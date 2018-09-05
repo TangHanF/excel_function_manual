@@ -5,7 +5,7 @@
 
 # Excel公式与函数帮助手册
 
-欢迎各位Start、Fork进行完善。时间有限，没做细致优化，有意向者可以一起完善
+欢迎各位Star、Fork进行完善。时间有限，没做细致优化，有意向者可以一起完善
 
 对外发布、提供服务请保留项目地址，谢谢合作！
 
@@ -19,15 +19,15 @@
 
 ------
 
-> **作       者：**GuoFu
+> **作       者：** GuoFu
 >
-> **邮       箱：** [guofu_gh@163.com](mailto:guofu_gh@163.com)
+> **邮       箱：**  [guofu_gh@163.com](mailto:guofu_gh@163.com)
 >
-> **创建日期：**2018年09月05日
+> **创建日期：** 2018年09月05日
 >
-> **GitHub地址：**<https://github.com/TangHanF>
+> **GitHub个人主页：** <https://github.com/TangHanF>
 >
-> **Gitee地址：**<https://gitee.com/TangHanF>
+> **Gitee个人主页：** <https://gitee.com/TangHanF>
 
 ------
 
@@ -38,4 +38,4 @@
 **Github入口：** <https://tanghanf.github.io/excel_function_manual/>
 
 [本项目GitHub地址](https://github.com/TangHanF/excel_function_manual) 
-[本项目GitHub地址](https://gitee.com/TangHanF/excel_function_manual) 
+[本项目Gitee地址](https://gitee.com/TangHanF/excel_function_manual) 
