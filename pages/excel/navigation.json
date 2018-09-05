@@ -1,0 +1,1944 @@
+{
+  "title": "公式与函数帮助",
+  "sections": {
+    "ffsa593ae8a": {
+      "name": "数字函数",
+      "children": [
+        "ffa585b339",
+        "ffa592ccd5",
+        "ffa5906f26",
+        "ffa58be187",
+        "ffa58f0047",
+        "ffa5908ce7",
+        "ffa58c5baf",
+        "ffa5883dff",
+        "ffa58ff3ae",
+        "ffa5946f58",
+        "ffa5918fe7",
+        "ffa58520f3",
+        "ffa590c7c1",
+        "ffa5869f06",
+        "ffa5904d12",
+        "ffa59247cb",
+        "ffa59649f5",
+        "ffa58b6c37",
+        "ffa589ebc8",
+        "ffa6f12c7b9",
+        "ffa5866491",
+        "ffa5887a29",
+        "ffa5868145",
+        "ffa590301a",
+        "ffa58c2118",
+        "ffa5913166",
+        "ffa5940fed",
+        "ffa58f7708",
+        "ffa5929132",
+        "ffa6f12fdca",
+        "ffa58ba6ce",
+        "ffa5844a41",
+        "ffa5910f52",
+        "ffa5926bd7",
+        "ffa58cd24e",
+        "ffa59150db",
+        "ffa58d2a84",
+        "ffa58929ed",
+        "ffa592af9b",
+        "ffa58e5bea",
+        "ffa58d4739",
+        "ffa58af6a5"
+      ]
+    },
+    "ffa56efb6e": {
+      "name": "工程函数",
+      "children": [
+        "ffa565206d",
+        "ffa566c376",
+        "ffa56b4a02",
+        "ffa565cee1",
+        "ffa567f1fa",
+        "ffa56b0c24",
+        "ffa56f533f",
+        "ffa56bcada",
+        "ffa56973fb",
+        "ffa564e4eb",
+        "ffa56a7a63",
+        "ffa56e67b6",
+        "ffa5688590",
+        "ffa56d43d0",
+        "ffa56503fb",
+        "ffa56f192f",
+        "ffa563df8f",
+        "ffa56db9a6",
+        "ffa56ab5c4",
+        "ffa56f99a2",
+        "ffa568a633"
+      ]
+    },
+    "ffa572d7f9": {
+      "name": "财务函数",
+      "children": [
+        "ffa5751245",
+        "ffa57d9125",
+        "ffa5742353",
+        "ffa57a0ee9",
+        "ffa57745e1",
+        "ffa5765c92",
+        "ffa57e42e1",
+        "ffa5785836",
+        "ffa579d346",
+        "ffa57263fa",
+        "ffa5d87a8c31",
+        "ffa354d15acd",
+        "ffa1965cea68",
+        "ffa3e86ad3f3",
+        "ffa571ac15",
+        "ffa578e992",
+        "ffa57c397a",
+        "ffa5754cba",
+        "ffa57875d5",
+        "ffa57aa045",
+        "ffa57a49c3",
+        "ffa575692b",
+        "ffa5700dc3",
+        "ffa57c73ac",
+        "ffa571700d",
+        "ffa57bffce",
+        "ffa574069e",
+        "ffa57ada77",
+        "ffa57cf228",
+        "ffa576d0b3",
+        "ffa574b9cb",
+        "ffa573c2db",
+        "ffa57e084a",
+        "ffa57d4b27",
+        "ffa579081c",
+        "ffa571363f",
+        "ffa729d49e1c",
+        "ffaedc3b1296",
+        "ffa576ee52",
+        "ffa5702fb6",
+        "ffa57be0bd",
+        "ffa577d9ba",
+        "ffa572bbaa"
+      ]
+    },
+    "ffa5983276": {
+      "name": "引用函数",
+      "children": [
+        "ffa59ca516",
+        "ffa59d8b61",
+        "ffa599a9fc",
+        "ffa599e753",
+        "ffa59bde1e",
+        "ffa59a0514",
+        "ffa596a1c7",
+        "ffa59b4edb",
+        "ffa596db0e",
+        "ffa00508b",
+        "ffa597dc7b",
+        "ffa59a83d3",
+        "ffa597c0d3",
+        "ffa59cc33b",
+        "ffa59cfc1e",
+        "ffa596bee0",
+        "ffa6f15afb0",
+        "ffa5997050"
+      ]
+    },
+    "ffa55b52ca": {
+      "name": "日期和时间函数",
+      "children": [
+        "ffa55cce81",
+        "ffa55ea982",
+        "ffa558a84c",
+        "ffa557b613",
+        "ffa55abffd",
+        "ffa557d36f",
+        "ffa5582a78",
+        "ffa55fec78",
+        "ffa55a0408",
+        "ffa55b8e08",
+        "ffa55a9ae5",
+        "ffa557f089",
+        "ffa55b18db",
+        "ffa55fcf1c",
+        "ffa5580cfa",
+        "ffa55f034b",
+        "ffa55e8d11",
+        "ffa55d9924",
+        "ffa56029ae",
+        "ffa55ee5ac",
+        "ffa55f9592",
+        "ffa5584cf0",
+        "ffa55c753e"
+      ]
+    },
+    "ffa5608030": {
+      "name": "持续时间函数",
+      "children": [
+        "ffa560be0e",
+        "ffa5625ca3",
+        "ffa561aeb4",
+        "ffa56312b2",
+        "ffa5619136",
+        "ffa561cb47",
+        "ffa561e8c4",
+        "ffa5620514"
+      ]
+    },
+    "ffa5a68be3": {
+      "name": "统计函数",
+      "children": [
+        "ffa5ab7bf2",
+        "ffa5a1272d",
+        "ffa5b2784b",
+        "ffa5a5df22",
+        "ffa5b68ea4",
+        "ffa5a3a754",
+        "ffa5ad0bfa",
+        "ffa5b7ea3e",
+        "ffa5a6a7f0",
+        "ffa5b3d428",
+        "ffa5b20557",
+        "ffa5a29b28",
+        "ffa5afdc38",
+        "ffa5a52a41",
+        "ffa5b36220",
+        "ffa5a1ef74",
+        "ffa5b9f72f",
+        "ffa5a400fc",
+        "ffa5adba91",
+        "ffa59f7814",
+        "ffa5aaa9b5",
+        "ffa5a8d79d",
+        "ffa5a77b5b",
+        "ffa5aa13c2",
+        "ffa5a9f59d",
+        "ffa5b13e81",
+        "ffa5a92ddc",
+        "ffa5b17742",
+        "ffa5a967cb",
+        "ffa5b2b53d",
+        "ffa59e5a79",
+        "ffa5af6923",
+        "ffa5a89e56",
+        "ffa5a58341",
+        "ffa5ac0b35",
+        "ffa5b5c7ac",
+        "ffa5ab1ceb",
+        "ffa5aebacf",
+        "ffa5b4f8b6",
+        "ffa5b6ab7a",
+        "ffa5b8f53c",
+        "ffa5a229a6",
+        "ffa5aa5269",
+        "ffa5af1045",
+        "ffa5a0068e",
+        "ffa5a5fb72",
+        "ffa5a635e7",
+        "ffa5a24591",
+        "ffa5b571d2",
+        "ffa5a262aa",
+        "ffa59e0419",
+        "ffa5b4a2db",
+        "ffa5aa708f",
+        "ffa5b15a6c",
+        "ffa59f9442",
+        "ffa5bb1594",
+        "ffa5a8f367",
+        "ffa5b72086",
+        "ffa5b823a7",
+        "ffa5a472c1",
+        "ffa5a86530",
+        "ffa5b41355",
+        "ffa5a023a7",
+        "ffa5b9da59",
+        "ffa5b6c8b4",
+        "ffa5aa34ec",
+        "ffa5b3f163",
+        "ffa59f5947",
+        "ffa6f16a1e8",
+        "ffa5b058de"
+      ]
+    },
+    "ffa5c69b9d": {
+      "name": "三角函数",
+      "children": [
+        "ffa5c74880",
+        "ffa5c9a390",
+        "ffa5c6d506",
+        "ffa5c93fd1",
+        "ffa5c9dfb9",
+        "ffa5cb9325",
+        "ffa5c8e90c",
+        "ffa5c8aa65",
+        "ffa5c97cc4",
+        "ffa5cb3ce6",
+        "ffa5cae169",
+        "ffa5c6451c",
+        "ffa5c88d4c",
+        "ffa5c66235",
+        "ffa5c5b63d"
+      ]
+    },
+    "ffa5821683": {
+      "name": "逻辑和信息函数",
+      "children": [
+        "ffa58075d5",
+        "ffa581fa33",
+        "ffa5834118",
+        "ffa580d62c",
+        "ffa57eb830",
+        "ffa57f6d11",
+        "ffa5835eb7",
+        "ffa58167ec",
+        "ffa583eff2",
+        "ffa57fe1fc",
+        "ffa5811106"
+      ]
+    },
+    "ffa5c18202": {
+      "name": "文本函数",
+      "children": [
+        "ffa5bfe8ee",
+        "ffa5c2da34",
+        "ffa5bf70bd",
+        "ffa5c3dd12",
+        "ffa5c4c101",
+        "ffa5c24b12",
+        "ffa5c2f5dc",
+        "ffa5be6e87",
+        "ffa5c34c1b",
+        "ffa5c312f5",
+        "ffa5c0cd85",
+        "ffa5bee222",
+        "ffa03f1ed2ba",
+        "ffa5bf54d2",
+        "ffa5bddfec",
+        "ffa5bd143c",
+        "ffa5c487fd",
+        "ffa5bd4d40",
+        "ffa5c004fb",
+        "ffa5be1933",
+        "ffa5c3302f",
+        "ffa5bc284e",
+        "ffa5bd6a16"
+      ]
+    }
+  },
+  "toc": [
+    "ffa55b52ca",
+    "ffa5608030",
+    "ffa56efb6e",
+    "ffa572d7f9",
+    "ffa5821683",
+    "ffa593ae8a",
+    "ffa5983276",
+    "ffa5a68be3",
+    "ffa5c18202",
+    "ffa5c69b9d"
+  ],
+  "topics": {
+    "ffa5688590": {
+      "name": "ERFC",
+      "href": "ffa5688590.html",
+      "summary": "ERFC(下限) 函数返回补余 ERF 函数在给定下限和无穷大之间的积分。"
+    },
+    "ffa561aeb4": {
+      "name": "DUR2MILLISECONDS",
+      "href": "ffa561aeb4.html",
+      "summary": "DUR2MILLISECONDS(持续时间) 函数可将持续时间值转换为毫秒数。"
+    },
+    "ffa00508b": {
+      "name": "INTERSECT.RANGES",
+      "href": "ffa00508b.html",
+      "summary": "INTERSECT.RANGES(范围, 范围…) 得出所指定集合之交集的范围。"
+    },
+    "ffa5c3dd12": {
+      "name": "CONCATENATE",
+      "href": "ffa5c3dd12.html",
+      "summary": "CONCATENATE(字符串, 字符串…) 连接引用单元格的内容的值。"
+    },
+    "ffad1ec8928": {
+      "name": "二进制补码记数法",
+      "href": "ffad1ec8928.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa8dfb5116": {
+      "name": "并置运算符",
+      "href": "ffa8dfb5116.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa55ea982": {
+      "name": "DATEDIF",
+      "href": "ffa55ea982.html",
+      "summary": "DATEDIF(开始日期, 结束日期, 计算方式) 将得出两个日期之间的天数、月数或年数。"
+    },
+    "ffa557b613": {
+      "name": "DAY",
+      "href": "ffa557b613.html",
+      "summary": "DAY(日期) 将根据给定日期\/时间值得出该月的某一天。"
+    },
+    "ffa56e67b6": {
+      "name": "ERF",
+      "href": "ffa56e67b6.html",
+      "summary": "ERF(下限, 上限) 返回误差函数在两个值之间的积分。"
+    },
+    "ffa56d43d0": {
+      "name": "GESTEP",
+      "href": "ffa56d43d0.html",
+      "summary": "GESTEP(待比较数字, 步长数字) 函数可确定一个值是否大于或等于另一个值。"
+    },
+    "ffa5a229a6": {
+      "name": "MODE",
+      "href": "ffa5a229a6.html",
+      "summary": "MODE(值, 值…) 得出数值集中出现频率最高的值。"
+    },
+    "ffa5aa708f": {
+      "name": "QUARTILE",
+      "href": "ffa5aa708f.html",
+      "summary": "QUARTILE(数字集合, 四分位数) 得出给定数字集中指定四分位数的值。"
+    },
+    "ffa5b6c8b4": {
+      "name": "VAR",
+      "href": "ffa5b6c8b4.html",
+      "summary": "VAR(值, 值…) 返回数值集的样本（无偏）方差（离差的一种度量）。"
+    },
+    "ffa6f16a1e8": {
+      "name": "WEIBULL",
+      "href": "ffa6f16a1e8.html",
+      "summary": "WEIBULL(非负 x 值, alpha, beta, 形式类型) 得出 Weibull 分布。Weibull 分布是连续概率分布的一种。"
+    },
+    "ffa5c88d4c": {
+      "name": "SINH",
+      "href": "ffa5c88d4c.html",
+      "summary": "SINH(数字) 可得出指定数字的双曲正弦值。"
+    },
+    "ffa5b6ab7a": {
+      "name": "MIN",
+      "href": "ffa5b6ab7a.html",
+      "summary": "MIN(值, 值…) 得出数字值、日期\/时间值或持续时间值集的最小数值。"
+    },
+    "ffa5582a78": {
+      "name": "EDATE",
+      "href": "ffa5582a78.html",
+      "summary": "EDATE(开始日期, 月数偏移) 返回在给定日期之前或之后数月的日期\/时间值。"
+    },
+    "ffa565206d": {
+      "name": "BASETONUM",
+      "href": "ffa565206d.html",
+      "summary": "BASETONUM(待转换字符串, 转换基数) 可将指定基数的数字转换成基数为 10 的数字。"
+    },
+    "ffa5b20557": {
+      "name": "CHITEST",
+      "href": "ffa5b20557.html",
+      "summary": "CHITEST(实际值, 预期值) 可根据给定数据的卡方分布得出某值。"
+    },
+    "ffa5625ca3": {
+      "name": "DUR2HOURS",
+      "href": "ffa5625ca3.html",
+      "summary": "DUR2HOURS(持续时间) 函数可将持续时间值转换为小时数。"
+    },
+    "ffa5a3a754": {
+      "name": "BETADIST",
+      "href": "ffa5a3a754.html",
+      "summary": "BETADIST(x 值, alpha, beta, x 下限, x 上限) 得出累积 Beta 分布概率值。"
+    },
+    "ffa5aa34ec": {
+      "name": "VARA",
+      "href": "ffa5aa34ec.html",
+      "summary": "VARA(值, 值…) 得出任何值集合的样本（无偏）方差（离差的一种度量）。"
+    },
+    "ffa55a0408": {
+      "name": "HOUR",
+      "href": "ffa55a0408.html",
+      "summary": "HOUR(时间) 得出给定日期\/时间值或时间字符串的小时数。"
+    },
+    "ffa5946f58": {
+      "name": "INT",
+      "href": "ffa5946f58.html",
+      "summary": "INT(要舍入的数字) 将得出小于或等于某数的最接近的整数。"
+    },
+    "ffa5869f06": {
+      "name": "LOG10",
+      "href": "ffa5869f06.html",
+      "summary": "LOG10(正数) 得出以 10 为底数的数字的对数。"
+    },
+    "ffa57263fa": {
+      "name": "CUMPRINC",
+      "href": "ffa57263fa.html",
+      "summary": "CUMPRINC(各期利率, 期数, 现值, 首期, 末期, 付款时间) 函数根据固定定期付款和固定利息，得出在所选时间间隔内包含在贷款或年金付款中的本金总额。"
+    },
+    "ffa55fec78": {
+      "name": "EOMONTH",
+      "href": "ffa55fec78.html",
+      "summary": "EOMONTH(开始日期, 月数偏移) 将得出在给定日期之前或之后数月的该月最后一天的日期。"
+    },
+    "ffa5883dff": {
+      "name": "FLOOR",
+      "href": "ffa5883dff.html",
+      "summary": "FLOOR(要舍入的数字, 因子) 会将一个数往零的方向四舍五入到最接近的指定因数倍数。"
+    },
+    "ffa5997050": {
+      "name": "VLOOKUP",
+      "href": "ffa5997050.html",
+      "summary": "VLOOKUP(搜索目标, 列范围, 返回列编号, 近似匹配) 通过使用左列值挑选行并使用列编号挑选该行中的列从列集合中得出某值。"
+    },
+    "ffa5c97cc4": {
+      "name": "COSH",
+      "href": "ffa5c97cc4.html",
+      "summary": "COSH(数字) 将得出数字的双曲余弦值。"
+    },
+    "ffa56312b2": {
+      "name": "DUR2MINUTES",
+      "href": "ffa56312b2.html",
+      "summary": "DUR2MINUTES(持续时间) 函数可将持续时间值转换为分钟数。"
+    },
+    "ffa565cee1": {
+      "name": "BIN2DEC",
+      "href": "ffa565cee1.html",
+      "summary": "BIN2DEC(二进制字符串, 转换长度) 可将二进制数字转换成相应的十进制数字。"
+    },
+    "ffa5b058de": {
+      "name": "ZTEST",
+      "href": "ffa5b058de.html",
+      "summary": "ZTEST(值集合, 值, 标准偏差) 得出 Z 检验的单尾概率值。"
+    },
+    "ffa354d15acd": {
+      "name": "CURRENCYCODE",
+      "href": "ffa354d15acd.html",
+      "summary": "CURRENCYCODE 会返回货币值的货币代码，或者电脑或当前文稿所设语言和地区的货币代码。"
+    },
+    "ffa58ff3ae": {
+      "name": "GCD",
+      "href": "ffa58ff3ae.html",
+      "summary": "GCD(数字值, 数字值…) 得出一组数字的最大公约数。"
+    },
+    "ffa5ad0bfa": {
+      "name": "BETAINV",
+      "href": "ffa5ad0bfa.html",
+      "summary": "BETAINV(概率, alpha, beta, x 下限, x 上限) 得出给定累积 Beta 分布概率值的逆运算。"
+    },
+    "ffa5bf70bd": {
+      "name": "CODE",
+      "href": "ffa5bf70bd.html",
+      "summary": "CODE(代码字符串) 将得出指定字符串中的第一个字符的十进制 Unicode 代码编号。"
+    },
+    "ffa5be1933": {
+      "name": "T",
+      "href": "ffa5be1933.html",
+      "summary": "T(单元格) 将得出单元格中含有的文本。此函数包含在内，以便与从其他电子表格应用导入的表格兼容。"
+    },
+    "ffa589ebc8": {
+      "name": "PI",
+      "href": "ffa589ebc8.html",
+      "summary": "PI() 得出 π (pi)（圆的圆周与其直径的比）的近似值。"
+    },
+    "ffa5a262aa": {
+      "name": "PERMUT",
+      "href": "ffa5a262aa.html",
+      "summary": "PERMUT(对象数, 元素数) 得出可从对象总数中选择的给定数量的对象的排列数。"
+    },
+    "ffa57e42e1": {
+      "name": "COUPDAYSNC",
+      "href": "ffa57e42e1.html",
+      "summary": "COUPDAYSNC(结算日, 到期日, 频率, 基准天数) 得出从结算日到息票期（结算期）结束的天数。"
+    },
+    "ffa5904d12": {
+      "name": "MOD",
+      "href": "ffa5904d12.html",
+      "summary": "MOD(被除数, 除数) 得出除法的余数。"
+    },
+    "ffa6f12fdca": {
+      "name": "SERIESSUM",
+      "href": "ffa6f12fdca.html",
+      "summary": "SERIESSUM(x 值, 次方, 步长值, 系数) 用于计算和得出一个乘幂序列的和。这些系数用于通过步长值来递增的 x 值的连续乘幂。"
+    },
+    "ffa58167ec": {
+      "name": "ISODD",
+      "href": "ffa58167ec.html",
+      "summary": "如果给定的数字为奇数（被 2 除时，有余数），ISODD(数字) 将得出 TRUE；否则得出 FALSE。"
+    },
+    "ffa566c376": {
+      "name": "BESSELJ",
+      "href": "ffa566c376.html",
+      "summary": "BESSELJ(任何 x 值, n 值) 可得出整数 Bessel 函数 Jn(x)。"
+    },
+    "ffa57a0ee9": {
+      "name": "BONDMDURATION",
+      "href": "ffa57a0ee9.html",
+      "summary": "BONDMDURATION(结算日, 到期日, 年利率, 年收益率, 频率, 基准天数) 得出假定面值为 ￥100 的现金流的现值修正加权平均值。"
+    },
+    "ffa5887a29": {
+      "name": "PRODUCT",
+      "href": "ffa5887a29.html",
+      "summary": "PRODUCT(数字值, 数字值…) 得出一组数字值的乘积。"
+    },
+    "ffa5619136": {
+      "name": "DUR2SECONDS",
+      "href": "ffa5619136.html",
+      "summary": "DUR2SECONDS(持续时间) 函数可将持续时间值转换为秒数。"
+    },
+    "ffa56503fb": {
+      "name": "HEX2BIN",
+      "href": "ffa56503fb.html",
+      "summary": "HEX2BIN(十六进制字符串, 转换长度) 可将十六进制数字转换为相应的二进制数字。"
+    },
+    "ffa5580cfa": {
+      "name": "SECOND",
+      "href": "ffa5580cfa.html",
+      "summary": "SECOND(时间) 返回给定日期\/时间值或时间字符串的秒数。"
+    },
+    "ffa5c5b63d": {
+      "name": "TANH",
+      "href": "ffa5c5b63d.html",
+      "summary": "TANH(数字) 可得出指定数字的双曲正切值。"
+    },
+    "ffa361c4ee8": {
+      "name": "函数浏览器",
+      "href": "ffa361c4ee8.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5adba91": {
+      "name": "COVAR",
+      "href": "ffa5adba91.html",
+      "summary": "COVAR(第一组样本值, 第二组样本值) 得出两组数字值的协方差。"
+    },
+    "ffa8575bdd7": {
+      "name": "基准天数惯例",
+      "href": "ffa8575bdd7.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa58d4739": {
+      "name": "SUMXMY2",
+      "href": "ffa58d4739.html",
+      "summary": "SUMXMY2(第一个值集合, 第二个值集合) 得出两个集合内对应值的差值的平方和。"
+    },
+    "ffa58b6c37": {
+      "name": "ODD",
+      "href": "ffa58b6c37.html",
+      "summary": "ODD(要舍入的数字) 会将一个数往与 0 相反的方向四舍五入到下一个奇数。"
+    },
+    "ffa59a83d3": {
+      "name": "MATCH",
+      "href": "ffa59a83d3.html",
+      "summary": "MATCH(搜索目标, 搜索位置, 匹配方式) 得出一个集合内值的位置。"
+    },
+    "ffa5910f52": {
+      "name": "SQRTPI",
+      "href": "ffa5910f52.html",
+      "summary": "SQRTPI(非负数) 得出一个数字乘以 π (pi) 后的平方根。"
+    },
+    "ffa5ab7bf2": {
+      "name": "AVEDEV",
+      "href": "ffa5ab7bf2.html",
+      "summary": "AVEDEV(值, 值…) 得出数字集合与其平均值（算术平均）之差。"
+    },
+    "ffa5b823a7": {
+      "name": "STDEVA",
+      "href": "ffa5b823a7.html",
+      "summary": "STDEVA(值, 值…) 根据样本（无偏）方差得出包含任何值的集的标准偏差（离差的一种度量）。"
+    },
+    "ffa5c004fb": {
+      "name": "SUBSTITUTE",
+      "href": "ffa5c004fb.html",
+      "summary": "SUBSTITUTE(来源字符串, 现有字符串, 新字符串, 次数) 得出用新字符串值替换给定字符串值的指定字符的字符串值。"
+    },
+    "ffa5b9f72f": {
+      "name": "COUNTIF",
+      "href": "ffa5b9f72f.html",
+      "summary": "COUNTIF(待检验阵列, 条件) 得出某个集合内满足给定条件的单元格的个数。"
+    },
+    "ffa8575c68f": {
+      "name": "列表值",
+      "href": "ffa8575c68f.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa55f034b": {
+      "name": "TIME",
+      "href": "ffa55f034b.html",
+      "summary": "TIME(小时数, 分钟数, 秒数) 将小时、分钟、秒钟各自的数字值（任何小数部分都被忽略）转换为日期\/时间值。"
+    },
+    "ffa575692b": {
+      "name": "IRR",
+      "href": "ffa575692b.html",
+      "summary": "IRR(现金流范围, 估计) 基于一系列定期发生的潜在不规则现金流（付款金额不必为某特定数量）得出投资的内部回报率。"
+    },
+    "ffa580d62c": {
+      "name": "IFERROR",
+      "href": "ffa580d62c.html",
+      "summary": "如果给定的值计算出错，IFERROR(任何表达式, 出错返回值) 将得出您指定的值；否则得出给定值。"
+    },
+    "ffa5929132": {
+      "name": "ROUNDUP",
+      "href": "ffa5929132.html",
+      "summary": "ROUNDUP(要舍入的数字, 数字位数) 得出一个按指定位数朝零的反方向（向上）四舍五入的数字"
+    },
+    "ffa5811106": {
+      "name": "TRUE",
+      "href": "ffa5811106.html",
+      "summary": "TRUE() 返回布尔值 TRUE。此函数包含在内，以便与从其他电子表格应用导入的表格兼容。"
+    },
+    "ffa361cb72c": {
+      "name": "布尔值",
+      "href": "ffa361cb72c.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa58cd24e": {
+      "name": "SUMIF",
+      "href": "ffa58cd24e.html",
+      "summary": "SUMIF(待检验的值, 条件, 待求和的值) 得出一组数字的总和，且仅包括满足指定条件的数字。"
+    },
+    "ffa5c8e90c": {
+      "name": "ATANH",
+      "href": "ffa5c8e90c.html",
+      "summary": "ATANH(数字) 将得出数字的反双曲正切值。"
+    },
+    "ffa56f99a2": {
+      "name": "OCT2DEC",
+      "href": "ffa56f99a2.html",
+      "summary": "OCT2DEC(八进制字符串, 转换长度) 将八进制数字转换为相应的十进制数字。"
+    },
+    "ffa5bd6a16": {
+      "name": "VALUE",
+      "href": "ffa5bd6a16.html",
+      "summary": "VALUE(来源字符串) 将得出一个数字值，即使参数被格式化为文本。"
+    },
+    "ffa5835eb7": {
+      "name": "ISEVEN",
+      "href": "ffa5835eb7.html",
+      "summary": "如果给定的数字为偶数（被 2 除时，无余数），ISEVEN(数字) 将得出 TRUE；否则得出 FALSE。"
+    },
+    "ffa5c66235": {
+      "name": "TAN",
+      "href": "ffa5c66235.html",
+      "summary": "TAN(弧度) 将得出以弧度表示的角度的正切值。"
+    },
+    "ffa53367a96": {
+      "name": "比较运算符",
+      "href": "ffa53367a96.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5bb1594": {
+      "name": "SMALL",
+      "href": "ffa5bb1594.html",
+      "summary": "SMALL(值集合, 排位) 得出数值集中第 n 小的值。最小值的排位为 1。"
+    },
+    "ffa5b3d428": {
+      "name": "CHIINV",
+      "href": "ffa5b3d428.html",
+      "summary": "CHIINV(概率, 自由度) 可得出卡方分布的单尾概率的逆运算。"
+    },
+    "ffa5b5c7ac": {
+      "name": "LOGNORMDIST",
+      "href": "ffa5b5c7ac.html",
+      "summary": "LOGNORMDIST(正 x 值, 平均数, 标准偏差) 得出对数正态分布。"
+    },
+    "ffa576d0b3": {
+      "name": "PRICE",
+      "href": "ffa576d0b3.html",
+      "summary": "PRICE(结算日, 到期日, 年利率, 年收益率, 赎回价, 频率, 基准天数) 将得出每 ￥100 赎回（票面）价值定期支付利息的证券的价格。"
+    },
+    "ffa5ac0b35": {
+      "name": "LOGINV",
+      "href": "ffa5ac0b35.html",
+      "summary": "LOGINV(概率, 平均数, 标准偏差) 可得出 x 的对数正态累积分布函数的逆运算。"
+    },
+    "ffa5906f26": {
+      "name": "COMBIN",
+      "href": "ffa5906f26.html",
+      "summary": "COMBIN(项目总数, 组别大小) 将得出可将大量项目合并成特定大小的组（忽略组内的顺序）的不同方法。"
+    },
+    "ffa5a400fc": {
+      "name": "COUNTIFS",
+      "href": "ffa5a400fc.html",
+      "summary": "COUNTIFS(待检验的值, 条件, 待检验的值…, 条件…) 得出一个或多个集合内满足给定条件（每个集合一个条件）的单元格的个数。"
+    },
+    "ffa56973fb": {
+      "name": "DEC2HEX",
+      "href": "ffa56973fb.html",
+      "summary": "DEC2HEX(十进制字符串, 转换长度) 可将十进制数字转换为相应的十六进制数字。"
+    },
+    "ffa592af9b": {
+      "name": "SUMX2MY2",
+      "href": "ffa592af9b.html",
+      "summary": "SUM2XMY2(第一个值集合, 第二个值集合) 得出两个集合内对应值的平方差之和。"
+    },
+    "ffa59f7814": {
+      "name": "CRITBINOM",
+      "href": "ffa59f7814.html",
+      "summary": "CRITBINOM(试验次数, 成功概率, alpha) 可得出其累积二项分布大于或等于给定值的最小值。"
+    },
+    "ffa5d87a8c31": {
+      "name": "CURRENCY",
+      "href": "ffa5d87a8c31.html",
+      "summary": "CURRENCY 返回通过互联网远程获取的两种货币间汇率的数据。"
+    },
+    "ffa5908ce7": {
+      "name": "FACT",
+      "href": "ffa5908ce7.html",
+      "summary": "FACT(阶乘数字) 得出一个数字的阶乘。"
+    },
+    "ffa55b8e08": {
+      "name": "MINUTE",
+      "href": "ffa55b8e08.html",
+      "summary": "MINUTE(时间) 返回给定日期\/时间值或时间字符串的分钟数。"
+    },
+    "ffa56b4a02": {
+      "name": "BESSELY",
+      "href": "ffa56b4a02.html",
+      "summary": "BESSELY(正 x 值, n 值) 得出整数 Bessel 函数 Yn(x)。"
+    },
+    "ffa596bee0": {
+      "name": "TRANSPOSE",
+      "href": "ffa596bee0.html",
+      "summary": "TRANSPOSE(阵列范围) 得出垂直方向的单元格集合作为水平方向的单元格数组，或者反之亦然。"
+    },
+    "ffa58520f3": {
+      "name": "LN",
+      "href": "ffa58520f3.html",
+      "summary": "LN(正数) 得出一个数的自然对数（以 e 为底数求幂得到该数而必需的指数）。"
+    },
+    "ffa8575c6f3": {
+      "name": "集合",
+      "href": "ffa8575c6f3.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5620514": {
+      "name": "STRIPDURATION",
+      "href": "ffa5620514.html",
+      "summary": "STRIPDURATION(任何值) 函数用于计算给定值，然后得出显示的天数（如果是持续时间值）或给定值。此函数包含在内，以便与其他电子表格应用兼容。"
+    },
+    "ffa55abffd": {
+      "name": "DAYNAME",
+      "href": "ffa55abffd.html",
+      "summary": "DAYNAME(日期数字) 返回给定日期\/时间值、日期字符串或数字值的星期几名称。第 1 天为星期日。"
+    },
+    "ffa585b339": {
+      "name": "ABS",
+      "href": "ffa585b339.html",
+      "summary": "ABS(数字或持续时间) 得出数字值或持续时间值的绝对值。"
+    },
+    "ffa5a89e56": {
+      "name": "LARGE",
+      "href": "ffa5a89e56.html",
+      "summary": "LARGE(值集合, 排位) 得出集合中第 n 大的值。最大值的排位为 1。"
+    },
+    "ffa5aa5269": {
+      "name": "NEGBINOMDIST",
+      "href": "ffa5aa5269.html",
+      "summary": "NEGBINOMDIST(失败次数, 成功次数, 成功概率) 可得出负二项分布。"
+    },
+    "ffa5c2f5dc": {
+      "name": "FIND",
+      "href": "ffa5c2f5dc.html",
+      "summary": "FIND(待查找字符串, 来源字符串, 开始位置) 将得出一个字符串在另一个字符串中的开始位置。"
+    },
+    "ffa55b18db": {
+      "name": "NETWORKDAYS",
+      "href": "ffa55b18db.html",
+      "summary": "NETWORKDAYS(开始日期, 结束日期, 排除日期) 将得出两个日期之间的工作日数。工作日不包括周末和任何其他指定日期。"
+    },
+    "ffa5b3f163": {
+      "name": "VARP",
+      "href": "ffa5b3f163.html",
+      "summary": "VARP(值, 值…) 返回数值集的总体 (true) 方差（离差的一种度量）。"
+    },
+    "ffa5b41355": {
+      "name": "TDIST",
+      "href": "ffa5b41355.html",
+      "summary": "TDIST(非负 x 值, 自由度, 尾数) 得出学生 t 分布的概率。"
+    },
+    "ffa5700dc3": {
+      "name": "ISPMT",
+      "href": "ffa5700dc3.html",
+      "summary": "ISPMT(各期利率, 付款期数, 期数, 现值) 得出固定利率贷款的定期利息，在每期期初减少等额本金，在每期期末支付余额的利息。"
+    },
+    "ffa55ee5ac": {
+      "name": "WEEKNUM",
+      "href": "ffa55ee5ac.html",
+      "summary": "WEEKNUM(日期, 第一天) 返回给定日期\/时间值或日期字符串在该年是第几个星期。"
+    },
+    "ffa57745e1": {
+      "name": "COUPDAYBS",
+      "href": "ffa57745e1.html",
+      "summary": "COUPDAYBS(结算日, 到期日, 频率, 基准天数) 得出息票期（结算期）的开头至结算日之间的天数。"
+    },
+    "ffa57e084a": {
+      "name": "PV",
+      "href": "ffa57e084a.html",
+      "summary": "PV(各期利率, 期数, 付款, 终值, 付款时间) 基于一系列定期现金流（在固定间隔内某特定数量的付款和所有现金流）和固定利率得出投资或年金的现值。"
+    },
+    "ffa5a29b28": {
+      "name": "CONFIDENCE",
+      "href": "ffa5a29b28.html",
+      "summary": "CONFIDENCE(alpha, 标准偏差, 样本大小) 函数可得出一个值，用于为具有已知标准偏差的总体的样本创建统计置信区间。"
+    },
+    "ffa5cae169": {
+      "name": "RADIANS",
+      "href": "ffa5cae169.html",
+      "summary": "RADIANS(度) 可将度数转换为弧度。"
+    },
+    "ffa599e753": {
+      "name": "COLUMN",
+      "href": "ffa599e753.html",
+      "summary": "COLUMN(单元格) 将得出含有指定单元格的列的列编号。"
+    },
+    "ffa6c2af7f0": {
+      "name": "算术运算符",
+      "href": "ffa6c2af7f0.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa599a9fc": {
+      "name": "CHOOSE",
+      "href": "ffa599a9fc.html",
+      "summary": "CHOOSE(索引, 值, 值…) 可基于指定索引值得出值集合中的某个值。"
+    },
+    "ffa5c6d506": {
+      "name": "ASIN",
+      "href": "ffa5c6d506.html",
+      "summary": "ASIN(数字) 可得出数字的反正弦值。"
+    },
+    "ffa5c34c1b": {
+      "name": "LEFT",
+      "href": "ffa5c34c1b.html",
+      "summary": "LEFT(来源字符串, 字符串长度) 得出由给定字符串值左端指定数量的字符构成的字符串值。"
+    },
+    "ffa579d346": {
+      "name": "CUMIPMT",
+      "href": "ffa579d346.html",
+      "summary": "CUMIPMT(各期利率, 期数, 现值, 首期, 末期, 付款时间) 基于固定定期付款和固定利息得出在所选时间间隔内包含在贷款或年金付款中的总利息。"
+    },
+    "ffa5a472c1": {
+      "name": "STDEVP",
+      "href": "ffa5a472c1.html",
+      "summary": "STDEVP(值, 值…) 根据总体 (true) 方差得出数值集的标准偏差（离差的一种度量）。"
+    },
+    "ffa5c8aa65": {
+      "name": "COS",
+      "href": "ffa5c8aa65.html",
+      "summary": "COS(弧度) 将得出以弧度表示的角度的余弦值。"
+    },
+    "ffa56b0c24": {
+      "name": "BIN2OCT",
+      "href": "ffa56b0c24.html",
+      "summary": "BIN2OCT(二进制字符串, 转换长度) 可将二进制数字转换为相应的八进制数字。"
+    },
+    "ffa5aebacf": {
+      "name": "MAXA",
+      "href": "ffa5aebacf.html",
+      "summary": "MAXA(值, 值…) 得出包含任何值的集中的最大数值。"
+    },
+    "ffa59f9442": {
+      "name": "SLOPE",
+      "href": "ffa59f9442.html",
+      "summary": "SLOPE(y 值, x 值) 可使用线性回归分析得出集合的最佳拟合线的斜率。"
+    },
+    "ffa57d4b27": {
+      "name": "RATE",
+      "href": "ffa57d4b27.html",
+      "summary": "RATE(期数, 付款, 现值, 终值, 付款时间, 估计) 基于一系列定期现金付款（在固定间隔内某特定数量的付款）和固定利率得出投资、贷款或年金的利率。"
+    },
+    "ffa8575ca19": {
+      "name": "日期\/时间值",
+      "href": "ffa8575ca19.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5c487fd": {
+      "name": "RIGHT",
+      "href": "ffa5c487fd.html",
+      "summary": "RIGHT(来源字符串, 字符串长度) 得出由给定字符串值右端指定数量的字符构成的字符串值。"
+    },
+    "ffa55a9ae5": {
+      "name": "MONTH",
+      "href": "ffa55a9ae5.html",
+      "summary": "MONTH(日期) 返回给定日期\/时间值或日期字符串的月份。"
+    },
+    "ffa5a52a41": {
+      "name": "COUNT",
+      "href": "ffa5a52a41.html",
+      "summary": "COUNT(值, 值…) 可得出参数（含有数字、数字表达式或日期）的个数。"
+    },
+    "ffa590301a": {
+      "name": "RAND",
+      "href": "ffa590301a.html",
+      "summary": "RAND() 得出大于或等于 0 且小于 1 的随机数。"
+    },
+    "ffa5af6923": {
+      "name": "INTERCEPT",
+      "href": "ffa5af6923.html",
+      "summary": "INTERCEPT(y 值, x 数) 可使用线性回归分析得出集合的最佳拟合线的 y 截距。"
+    },
+    "ffa4fa5b15f": {
+      "name": "时间字符串",
+      "href": "ffa4fa5b15f.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa56db9a6": {
+      "name": "NUMTOBASE",
+      "href": "ffa56db9a6.html",
+      "summary": "NUMTOBASE(十进制字符串, 基数, 转换长度) 可将基数为 10 的数字转换成指定基数的数字。"
+    },
+    "ffa560be0e": {
+      "name": "DUR2DAYS",
+      "href": "ffa560be0e.html",
+      "summary": "DUR2DAYS(持续时间) 函数将持续时间值转换为天数。"
+    },
+    "ffa57c73ac": {
+      "name": "MIRR",
+      "href": "ffa57c73ac.html",
+      "summary": "MIRR(现金流范围, 财务利率, 再投资利率) 基于一系列定期发生的潜在不规则现金流（付款金额不必为某特定数量）得出投资的修正内部回报率。"
+    },
+    "ffa5b7ea3e": {
+      "name": "BINOMDIST",
+      "href": "ffa5b7ea3e.html",
+      "summary": "BINOMDIST(成功次数, 试验次数, 成功概率, 形式类型) 可得出指定形式的单个项的二项分布概率。"
+    },
+    "ffa5a9f59d": {
+      "name": "FORECAST",
+      "href": "ffa5a9f59d.html",
+      "summary": "FORECAST(x 值, y 值, x 值) 可使用线性回归分析，基于样本值得出给定 x 值的预测 y 值。"
+    },
+    "ffa5584cf0": {
+      "name": "YEAR",
+      "href": "ffa5584cf0.html",
+      "summary": "YEAR(日期) 返回给定日期\/时间值或日期字符串的年份。"
+    },
+    "ffa5866491": {
+      "name": "POWER",
+      "href": "ffa5866491.html",
+      "summary": "POWER(数字, 指数) 得出一个数乘方所得的幂。"
+    },
+    "ffa581fa33": {
+      "name": "FALSE",
+      "href": "ffa581fa33.html",
+      "summary": "FALSE() 将得出布尔值 FALSE。此函数包含在内，以便与从其他电子表格应用导入的表格兼容。"
+    },
+    "ffa5afdc38": {
+      "name": "CORREL",
+      "href": "ffa5afdc38.html",
+      "summary": "CORREL(y 值, x 值) 可使用线性回归分析得出两个集之间的相关性。"
+    },
+    "ffa58be187": {
+      "name": "EVEN",
+      "href": "ffa58be187.html",
+      "summary": "EVEN(要舍入的数字) 将一个数往零相反的方向四舍五入到下一个偶数。"
+    },
+    "ffa574b9cb": {
+      "name": "PRICEDISC",
+      "href": "ffa574b9cb.html",
+      "summary": "PRICEDISC(结算日, 到期日, 年收益率, 赎回价, 基准天数) 得出按赎回价值卖出并不支付每 ￥100 赎回（票面）价值利息的证券的价格。"
+    },
+    "ffa4b83d89f": {
+      "name": "数组函数",
+      "href": "ffa4b83d89f.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa561cb47": {
+      "name": "DUR2WEEKS",
+      "href": "ffa561cb47.html",
+      "summary": "DUR2WEEKS(持续时间) 函数可将持续时间值转换为周数。"
+    },
+    "ffa563df8f": {
+      "name": "HEX2OCT",
+      "href": "ffa563df8f.html",
+      "summary": "HEX2OCT(十六进制字符串, 转换长度) 可将十六进制数字转换为相应的八进制数字。"
+    },
+    "ffa57d9125": {
+      "name": "ACCRINTM",
+      "href": "ffa57d9125.html",
+      "summary": "ACCRINTM(发行日, 结算日, 年利率, 票面值, 基准天数) 计算证券仅在到期支付利息时添加到证券的购买价格的应计利息以及支付给卖方的应计利息。"
+    },
+    "ffa58c5baf": {
+      "name": "FACTDOUBLE",
+      "href": "ffa58c5baf.html",
+      "summary": "FACTDOUBLE(阶乘数字) 得出数字的双阶乘。"
+    },
+    "ffa5a8d79d": {
+      "name": "EXPONDIST",
+      "href": "ffa5a8d79d.html",
+      "summary": "EXPONDIST(非负 x 值, lambda, 形式类型) 可得出指定形式的指数分布。"
+    },
+    "ffa5b13e81": {
+      "name": "FREQUENCY",
+      "href": "ffa5b13e81.html",
+      "summary": "FREQUENCY(数据值, 区间值) 得出数据值在区间值集合内出现频率的数组。"
+    },
+    "ffa361bc137": {
+      "name": "任何值",
+      "href": "ffa361bc137.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5754cba": {
+      "name": "EFFECT",
+      "href": "ffa5754cba.html",
+      "summary": "EFFECT(名义利率, 每年期数) 函数基于每年的复利周期数，从名义年利率得出实际年利率。"
+    },
+    "ffa5b571d2": {
+      "name": "PERCENTRANK",
+      "href": "ffa5b571d2.html",
+      "summary": "PERCENTRANK(值集合, 值, 有效位数) 得出值在集中的百分数排位。"
+    },
+    "ffa5c4c101": {
+      "name": "DOLLAR",
+      "href": "ffa5c4c101.html",
+      "summary": "DOLLAR(数字, 位数) 返回根据指定数字值格式化为货币格式的字符串。"
+    },
+    "ffac6f2d7977": {
+      "name": "值类型",
+      "href": "ffac6f2d7977.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa58ba6ce": {
+      "name": "SIGN",
+      "href": "ffa58ba6ce.html",
+      "summary": "SIGN(数字) 得出 1（当参数为正时），或得出 –1（当参数为负时），或得出 0（当参数为 0 时）。"
+    },
+    "ffa5b4a2db": {
+      "name": "PROB",
+      "href": "ffa5b4a2db.html",
+      "summary": "PROB(数字集合, 概率值, 下限, 上限) 可得出值集合的概率（如果已知单个值的概率）。"
+    },
+    "ffa8575bb7b": {
+      "name": "条件",
+      "href": "ffa8575bb7b.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa8575c209": {
+      "name": "单元格引用",
+      "href": "ffa8575c209.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5bee222": {
+      "name": "MID",
+      "href": "ffa5bee222.html",
+      "summary": "MID(来源字符串, 开始位置, 字符串长度) 得出由指定位置开始的字符串值中指定数量的字符构成的字符串值。"
+    },
+    "ffa994afa61": {
+      "name": "通配符",
+      "href": "ffa994afa61.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa55c753e": {
+      "name": "YEARFRAC",
+      "href": "ffa55c753e.html",
+      "summary": "YEARFRAC(开始日期, 结束日期, 基准天数) 返回以两个日期之间的整日数表示的年份的分数。"
+    },
+    "ffa58f0047": {
+      "name": "EXP",
+      "href": "ffa58f0047.html",
+      "summary": "EXP(指数) 可得出 e（自然对数的底数）的指定幂次。"
+    },
+    "ffa57cf228": {
+      "name": "PPMT",
+      "href": "ffa57cf228.html",
+      "summary": "PPMT(各期利率, 付款期数, 期数, 现值, 终值, 付款时间) 基于固定定期付款和固定利率得出指定贷款或年金付款的本金部分。"
+    },
+    "ffa59f5947": {
+      "name": "VARPA",
+      "href": "ffa59f5947.html",
+      "summary": "VARPA(值, 值…) 得出任何值集的总体 (true) 方差（离差的一种度量）。"
+    },
+    "ffa59247cb": {
+      "name": "MROUND",
+      "href": "ffa59247cb.html",
+      "summary": "MROUND(要舍入的数字, 因子) 会将一个数四舍五入到最接近的指定因数倍数。"
+    },
+    "ffa6f12c7b9": {
+      "name": "POLYNOMIAL",
+      "href": "ffa6f12c7b9.html",
+      "summary": "POLYNOMIAL(x 值, 系数) 用于计算多项式在给定点的值。"
+    },
+    "ffa5a967cb": {
+      "name": "GAMMALN",
+      "href": "ffa5a967cb.html",
+      "summary": "GAMMALN(正 x 值) 可得出伽玛函数 G(x) 的自然对数。"
+    },
+    "ffa59ca516": {
+      "name": "ADDRESS",
+      "href": "ffa59ca516.html",
+      "summary": "ADDRESS(行号, 列号, 地址类型, 地址样式, 表格) 可使用单个行、列和表格标识符构建单元格地址字符串。"
+    },
+    "ffa5a92ddc": {
+      "name": "GAMMADIST",
+      "href": "ffa5a92ddc.html",
+      "summary": "GAMMADIST(非负 x 值, alpha, beta, 形式类型) 将得出指定形式的伽玛分布。"
+    },
+    "ffa5a1272d": {
+      "name": "AVERAGE",
+      "href": "ffa5a1272d.html",
+      "summary": "AVERAGE(值, 值…) 得出一组数字的平均值（算术平均）。"
+    },
+    "ffa5b2784b": {
+      "name": "AVERAGEA",
+      "href": "ffa5b2784b.html",
+      "summary": "AVERAGEA(值, 值…) 得出包含任何值的集的平均值（算术平均）。"
+    },
+    "ffa5a6a7f0": {
+      "name": "CHIDIST",
+      "href": "ffa5a6a7f0.html",
+      "summary": "CHIDIST(非负 x 值, 自由度) 可得出卡方分布的单尾概率。"
+    },
+    "ffa5a58341": {
+      "name": "LINEST",
+      "href": "ffa5a58341.html",
+      "summary": "LINEST(已知 y 值, 已知 x 值, y 截距不为 0, 统计) 可使用“最小平方法”得出给定数据的最佳拟合直线的统计数据数组。"
+    },
+    "ffa557d36f": {
+      "name": "DAYS360",
+      "href": "ffa557d36f.html",
+      "summary": "DAYS360(开始日期, 结束日期, 使用欧洲方法) 将得出基于 12 个 30 日制月和 360 日制年的两个日期之间的天数。"
+    },
+    "ffa03f1ed2ba": {
+      "name": "PLAINTEXT",
+      "href": "ffa03f1ed2ba.html",
+      "summary": "PLAINTEXT（来源字符串）得出的字符串不具有任何多信息文本属性，而不考虑输入值中的属性。"
+    },
+    "ffa5bddfec": {
+      "name": "REPLACE",
+      "href": "ffa5bddfec.html",
+      "summary": "REPLACE(来源字符串, 开始位置, 替换长度, 新字符串) 得出用新字符串值替换给定字符串值的指定字符数的字符串值。"
+    },
+    "ffa1965cea68": {
+      "name": "CURRENCYCONVERT",
+      "href": "ffa1965cea68.html",
+      "summary": "CURRENCYCONVERT 会返回通过互联网远程获取的货币值以其他货币表示的价格，按照前一交易日收盘时的汇率计算。"
+    },
+    "ffa5c74880": {
+      "name": "ACOS",
+      "href": "ffa5c74880.html",
+      "summary": "ACOS(数字) 可得出数字的反余弦值。"
+    },
+    "ffa561e8c4": {
+      "name": "DURATION",
+      "href": "ffa561e8c4.html",
+      "summary": "DURATION(参数) 函数可合并周、日、小时、分钟、秒钟和毫秒的各个值，然后得出持续时间值。"
+    },
+    "ffa59d8b61": {
+      "name": "AREAS",
+      "href": "ffa59d8b61.html",
+      "summary": "AREAS(区域) 可得出函数引用的范围个数。"
+    },
+    "ffa5913166": {
+      "name": "ROMAN",
+      "href": "ffa5913166.html",
+      "summary": "ROMAN(阿拉伯数字, 罗马数字样式) 可将数字转换成罗马数字。"
+    },
+    "ffa59cfc1e": {
+      "name": "ROWS",
+      "href": "ffa59cfc1e.html",
+      "summary": "ROWS(范围) 得出指定的单元格集合内包括的行数。"
+    },
+    "ffa564e4eb": {
+      "name": "DEC2OCT",
+      "href": "ffa564e4eb.html",
+      "summary": "DEC2OCT(十进制字符串, 转换长度) 可将十进制数字转换为相应的八进制数字。"
+    },
+    "ffa5926bd7": {
+      "name": "SUM",
+      "href": "ffa5926bd7.html",
+      "summary": "SUM(值, 值…) 得出数字集合之和。"
+    },
+    "ffa5aaa9b5": {
+      "name": "DEVSQ",
+      "href": "ffa5aaa9b5.html",
+      "summary": "DEVSQ(数字值, 数字值…) 可根据一个数字集的平均值（算术平均）得出其偏差平方和。"
+    },
+    "ffa59b4edb": {
+      "name": "INDEX",
+      "href": "ffa59b4edb.html",
+      "summary": "INDEX(范围, 行编号, 列编号, 区域编号) 得出位于某单元格集合内或数组函数返回的数组中指定行和列的交汇处的单元格中的值。"
+    },
+    "ffa572bbaa": {
+      "name": "YIELDMAT",
+      "href": "ffa572bbaa.html",
+      "summary": "YIELDMAT(结算日, 到期日, 发行日, 年利率, 价格, 基准天数) 将得出仅在到期时支付利息的证券的实际年利率。"
+    },
+    "ffa5bd4d40": {
+      "name": "SEARCH",
+      "href": "ffa5bd4d40.html",
+      "summary": "SEARCH(待查找字符串, 来源字符串, 开始位置) 得出一个字符串值在另一个字符串中的开始位置（忽略大小写，并允许存在通配符）。"
+    },
+    "ffa5bc284e": {
+      "name": "UPPER",
+      "href": "ffa5bc284e.html",
+      "summary": "UPPER(来源字符串) 得出全部是大写的字符串值，而不考虑指定字符串值中字符的大小写。"
+    },
+    "ffa8575c843": {
+      "name": "持续时间值",
+      "href": "ffa8575c843.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa7b6f10f2": {
+      "name": "欧洲方法",
+      "href": "ffa7b6f10f2.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5a5df22": {
+      "name": "AVERAGEIF",
+      "href": "ffa5a5df22.html",
+      "summary": "AVERAGEIF(待检验的值, 条件, 待平均的值) 得出集合内满足给定条件的单元格的平均值（算术平均）。"
+    },
+    "ffa583eff2": {
+      "name": "NOT",
+      "href": "ffa583eff2.html",
+      "summary": "NOT(任何表达式) 将得出与指定表达式相反的布尔值。"
+    },
+    "ffa361c3e64": {
+      "name": "公式编辑器",
+      "href": "ffa361c3e64.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa59bde1e": {
+      "name": "COLUMNS",
+      "href": "ffa59bde1e.html",
+      "summary": "COLUMNS(范围) 得出指定的单元格集合内包括的列数。"
+    },
+    "ffa5a86530": {
+      "name": "STDEVPA",
+      "href": "ffa5a86530.html",
+      "summary": "STDEVPA(值, 值…) 根据总体 (true) 方差得出包含任何值的集的标准偏差（离差的一种度量）。"
+    },
+    "ffa56a7a63": {
+      "name": "DELTA",
+      "href": "ffa56a7a63.html",
+      "summary": "DELTA(比较来源, 比较目标) 可确定两个值是否相等。"
+    },
+    "ffa5cb9325": {
+      "name": "ATAN2",
+      "href": "ffa5cb9325.html",
+      "summary": "ATAN2(x 坐标, y 坐标) 将得出通过原点和指定点的线与正 x 轴的相对角度。"
+    },
+    "ffac26dc144": {
+      "name": "日期字符串",
+      "href": "ffac26dc144.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa577d9ba": {
+      "name": "YIELDDISC",
+      "href": "ffa577d9ba.html",
+      "summary": "YIELDDISC(结算日, 到期日, 价格, 赎回价, 基准天数) 得出证券的实际年利率，此类证券按其赎回价值卖出且不支付任何利息。"
+    },
+    "ffa8575c9b4": {
+      "name": "范围",
+      "href": "ffa8575c9b4.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa59cc33b": {
+      "name": "ROW",
+      "href": "ffa59cc33b.html",
+      "summary": "ROW(单元格) 将得出含有指定单元格的行的行编号。"
+    },
+    "ffa5c0cd85": {
+      "name": "LOWER",
+      "href": "ffa5c0cd85.html",
+      "summary": "LOWER(来源字符串) 得出全部是小写的字符串值，而不考虑指定字符串值中字符的大小写。"
+    },
+    "ffa55d9924": {
+      "name": "TODAY",
+      "href": "ffa55d9924.html",
+      "summary": "TODAY() 返回当前日期并将时间设为上午 12:00。TODAY 使用设备的时钟或 iCloud 设置（对于 iCloud 应用）中显示的日期。"
+    },
+    "ffa5c3302f": {
+      "name": "TRIM",
+      "href": "ffa5c3302f.html",
+      "summary": "删除多余空格后，TRIM(来源字符串) 将基于给定字符串得出字符串。"
+    },
+    "ffaedc3b1296": {
+      "name": "STOCKH",
+      "href": "ffaedc3b1296.html",
+      "summary": "STOCKH(代码, 收盘价, 日期) 会返回股票的历史数据。"
+    },
+    "ffa568a633": {
+      "name": "OCT2HEX",
+      "href": "ffa568a633.html",
+      "summary": "OCT2HEX(八进制字符串, 转换长度) 可将八进制数字转换为相应的十六进制数字。"
+    },
+    "ffa58075d5": {
+      "name": "AND",
+      "href": "ffa58075d5.html",
+      "summary": "如果所有参数为真，AND(测试表达式, 测试表达式…) 将得出 TRUE；否则得出 FALSE。"
+    },
+    "ffa5834118": {
+      "name": "IF",
+      "href": "ffa5834118.html",
+      "summary": "IF(条件表达式, 为 TRUE 时返回的值, 为 FALSE 时返回的值) 得出 TRUE 或 FALSE，具体取决于指定的表达式求得的值是布尔值 TRUE 还是 FALSE。"
+    },
+    "ffa58d2a84": {
+      "name": "SUMPRODUCT",
+      "href": "ffa58d2a84.html",
+      "summary": "SUMPRODUCT(范围, 范围…) 得出两个或多个集合内对应数字的乘积之和。"
+    },
+    "ffa59e0419": {
+      "name": "POISSON",
+      "href": "ffa59e0419.html",
+      "summary": "POISSON(事件, 平均值, 形式类型) 函数可使用泊松分布得出出现特定事件数的概率。"
+    },
+    "ffa55cce81": {
+      "name": "DATE",
+      "href": "ffa55cce81.html",
+      "summary": "DATE(年, 月, 日) 将年、月、日各自的值合并，然后得出一个日期\/时间值。"
+    },
+    "ffa596a1c7": {
+      "name": "HYPERLINK",
+      "href": "ffa596a1c7.html",
+      "summary": "HYPERLINK(URL, 链接文本) 可创建可打开网页或新电子邮件的可点按链接。"
+    },
+    "ffa5b68ea4": {
+      "name": "AVERAGEIFS",
+      "href": "ffa5b68ea4.html",
+      "summary": "AVERAGEIFS(待平均的值, 待检验的值, 条件, 待检验的值…, 条件…) 得出给定集合内（一个或多个集合满足一个或多个相关条件）单元格的平均值（算术平均）。"
+    },
+    "ffa5b15a6c": {
+      "name": "RANK",
+      "href": "ffa5b15a6c.html",
+      "summary": "RANK(值, 值集合, 最大值排位最高) 得出数值集内值的排列。"
+    },
+    "ffa361f0f17": {
+      "name": "公式与函数帮助",
+      "href": "ffa361f0f17.html",
+      "categories": [
+        "landing"
+      ]
+    },
+    "ffa57fe1fc": {
+      "name": "OR",
+      "href": "ffa57fe1fc.html",
+      "summary": "如果任何参数均为真，OR(任何表达式, 任何表达式…) 返回 TRUE；否则返回 FALSE。"
+    },
+    "ffa58c2118": {
+      "name": "RANDBETWEEN",
+      "href": "ffa58c2118.html",
+      "summary": "RANDBETWEEN(下限, 上限) 得出指定范围内的随机整数。"
+    },
+    "ffa596db0e": {
+      "name": "INDIRECT",
+      "href": "ffa596db0e.html",
+      "summary": "INDIRECT(地址字符串, 地址样式) 将得出由指定为字符串的地址引用的单元格或一组单元格中的内容。"
+    },
+    "ffa5af1045": {
+      "name": "NORMDIST",
+      "href": "ffa5af1045.html",
+      "summary": "NORMDIST(数字, 平均值, 标准偏差, 形式类型) 可得出指定函数形式的正态分布。"
+    },
+    "ffa5918fe7": {
+      "name": "LCM",
+      "href": "ffa5918fe7.html",
+      "summary": "LCM(数字值, 数字值…) 得出指定数字的最小公倍数。"
+    },
+    "ffa5c6451c": {
+      "name": "SIN",
+      "href": "ffa5c6451c.html",
+      "summary": "SIN(弧度) 将得出以弧度表示的角度的正弦值。"
+    },
+    "ffa557f089": {
+      "name": "MONTHNAME",
+      "href": "ffa557f089.html",
+      "summary": "MONTHNAME(月份数字) 返回数字的月份名称。第 1 个月为一月。"
+    },
+    "ffa59649f5": {
+      "name": "MULTINOMIAL",
+      "href": "ffa59649f5.html",
+      "summary": "MULTINOMIAL(非负数, 非负数…) 可得出给定数字多项式系数的闭型。"
+    },
+    "ffa5b36220": {
+      "name": "COUNTA",
+      "href": "ffa5b36220.html",
+      "summary": "COUNTA(值, 值…) 可得出参数（不为空）的个数。"
+    },
+    "ffa57c397a": {
+      "name": "DISC",
+      "href": "ffa57c397a.html",
+      "summary": "DISC(结算日, 到期日, 价格, 赎回价, 基准天数) 得出证券的年贴现率，此类证券不支付任何利息并按其赎回价值卖出。"
+    },
+    "ffa57aa045": {
+      "name": "INTRATE",
+      "href": "ffa57aa045.html",
+      "summary": "INTRATE(结算日, 到期日, 投资额, 到期金额, 基准天数) 得出仅在到期时支付利息的证券的实际年利率。"
+    },
+    "ffa574069e": {
+      "name": "NPV",
+      "href": "ffa574069e.html",
+      "summary": "NPV(每期贴现率, 现金流, 现金流…) 基于一系列定期发生的潜在不规则现金流得出投资的净现值。"
+    },
+    "ffa5aa13c2": {
+      "name": "FINV",
+      "href": "ffa5aa13c2.html",
+      "summary": "FINV(概率, 分子自由度, 分母自由度) 可得出 F 概率分布的逆运算。"
+    },
+    "ffa24e5c1f8": {
+      "name": "运算符",
+      "href": "ffa24e5c1f8.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa56bcada": {
+      "name": "DEC2BIN",
+      "href": "ffa56bcada.html",
+      "summary": "DEC2BIN(十进制字符串, 转换长度) 可将十进制数字转换为相应的二进制数字。"
+    },
+    "ffa558a84c": {
+      "name": "DATEVALUE",
+      "href": "ffa558a84c.html",
+      "summary": "DATEVALUE(日期文本) 返回给定日期字符串的日期\/时间值。此函数可与其他电子表格应用兼容。"
+    },
+    "ffa5b9da59": {
+      "name": "TTEST",
+      "href": "ffa5b9da59.html",
+      "summary": "TTEST(第一组样本值, 第二组样本值, 尾数, 检验类型) 基于 t 分布函数得出与学生的 t 检验关联的概率。"
+    },
+    "ffa361b4f72": {
+      "name": "数字值",
+      "href": "ffa361b4f72.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5c24b12": {
+      "name": "EXACT",
+      "href": "ffa5c24b12.html",
+      "summary": "如果参数字符串的大小写和内容完全相同，EXACT(字符串 1, 字符串 2) 函数将得出 TRUE。"
+    },
+    "ffa8575c62a": {
+      "name": "常数",
+      "href": "ffa8575c62a.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa573c2db": {
+      "name": "PRICEMAT",
+      "href": "ffa573c2db.html",
+      "summary": "PRICEMAT(结算日, 到期日, 发行日, 年利率, 年收益率, 基准天数) 将得出每 ￥100 赎回（票面）价值仅在到期时支付利息的证券的价格。"
+    },
+    "ffa5765c92": {
+      "name": "COUPDAYS",
+      "href": "ffa5765c92.html",
+      "summary": "COUPDAYS(结算日, 到期日, 频率, 基准天数) 得出息票期（结算期）的天数。"
+    },
+    "ffa571700d": {
+      "name": "NOMINAL",
+      "href": "ffa571700d.html",
+      "summary": "NOMINAL(有效利率, 每年期数) 函数基于每年的复利周期数，从实际年利率得出名义年利率。"
+    },
+    "ffa55f9592": {
+      "name": "WORKDAY",
+      "href": "ffa55f9592.html",
+      "summary": "WORKDAY(日期, 工作日数, 排除日期) 将返回在给定日期之前或之后给定工作日数的日期。工作日不包括周末和任何其他指定日期。"
+    },
+    "ffa597dc7b": {
+      "name": "LOOKUP",
+      "href": "ffa597dc7b.html",
+      "summary": "LOOKUP(搜索目标, 搜索位置, 结果值) 可查找某个集合内与给定搜索值匹配的值，然后在第二个集合内具有相同相对位置的单元格中得出值。"
+    },
+    "ffa57ada77": {
+      "name": "PMT",
+      "href": "ffa57ada77.html",
+      "summary": "PMT(各期利率, 期数, 现值, 终值, 付款时间) 基于定期现金流（在固定间隔内某特定数量的付款和所有现金流）和固定利率得出贷款或年金的固定定期付款。"
+    },
+    "ffa3619f6ba": {
+      "name": "公式栏",
+      "href": "ffa3619f6ba.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa56ab5c4": {
+      "name": "OCT2BIN",
+      "href": "ffa56ab5c4.html",
+      "summary": "OCT2BIN(八进制字符串, 转换长度) 可将八进制数字转换为相应的二进制数字。"
+    },
+    "ffa59a0514": {
+      "name": "HLOOKUP",
+      "href": "ffa59a0514.html",
+      "summary": "HLOOKUP(搜索目标, 行号范围, 待返回值行号, 近似匹配) 通过使用顶行值挑选某列和使用行号挑选该列中的某行，从行集合中得出某值。"
+    },
+    "ffa5b8f53c": {
+      "name": "MINA",
+      "href": "ffa5b8f53c.html",
+      "summary": "MINA(值, 值…) 得出包含任何值的集中的最小数值。"
+    },
+    "ffa55fcf1c": {
+      "name": "NOW",
+      "href": "ffa55fcf1c.html",
+      "summary": "NOW() 根据文件时区的当前时间返回一个日期\/时间值。"
+    },
+    "ffa58e5bea": {
+      "name": "SUMX2PY2",
+      "href": "ffa58e5bea.html",
+      "summary": "SUMX2PY2(第一个值集合, 第二个值集合) 得出两个集合内值的平方和。"
+    },
+    "ffa5ab1ceb": {
+      "name": "MAX",
+      "href": "ffa5ab1ceb.html",
+      "summary": "MAX(值, 值…) 得出数字值、日期\/时间值或持续时间值集的最大数值。"
+    },
+    "ffa57875d5": {
+      "name": "FV",
+      "href": "ffa57875d5.html",
+      "summary": "FV(各期利率, 期数, 付款, 现值, 付款时间) 基于一系列定期现金流（在固定间隔内某特定数量的付款和所有现金流）和固定利率得出投资的未来值。"
+    },
+    "ffa361d1a87": {
+      "name": "数组",
+      "href": "ffa361d1a87.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5c2da34": {
+      "name": "CLEAN",
+      "href": "ffa5c2da34.html",
+      "summary": "CLEAN(文本) 会从文本中删除最常显示的非打印字符（Unicode 字符代码 0–31）。"
+    },
+    "ffa56f192f": {
+      "name": "HEX2DEC",
+      "href": "ffa56f192f.html",
+      "summary": "HEX2DEC(十六进制字符串, 转换长度) 可将十六进制数字转换为相应的十进制数字。"
+    },
+    "ffa592ccd5": {
+      "name": "CEILING",
+      "href": "ffa592ccd5.html",
+      "summary": "CEILING(要舍入的数字, 倍数因子) 函数会将一个数字往与 0 相反的方向四舍五入到最接近的指定因数倍数。"
+    },
+    "ffa5a1ef74": {
+      "name": "COUNTBLANK",
+      "href": "ffa5a1ef74.html",
+      "summary": "COUNTBLANK(范围) 得出某个集合内空白单元格的个数。"
+    },
+    "ffa571363f": {
+      "name": "SLN",
+      "href": "ffa571363f.html",
+      "summary": "SLN(成本, 残值, 折旧年限) 使用直线方法得出某一周期内的资产的折旧。"
+    },
+    "ffa59e5a79": {
+      "name": "HARMEAN",
+      "href": "ffa59e5a79.html",
+      "summary": "HARMEAN(正数) 可得出调和平均数。"
+    },
+    "ffa5b72086": {
+      "name": "STDEV",
+      "href": "ffa5b72086.html",
+      "summary": "STDEV(值, 值…) 根据样本（无偏）方差得出数值集的标准偏差（离差的一种度量）。"
+    },
+    "ffa59150db": {
+      "name": "SUMIFS",
+      "href": "ffa59150db.html",
+      "summary": "SUMIFS(待求和的值, 待检验的值, 条件, 待检验的值…, 条件…) 得出集合（其中测试值满足给定条件）内单元格的总和。"
+    },
+    "ffa5c9a390": {
+      "name": "ACOSH",
+      "href": "ffa5c9a390.html",
+      "summary": "ACOSH(数字) 可得出数字的反双曲余弦值。"
+    },
+    "ffa571ac15": {
+      "name": "DB",
+      "href": "ffa571ac15.html",
+      "summary": "DB(成本, 残值, 折旧年限, 折旧期, 第一年月数) 使用定率余额递减法得出指定期限的资产的折旧额。"
+    },
+    "ffa8575bef5": {
+      "name": "字符串值",
+      "href": "ffa8575bef5.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa579081c": {
+      "name": "RECEIVED",
+      "href": "ffa579081c.html",
+      "summary": "RECEIVED(结算日, 到期日, 投资额, 年利率, 基准天数) 将得出仅在到期时支付利息的证券的到期值。"
+    },
+    "ffa57bffce": {
+      "name": "NPER",
+      "href": "ffa57bffce.html",
+      "summary": "NPER(各期利率, 付款, 现值, 终值, 付款时间) 基于定期现金流（在固定间隔内某特定数量的付款和所有现金流）和固定利率得出贷款或年金的付款周期数。"
+    },
+    "ffa5844a41": {
+      "name": "SQRT",
+      "href": "ffa5844a41.html",
+      "summary": "SQRT(数字) 得出一个数字的平方根。"
+    },
+    "ffa576ee52": {
+      "name": "SYD",
+      "href": "ffa576ee52.html",
+      "summary": "SYD(成本, 残值, 折旧年限, 折旧期) 使用年数合计法得出指定期限的资产的折旧额。"
+    },
+    "ffa58f7708": {
+      "name": "ROUNDDOWN",
+      "href": "ffa58f7708.html",
+      "summary": "ROUNDDOWN(要舍入的数字, 数字位数) 得出一个按指定位数朝零（向下）四舍五入的数。"
+    },
+    "ffa58af6a5": {
+      "name": "TRUNC",
+      "href": "ffa58af6a5.html",
+      "summary": "TRUNC(数字, 数字位数) 将一个数字截至指定位数。"
+    },
+    "ffa5a023a7": {
+      "name": "TINV",
+      "href": "ffa5a023a7.html",
+      "summary": "TINV(概率, 自由度) 得出学生 t 分布的 t 值（概率和自由度的函数）。"
+    },
+    "ffa5b2b53d": {
+      "name": "GEOMEAN",
+      "href": "ffa5b2b53d.html",
+      "summary": "GEOMEAN(正数, 正数…) 可得出几何平均数。"
+    },
+    "ffa55e8d11": {
+      "name": "TIMEVALUE",
+      "href": "ffa55e8d11.html",
+      "summary": "TIMEVALUE(日期时间) 返回给定日期\/时间值或时间字符串的 24 小时制日小数部分的时间。"
+    },
+    "ffa567f1fa": {
+      "name": "BIN2HEX",
+      "href": "ffa567f1fa.html",
+      "summary": "BIN2HEX(二进制字符串, 转换长度) 可将二进制数字转换为相应的十六进制数字。"
+    },
+    "ffa5b4f8b6": {
+      "name": "MEDIAN",
+      "href": "ffa5b4f8b6.html",
+      "summary": "MEDIAN(值, 值…) 得出数值集的中间值。集合中有一半值比中间值小，一半比中间值大。"
+    },
+    "ffa5868145": {
+      "name": "QUOTIENT",
+      "href": "ffa5868145.html",
+      "summary": "QUOTIENT(被除数, 除数) 得出两个数的整数商。"
+    },
+    "ffa590c7c1": {
+      "name": "LOG",
+      "href": "ffa590c7c1.html",
+      "summary": "LOG(正数, raise-to) 得出指定底数的数字的对数。"
+    },
+    "ffa5a8f367": {
+      "name": "STANDARDIZE",
+      "href": "ffa5a8f367.html",
+      "summary": "STANDARDIZE(数字, 平均值, 标准偏差) 可根据具有给定平均值和标准偏差的分布得出正态化值。"
+    },
+    "ffa5751245": {
+      "name": "ACCRINT",
+      "href": "ffa5751245.html",
+      "summary": "ACCRINT(发行日, 首次, 结算日, 年利率, 票面值, 频率, 基准天数) 得出定期支付利息的证券的应计利息。得出的金额是自发行日起应计的总利息，而不是上次息票支付之日起的应计利息。"
+    },
+    "ffa56f533f": {
+      "name": "CONVERT",
+      "href": "ffa56f533f.html",
+      "summary": "CONVERT(待转换数字, 转换前单位, 转换后单位) 可将数字从一个度量系统转换成另一个度量系统中的相应值。"
+    },
+    "ffa5a635e7": {
+      "name": "NORMSINV",
+      "href": "ffa5a635e7.html",
+      "summary": "NORMSINV(概率) 得出累积标准正态分布的逆运算。"
+    },
+    "ffa5a5fb72": {
+      "name": "NORMSDIST",
+      "href": "ffa5a5fb72.html",
+      "summary": "NORMSDIST(数字) 可得出标准正态分布。"
+    },
+    "ffa24e5caf3": {
+      "name": "函数",
+      "href": "ffa24e5caf3.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa8575c326": {
+      "name": "模态值",
+      "href": "ffa8575c326.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa57f6d11": {
+      "name": "ISERROR",
+      "href": "ffa57f6d11.html",
+      "summary": "如果给定的表达式计算出错，ISERROR(任何表达式) 将得出 TRUE；否则得出 FALSE。"
+    },
+    "ffa578e992": {
+      "name": "DDB",
+      "href": "ffa578e992.html",
+      "summary": "DDB(成本, 残值, 折旧年限, 折旧期, 折旧因子) 函数基于指定的折旧率得出资产的折旧额。"
+    },
+    "ffa58929ed": {
+      "name": "SUMSQ",
+      "href": "ffa58929ed.html",
+      "summary": "SUMSQ(数字, 数字…) 得出包含数字值的集合的平方和。"
+    },
+    "ffa5bf54d2": {
+      "name": "PROPER",
+      "href": "ffa5bf54d2.html",
+      "summary": "PROPER(来源字符串) 得出每个词的第一个字母大写、剩下的所有字符小写的字符串值，而不考虑指定字符串值中字符的大小写。"
+    },
+    "ffa5702fb6": {
+      "name": "VDB",
+      "href": "ffa5702fb6.html",
+      "summary": "VDB(成本, 残值, 折旧年限, 首期, 末期, 折旧因子, 不切换) 基于指定的折旧率得出所选时间间隔内的资产的折旧额。"
+    },
+    "ffa5c312f5": {
+      "name": "LEN",
+      "href": "ffa5c312f5.html",
+      "summary": "LEN(来源字符串) 得出字符串值中的字符数。"
+    },
+    "ffa5742353": {
+      "name": "BONDDURATION",
+      "href": "ffa5742353.html",
+      "summary": "BONDDURATION(结算日, 到期日, 年利率, 年收益率, 频率, 基准天数) 得出假定面值为 ￥100 的现金流的现值加权平均值。"
+    },
+    "ffa5b17742": {
+      "name": "GAMMAINV",
+      "href": "ffa5b17742.html",
+      "summary": "GAMMAINV(概率, alpha, beta) 将得出伽玛累积分布的逆运算。"
+    },
+    "ffa5a0068e": {
+      "name": "NORMINV",
+      "href": "ffa5a0068e.html",
+      "summary": "NORMINV(概率, 平均值, 标准偏差) 可得出累积正态分布函数的逆运算。"
+    },
+    "ffa57be0bd": {
+      "name": "YIELD",
+      "href": "ffa57be0bd.html",
+      "summary": "YIELD(结算日, 到期日, 年利率, 价格, 赎回价, 频率, 基准天数) 将得出定期支付利息的证券的实际年利率。"
+    },
+    "ffa6f15afb0": {
+      "name": "UNION.RANGES",
+      "href": "ffa6f15afb0.html",
+      "summary": "UNION.RANGES(压缩模式, 范围, 范围…) 得出一个数组，该数组表示一个代表指定集合的单元的集合。"
+    },
+    "ffa57a49c3": {
+      "name": "IPMT",
+      "href": "ffa57a49c3.html",
+      "summary": "IPMT(各期利率, 付款期数, 期数, 现值, 终值, 付款时间) 基于固定定期付款和固定利率得出指定贷款或年金付款的利息部分。"
+    },
+    "ffa5cb3ce6": {
+      "name": "DEGREES",
+      "href": "ffa5cb3ce6.html",
+      "summary": "DEGREES(弧度) 将得出以弧度表示的角度的度数。"
+    },
+    "ffaf0f44203": {
+      "name": "布尔表达式",
+      "href": "ffaf0f44203.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5940fed": {
+      "name": "ROUND",
+      "href": "ffa5940fed.html",
+      "summary": "ROUND(要舍入的数字, 数字位数) 得出一个朝指定位数四舍五入的数字。"
+    },
+    "ffa5be6e87": {
+      "name": "FIXED",
+      "href": "ffa5be6e87.html",
+      "summary": "FIXED(数字, 位数, 无逗号) 将数字值四舍五入到指定小数位，然后得出作为字符串值的结果。"
+    },
+    "ffa57eb830": {
+      "name": "ISBLANK",
+      "href": "ffa57eb830.html",
+      "summary": "如果指定的单元格为空，ISBLANK(单元格) 将得出 TRUE；否则得出　FALSE。"
+    },
+    "ffa56029ae": {
+      "name": "WEEKDAY",
+      "href": "ffa56029ae.html",
+      "summary": "WEEKDAY(日期, 第一天) 返回给定日期值或日期字符串在一周中是星期几。"
+    },
+    "ffa3e86ad3f3": {
+      "name": "CURRENCYH",
+      "href": "ffa3e86ad3f3.html",
+      "summary": "CURRENCYH 返回给定日期两种货币间汇率的历史数据。"
+    },
+    "ffa729d49e1c": {
+      "name": "STOCK",
+      "href": "ffa729d49e1c.html",
+      "summary": "STOCK(代码, 价格) 会返回通过互联网远程获取的股票的数据。"
+    },
+    "ffa5c9dfb9": {
+      "name": "ATAN",
+      "href": "ffa5c9dfb9.html",
+      "summary": "ATAN(数字) 将得出数字的反正切值。"
+    },
+    "ffa5bfe8ee": {
+      "name": "CHAR",
+      "href": "ffa5bfe8ee.html",
+      "summary": "CHAR(代码数字) 将得出与十进制 Unicode 字符代码相对应的字符。"
+    },
+    "ffa5c93fd1": {
+      "name": "ASINH",
+      "href": "ffa5c93fd1.html",
+      "summary": "ASINH(数字) 可得出数字的反双曲正弦值。"
+    },
+    "ffa5bd143c": {
+      "name": "REPT",
+      "href": "ffa5bd143c.html",
+      "summary": "REPT(来源字符串, 重复次数) 得出含有按指定次数重复的给定字符串值的字符串值。"
+    },
+    "ffa205f6771": {
+      "name": "NASD 方法",
+      "href": "ffa205f6771.html",
+      "categories": [
+        "aside"
+      ]
+    },
+    "ffa5a24591": {
+      "name": "PERCENTILE",
+      "href": "ffa5a24591.html",
+      "summary": "PERCENTILE(值集合, 百分位值) 得出数值集内与特定百分位对应的值。"
+    },
+    "ffa597c0d3": {
+      "name": "OFFSET",
+      "href": "ffa597c0d3.html",
+      "summary": "OFFSET(基准, 行偏移, 列偏移, 行数, 列数) 得出与指定的基准单元格相隔指定行数和列数的单元格数组。"
+    },
+    "ffa5785836": {
+      "name": "COUPNUM",
+      "href": "ffa5785836.html",
+      "summary": "COUPNUM(结算日, 到期日, 频率, 基准天数) 得出结算日至到期日之间需要支付的息票数。"
+    },
+    "ffa5a77b5b": {
+      "name": "FDIST",
+      "href": "ffa5a77b5b.html",
+      "summary": "FDIST(非负 x 值, 分子自由度, 分母自由度) 可得出 F 概率分布。"
+    }
+  }
+}
