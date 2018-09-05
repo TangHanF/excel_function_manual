@@ -11,19 +11,14 @@
     <script src="js/layui.js"></script>
     <script src="js/nav_json.js"></script>
     <script src="js/search_json.js"></script>
+    <script src="js/component/vuecomponent.js"></script>
+
 </head>
 <body>
 <div class="container" style="padding-top: 20px" id="app">
     <div class="row">
         <div class="col-md-12">
-            <form class="form-inline has-success">
-                <div class="form-group">
-                    <input v-model="keyword" type="text" class="form-control" id="exampleInputName2"
-                           placeholder="请输入搜索内容..." data-toggle="tooltip" data-placement="bottom" title="输入要搜索的内容">
-                </div>
-                <button type="button" class="btn btn-primary" @click="keyword=''">清空
-                </button>
-            </form>
+            <form-field :keyword="keyword"  @select-change="selectChange($event)" :elestyle="style"></form-field>
         </div>
     </div>
     <!--初始加载-->

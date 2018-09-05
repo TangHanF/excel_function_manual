@@ -28,6 +28,12 @@ app2 = new Vue({
                     tmpJsonData: [],
                     keyword: "",
                     isShow: true,
+                    style:[
+                        {name:'风格1',value:'index.html'},
+                        {name:'风格2',value:'index2.html'}
+                        // {name:'风格3',value:'index3.html'},
+                    ],
+                    currentSelected:'index2.html',
                     iframeSrc: "",
                     renderIframeXiangxiFlagArr: {},
                     panel: 'panel',
@@ -48,6 +54,10 @@ app2 = new Vue({
                     // 生成随机样式
                     randomPanelClass: function () {
                         return this.panelStyle[Math.floor(Math.random() * this.panelStyle.length)];
+                    },
+                    selectChange:function (ele) {
+                        let selected = ele.target.value;
+                        window.location.href=selected;
                     }
                 }
                 , watch: {
@@ -76,6 +86,8 @@ app2 = new Vue({
                     }
                 }
                 , mounted: function () {
+                    this.currentSelected=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+                    console.log("===:"+this.currentSelected)
                     $("[data-toggle='tooltip']").tooltip();
                 }
             })
