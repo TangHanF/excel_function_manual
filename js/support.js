@@ -4,7 +4,6 @@ let app2;
 app2 = new Vue({
     el: "#app2",
     data: {
-        funName: "",//函数名称
         iframeSrc: "",
     }
 });
