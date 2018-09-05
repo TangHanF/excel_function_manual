@@ -43,7 +43,8 @@
                                    aria-expanded="true" aria-controls="['collapse'+index]">
                                     {{index+1}}、{{feilei.name}}
                                 </a>
-                                <span class="badge" data-toggle="tooltip" data-placement="right" :title="['共有'+feilei.children.length]+'条相关函数'">{{feilei.children.length}}</span>
+                                <span class="badge" data-toggle="tooltip" data-placement="right"
+                                      :title="['共有'+feilei.children.length]+'条相关函数'">{{feilei.children.length}}</span>
                             </h4>
                         </div>
                         <div :id="['collapse'+index]" class="panel-collapse collapse" role="tabpanel"
@@ -102,6 +103,43 @@
         </div>
     </div>
 
+    <div class="jumbotron">
+        <p>欢迎使用</p>
+        <h1>Excel公式与函数帮助手册</h1>
+        <p>欢迎各位Start、Fork进行完善。时间有限，没做细致优化，有意向者可以一起完善</p>
+        <p>对外发布、提供服务请保留项目地址，谢谢合作！</p>
+        <hr>
+        <blockquote>
+            <p><strong>作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</strong>GuoFu</p>
+            <p><strong>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</strong>
+                <a href="mailto:guofu_gh@163.com" data-toggle="tooltip" data-placement="right" title="有问题欢迎邮件联系">guofu_gh@163.com</a>
+            </p>
+            <p><strong>创建日期：</strong>2018年09月05日</p>
+            <p><strong>GitHub地址：</strong><a href="https://github.com/TangHanF" target="_blank">https://github.com/TangHanF</a>
+            </p>
+            <p><strong>Gitee地址：</strong><a href="https://gitee.com/TangHanF"
+                                           target="_blank">https://gitee.com/TangHanF</a></p>
+        </blockquote>
+        <hr>
+        <h2>本项目可通过以下两个入口进行访问：</h2>
+        <p>
+            <strong>Gitee入口：</strong>
+            <a href="https://tanghanf.gitee.io/excel_function_manual/" target="_blank" data-toggle="tooltip"
+               data-placement="right" title="访问速度快">https://tanghanf.gitee.io/excel_function_manual/</a>
+        </p>
+        <p>
+            <strong>Github入口：</strong>
+            <a href="https://tanghanf.github.io/excel_function_manual/" target="_blank" data-toggle="tooltip"
+               data-placement="right" title="访问速度稍慢">https://tanghanf.github.io/excel_function_manual/</a>
+        </p>
+
+        <p>
+            <a class="btn btn-primary btn-lg" href="https://github.com/TangHanF/excel_function_manual" target="_blank"
+               role="button">本项目GitHub地址</a>
+            <a class="btn btn-primary btn-lg" href="https://gitee.com/TangHanF/excel_function_manual" target="_blank"
+               role="button">本项目Gitee地址</a>
+        </p>
+    </div>
 </div>
 </body>
 <script src="js/support.js"></script>
