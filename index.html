@@ -2,12 +2,9 @@
 <html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:>
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-
     <title>Excel公式与函数帮助手册</title>
     <link href="css/layui.css" rel="stylesheet">
-
     <link href="css/bootstrap.css" rel="stylesheet">
-
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/vue.js"></script>
@@ -47,7 +44,7 @@
                                       :title="['共有'+feilei.children.length]+'条相关函数'">{{feilei.children.length}}</span>
                             </h4>
                         </div>
-                        <div :id="['collapse'+index]" class="panel-collapse collapse" role="tabpanel"
+                        <div :id="['collapse'+index]" class="panel-collapse collapse in" role="tabpanel"
                              :aria-labelledby="['heading'+index]">
                             <div class="panel-body">
                                 <div v-for="childrenItem in feilei.children">
@@ -141,6 +138,34 @@
         </p>
     </div>
 </div>
+
+
+<div id="app2">
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        函数详细说明
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <iframe v-if="iframeSrc!=''" style="border: none;width: 100%" :src="['pages/excel/'+iframeSrc]"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
 </body>
 <script src="js/support.js"></script>
 
