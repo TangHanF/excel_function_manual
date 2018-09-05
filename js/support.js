@@ -14,11 +14,13 @@ app2 = new Vue({
         layui.use(["layer", "util"], function () {
             let util = layui.util;
             util.fixbar({});
-            let jsonData = $.parseJSON(nav);
+            let searchFunNameJsonData = $.parseJSON(nav);
+            let searchDesJsonData = $.parseJSON(search_name_json);
+
             app = new Vue({
                 el: "#app"
                 , data: {
-                    jsonData: jsonData,
+                    jsonData: searchFunNameJsonData,
                     tmpJsonData: [],
                     keyword: "",
                     isShow: true,
@@ -30,22 +32,7 @@ app2 = new Vue({
                         app2.iframeSrc = "";//赋空值，避免重复打开一个URL导致更新不及时问题
                         app2.iframeSrc = href;
                         console.log(href);
-                        $("#myModal").modal({
-                        })
-                        // let layer = layui.layer;
-                        // layer.open({
-                        //     type: 2,
-                        //     title: e.target.text + '函数说明',
-                        //     anim: 0,
-                        //     shadeClose: true,
-                        //     resize: false,
-                        //     area: ['800px', '700px'],
-                        //     btn: ['确定'],
-                        //     yes: function (index, layero) {
-                        //         layer.close(index);
-                        //     },
-                        //     content: 'pages/excel/' + href
-                        // });
+                        $("#myModal").modal({})
                     },
                     // 生成随机样式
                     randomPanelClass: function () {
@@ -59,12 +46,21 @@ app2 = new Vue({
                         } else {
                             this.isShow = false;
                         }
+                        //匹配函数名搜索
                         const tmpObj = [];
-                        $.each(jsonData.topics, function (key, obj) {
+                        $.each(searchFunNameJsonData.topics, function (key, obj) {
                             if (obj.name.toLowerCase().indexOf(newKeyword) != -1) {
                                 tmpObj.push(obj);
                             }
-                        })
+                        });
+
+                        //匹配描述搜索
+                        let searchDesObj = searchDesJsonData[newKeyword];
+                        if (searchDesObj) {
+                            $.each(searchDesObj, function (key, val) {
+                                tmpObj.push(searchFunNameJsonData.topics[key]);
+                            })
+                        }
                         this.tmpJsonData = tmpObj;
                     }
                 }
