@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>Excel公式与函数帮助手册</title>
+    <link href="css/layui.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/layui.js"></script>
+    <script src="js/nav_json.js"></script>
+    <script src="js/search_json.js"></script>
+</head>
+<body>
+<div class="container" style="padding-top: 20px" id="app">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline has-success">
+                <div class="form-group">
+                    <input v-model="keyword" type="text" class="form-control" id="exampleInputName2"
+                           placeholder="请输入搜索内容..." data-toggle="tooltip" data-placement="bottom" title="输入要搜索的内容">
+                </div>
+                <button type="button" class="btn btn-primary" @click="keyword=''">清空
+                </button>
+            </form>
+        </div>
+    </div>
+    <!--初始加载-->
+    <div v-show="isShow" class="row">
+
+
+        <div class="col-md-12">
+            <!--标题-->
+            <h1>Excel{{jsonData.title}}手册</h1>
+            <div v-for="(feilei,key,index) in jsonData.sections">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div :class="[panel, randomPanelClass()]">
+                        <div class="panel-heading" role="tab" :id="['heading'+index]">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                   :href="['#collapse'+index]"
+                                   aria-expanded="true" aria-controls="['collapse'+index]">
+                                    {{index+1}}、{{feilei.name}}
+                                </a>
+                                <span class="badge" data-toggle="tooltip" data-placement="right"
+                                      :title="['共有'+feilei.children.length]+'条相关函数'">{{feilei.children.length}}</span>
+                            </h4>
+                        </div>
+                        <div :id="['collapse'+index]" class="panel-collapse collapse" role="tabpanel"
+                             :aria-labelledby="['heading'+index]">
+                            <div class="panel-body">
+                                <div v-for="(childrenItem,index_item) in feilei.children">
+                                    <strong>
+                                        <a @click="itemClick2(jsonData.topics[childrenItem].href,$event)">{{jsonData.topics[childrenItem].name}}</a>
+                                    </strong>
+                                    <blockquote>
+                                        <p class="bg-success">
+                                            <strong>描述：</strong>
+                                            {{jsonData.topics[childrenItem].summary.substr(jsonData.topics[childrenItem].summary.indexOf(")")+1)}}
+                                        </p>
+                                        <strong>格式：</strong>
+
+                                        <kbd>
+                                            {{jsonData.topics[childrenItem].summary.substr(0,jsonData.topics[childrenItem].summary.indexOf(")")+1)}}
+                                        </kbd>
+
+                                        <div class="panel-group" style="padding-top: 15px"
+                                             :id="['accordion_item_'+index_item+index]" role="tablist"
+                                             aria-multiselectable="true">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading" role="tab"
+                                                     :id="['heading_item_'+index_item+index]">
+                                                    <h4 class="panel-title">
+                                                        <a role="button" data-toggle="collapse"
+                                                           :data-parent="['#accordion_item_'+index_item+index]"
+                                                           :href="['#collapse_item_'+index_item+index]"
+                                                           aria-expanded="true"
+                                                           aria-controls="['heading_item_'+index_item+index]"
+                                                           @click="itemClick2(jsonData.topics[childrenItem].href,$event)">
+                                                            详细介绍
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div :id="['collapse_item_'+index_item+index]"
+                                                     class="panel-collapse collapse" role="tabpanel"
+                                                     aria-labelledby="['heading_item_'+index_item+index]">
+                                                    <div class="panel-body">
+                                                        <div v-if="renderIframeXiangxiFlagArr[jsonData.topics[childrenItem].href]">
+                                                            <iframe
+                                                                    style="border: none;width: 100%;height:400px"
+                                                                    :src="['pages/excel/'+jsonData.topics[childrenItem].href]">
+                                                            </iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--搜索-->
+    <div v-if="!isShow" class="row" style="padding-top: 20px">
+        <div class="col-md-12">
+            <div v-if="tmpJsonData.length>0">
+                <small>搜索结果如下：</small>
+                <div v-for="(item,index) in tmpJsonData">
+                    <strong>
+                        <a @click="itemClick(item.href,$event)">{{index+1}}、{{item.name}}</a>
+                    </strong>
+                    <blockquote v-if="item.summary">
+                        <p class="bg-success">
+                            <strong>描述：</strong>
+                            {{item.summary.substr(item.summary.indexOf(")")+1)}}
+                        </p>
+                        <strong>格式：</strong>
+                        <kbd>
+                            {{item.summary.substr(0,item.summary.indexOf(")")+1)}}
+                        </kbd>
+
+                        <div class="panel-group" style="padding-top: 15px"
+                             :id="['accordion_item_'+index]" role="tablist"
+                             aria-multiselectable="true">
+                            <div class="panel panel-info">
+                                <div class="panel-heading" role="tab"
+                                     :id="['heading_item_'+index]">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse"
+                                           :data-parent="['#accordion_item_'+index]"
+                                           :href="['#collapse_item_'+index]"
+                                           aria-expanded="true"
+                                           aria-controls="['heading_item_'+index]"
+                                           @click="itemClick2(item.href,$event)">
+                                            详细介绍
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div :id="['collapse_item_'+index]"
+                                     class="panel-collapse collapse" role="tabpanel"
+                                     aria-labelledby="['heading_item_'+index]">
+                                    <div class="panel-body">
+                                        <div v-if="renderIframeXiangxiFlagArr[item.href]">
+                                            <iframe
+                                                    style="border: none;width: 100%;height:400px"
+                                                    :src="['pages/excel/'+item.href]">
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+            <div v-else>
+                <small class="text-danger">未搜索到相关结果...</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <p>欢迎使用</p>
+        <h1>Excel公式与函数帮助手册</h1>
+        <p>欢迎各位Star、Fork进行完善。时间有限，没做细致优化，有意向者可以一起完善</p>
+        <p>对外发布、提供服务请保留项目地址，谢谢合作！</p>
+        <strong class="text-danger">移动端访问时如果弹窗之后无法显示全部，请关闭弹窗再次打开（后续优化，提高兼容性）</strong>
+
+        <p class="text-danger">详情阅读：
+            <a href="https://github.com/TangHanF/excel_function_manual/blob/master/README.md" target="_blank">Readme</a>
+        </p>
+        <hr>
+        <blockquote>
+            <p><strong>作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</strong>GuoFu</p>
+            <p><strong>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</strong>
+                <a href="mailto:guofu_gh@163.com" data-toggle="tooltip" data-placement="right" title="有问题欢迎邮件联系">guofu_gh@163.com</a>
+            </p>
+            <p><strong>创建日期：</strong>2018年09月05日</p>
+            <p><strong>GitHub地址：</strong><a href="https://github.com/TangHanF" target="_blank">https://github.com/TangHanF</a>
+            </p>
+            <p><strong>Gitee地址：</strong><a href="https://gitee.com/TangHanF"
+                                           target="_blank">https://gitee.com/TangHanF</a></p>
+        </blockquote>
+        <hr>
+        <h2>本项目可通过以下两个入口进行访问：</h2>
+        <p>
+            <strong>Gitee入口：</strong>
+            <a href="https://tanghanf.gitee.io/excel_function_manual/" target="_blank" data-toggle="tooltip"
+               data-placement="right" title="访问速度快">https://tanghanf.gitee.io/excel_function_manual/</a>
+        </p>
+        <p>
+            <strong>Github入口：</strong>
+            <a href="https://tanghanf.github.io/excel_function_manual/" target="_blank" data-toggle="tooltip"
+               data-placement="right" title="访问速度稍慢">https://tanghanf.github.io/excel_function_manual/</a>
+        </p>
+
+        <p>
+            <a class="btn btn-primary btn-lg" href="https://github.com/TangHanF/excel_function_manual" target="_blank"
+               role="button">本项目GitHub地址</a>
+            <a class="btn btn-primary btn-lg" href="https://gitee.com/TangHanF/excel_function_manual" target="_blank"
+               role="button">本项目Gitee地址</a>
+        </p>
+    </div>
+</div>
+
+
+<div id="app2">
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        函数详细说明
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <iframe v-if="iframeSrc!=''" style="border: none;width: 100%"
+                            :src="['pages/excel/'+iframeSrc]"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+<script src="js/support.js"></script>
+
+</html>

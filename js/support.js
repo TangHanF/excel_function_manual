@@ -11,9 +11,9 @@ app2 = new Vue({
 (function () {
     $(function () {
         //数组去重
-        function dedupe(array){
+        function dedupe(array) {
             return Array.from(new Set(array));
-        }
+        }//设置iframe高度函数
 
         layui.use(["layer", "util"], function () {
             let util = layui.util;
@@ -28,6 +28,8 @@ app2 = new Vue({
                     tmpJsonData: [],
                     keyword: "",
                     isShow: true,
+                    iframeSrc: "",
+                    renderIframeXiangxiFlagArr: {},
                     panel: 'panel',
                     panelStyle: ['panel-primary', 'panel-success', 'panel-info', 'panel-warning', 'panel-danger'],
                 }
@@ -37,6 +39,11 @@ app2 = new Vue({
                         app2.iframeSrc = href;
                         console.log(href);
                         $("#myModal").modal({})
+                    },
+                    itemClick2: function (href, e) {
+                        //由于 JavaScript 的限制，Vue 不能检测对象属性的添加、删除、更新，可使用Vue.set进行更新
+                        Vue.set(app.renderIframeXiangxiFlagArr, href, true);
+                        console.log(href);
                     },
                     // 生成随机样式
                     randomPanelClass: function () {

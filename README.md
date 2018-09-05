@@ -11,11 +11,17 @@
 
 # 运行图
 
+## 风格1
+
 ![](https://ws3.sinaimg.cn/large/0069RVTdly1fuyqtsrfrjj31kw0zs792.jpg)
 
 ![](https://ws1.sinaimg.cn/large/0069RVTdly1fuyquns1tyj31kw0rbq89.jpg)
 
 ![](https://ws1.sinaimg.cn/large/0069RVTdly1fuyqv05uz4j31kw12j7g4.jpg)
+
+## 风格2
+
+![](https://ws1.sinaimg.cn/large/0069RVTdly1fuz75vm30sj3156174q9n.jpg)
 
 # 额外说明
 
