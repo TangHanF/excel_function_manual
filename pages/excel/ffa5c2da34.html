@@ -1,0 +1,40 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CLEAN</title>
+    <meta name="description" content="CLEAN(文本) 会从文本中删除最常显示的非打印字符（Unicode 字符代码 0–31）。">
+</head>
+<body dir="ltr" id="ffa5c2da34" class="AppleTopic apd-topic"><a name="ffa5c2da34"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CLEAN</h1>
+<p>CLEAN 函数从文本中删除最常见的非打印字符（Unicode 字符代码 0–31）。 </p>
+<div class="HIStrings"><p><strong class="Term">CLEAN</strong>(<em>文本</em>)</p>
+    <div class="HISubString"><p><em class="Term">文本： </em>要从其中删除非打印字符的<a href="ffa361bc137.html#ffa361bc137"
+                                                                         class="xRef Aside">任何值</a>。 </p></div>
+</div>
+<div id="ffa5c1bbf1" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>如果从另一个应用程序中粘帖的文本含有不想要的问号、空格、方框或其他多余的字符，此函数可能很有用。</p></li>
+        <li><p>某些不太常见的非打印字符无法通过 CLEAN 删除（字符代码 127、129、141、143、144 和 157）。要删除这些字符，您可以使用 SUBSTITUTE 函数将其替换为介于 0–31
+            之间的代码，然后再使用 CLEAN 函数。</p></li>
+        <li><p>可以使用 TRIM 函数删除文本中的多余空格。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CLEAN 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设您从另一个应用程序中拷贝了认为是文本的“a b c d e f”并将其粘贴到单元格 A1 中，但看到的却是“a b c ? ?d e f”。您可以尝试使用 CLEAN 删除多余的字符：</p>
+            <p>=CLEAN(A1) 得出“a b c d e f”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5c004fb.html#ffa5c004fb"
+                                                   class="xRef AppleTopic">SUBSTITUTE</a><a
+        href="ffa5c3302f.html#ffa5c3302f" class="xRef AppleTopic">TRIM</a></div>
+</body>
+</html>

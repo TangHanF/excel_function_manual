@@ -1,0 +1,67 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>BONDMDURATION</title>
+    <meta name="description" content="BONDMDURATION(结算日, 到期日, 年利率, 年收益率, 频率, 基准天数) 得出假定面值为 ￥100 的现金流的现值修正加权平均值。">
+</head>
+<body dir="ltr" id="ffa57a0ee9" class="AppleTopic apd-topic"><a name="ffa57a0ee9"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>BONDMDURATION</h1>
+<p>BONDMDURATION 函数得出假定面值为 ￥100 的现金流的现值加权平均值。</p>
+<div class="HIStrings"><p><strong class="Term">BONDMDURATION</strong>(<em>结算日, 到期日, 年利率, 年收益率, 频率, 基准天数</em>)</p>
+    <div class="HISubString"><p><em class="Term">结算日： </em><a href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>，表示交易结算日期，通常比交易日期晚一天或多天。 </p></div>
+    <div class="HISubString"><p><em class="Term">到期日： </em>日期/时间值或日期字符串，表示证券的到期日期。<span
+            class="DescriptionNotString"><em>到期日</em>必须晚于为<em>结算日</em>指定的日期。</span></p></div>
+    <div class="HISubString"><p><em class="Term">年利率： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                              class="xRef Aside">数字值</a>，表示证券的票面年利率或名义年利率，用来确定每期支付的利息。<span
+            class="DescriptionNotString"><em>年利率</em>必须大于 0，且以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。</span></p></div>
+    <div class="HISubString"><p><em class="Term">年收益率： </em>数字值，表示证券的年收益率。<span
+            class="DescriptionNotString"><em>年收益率</em>必须大于 0，且以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。 </span></p></div>
+    <div class="HISubString"><p><em class="Term">频率： </em><a href="ffa8575c326.html#ffa8575c326"
+                                                             class="xRef Aside">模态值</a>，指定每年息票支付的次数。</p>
+        <div class="HISubString"><p><em class="Term">每年一次<span class="TermNotString">(1)</span>：  </em>每年支付一次。</p></div>
+        <div class="HISubString"><p><em class="Term">每半年一次<span class="TermNotString">(2)</span>：  </em>每年支付两次。</p>
+        </div>
+        <div class="HISubString"><p><em class="Term">每季一次<span class="TermNotString">(4)</span>：  </em>每年支付四次。</p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">基准天数： </em>可选模态值，指定计算中使用的每月天数和每年天数（<a
+            href="ffa8575bdd7.html#ffa8575bdd7" class="xRef Aside">基准天数惯例</a>）。</p>
+        <div class="HISubString"><p><em class="Term">30/360<span class="TermNotString">(0 或省略)</span>： </em>一个月 30 天，一年
+            360 天，采用 <a href="ffa205f6771.html#ffa205f6771" class="xRef Aside">NASD 方法</a>计算一个月的第 31 天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/实际天数 <span class="TermNotString">(1)</span>： </em>每月实际天数，每年实际天数。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/360<span class="TermNotString">(2)</span>： </em>每月实际天数，一年 360
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/365<span class="TermNotString">(3)</span>： </em>每月实际天数，一年 365
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">30E/360<span class="TermNotString">(4)</span>： </em>一个月 30 天，一年 360
+            天，采用<a href="ffa7b6f10f2.html#ffa7b6f10f2" class="xRef Aside">欧洲方法</a>计算一个月的第 31 天。</p></div>
+    </div>
+</div>
+<div id="ffa5779e9d" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p> 此函数得出称为<em>修正麦考莱久期</em>的值。与麦考莱久期 (BONDDURATION) 相比，修改的久期被定义为在收益率改变 1%
+            时价格的百分比变化，而且被视为价格敏感度的一种度量。它使用债券的到期收益率来计算贴现因素。</p></li>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="BONDMDURATION 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您在考虑购买假想的证券。所购买证券的结算日是 2010 年 4 月 2 日（<em>结算日</em>），到期日是 2015 年 12 月 31 日（<em>到期日</em>）。息票利率是 5%（<em>年利率</em>）。声明收益率是
+            5.284%（<em>年收益率</em>）。债券根据实际的日历天数（<em>基准天数</em>），每季度（<em>频率</em>）支付一次利息。</p>
+            <p>=BONDMDURATION(“2010/4/2”, “2015/12/31”, 0.05,0.05284,4,1) 得出近似值 4.95538808340513，这是年收益率改变 1%
+                时证券价格的百分比变化近似值。 </p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5742353.html#ffa5742353" class="xRef AppleTopic">BONDDURATION</a><a
+        href="ffa57be0bd.html#ffa57be0bd" class="xRef AppleTopic">YIELD</a></div>
+</body>
+</html>

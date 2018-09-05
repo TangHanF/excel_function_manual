@@ -1,0 +1,46 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>SYD</title>
+    <meta name="description" content="SYD(成本, 残值, 折旧年限, 折旧期) 使用年数合计法得出指定期限的资产的折旧额。">
+</head>
+<body dir="ltr" id="ffa576ee52" class="AppleTopic apd-topic"><a name="ffa576ee52"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>SYD</h1>
+<p>SYD 函数使用年数合计法得出指定期限的资产的折旧额。所有参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">SYD</strong>(<em>成本, 残值, 折旧年限, 折旧期</em>)</p>
+    <div class="HISubString"><p><em class="Term">成本： </em>要折旧的资产的成本。<span class="DescriptionNotString"><em>成本</em>通常格式化为货币且必须大于或等于 0。成本通常是购买价格，包括税金、运费和安装费。某些税收利益可从成本中扣除。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">残值： </em>资产的折余价值。<span class="DescriptionNotString"><em>残值</em>通常格式化为货币且必须大于或等于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">折旧年限： </em>资产折旧期数，称为折旧年限或预计使用年限。<span class="DescriptionNotString"><em>折旧年限</em>必须大于 0。允许<em>折旧年限</em>的小数部分（例如，5.5 表示五年半的折旧年限）。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">折旧期： </em>要计算折旧的周期。<span class="DescriptionNotString"><em>折旧期</em>必须大于 0。<em>折旧期</em>的任何小数（分数）部分都将忽略。</span>
+    </p></div>
+</div>
+<div id="ffa7fe9aac44" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="SYD 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定所购买资产的成本为 ￥10,000（<em>成本</em>），在折旧年限达到 9 年（<em>折旧年限</em>）后，估计折余价值为 ￥1,000（<em>残值</em>）。</p>
+            <p>=SYD(10000, 1000, 9, 1) 得出 ￥1,800，此值是第一年（<em>折旧期</em>为 1）的折旧额（人民币）。</p>
+            <p>=SYD(10000, 1000, 9, 2) 得出 ￥1,600，此值是第二年的折旧额。</p>
+            <p>=SYD(10000, 1000, 9, 8) 得出 ￥400，此值是第八年的折旧额。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa571ac15.html#ffa571ac15" class="xRef AppleTopic">DB</a><a
+        href="ffa578e992.html#ffa578e992" class="xRef AppleTopic">DDB</a><a href="ffa571363f.html#ffa571363f"
+                                                                            class="xRef AppleTopic">SLN</a><a
+        href="ffa5702fb6.html#ffa5702fb6" class="xRef AppleTopic">VDB</a></div>
+</body>
+</html>

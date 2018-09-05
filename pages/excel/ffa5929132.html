@@ -1,0 +1,44 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ROUNDUP</title>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--<meta name="description" content="ROUNDUP(要舍入的数字, 数字位数) 得出一个按指定位数朝零的反方向（向上）四舍五入的数字">-->
+</head>
+<body dir="ltr" id="ffa5929132" class="AppleTopic apd-topic"><a name="ffa5929132"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ROUNDUP</h1>
+<p>ROUNDUP 函数得出一个按指定位数朝零的反方向四舍五入的数。两个参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">ROUNDUP</strong>(<em>要舍入的数字, 数字位数</em>)</p>
+    <div class="HISubString"><p><em class="Term">要舍入的数字： </em>要四舍五入的数字。 </p></div>
+    <div class="HISubString"><p><em class="Term">数字位数： </em>要保留的位数（相对于小数点）。<span class="DescriptionNotString">正数表示小数点右边包括的位数（小数位）。负数表示小数点左边用零替换的位数（数字末尾零的数目）。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="ROUNDUP 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=ROUNDUP(1.49, 0) 得出 2，即为朝 0 的反方向最近的整数（0 个小数位）。</p>
+            <p>=ROUNDUP(1.23456, 3) 得出 1.235，即为朝 0 的反方向最近的数（3 个小数位）。</p>
+            <p>=ROUNDUP(1111.222, -2) 得出 1,200，即为朝 0 的反方向最近的 100 的倍数（-2 表示小数点左边 2 位是 0）。</p>
+            <p>=ROUNDUP(-2.2, 0) 得出 -3，即为朝 0 的反方向最近的整数（0 个小数位）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa592ccd5.html#ffa592ccd5" class="xRef AppleTopic">CEILING</a><a
+        href="ffa58be187.html#ffa58be187" class="xRef AppleTopic">EVEN</a><a href="ffa5883dff.html#ffa5883dff"
+                                                                             class="xRef AppleTopic">FLOOR</a><a
+        href="ffa5946f58.html#ffa5946f58" class="xRef AppleTopic">INT</a><a href="ffa59247cb.html#ffa59247cb"
+                                                                            class="xRef AppleTopic">MROUND</a><a
+        href="ffa58b6c37.html#ffa58b6c37" class="xRef AppleTopic">ODD</a><a href="ffa5940fed.html#ffa5940fed"
+                                                                            class="xRef AppleTopic">ROUND</a><a
+        href="ffa58f7708.html#ffa58f7708" class="xRef AppleTopic">ROUNDDOWN</a><a href="ffa58af6a5.html#ffa58af6a5"
+                                                                                  class="xRef AppleTopic">TRUNC</a>
+</div>
+</body>
+</html>

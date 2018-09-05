@@ -1,0 +1,50 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>TTEST</title>
+    <meta name="description" content="TTEST(第一组样本值, 第二组样本值, 尾数, 检验类型) 基于 t 分布函数得出与学生的 t 检验关联的概率。">
+</head>
+<body dir="ltr" id="ffa5b9da59" class="AppleTopic apd-topic"><a name="ffa5b9da59"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>TTEST</h1>
+<p>TTEST 函数基于 t 分布函数返回与学生的 t 检验关联的概率。</p>
+<div class="HIStrings"><p><strong class="Term">TTEST</strong>(<em>第一组样本值, 第二组样本值, 尾数, 检验类型</em>)</p>
+    <div class="HISubString"><p><em class="Term">第一组样本值： </em>包含第一组样本<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                        class="xRef Aside">数字值</a>的<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">第二组样本值： </em>含有第二组样本数字值的集合。 </p></div>
+    <div class="HISubString"><p><em class="Term">尾数： </em><a href="ffa8575c326.html#ffa8575c326"
+                                                             class="xRef Aside">模态值</a>，指定要返回的尾数。</p>
+        <div class="HISubString"><p><em class="Term">单尾<span class="TermNotString">(1)</span>： </em>得出单尾分布的值。</p></div>
+        <div class="HISubString"><p><em class="Term">双尾<span class="TermNotString">(2)</span>： </em>得出双尾分布的值。</p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">检验类型： </em>模态值，指定要执行的 t 测试的类型。</p>
+        <div class="HISubString"><p><em class="Term">配对<span class="TermNotString">(1)</span>： </em>执行配对检验。</p></div>
+        <div class="HISubString"><p><em class="Term">双样本等方差<span class="TermNotString">(2)</span>： </em>执行双样本方差齐性（同方差）检验。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">双样本异方差<span class="TermNotString">(3)</span>： </em>执行双样本方差不齐性（异方差）检验。
+        </p></div>
+    </div>
+</div>
+<table data-type="1 column" aria-label="TTEST 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设单元格 B2 至 G2 分别包含值 57、75、66、98、92 和 80，且表示<em>第一组样本值</em>。假设单元格 B3 至 G3 分别包含值 87、65、45、95、88 和
+            79，且表示<em>第二组样本值</em>。可以使用以下公式求得这两个样本的各个 TTEST 值：</p>
+            <p>=TTEST(B2:G2, B3:G3, 1, 1) 得出 0.418946725989974（适用于单尾配对检验）。</p>
+            <p>=TTEST(B2:G2 ,B3:G3, 2, 1) 得出 0.837893451979947（适用于双尾配对检验）。</p>
+            <p>=TTEST(B2:G2, B3:G3, 1, 2) 得出 0.440983897602811（适用于单尾、双样本等方差检验）。</p>
+            <p>=TTEST(B2:G2, B3:G3, 2, 2) 得出 0.881967795205622（适用于双尾、双样本等方差检验）。</p>
+            <p>=TTEST(B2:G2, B3:G3, 1, 3) 得出 0.441031763311189（适用于单尾、双样本异方差检验）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b41355.html#ffa5b41355" class="xRef AppleTopic">TDIST</a><a
+        href="ffa5a023a7.html#ffa5a023a7" class="xRef AppleTopic">TINV</a></div>
+</body>
+</html>

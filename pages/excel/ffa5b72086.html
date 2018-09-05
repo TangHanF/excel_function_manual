@@ -1,0 +1,129 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>STDEV</title>
+    <meta name="description" content="STDEV(值, 值…) 根据样本（无偏）方差得出数值集的标准偏差（离差的一种度量）。">
+</head>
+<body dir="ltr" id="ffa5b72086" class="AppleTopic apd-topic"><a name="ffa5b72086"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>STDEV</h1>
+<p>STDEV 函数根据样本（无偏）方差得出数值集的标准偏差（离差的一种度量）。</p>
+<div class="HIStrings"><p><strong class="Term">STDEV</strong>(<em>值, 值…</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                            class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>或包含这些<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                                class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString">所有值都必须属于同一值类型，且最少需要两个值。</span></p></div>
+    <div class="HISubString"><p><em class="Term">值…： </em>可选择性地包括一个或多个附加值或值集合。</p></div>
+</div>
+<div id="ffa5a36e72" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>当指定值仅表示较大总体的样本时，适合使用 STDEV 函数。如果正在分析的值表示整个集合或总体，请使用 STDEVP 函数。</p></li>
+        <li><p>标准偏差是 VAR 函数得出的方差的平方根。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="STDEV 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设您对一组学生进行五项测试。您任意选择五个学生表示学生总人数（请注意，这仅是一个示例，在统计上可能无效）。通过使用样本数据，您可以使用 STDEV
+            函数确定哪项测试中的测试分数离差最大。这在确定课程计划时可能很有用，可指出潜在问题或用于其他分析。</p>
+            <p>您将测试分数输入到空白表格中，其中 A 列到 E 列是每个学生在该示例中的分数，第 1 行到第 5 行是五个学生。该表格将显示如下。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="STDEV 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead"> </p></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>75</p></td>
+        <td><p>82</p></td>
+        <td><p>90</p></td>
+        <td><p>78</p></td>
+        <td><p>84</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>100</p></td>
+        <td><p>90</p></td>
+        <td><p>95</p></td>
+        <td><p>88</p></td>
+        <td><p>90</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>40</p></td>
+        <td><p>80</p></td>
+        <td><p>78</p></td>
+        <td><p>90</p></td>
+        <td><p>85</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>80</p></td>
+        <td><p>35</p></td>
+        <td><p>95</p></td>
+        <td><p>98</p></td>
+        <td><p>92</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>90</p></td>
+        <td><p>98</p></td>
+        <td><p>75</p></td>
+        <td><p>97</p></td>
+        <td><p>88</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 STDEV 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=STDEV(A1:A5) 得出近似值 22.8035085019828，即测试 1 的结果的标准偏差。</p>
+            <p>=STDEV(B1:B5) 得出近似值 24.5356882927706，即测试 2 的结果的标准偏差。</p>
+            <p>=STDEV(C1:C5) 得出近似值 9.50263121456368，即测试 3 的结果的标准偏差。</p>
+            <p>=STDEV(D1:D5) 得出近似值 8.07465169527454，即测试 4 的结果的标准偏差。</p>
+            <p>=STDEV(E1:E5) 得出近似值 3.3466401061363，即测试 5 的结果的标准偏差。</p>
+            <p>测试 2 拥有最大离差（标准偏差是离差的一种度量），紧接着是测试 1。其他三项测试的离差较小。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="STDEV 函数其他示例参考">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例—调查结果</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>若要查看此函数和其他几个应用到调查结果的统计函数的示例，请参阅 <a href="ffa5b9f72f.html#ffa5b9f72f" class="xRef AppleTopic">COUNTIF</a>
+            函数。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b9f72f.html#ffa5b9f72f" class="xRef AppleTopic">COUNTIF</a><a
+        href="ffa5b823a7.html#ffa5b823a7" class="xRef AppleTopic">STDEVA</a><a href="ffa5a472c1.html#ffa5a472c1"
+                                                                               class="xRef AppleTopic">STDEVP</a><a
+        href="ffa5a86530.html#ffa5a86530" class="xRef AppleTopic">STDEVPA</a><a href="ffa5b6c8b4.html#ffa5b6c8b4"
+                                                                                class="xRef AppleTopic">VAR</a><a
+        href="ffa5aa34ec.html#ffa5aa34ec" class="xRef AppleTopic">VARA</a><a href="ffa5b3f163.html#ffa5b3f163"
+                                                                             class="xRef AppleTopic">VARP</a><a
+        href="ffa59f5947.html#ffa59f5947" class="xRef AppleTopic">VARPA</a></div>
+</body>
+</html>

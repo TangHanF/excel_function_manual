@@ -1,0 +1,51 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>BINOMDIST</title>
+    <meta name="description" content="BINOMDIST(成功次数, 试验次数, 成功概率, 形式类型) 可得出指定形式的单个项的二项分布概率。">
+</head>
+<body dir="ltr" id="ffa5b7ea3e" class="AppleTopic apd-topic"><a name="ffa5b7ea3e"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>BINOMDIST</h1>
+<p>BINOMDIST 函数可得出指定形式的单个项的二项分布概率。 </p>
+<div class="HIStrings"><p><strong
+        class="Term">BINOMDIST</strong>(<em>成功次数, </em><em>试验次数, </em><em>成功概率, </em><em>形式类型</em>)</p>
+    <div class="HISubString"><p><em class="Term">成功次数： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，表示试验或检验成功的次数。<span
+            class="DescriptionNotString"><em>成功次数</em>必须大于或等于 1，且小于或等于<em>试验次数</em>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">试验次数： </em>数字值，表示试验或检验的总次数。<span
+            class="DescriptionNotString"><em>试验次数</em>必须大于或等于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">成功概率： </em>数字值，表示每次试验或检验的成功概率。<span class="DescriptionNotString"><em>成功概率</em>必须大于或等于 0，且小于或等于 1。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">形式类型： </em><a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指明要提供何种形式的指数函数。
+    </p>
+        <div class="HISubString"><p><em class="Term">累积形式<span class="TermNotString">(TRUE 或 1)</span>： </em>得出累积分布函数形式的值（发生指定数量或更少的成功次数或事件数）。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">概率质量形式<span class="TermNotString">(FALSE 或 0)</span>： </em>得出概率群分布函数形式的值（等于指定数量的成功次数或事件数）。
+        </p></div>
+    </div>
+</div>
+<div id="ffa5b9a198" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>BINOMDIST 函数适用于解决具有恒定的成功概率，且可能的试验结果只能是成功或失败的固定数量的独立试验中的问题。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="BINOMDIST 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=BINOMDIST(3, 98, 0.04, 1) 得出 0.445507210083272（累积分布形式）。</p>
+            <p>=BINOMDIST(3, 98, 0.04, 0) 得出 0.201402522366024（概率群分布形式）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59f7814.html#ffa59f7814"
+                                                   class="xRef AppleTopic">CRITBINOM</a><a
+        href="ffa5aa5269.html#ffa5aa5269" class="xRef AppleTopic">NEGBINOMDIST</a><a href="ffa5a262aa.html#ffa5a262aa"
+                                                                                     class="xRef AppleTopic">PERMUT</a><a
+        href="ffa5b4a2db.html#ffa5b4a2db" class="xRef AppleTopic">PROB</a></div>
+</body>
+</html>

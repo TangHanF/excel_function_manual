@@ -1,0 +1,116 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>COUNTBLANK</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+    <!--<meta name="description" content="COUNTBLANK(范围) 得出某个集合内空白单元格的个数。">-->
+</head>
+<body dir="ltr" id="ffa5a1ef74" class="AppleTopic apd-topic"><a name="ffa5a1ef74"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>COUNTBLANK</h1>
+<p>COUNTBLANK 函数得出某个集合内空白单元格的个数。</p>
+<div class="HIStrings"><p><strong class="Term">COUNTBLANK</strong>(<em>范围</em>)</p>
+    <div class="HISubString"><p><em class="Term">范围： </em><a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                             class="xRef Aside">集合</a>，包含对单个单元格<a
+            href="ffa8575c9b4.html#ffa8575c9b4" class="xRef Aside">范围</a>的引用。 </p></div>
+</div>
+<table data-type="1 column" aria-label="COUNTBLANK 示例的表格标题">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>以下表格中的信息没什么意义，但能说明包括在结果中的 COUNTBLANK 参数的参数类型。</p>
+            <p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="COUNTBLANK 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>100</p></td>
+        <td><p>200</p></td>
+        <td><p>300</p></td>
+        <td><p>400</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>lorem</p></td>
+        <td><p>ipsum</p></td>
+        <td><p>dolor</p></td>
+        <td><p>sit</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>100</p></td>
+        <td><p>200</p></td>
+        <td><p>300</p></td>
+        <td><p>sit</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>TRUE</p></td>
+        <td><p>TRUE</p></td>
+        <td><p>FALSE</p></td>
+        <td><p>FALSE</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td></td>
+        <td><p>200</p></td>
+        <td></td>
+        <td><p>400</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 COUNTBLANK 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=COUNTBLANK(A1:D1) 得出 0，因为范围引用的集合内没有空白单元格。</p>
+            <p>=COUNTBLANK(A2:D2) 得出 0，因为范围引用的集合内没有空白单元格。</p>
+            <p>=COUNTBLANK(A5:D5) 得出 2，因为范围引用的集合内有两个空白单元格。</p>
+            <p>=COUNTBLANK(A6:D6) 得出 4，因为范围引用的集合内全部为空白单元格。</p>
+            <p>=COUNTBLANK(A1:D6) 得出 6，因为范围引用的集合内共有 6 个空白单元格。</p>
+            <p>=COUNTBLANK(A1:D1, A5:D5) 返回错误，因为 COUNTBLANK 只能接受一个集合作为参数。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="COUNTBLANK 函数其他示例参考">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例—调查结果</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>若要查看此函数和其他几个应用到调查结果的统计函数的示例，请参阅 <a href="ffa5b9f72f.html#ffa5b9f72f" class="xRef AppleTopic">COUNTIF</a>
+            函数。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a52a41.html#ffa5a52a41" class="xRef AppleTopic">COUNT</a><a
+        href="ffa5b36220.html#ffa5b36220" class="xRef AppleTopic">COUNTA</a><a href="ffa5b9f72f.html#ffa5b9f72f"
+                                                                               class="xRef AppleTopic">COUNTIF</a><a
+        href="ffa5a400fc.html#ffa5a400fc" class="xRef AppleTopic">COUNTIFS</a></div>
+</body>
+</html>

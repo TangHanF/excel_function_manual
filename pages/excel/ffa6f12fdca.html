@@ -1,0 +1,51 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>SERIESSUM</title>
+    <meta name="description" content="SERIESSUM(x 值, 次方, 步长值, 系数) 用于计算和得出一个乘幂序列的和。这些系数用于通过步长值来递增的 x 值的连续乘幂。">
+</head>
+<body dir="ltr" id="ffa6f12fdca" class="AppleTopic apd-topic"><a name="ffa6f12fdca"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>SERIESSUM</h1>
+<p>SERIESSUM 函数用于计算和得出一个乘幂序列的和。这些系数用于通过<em>步长值</em>来递增的 <em>x 值</em>的连续乘幂。 </p>
+<div class="HIStrings"><p><strong class="Term">SERIESSUM</strong>(<em>x 值</em>, <em>次方</em>, <em>步长值</em>, <em>系数</em>)
+</p>
+    <div class="HISubString"><p><em class="Term">x 值： </em>乘幂序列的 x 值输入。<span class="DescriptionNotString"><em>x 值</em>是一个<a
+            href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">次方： </em>表示为底数 <em>x 值</em>乘方的初始幂次的数字值。 </p></div>
+    <div class="HISubString"><p><em class="Term">步长值： </em>数字值，表示为序列中每项增加幂次的步进值。 </p></div>
+    <div class="HISubString"><p><em class="Term">系数： </em>系数将乘以 <em>x 值</em>的每个连续乘幂。<span class="DescriptionNotString">系数的个数决定乘幂序列的项数。<em>系数</em>是一个数字值集合。</span>
+    </p></div>
+</div>
+<div id="ffa6f124c30" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>SERIESSUM 函数支持任意的起始点和任意的指数间距。如果不要求以上任意一项，可考虑使用 POLYNOMIAL 函数。</p></li>
+    </ul>
+    <ul>
+        <li><p>高阶项最后表示。系数 (a<sub>i</sub>) 用于 <em>x 值</em>的连续乘幂。在以下公式中，“x”代表 <em>x
+            值</em>，“n”代表<em>次方</em>，而“m”代表<em>步长值</em>。SERIESSUM 函数使用的公式是：a<sub>1</sub> x<sup>n</sup> + a<sub>2</sub>
+            x<sup>(n+m)</sup> + a<sub>3</sub> x<sup>(n+2m)</sup> + ...+ a<sub>k</sub> x<sup>(n + (k-1)m)</sup>，这里 k
+            表示系数的个数。</p></li>
+    </ul>
+    <ul>
+        <li><p>指数必须是非负整数。</p></li>
+        <li><p>iBooks Author 中该函数不可用。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="SERIESSUM 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=SERIESSUM(2, 0, 1, 9) 得出 9。</p>
+            <p>=SERIESSUM(2, 0, 1, 1) 得出 1。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa6f12c7b9.html#ffa6f12c7b9" class="xRef AppleTopic">POLYNOMIAL</a>
+</div>
+</body>
+</html>

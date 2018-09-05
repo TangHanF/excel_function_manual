@@ -1,0 +1,47 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ROMAN</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--<meta name="description" content="ROMAN(阿拉伯数字, 罗马数字样式) 可将数字转换成罗马数字。">-->
+</head>
+<body dir="ltr" id="ffa5913166" class="AppleTopic apd-topic"><a name="ffa5913166"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ROMAN</h1>
+<p>ROMAN 函数可将数字转换为罗马数字。</p>
+<div class="HIStrings"><p><strong class="Term">ROMAN</strong>(<em>阿拉伯数字, </em><em>罗马数字样式</em>)</p>
+    <div class="HISubString"><p><em class="Term">阿拉伯数字： </em>要转换的阿拉伯数字。<span class="DescriptionNotString"><em>阿拉伯数字</em>是在范围 0-3999 内的<a
+            href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">罗马数字样式： </em>可选<a href="ffa8575c326.html#ffa8575c326"
+                                                                   class="xRef Aside">模态值</a>，确定在转换成罗马数字时应执行的传统规则的严格程度。
+    </p>
+        <div class="HISubString"><p><em class="Term">严格 <span class="TermNotString">(0、TRUE 或省略)</span>： </em>使用最严格的传统规则。当较小的数字在较大数字之前表示减法时，较小的数字必须为
+            10 的幂，可位于不大于它 10 倍的数字之前。例如，999 表示为 CMXCIX 而非 LMVLIV。</p></div>
+        <div class="HISubString"><p><em class="Term">降低一个级别<span class="TermNotString">(1)</span>： </em>可将严格的传统规则降低一级。当较小的数字在较大数字之前时，较小数字不需要为
+            10 的幂，相对大小规则将延伸一个数字。例如，999 可表示为 LMVLIV 而非 XMIX。</p></div>
+        <div class="HISubString"><p><em class="Term">降低两个级别<span class="TermNotString">(2)</span>： </em>可将传统规则降低两级。当较小数字位于较大数字之前时，相对大小规则延伸两个数字。例如，999
+            可表示为 XMIX 而非 VMIV。</p></div>
+        <div class="HISubString"><p><em class="Term">降低三个级别<span class="TermNotString">(3)</span>： </em>可将传统规则降低三级。当较小数字位于较大数字之前时，相对大小规则延伸三个数字。例如，999
+            可表示为 VMIV 而非 IM。</p></div>
+        <div class="HISubString"><p><em class="Term">降低四个级别<span class="TermNotString">(4 或 FALSE)</span>： </em>可将传统规则降低四级。当较小数字位于较大数字之前时，相对大小规则延伸四个数字。例如，999
+            可表示为 IM。</p></div>
+    </div>
+</div>
+<table data-type="1 column" aria-label="ROMAN 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=ROMAN(12) 得出 XII。</p>
+            <p>=ROMAN(999) 得出 CMXCIX。</p>
+            <p>=ROMAN(999, 1) 得出 LMVLIV。</p>
+            <p>=ROMAN(999, 2) 得出 XMIX。</p>
+            <p>=ROMAN(999, 3) 得出 VMIV。</p></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

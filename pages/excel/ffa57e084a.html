@@ -1,0 +1,70 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>PV</title>
+    <meta name="description" content="PV(各期利率, 期数, 付款, 终值, 付款时间) 基于一系列定期现金流（在固定间隔内某特定数量的付款和所有现金流）和固定利率得出投资或年金的现值。">
+</head>
+<body dir="ltr" id="ffa57e084a" class="AppleTopic apd-topic"><a name="ffa57e084a"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>PV</h1>
+<p>PV 函数基于一系列定期现金流（在固定间隔内某特定数量的付款和所有现金流）和固定利率得出投资或年金的现值。</p>
+<div class="HIStrings"><p><strong class="Term">PV</strong>(<em>各期利率, 期数, 付款, 终值, 付款时间</em>)</p>
+    <div class="HISubString"><p><em class="Term">各期利率： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，表示每期的利率。<span
+            class="DescriptionNotString"><em>各期利率</em>可以以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。<em>各期利率</em>可使用与<em>期数</em>相同的时限（如每月、每季或每年）指定。例如，如果<em>期数</em>表示月份，且年利率为 8%，则<em>各期利率</em>指定为 0.00667 或 0.667%（0.08 除以 12）。<em>各期利率</em>可以是负值，但函数得出的结果可能难以解释。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">期数： </em>数字值，表示期数。<span
+            class="DescriptionNotString"><em>期数</em>可使用与<em>各期利率</em>相同的时限（如每月、每季或每年）指定。<em>期数</em>必须大于或等于 0。</span></p>
+    </div>
+    <div class="HISubString"><p><em class="Term">付款： </em>数字值，表示每期支付或收到的金额。<span
+            class="DescriptionNotString"><em>付款</em>通常格式化为货币。每个周期中接收的金额为正值，投资的金额为负值。例如，金额可以是每月的贷款还款（正）或定期接收到的年金付款（负）。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">终值： </em>可选数字值，表示最终付款后投资的值或年金的剩余现金值（正值），或贷款余额（负值）。<span
+            class="DescriptionNotString"><em>终值</em>通常格式化为货币。在投资周期结束时，接收的金额为正值，投资的金额为负值。例如，金额可以是要支付的贷款的大额尾付金额（正）或年金合约的剩余值（负）。如果省略，则假定<em>终值</em>为 0。如果已指定<em>付款</em>，同时不存在投资值、现金值或贷款余额，则可以忽略<em>终值</em>。如果已忽略<em>付款</em>，则必须包括<em>终值</em>。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">付款时间： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定是在每期的开头还是结尾付款。<span
+            class="DescriptionNotString">多数抵押和其他贷款要求在第一个周期 (0) 的结尾进行第一次付款。多数租赁付款和一些其他类型的付款在每个周期 (1) 的开头支付。</span></p>
+        <div class="HISubString"><p><em class="Term">期末<span class="TermNotString">(0 或省略)</span>： </em>将付款视为在每期结尾收到或支付。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">期初<span class="TermNotString">(1)</span>： </em>将付款视为在每期开头收到或支付。</p>
+        </div>
+    </div>
+</div>
+<div id="ffa1866b311b" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="PV 函数示例 1">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例 1</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您在为女儿的大学教育制定计划。她刚 3 岁，有望在 15 年后上大学（<em>期数</em>为 15*12）。您认为在她上大学时，储蓄帐户中需要有 ￥150,000（<em>终值</em>为正数，因为这是现金流入）。每个月初，您可以在帐户中另存
+            ￥200（<em>付款</em>是 -200，因为这是现金流出）。在以后的 15 年内，储蓄帐户的年利率预计为 4.5%（<em>各期利率</em>为 0.045/12），按月支付利息。</p>
+            <p>=PV(0.045/12, 15*12, -200, 150000, 1) 得出 -￥50,227.88，此值是以后的 15
+                年内，需要在帐户中定期存款的金额（函数得出负值，因为存入储蓄帐户的资金是现金流出），进而在 15 年后帐户存款达到 ￥150,000。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="PV 函数示例 2">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例 2</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您在考虑购买假想的贴现证券。证券在 14 年（<em>期数</em>为 14*12）后到期，赎回价值为 ￥100,000（<em>终值</em>是正数，因为到期时这是现金流入）。另一个选择是将资金留在货币市场储蓄帐户内，这样每年预计可取得
+            5.25% 的年收益率，按月支付利息（<em>各期利率</em>是 0.0525/12）（<em>付款时间</em>为 0，这不是必需项，因为没有<em>付款</em>金额）。</p>
+            <p>=PV(0.0525/12, 14*12, 0, 100000, 0) 得出
+                -￥48,027.48（函数得出负金额，因为这里的购买要付出现金），这代表您购买贴现证券所支付的最大金额，用以挣得至少等于货币市场帐户的利息。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa57875d5.html#ffa57875d5" class="xRef AppleTopic">FV</a><a
+        href="ffa575692b.html#ffa575692b" class="xRef AppleTopic">IRR</a></div>
+</body>
+</html>

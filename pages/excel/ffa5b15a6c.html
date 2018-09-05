@@ -1,0 +1,105 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>RANK</title>
+    <meta name="description" content="RANK(值, 值集合, 最大值排位最高) 得出数值集内值的排列。">
+</head>
+<body dir="ltr" id="ffa5b15a6c" class="AppleTopic apd-topic"><a name="ffa5b15a6c"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>RANK</h1>
+<p>RANK 函数得出数值集内值的排列。</p>
+<div class="HIStrings"><p><strong class="Term">RANK</strong>(<em>值, 值集合, 最大值排位最高</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em>要排位的<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>。 </p>
+    </div>
+    <div class="HISubString"><p><em class="Term">值集合： </em>数字值、日期/时间值或持续时间值的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                               class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString">所有值都必须属于同一<a href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>，且也与 <em>值</em> 的值类型相同。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">最大值排位最高： </em>可选<a href="ffa8575c326.html#ffa8575c326"
+                                                                    class="xRef Aside">模态值</a>，用于指定集合中最小值排位为 1 还是最大值排位为
+        1。</p>
+        <div class="HISubString"><p><em class="Term">最大值排位最低<span class="TermNotString">(0、FALSE 或省略)</span>： </em>将集合中的最大值分配为排位
+            1。</p></div>
+        <div class="HISubString"><p><em class="Term">最大值排位最高<span class="TermNotString">(1 或 TRUE)</span>： </em>将集合中的最小值分配为排位
+            1。</p></div>
+    </div>
+</div>
+<div id="ffa5a19935" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>集合中大小相同的值同属一个排位，但会影响结果。</p></li>
+        <li><p>如果指定的值与集合中的任何值都不匹配，将会得出一个错误。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="RANK 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设下表是 20 名学生在本学期的累积测试分数。（我们在这个示例中按此方式组织数据，最初可能有 20 行。）</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="RANK 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>30</p></td>
+        <td><p>75</p></td>
+        <td><p>92</p></td>
+        <td><p>86</p></td>
+        <td><p>51</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>83</p></td>
+        <td><p>100</p></td>
+        <td><p>92</p></td>
+        <td><p>68</p></td>
+        <td><p>70</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>77</p></td>
+        <td><p>91</p></td>
+        <td><p>86</p></td>
+        <td><p>85</p></td>
+        <td><p>83</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>77</p></td>
+        <td><p>90</p></td>
+        <td><p>83</p></td>
+        <td><p>75</p></td>
+        <td><p>80</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 RANK 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=RANK(30, A1:E4, 1) 得出 1，因为 30 是最低累积测试分数，且<em>最大值排位最高</em>是 1（将最小值排位为第一个值）。</p>
+            <p>=RANK(92, A1:E4, 0) 得出 2，因为 92 是第二大累积测试分数，且<em>最大值排位最高</em>是 0（将最大值排位为第一个值）。</p>
+            <p>=RANK(91, A1:E4, 0) 得出 4，因为第二排位有两个相同数字。顺序为 100、92、92，然后是 91，排位为 1、2、2，然后是 4。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a89e56.html#ffa5a89e56" class="xRef AppleTopic">LARGE</a><a
+        href="ffa5bb1594.html#ffa5bb1594" class="xRef AppleTopic">SMALL</a></div>
+</body>
+</html>

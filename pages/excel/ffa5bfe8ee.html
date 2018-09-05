@@ -1,0 +1,41 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CHAR</title>
+    <meta name="description" content="CHAR(代码数字) 将得出与十进制 Unicode 字符代码相对应的字符。">
+</head>
+<body dir="ltr" id="ffa5bfe8ee" class="AppleTopic apd-topic"><a name="ffa5bfe8ee"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CHAR</h1>
+<p>CHAR 函数将得出与十进制 Unicode 字符代码对应的字符。 </p>
+<div class="HIStrings"><p><strong class="Term">CHAR</strong>(<em>代码数字</em>)</p>
+    <div class="HISubString"><p><em class="Term">代码数字： </em>要返回与十进制 Unicode 字符对应的<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                                    class="xRef Aside">数字值</a>。<span
+            class="DescriptionNotString"><em>代码数字</em>必须大于或等于 32 且小于或等于 65,535，不等于控制字符 (127-159) 且不是非法字符。</span></p>
+    </div>
+</div>
+<div id="ffa5c16484" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p> 任何小数部分都会被忽略。</p></li>
+        <li><p>并非所有 Unicode 编号都可与可打印字符相关联。</p></li>
+        <li><p>字符 32 为空格字符。</p></li>
+        <li><p>CODE 函数将得出特定字符的数字代码。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CHAR 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=CHAR(98.6) 得出“b”，对应的代码为 98。数字的小数部分被忽略。</p>
+            <p>=CODE(“b”) 得出 98。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5bf70bd.html#ffa5bf70bd" class="xRef AppleTopic">CODE</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>REPLACE</title>
+    <meta name="description" content="REPLACE(来源字符串, 开始位置, 替换长度, 新字符串) 得出用新字符串值替换给定字符串值的指定字符数的字符串值。">
+</head>
+<body dir="ltr" id="ffa5bddfec" class="AppleTopic apd-topic"><a name="ffa5bddfec"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>REPLACE</h1>
+<p>REPLACE 函数返回用新字符串值替换给定字符串值中指定字符数的<a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">REPLACE</strong>(<em>来源字符串, 开始位置, 替换长度, 新字符串</em>)</p>
+    <div class="HISubString"><p><em class="Term">来源字符串： </em><a href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>。
+    </p></div>
+    <div class="HISubString"><p><em class="Term">开始位置： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，指定应该在指定字符串中开始操作的位置。<span
+            class="DescriptionNotString"><em>开始位置</em>必须大于或等于 1。如果<em>开始位置</em>大于<em>来源字符串</em>中的字符数，则会将<em>新字符串</em>添加到<em>来源字符串</em>的结尾。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">替换长度： </em>数字值，指定要替换的字符个数。<span
+            class="DescriptionNotString"><em>替换长度</em>必须大于或等于 1。如果<em>替换长度</em>大于或等于<em>来源字符串</em>的长度且<em>开始位置</em>为 1，返回的字符串将等于<em>新字符串</em>。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">新字符串： </em>用作替换的值。<span class="DescriptionNotString"><em>新字符串</em>可以包含任何值。它的长度不必与<em>现有字符串</em>的长度相等。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="REPLACE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=REPLACE(“received applicant’s forms”, 10, 9, “Frank”) 得出“received Frank’s forms”。</p>
+            <p>=REPLACE(6060606, 2, 2, 30303) 得出“6303030606”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5c004fb.html#ffa5c004fb"
+                                                   class="xRef AppleTopic">SUBSTITUTE</a></div>
+</body>
+</html>

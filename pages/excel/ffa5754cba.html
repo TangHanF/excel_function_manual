@@ -1,0 +1,37 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>EFFECT</title>
+    <meta name="description" content="EFFECT(名义利率, 每年期数) 函数基于每年的复利周期数，从名义年利率得出实际年利率。">
+</head>
+<body dir="ltr" id="ffa5754cba" class="AppleTopic apd-topic"><a name="ffa5754cba"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>EFFECT</h1>
+<p>EFFECT 函数基于每年的复利周期数，从名义年利率得出实际年利率。两个参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">EFFECT</strong>(<em>名义利率, 每年期数</em>)</p>
+    <div class="HISubString"><p><em class="Term">名义利率： </em>证券的名义年利率。<span class="DescriptionNotString"><em>名义利率</em>可以以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">每年期数： </em>每年的复利周期数。<span class="DescriptionNotString"><em>每年期数</em>必须大于 0。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="EFFECT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>实际利率随名义利率而不同，具体取决于复利计算方式。下列示例假定储蓄帐户的法定利率（<em>名义利率</em>）为 5.00%。</p>
+            <p>如果每日复利 5%（<em>每年期数</em>为 365），则 =EFFECT(0.05,365) 得出的实际年利率大约为 5.12674964674473%。</p>
+            <p>如果每月复利 5%，则 =EFFECT(0.05, 12) 得出的实际年利率大约为 5.1161897881733%。</p>
+            <p>如果每季度复利 5%，则 =EFFECT(0.05, 4) 得出的实际年利率大约为 5.09453369140622%。</p>
+            <p>如果每半年复利 5%，则 =EFFECT(0.05, 2) 得出的实际年利率大约为 5.06249999999999%。</p>
+            <p>如果每年复利 5%，则 =EFFECT(0.05, 1) 得出的实际年利率大约为 5%。在这里，名义年利率和实际年利率是相同的，因为没有期中复利。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa571700d.html#ffa571700d" class="xRef AppleTopic">NOMINAL</a>
+</div>
+</body>
+</html>

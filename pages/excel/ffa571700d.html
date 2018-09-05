@@ -1,0 +1,37 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>NOMINAL</title>
+    <meta name="description" content="NOMINAL(有效利率, 每年期数) 函数基于每年的复利周期数，从实际年利率得出名义年利率。">
+</head>
+<body dir="ltr" id="ffa571700d" class="AppleTopic apd-topic"><a name="ffa571700d"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>NOMINAL</h1>
+<p>NOMINAL 函数基于每年的复利周期数，从实际年利率得出名义年利率。两个参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">NOMINAL</strong>(<em>有效利率, 每年期数</em>)</p>
+    <div class="HISubString"><p><em class="Term">有效利率： </em>证券的实际利率。<span class="DescriptionNotString"><em>有效利率</em>可以以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">每年期数： </em>每年的复利周期数。<span class="DescriptionNotString"><em>每年期数</em>必须大于 0。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="NOMINAL 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>名义利率随实际利率而不同，具体取决于复利计算方式。下列示例假定储蓄帐户的实际利率（<em>有效利率</em>）是法定利率。请注意，在所有情况下，名义利率都是 5.00%。</p>
+            <p>如果实际利率 5.13% 基于日复利（<em>每年期数</em>为 365），则 =NOMINAL(0.0513, 365) 得出近似值 5.00309221810813%，此值是名义年利率。</p>
+            <p>如果实际利率 5.12% 基于月复利，则 =NOMINAL(0.0512, 12) 得出近似值 5.00363980482339%，此值是名义年利率。</p>
+            <p>如果实际利率 5.09% 基于季度复利，则 =NOMINAL(0.0509, 4) 得出近似值 4.99563208794154%，此值是名义年利率。</p>
+            <p>如果实际利率 5.06% 基于半年复利，则 =NOMINAL(0.0506, 2) 得出近似值 4.9975609611002%，此值是名义年利率。</p>
+            <p>如果实际利率 5.00% 基于年复利，则 =NOMINAL(0.0500, 1) 得出近似值 5%，此值是名义年利率。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5754cba.html#ffa5754cba" class="xRef AppleTopic">EFFECT</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>FORECAST</title>
+    <meta name="description" content="FORECAST(x 值, y 值, x 值) 可使用线性回归分析，基于样本值得出给定 x 值的预测 y 值。">
+</head>
+<body dir="ltr" id="ffa5a9f59d" class="AppleTopic apd-topic"><a name="ffa5a9f59d"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>FORECAST</h1>
+<p>FORECAST 函数可使用线性回归分析基于样本值得出给定 x 值的预测 y 值。</p>
+<div class="HIStrings"><p><strong class="Term">FORECAST</strong>(<em>x 值, y 值, x 值</em>)</p>
+    <div class="HISubString"><p><em class="Term">x 值： </em>函数应得出其预测 y 值的 x 值。<span
+            class="DescriptionNotString"><em>x 值</em>必须包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                            class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">y 值： </em>含有 y（因变量）值的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                         class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString"><em>y 值</em>必须包含数字值、日期/时间值或持续时间值。所有值都必须属于同一<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">x 值： </em>含有 x（自变量）值的集合。<span class="DescriptionNotString"><em>x 值</em>必须包含数字值、日期/时间值或持续时间值。所有值都必须属于同一值类型。</span>
+    </p></div>
+</div>
+<div id="ffa5a1d239" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>两个集合的大小必须相同。</p></li>
+        <li><p>例如，如果拥有机动车行驶速度及其处于每种速度时的燃料效率的相关数据，则燃料效率是因变量 (y)，行驶速度是自变量 (x)。</p></li>
+        <li><p>可使用 SLOPE 和 INTERCEPT 函数求得用于计算预测值的等式。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="FORECAST 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下，其中 A2:E2 包含 <em>x 值</em>且 A3:E3 包含 <em>y 值</em>：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="FORECAST 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>1</p></td>
+        <td><p>2</p></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+        <td><p>5</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>3</p></td>
+        <td><p>5</p></td>
+        <td><p>7</p></td>
+        <td><p>9</p></td>
+        <td><p>11</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 FORECAST 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=FORECAST(9, A3:E3, A2:E2) 得出 19，即 9 的 <em>x 值</em>的期望因变量值。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5afdc38.html#ffa5afdc38"
+                                                   class="xRef AppleTopic">CORREL</a><a
+        href="ffa5adba91.html#ffa5adba91" class="xRef AppleTopic">COVAR</a><a href="ffa5af6923.html#ffa5af6923"
+                                                                              class="xRef AppleTopic">INTERCEPT</a><a
+        href="ffa59f9442.html#ffa59f9442" class="xRef AppleTopic">SLOPE</a></div>
+</body>
+</html>

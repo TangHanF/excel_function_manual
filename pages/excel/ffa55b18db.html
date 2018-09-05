@@ -1,0 +1,39 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>NETWORKDAYS</title>
+    <meta name="description" content="NETWORKDAYS(开始日期, 结束日期, 排除日期) 将得出两个日期之间的工作日数。工作日不包括周末和任何其他指定日期。">
+</head>
+<body dir="ltr" id="ffa55b18db" class="AppleTopic apd-topic"><a name="ffa55b18db"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>NETWORKDAYS</h1>
+<p>NETWORKDAYS 函数可得出两个日期之间的工作日数。工作日不包括周末和任何其他指定日期。</p>
+<div class="HIStrings"><p><strong class="Term">NETWORKDAYS</strong>(<em>开始日期, 结束日期, 排除日期</em>)</p>
+    <div class="HISubString"><p><em class="Term">开始日期： </em>开始日期。<span class="DescriptionNotString"><em>开始日期</em>是一个<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>（时间部分被忽略）或<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">结束日期： </em>结束日期。<span class="DescriptionNotString"><em>结束日期</em>是一个日期/时间值（时间部分被忽略）或日期字符串。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">排除日期： </em>可选的日期<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                    class="xRef Aside">集合</a>，包含不应计算在内的其他日期。<span
+            class="DescriptionNotString"><em>排除日期</em>必须包含日期/时间值或日期字符串。</span></p></div>
+</div>
+<table data-type="1 column" aria-label="NETWORKDAYS 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定 2009年11月11日和 2009年11月26日是节假日。如果分别在单元格 B2 和 B3 中输入了这两个值，则可以使用以下公式，求出 2009 年 11 月的工作天数（排除这些节假日）：</p>
+            <p>=NETWORKDAYS(“2009/11/01”,“2009/11/30”,B2:B3) 得出 19天，即 2009 年 11 月的工作日天数，不包括周末和两个节假日。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa55ea982.html#ffa55ea982" class="xRef AppleTopic">DATEDIF</a><a
+        href="ffa557d36f.html#ffa557d36f" class="xRef AppleTopic">DAYS360</a><a href="ffa55f9592.html#ffa55f9592"
+                                                                                class="xRef AppleTopic">WORKDAY</a>
+</div>
+</body>
+</html>

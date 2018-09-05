@@ -1,0 +1,121 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>SUMIF</title>
+    <meta name="description" content="SUMIF(待检验的值, 条件, 待求和的值) 得出一组数字的总和，且仅包括满足指定条件的数字。">
+</head>
+<body dir="ltr" id="ffa58cd24e" class="AppleTopic apd-topic"><a name="ffa58cd24e"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>SUMIF</h1>
+<p>SUMIF 函数返回数字<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>的和，且仅包括满足指定<a
+        href="ffa8575bb7b.html#ffa8575bb7b" class="xRef Aside">条件</a>的数字。</p>
+<div class="HIStrings"><p><strong class="Term">SUMIF</strong>(<em>待检验的值, 条件, </em><em>待求和的值</em>)</p>
+    <div class="HISubString"><p><em class="Term">待检验的值： </em>集合，包含要测试的值。<span
+            class="DescriptionNotString"><em>待检验的值</em>可以包含<a href="ffa361bc137.html#ffa361bc137"
+                                                              class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">条件： </em>比较或检验值，并返回<a href="ffa361cb72c.html#ffa361cb72c"
+                                                                       class="xRef Aside">布尔值</a> TRUE 或 FALSE 的<a
+            href="ffaf0f44203.html#ffaf0f44203" class="xRef Aside">表达式</a>。<span
+            class="DescriptionNotString"><em>条件</em>可包括比较运算符、常数、与符号并置运算符、引用表达式和通配符。您可以使用<a
+            href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>来匹配表达式中的任何单个字符或多个字符。您可以使用 ? （问号）表示一个字符，*（星号）表示多个字符，并使用 ~（波浪号）来指定下一个字符应当匹配，而非用作通配符。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">待求和的值： </em>可选集合，含有要进行求和的值。<span
+            class="DescriptionNotString"><em>待求和的值</em>可以包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                              class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>。应该与<em>待检验的值</em>的大小相同。</span>
+    </p></div>
+</div>
+<div id="ffa58752b9" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>如果忽略<em>待求和的值</em>，默认值将为<em>待检验的值</em>。</p></li>
+        <li><p>尽管<em>待检验的值</em>可以包含任何值，但通常包含的值全都应该属于同一<a href="ffac6f2d7977.html#ffac6f2d7977"
+                                                         class="xRef Aside">值类型</a>。</p></li>
+        <li><p>如果忽略<em>待求和的值</em>，<em>待检验的值</em>通常仅含有数字或持续时间值。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="SUMIF 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="SUMIF 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>1</p></td>
+        <td><p>10</p></td>
+        <td><p>a</p></td>
+        <td><p>a</p></td>
+        <td><p>c</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>2</p></td>
+        <td><p>20</p></td>
+        <td><p>b</p></td>
+        <td><p>c</p></td>
+        <td><p>b</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>3</p></td>
+        <td><p>30</p></td>
+        <td><p>a</p></td>
+        <td><p>a</p></td>
+        <td><p>c</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>4</p></td>
+        <td><p>40</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>5</p></td>
+        <td><p>50</p></td>
+        <td><p>1</p></td>
+        <td><p>5</p></td>
+        <td><p>9</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 SUMIF 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=SUMIF(A1:A5, “&lt;5”) 得出 10，因为 1、2、3 和 4（<em>条件</em>的值小于 5，包含在<em>待检验的值</em>的范围 A1:A5 内）的和是 10。</p>
+            <p>=SUMIF(A1:A5, “&lt;5”, B1:B5) 得出 100，因为 10、20、30 和 40（A 列中小于 5 的值在 B 列（<em>待求和的值</em> 是 B1:B5）中所对应的值）的总和是
+                100。</p>
+            <p>=SUMIF(D1:E3, “=c”, A3:B5) 得出 84，因为与<em>待检验的值</em>中等于“c”的单元格（单元格 E1、D2 和 E3）对应的<em>待求和的值</em>中的单元格（单元格
+                B3、A4 和 B5）包含 30、4 和 50，总和为 84。</p>
+            <p>=SUMIF(A1:D5, 1) 或 =SUMIF(A1:D5, SUM(1)) 各得出 2，即范围内所有出现的 1 的总和。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a5df22.html#ffa5a5df22"
+                                                   class="xRef AppleTopic">AVERAGEIF</a><a
+        href="ffa5b68ea4.html#ffa5b68ea4" class="xRef AppleTopic">AVERAGEIFS</a><a href="ffa59150db.html#ffa59150db"
+                                                                                   class="xRef AppleTopic">SUMIFS</a>
+</div>
+</body>
+</html>

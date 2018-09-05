@@ -1,0 +1,46 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>WEIBULL</title>
+    <meta name="description" content="WEIBULL(非负 x 值, alpha, beta, 形式类型) 得出 Weibull 分布。Weibull 分布是连续概率分布的一种。">
+</head>
+<body dir="ltr" id="ffa6f16a1e8" class="AppleTopic apd-topic"><a name="ffa6f16a1e8"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>WEIBULL</h1>
+<p>WEIBULL 函数得出 Weibull 分布。Weibull 分布是连续概率分布的一种。</p>
+<div class="HIStrings"><p><strong class="Term">WEIBULL</strong>(<em>非负 x 值, alpha, beta, 形式类型</em>)</p>
+    <div class="HISubString"><p><em class="Term">非负 x 值： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，表示要在
+        x 处为此函数求值的 x 值。<span class="DescriptionNotString"><em>非负 x 值</em>必须大于或等于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">alpha： </em>数字值，表示描述分布的形状参数的参数。<span class="DescriptionNotString"><em>alpha</em> 必须大于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">beta： </em>数字值，表示描述分布的规模的参数。<span
+            class="DescriptionNotString"><em>beta</em> 必须大于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">形式类型： </em><a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指明要提供何种形式的指数函数。
+    </p>
+        <div class="HISubString"><p><em class="Term">累积形式<span class="TermNotString">(TRUE 或 1)</span>： </em>得出累积分布形式的值。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">概率密度形式<span class="TermNotString">(FALSE 或 0)</span>： </em>得出概率密度形式的值。
+        </p></div>
+    </div>
+</div>
+<div id="ffa6f170718" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>WEIBULL 已被实现为两个参数的 Weibull 分布，此分布要求<em>非负 x 值</em>必须大于或等于 0。 </p></li>
+        <li><p>iBooks Author 中该函数不可用。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="WEIBULL 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=WEIBULL (1.5, 0.5, 2, 1) 得出 0.579379973945885，即给定值的 Weibull 函数的累积分布形式的结果。</p>
+            <p>=WEIBULL (1.5, 0.5, 2, 0) 得出 0.121422542634445，即给定值的 Weibull 函数的概率密度形式的结果。</p></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

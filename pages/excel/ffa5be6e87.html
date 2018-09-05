@@ -1,0 +1,46 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>FIXED</title>
+    <meta name="description" content="FIXED(数字, 位数, 无逗号) 将数字值四舍五入到指定小数位，然后得出作为字符串值的结果。">
+</head>
+<body dir="ltr" id="ffa5be6e87" class="AppleTopic apd-topic"><a name="ffa5be6e87"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>FIXED</h1>
+<p>FIXED 函数将<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>四舍五入到指定小数位，然后返回作为字符串值的结果。</p>
+<div class="HIStrings"><p><strong class="Term">FIXED</strong>(<em>数字, 位数, 无逗号</em>)</p>
+    <div class="HISubString"><p><em class="Term">数字： </em>要格式化为字符串的<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                      class="xRef Aside">数字值</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">位数： </em>可选数字值，表示应该在小数点右边或左边进行四舍五入的位数。<span
+            class="DescriptionNotString">要四舍五入到指定位数，可使用向上四舍五入。如果去掉的最高有效位数字等于或大于 5，结果将向前进位。负数表示应该在小数点的左边进行四舍五入（例如，四舍五入到百位或千位）。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">无逗号： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，表示是否在结果数字的整个部分中使用位置分隔符。
+    </p>
+        <div class="HISubString"><p><em class="Term">有逗号<span class="TermNotString">(FALSE、0 或省略)</span>： </em>结果中包括位置分隔符。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">无逗号<span class="TermNotString">(TRUE 或 1)</span>： </em>结果中未包括位置分隔符。
+        </p></div>
+    </div>
+</div>
+<table data-type="1 column" aria-label="FIXED 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=FIXED(6789.123, 2) 得出“6,789.12”。</p>
+            <p>=FIXED(6789.123, 1, 1) 得出“6789.1”。</p>
+            <p>=FIXED(6789.123, -2) 得出“6,800”。</p>
+            <p>=FIXED(12.4, 0) 得出“12”。</p>
+            <p>=FIXED(12.5, 0) 得出“13”。</p>
+            <p>=FIXED(4, -1) 得出“0”。</p>
+            <p>=FIXED(5, -1) 得出“10”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5c4c101.html#ffa5c4c101" class="xRef AppleTopic">DOLLAR</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>SLOPE</title>
+    <meta name="description" content="SLOPE(y 值, x 值) 可使用线性回归分析得出集合的最佳拟合线的斜率。">
+</head>
+<body dir="ltr" id="ffa59f9442" class="AppleTopic apd-topic"><a name="ffa59f9442"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>SLOPE</h1>
+<p>SLOPE 函数使用线性回归分析得出集的最佳拟合线的斜率。</p>
+<div class="HIStrings"><p><strong class="Term">SLOPE</strong>(<em>y 值, x 值</em>)</p>
+    <div class="HISubString"><p><em class="Term">y 值： </em>含有 y（因变量）值的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                         class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString"><em>y 值</em>必须包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                            class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>。所有值都必须属于同一<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">x 值： </em>含有 x（自变量）值的集合。<span class="DescriptionNotString"><em>x 值</em>必须包含数字值、日期/时间值或持续时间值。所有值都必须属于同一值类型。</span>
+    </p></div>
+</div>
+<div id="ffa5b91212" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>两个集合的大小必须相同，否则函数将得出一个错误。</p></li>
+        <li><p>例如，如果拥有机动车行驶速度及其处于每种速度时的燃料效率的相关数据，则燃料效率是因变量，行驶速度是自变量。</p></li>
+        <li><p>要求得最佳拟合线的 y 截距，请使用 INTERCEPT 函数。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="SLOPE 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设您对每一次为燃料油交付付款以及在相应价格下您恒温器的平均温度设定的周期性变化都作了记录。</p>
+            <p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="SLOPE 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>价格</p></td>
+        <td><p>设定</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>4.50</p></td>
+        <td><p>64</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>4.20</p></td>
+        <td><p>65</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>3.91</p></td>
+        <td><p>65</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>3.22</p></td>
+        <td><p>66</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>3.09</p></td>
+        <td><p>66</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td><p>3.15</p></td>
+        <td><p>66</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td><p>2.98</p></td>
+        <td><p>68</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">9</p></td>
+        <td><p>2.56</p></td>
+        <td><p>70</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">10</p></td>
+        <td><p>2.60</p></td>
+        <td><p>70</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">11</p></td>
+        <td><p>2.20</p></td>
+        <td><p>72</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 SLOPE 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=SLOPE(B2:B11, A2:A11) 得出近似值 -3.23374495288702，表示最佳拟合线向下倾斜（恒温器的温度设定随价格的上升而降低）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5af6923.html#ffa5af6923"
+                                                   class="xRef AppleTopic">INTERCEPT</a></div>
+</body>
+</html>

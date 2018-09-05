@@ -1,0 +1,42 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CURRENCYCONVERT</title>
+    <meta name="description" content="CURRENCYCONVERT 会返回通过互联网远程获取的货币值以其他货币表示的价格，按照前一交易日收盘时的汇率计算。">
+</head>
+<body dir="ltr" id="ffa1965cea68" class="AppleTopic apd-topic"><a name="ffa1965cea68"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CURRENCYCONVERT</h1>
+<p>CURRENCYCONVERT 函数会返回通过互联网远程获取的给定货币值以不同货币表示的价格，按照前一交易日收盘时的汇率计算。</p>
+<div class="HIStrings"><p><strong class="Term">CURRENCYCONVERT</strong>(<em>值, 货币代码</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em>待转换成新货币的值。<span class="DescriptionNotString">如果<em>值</em>不是货币值，将使用您所选语言和地区的默认货币。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">货币代码： </em>目标转换货币的货币代码。</p></div>
+</div>
+<div id="ffa8858f832d" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>货币代码由 ISO 4217 定义，它是由国际标准化组织发布的一项标准。您可以在网络上查找 ISO 货币代码。</p></li>
+        <li><p>默认货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”或 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”。若要在 macOS
+            中更改特定文稿的此设置，请在打开的文稿中选取“文件”&gt;“高级”&gt;“语言与地区”，或者在创建文稿时，从模板选取器的“语言”弹出式菜单中选取一个选项。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CURRENCYCONVERT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果语言和地区设置为英文（美国），则 =CURRENCYCONVERT(1) 返回 $1.00。</p>
+            <p>=CURRENCYCONVERT(“£6”, “EUR”) 返回前一交易日收盘时 6 英镑对应的欧元价格。</p>
+            <p>如果单元格 C3 包含 ¥5 且语言和地区设置为中文（简体，中国），=CURRENCYCONVERT(C3, “USD”) 将返回前一交易日收盘时人民币 5 元对应的美元价格。</p></td>
+    </tr>
+    </tbody>
+</table>
+<p class="footer credit">CURRENCYCONVERT 函数由<img src="../GlobalArt/IL_YahooLogo.png" alt="雅虎" height="30" width="119">提供数据支持
+</p>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5d87a8c31.html#ffa5d87a8c31" class="xRef AppleTopic">CURRENCY</a><a
+        href="ffa354d15acd.html#ffa354d15acd" class="xRef AppleTopic">CURRENCYCODE</a></div>
+</body>
+</html>

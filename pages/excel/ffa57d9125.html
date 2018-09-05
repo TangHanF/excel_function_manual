@@ -1,0 +1,59 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ACCRINTM</title>
+    <meta name="description" content="ACCRINTM(发行日, 结算日, 年利率, 票面值, 基准天数) 计算证券仅在到期支付利息时添加到证券的购买价格的应计利息以及支付给卖方的应计利息。">
+</head>
+<body dir="ltr" id="ffa57d9125" class="AppleTopic apd-topic"><a name="ffa57d9125"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ACCRINTM</h1>
+<p>ACCRINTM 函数计算证券支付到期利息时添加到证券的购买价格的总应计利息和支付给卖方的总应计利息。</p>
+<div class="HIStrings"><p><strong class="Term">ACCRINTM</strong>(<em>发行日, 结算日, 年利率, 票面值, 基准天数</em>)</p>
+    <div class="HISubString"><p><em class="Term">发行日： </em><a href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>，表示证券的最初发行日期。 </p></div>
+    <div class="HISubString"><p><em class="Term">结算日： </em>日期/时间值或日期字符串，表示交易结算日期，通常比交易日期晚一天或多天。<span
+            class="DescriptionNotString"><em>结算日</em>必须晚于为<em>发行日</em>指定的日期。</span></p></div>
+    <div class="HISubString"><p><em class="Term">年利率： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                              class="xRef Aside">数字值</a>，表示证券的票面年利率或名义年利率，用来确定每期支付的利息。<span
+            class="DescriptionNotString"><em>年利率</em>必须大于 0，且以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。</span></p></div>
+    <div class="HISubString"><p><em class="Term">票面值： </em>数字值，表示证券的票面值或到期值。<span
+            class="DescriptionNotString"><em>票面值</em>通常是数字，如 100、1,000 或 1,000,000。<em>票面值</em>通常格式化为货币。如果省略<em>票面值</em>（逗号，但无值），则假定<em>票面值</em>为 1000。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">基准天数： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定计算中使用的每月天数和每年天数（<a
+            href="ffa8575bdd7.html#ffa8575bdd7" class="xRef Aside">基准天数惯例</a>）。</p>
+        <div class="HISubString"><p><em class="Term">30/360<span class="TermNotString">(0 或省略)</span>： </em>一个月 30 天，一年
+            360 天，采用 <a href="ffa205f6771.html#ffa205f6771" class="xRef Aside">NASD 方法</a>计算一个月的第 31 天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/实际天数 <span class="TermNotString">(1)</span>： </em>每月实际天数，每年实际天数。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/360<span class="TermNotString">(2)</span>： </em>每月实际天数，一年 360
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/365<span class="TermNotString">(3)</span>： </em>每月实际天数，一年 365
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">30E/360<span class="TermNotString">(4)</span>： </em>一个月 30 天，一年 360
+            天，采用<a href="ffa7b6f10f2.html#ffa7b6f10f2" class="xRef Aside">欧洲方法</a>计算一个月的第 31 天。</p></div>
+    </div>
+</div>
+<div id="ffa82eb6fcb0" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="ACCRINTM 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您在考虑购买假想的证券。证券发行日是 2007 年 12 月 14 日（<em>发行日</em>），结算日是 2009 年 5 月 1 日（<em>结算日</em>），票面价值为
+            ￥1000（<em>票面值</em>），到期时支付利息，年利率为 10%（<em>年利率</em>），以 30/360 天（<em>基准天数</em>）为基础计算利息。</p>
+            <p>=ACCRINTM(“2007/12/14”, “2009/05/01”, 0.10, 1000, 0) 得出近似值
+                138.055555555556，此值表示发行日期和结算日期之间的应计利息。此金额将与议定的价格相加，来确定证券卖方应支付给证券买方的金额。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5751245.html#ffa5751245" class="xRef AppleTopic">ACCRINT</a>
+</div>
+</body>
+</html>

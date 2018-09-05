@@ -1,0 +1,40 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>BIN2DEC</title>
+    <meta name="description" content="BIN2DEC(二进制字符串, 转换长度) 可将二进制数字转换成相应的十进制数字。">
+</head>
+<body dir="ltr" id="ffa565cee1" class="AppleTopic apd-topic"><a name="ffa565cee1"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>BIN2DEC</h1>
+<p>BIN2DEC 函数可将二进制数字转换为相应的十进制数字。</p>
+<div class="HIStrings"><p><strong class="Term">BIN2DEC</strong>(<em>二进制字符串, 转换长度</em>)</p>
+    <div class="HISubString"><p><em class="Term">二进制字符串： </em><a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>，表示要被转换的数字。<span
+            class="DescriptionNotString"><em>二进制字符串</em>必须仅包含 0 和 1。</span></p></div>
+    <div class="HISubString"><p><em class="Term">转换长度： </em>可选<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，指定返回数字的最小长度。<span
+            class="DescriptionNotString"><em>转换长度</em>必须在范围 1 至 32 内。如果省略<em>转换长度</em>，则假定为 1。如果包括此值，则返回的数字将以前导零填充（如有必要），因此其长度至少为<em>转换长度</em>指定的长度。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="BIN2DEC 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=BIN2DEC(“1001”) 得出 9。</p>
+            <p>=BIN2DEC(“100111”, 3) 得出 039。</p>
+            <p>=BIN2DEC(101101) 得出 45。</p>
+            <p>=BIN2DEC(-101101) 得出错误，因为不允许存在负号。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa567f1fa.html#ffa567f1fa" class="xRef AppleTopic">BIN2HEX</a><a
+        href="ffa56b0c24.html#ffa56b0c24" class="xRef AppleTopic">BIN2OCT</a><a href="ffa56bcada.html#ffa56bcada"
+                                                                                class="xRef AppleTopic">DEC2BIN</a><a
+        href="ffa56f192f.html#ffa56f192f" class="xRef AppleTopic">HEX2DEC</a><a href="ffa56f99a2.html#ffa56f99a2"
+                                                                                class="xRef AppleTopic">OCT2DEC</a>
+</div>
+</body>
+</html>

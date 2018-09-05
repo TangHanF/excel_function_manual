@@ -1,0 +1,45 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AND</title>
+    <meta name="description" content="如果所有参数为真，AND(测试表达式, 测试表达式…) 将得出 TRUE；否则得出 FALSE。">
+</head>
+<body dir="ltr" id="ffa58075d5" class="AppleTopic apd-topic"><a name="ffa58075d5"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>AND</h1>
+<p>如果所有参数都为真，AND 函数返回<a href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a> TRUE，否则返回布尔值 FALSE。</p>
+<div class="HIStrings"><p><strong class="Term">AND</strong>(<em>测试表达式, 测试表达式…</em>)</p>
+    <div class="HISubString"><p><em class="Term">测试表达式： </em>一个表达式。<span class="DescriptionNotString"><em>测试表达式</em>可含有任何值，只要表达式可作为布尔值求值。如果表达式求得的值为数字，则 0 被视为 FALSE，任何其他数字则被视为 TRUE。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">测试表达式…： </em>可包括一个或更多附加表达式。</p></div>
+</div>
+<div id="ffa582cc71" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>AND 函数相当于数学或逻辑中使用的逻辑连接运算符。它首次对每个<em>测试表达式</em>求值。如果所有给定表达式的计算结果都为布尔值 TRUE，AND 函数将返回布尔值 TRUE；否则返回布尔值
+            FALSE。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="AND 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=AND(TRUE, TRUE) 得出 TRUE，因为两个参数都为真。</p>
+            <p>=AND(1, 0, 1, 1) 得出 FALSE，因为一个为数字 0 的参数解释为 FALSE。</p>
+            <p>如果单元格 A5 含有大于 60 且小于或等于 100 的数字，=AND(A5&gt;60, A5&lt;=100) 返回 TRUE，否则返回 FALSE。</p></td>
+    </tr>
+    <tr>
+        <td><p>以下两个 IF 函数将得出相同的值：</p>
+            <p>=IF(A5&gt;60, IF(A5&lt;=100, TRUE, FALSE), FALSE) 得出 TRUE，这里假定单元格 A5 含有 75 或者任何其他大于 60 且小于或等于 100 的值。</p>
+            <p>=IF(AND(A5&gt;60, A5&lt;=100), TRUE, FALSE) 也得出 TRUE。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5834118.html#ffa5834118" class="xRef AppleTopic">IF</a><a
+        href="ffa583eff2.html#ffa583eff2" class="xRef AppleTopic">NOT</a><a href="ffa57fe1fc.html#ffa57fe1fc"
+                                                                            class="xRef AppleTopic">OR</a></div>
+</body>
+</html>

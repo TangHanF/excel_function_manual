@@ -1,0 +1,40 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>WORKDAY</title>
+    <meta name="description" content="WORKDAY(日期, 工作日数, 排除日期) 将返回在给定日期之前或之后给定工作日数的日期。工作日不包括周末和任何其他指定日期。">
+</head>
+<body dir="ltr" id="ffa55f9592" class="AppleTopic apd-topic"><a name="ffa55f9592"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>WORKDAY</h1>
+<p>WORKDAY 函数返回在给定日期之前或之后给定工作日数的<a href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>。工作日不包括周末和任何其他指定日期。
+</p>
+<div class="HIStrings"><p><strong class="Term">WORKDAY</strong>(<em>日期, </em><em>工作日数, </em><em>排除日期</em>)</p>
+    <div class="HISubString"><p><em class="Term">日期： </em>日期/时间值或<a href="ffac26dc144.html#ffac26dc144"
+                                                                    class="xRef Aside">日期字符串</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">工作日数： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，表示工作日数。<span
+            class="DescriptionNotString">如果所需日期在<em>日期</em>之后，则<em>工作日数</em>是正值；如果所需日期在<em>日期</em>之前，则它是负值。</span></p>
+    </div>
+    <div class="HISubString"><p><em class="Term">排除日期： </em>可选的日期<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                    class="xRef Aside">集合</a>，包含不应计算在内的其他日期。<span
+            class="DescriptionNotString"><em>排除日期</em>必须包含日期/时间值或日期字符串。</span></p></div>
+</div>
+<table data-type="1 column" aria-label="WORKDAY 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定 2009年11月11日和 2009年11月26日是节假日。如果分别在单元格 B2 和 B3 中输入了这两个值，则可以使用以下公式，求出在 2009 年 11 月 1 日之后第 20
+            个工作日的日期（排除这些节假日）：</p>
+            <p>=WORKDAY(“2009/11/01”, 20, B2:B3) 得出 2009 年 12 月 1 日，即 2009 年 11 月 1 日之后第 20 个工作日的日期（排除周末和两个节假日）。</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa55b18db.html#ffa55b18db"
+                                                   class="xRef AppleTopic">NETWORKDAYS</a></div>
+</body>
+</html>

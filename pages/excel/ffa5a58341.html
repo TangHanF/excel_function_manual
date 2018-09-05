@@ -1,0 +1,190 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>LINEST</title>
+    <meta name="description" content="LINEST(已知 y 值, 已知 x 值, y 截距不为 0, 统计) 可使用“最小平方法”得出给定数据的最佳拟合直线的统计数据数组。">
+</head>
+<body dir="ltr" id="ffa5a58341" class="AppleTopic apd-topic"><a name="ffa5a58341"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>LINEST</h1>
+<p>LINEST 函数可使用<em>最小平均法</em>返回给定数据的最佳拟合直线的统计数据<a href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>。</p>
+<div class="HIStrings"><p><strong class="Term">LINEST</strong>(<em>已知 y 值, 已知 x 值, y 截距不为 0, 更多统计</em>)</p>
+    <div class="HISubString"><p><em class="Term">已知 y 值： </em>包含已知 y 值的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                          class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString"><em>已知 y 值</em>必须包含<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>或<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>。如果只有一组已知的 x 值，则<em>已知 y 值</em>可以是任意大小。如果有多组已知的 x 值，则<em>已知 y 值</em>可以是含有值的一列或一行，但不能同时是两者。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">已知 x 值： </em>一个可选集合，含有已知的 x 值。<span class="DescriptionNotString"><em>已知 x 值</em>必须包含数字值或日期/时间值。如果省略，则将假定它是大小与<em>已知 y 值</em>（从 1 开始）相同的集合，例如，1, 2, 3（如果有三个<em>已知 y 值</em>）。如果只有一组已知的 x 值，则<em>已知 x 值</em>（如已指定）的大小应与<em>已知 y 值</em>相同。如果存在多组已知的 x 值，则<em>已知 x 值</em>的每行/列都应视为一个集合，且每行/列的大小必须与<em>已知 y 值</em>的行/列大小相同。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">y 截距不为 0： </em>可选<a href="ffa8575c326.html#ffa8575c326"
+                                                                     class="xRef Aside">模态值</a>，用于指定应如何计算 y 轴截距（常数 b）。
+    </p>
+        <div class="HISubString"><p><em class="Term">正常<span class="TermNotString">(1、TRUE 或省略)</span>： </em>应按正常方式计算的 y
+            轴截距（常数 b）值。</p></div>
+        <div class="HISubString"><p><em class="Term">强制为 0 值<span class="TermNotString">(0、FALSE)</span>： </em>应强制设为 0 的
+            y 轴截距（常数 b）值。</p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">更多统计： </em>可选模态值，用于指定是否应得出附加统计数据信息。</p>
+        <div class="HISubString"><p><em class="Term">无附加的统计值<span class="TermNotString">(0、FALSE 或省略)</span>： </em>不在得出的数组中得出附加的回归统计数据。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">附加的统计值<span class="TermNotString">(1、TRUE)</span>： </em>在得出的数组中得出附加的回归统计数据。
+        </p></div>
+    </div>
+</div>
+<div id="ffa5ab38f8" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>函数得出的值包含在数组中。读取数组中值的方法之一是使用 INDEX 函数。可在 INDEX 函数中绕排 LINEST 函数：=INDEX(LINEST(<em>已知 y 值, 已知 x 值, y 截距,
+            更多统计</em>), <em>y</em>, <em>x</em>) 中的 y 和 x 是所需值的列索引和行索引。</p>
+            <p>如果未得出附加统计数据（<em>更多统计</em>为 FALSE），得出的数组则只有一行。列数等于<em>已知 x 值</em>的集合个数加 1。它含有以倒序排列（第一个值与 x
+                值的最后一行/列关联）的直线斜率（x 值的每行/列有一个值）和截距 b 的值。</p>
+            <p>如果得出附加统计数据（<em>更多统计</em>为 TRUE），则数组含有五行。请参阅此数组的附加信息（紧跟在这些示例的后面）。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="LINEST 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设包含<em>已知 x 值</em>（单元格 A2:A6）和<em>已知 y 值</em>（单元格 B2:B6）的表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="LINEST 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>X</p></td>
+        <td><p>Y</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>0</p></td>
+        <td><p>-1</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>8</p></td>
+        <td><p>10</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>9</p></td>
+        <td><p>12</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>4</p></td>
+        <td><p>5</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>1</p></td>
+        <td><p>3</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 LINEST 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=INDEX(LINEST(A2:A6, B2:B6, 1, 0), 1) 得出近似值 0.752707581227437，假定 <em>y 截距不为 0</em> 为正态值
+            1。这是最佳拟合线斜率，因为我们已经指定我们想要 INDEX 得出的数组的第一个值，并且我们只指定了一组<em>已知 x 值</em>。</p>
+            <p>=INDEX(LINEST(A2:A6, B2:B6, 1, 0), 2) 得出近似值 0.0342960288808646，即为 b，最佳拟合线的截距。得出该截距，因为我们已经指定我们想要 INDEX
+                得出的数组的第二个值，这可能是第二个值，因为我们只指定了一组<em>已知 x 值</em>。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div id="ffa004f4c" class="Subhead"><h2 class="Name">附加统计数据数组的内容</h2>
+    <p>LINEST 可包括此函数得出的数组中的附加统计信息。为了进行下面的讨论，假设除了已知的 y 值，还有五组已知的 x 值。进一步假设<em>已知 x 值</em>位于五个表格行或五个表格列中。根据这些假设，LINEST
+        得出的数组可能包含以下值。</p>
+    <table data-type="Multicolumn" aria-label="LINEST 函数得出的数组内容">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col"><p class="TableHead">1</p></th>
+            <th scope="col"><p class="TableHead">2</p></th>
+            <th scope="col"><p class="TableHead">3</p></th>
+            <th scope="col"><p class="TableHead">4</p></th>
+            <th scope="col"><p class="TableHead">5</p></th>
+            <th scope="col"><p class="TableHead">6</p></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="TableDisplayRow">
+            <td><p class="TableDisplay">1</p></td>
+            <td><p>S<sub>5</sub></p></td>
+            <td><p>S<sub>4</sub></p></td>
+            <td><p>S<sub>3</sub></p></td>
+            <td><p>S<sub>2</sub></p></td>
+            <td><p>S<sub>1</sub></p></td>
+            <td><p>b</p></td>
+        </tr>
+        <tr class="TableDisplayRow">
+            <td><p class="TableDisplay">2</p></td>
+            <td><p>SE<sub>5</sub></p></td>
+            <td><p>SE<sub>4</sub></p></td>
+            <td><p>SE<sub>3</sub></p></td>
+            <td><p>SE<sub>2</sub></p></td>
+            <td><p>SE<sub>1</sub></p></td>
+            <td><p>SE<sub>b</sub></p></td>
+        </tr>
+        <tr class="TableDisplayRow">
+            <td><p class="TableDisplay">3</p></td>
+            <td><p>C</p></td>
+            <td><p>SE<sub>y</sub></p></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="TableDisplayRow">
+            <td><p class="TableDisplay">4</p></td>
+            <td><p>F</p></td>
+            <td><p>DF</p></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="TableDisplayRow">
+            <td><p class="TableDisplay">5</p></td>
+            <td><p>R<sub>1</sub></p></td>
+            <td><p>R<sub>2</sub></p></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <p>第 1 行第 1 列包含 S<sub>5</sub>（第五组<em>已知 x 值</em>的斜率），继续直到第五列，第五列将包含 S<sub>1</sub>（第 1 组<em>已知 x
+        值</em>的斜率）。请注意与每组<em>已知 x 值</em>相关的斜率会以倒序得出。</p>
+    <p>第 1 行的最后一个单元格包含 b，即已知 x 值的截距 y。在我们的例子中，这会是第 1 行第 6 列。</p>
+    <p>第 2 行第 1 列包含 SE<sub>5</sub>（与第五组<em>已知 x 值</em>关联的系数的标准错误），继续直到第 5 列，第 5 列将包含 SE<sub>1</sub>（第一组<em>已知 x 值</em>的标准错误系数）。得出的这些值按倒序排列，也就是说，如果有五组已知的
+        x 值，则第五组值在数组中首先得出。这与得出斜率值的方法相同。</p>
+    <p>第 2 行的最后一个单元格包含 SE<sub>b</sub>，与 y 截距值 (b) 关联的标准错误。在我们的例子中，这会是第 2 行第 6 列。</p>
+    <p>第 3 行第 1 列包含 C，即确定系数。此统计方法可比较 y 估计值和 y 实际值。如果该值是 1，则 y 估计值和 y 实际值之间没有差异。这称为<em>完全相关</em>。如果确定系数是
+        0，则没有相关性，而且给定的回归方程对预测 y 值没有帮助。</p>
+    <p>第 3 行第 2 列包含 SE<sub>y</sub>，即与 y 估计值关联的标准错误。</p>
+    <p>第 4 行第 1 列包含 F，即 F 观测值。F 观测值用于确定因变量和自变量之间的观测关系是否为随机出现。</p>
+    <p>第 4 行第 2 列包含 DF，即自由度。使用自由度统计方法可帮助确定置信度。</p>
+    <p>第 5 行第 1 列包含 R<sub>1</sub>，回归平方和。</p>
+    <p>第 5 行第 2 列包含 R<sub>2</sub>，残差平方和。</p>
+    <p>对于附加统计数据数组，请记住以下事项：</p>
+    <ul>
+        <li><p>已知的 x 值和已知的 y 值是否在同一行或同一列无关紧要。在任意一种情况下，得出的数组都按表格中说明的行顺序排列。</p></li>
+        <li><p>此示例假设存在五组已知的 x 值。如果大于或小于五组，得出的数组中的列数也将相应改变（始终等于已知 x 值的组数加 1），但行数始终为常数。</p></li>
+        <li><p>如果未在 LINEST 的参数中指定附加统计数据，则得出的数组只能等于第一行。</p></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CURRENCYH</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--<meta name="description" content="CURRENCYH 返回给定日期两种货币间汇率的历史数据。">-->
+</head>
+<body dir="ltr" id="ffa3e86ad3f3" class="AppleTopic apd-topic"><a name="ffa3e86ad3f3"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CURRENCYH</h1>
+<p>CURRENCYH 函数会返回给定日期两种货币间汇率的历史数据。所返回的值以您要转换成的目标货币为单位（<em>货币‑2</em>）。</p>
+<div class="HIStrings"><p><strong class="Term">CURRENCYH</strong>(<em>货币-1, 货币-2, 收盘价, 日期</em>)</p>
+    <div class="HISubString"><p><em class="Term">货币-1： </em>您要转换的原始货币的代码。<span
+            class="DescriptionNotString"><em>货币‑1 </em>是一串包括在引号内的字符串。</span></p></div>
+    <div class="HISubString"><p><em class="Term">货币-2： </em>您要转换成的目标货币的代码。<span
+            class="DescriptionNotString"><em>货币‑2 </em>是一串包括在引号内的字符串。</span></p></div>
+    <div class="HISubString"><p><em class="Term">收盘价： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定待返回的汇率属性。
+    </p>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>收盘价<span class="TermNotString">” (0 或省略)</span>：
+        </em><em>日期</em>指定之日收盘时<em>货币-1</em> 对<em>货币-2</em> 的汇率，以<em>货币‑2</em> 的金额表示。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>开盘价<span class="TermNotString">”(1)</span>：
+        </em><em>日期</em>指定之日开盘时<em>货币-1</em> 对<em>货币-2</em> 的汇率，以<em>货币‑2</em> 的金额表示。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最高价<span class="TermNotString">”(2)</span>：
+        </em><em>日期</em>指定之日最高汇率，以<em>货币‑2</em> 的金额表示。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最低价<span class="TermNotString">”(3)</span>：
+        </em><em>日期</em>指定之日最低汇率，以<em>货币‑2</em> 的金额表示。</p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">日期： </em>您要查询其历史汇率信息的日期。<span class="DescriptionNotString"><em>日期</em>可以是包括在引号内且有效的过去<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>（例如，“2014/11/1”或“2015年12月31日”），这个公式将返回一个过去的日期，或者对包含有效过去日期或日期公式的单元格的引用。</span>
+    </p></div>
+</div>
+<div id="ffa4b52499c9" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>货币代码由 ISO 4217 定义，它是由国际标准化组织发布的一项标准。您可以在网络上查找 ISO 4217 货币代码。</p></li>
+        <li><p>如果在互联网无法使用时输入了含 CURRENCYH 函数的公式，CURRENCYH 不会返回值。但是，当互联网可用时，公式将根据 CURRENCYH 返回的值进行更新。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CURRENCYH 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=CURRENCYH(“USD”, “GBP”, 3, “2017/4/18”) 返回 £0.78，即 2017 年 4 月 18 日美元 (USD) 对英镑 (GBP) 的最低汇率（“最低价”或
+            3）。</p>
+            <p>=CURRENCYH(“GBP”, “BMD”, “开盘价”, “2015/12/31”) 返回 BMD1.48，即 2015 年 12 月 31 日开盘时英镑 (GBP) 对百慕大元 (BMD)
+                的汇率。</p>
+            <p>=CURRENCYH(“USD”, “AUD”, “收盘价”, TODAY()-2) 返回两天前收盘时美元对澳元 (AUD) 的汇率。</p></td>
+    </tr>
+    </tbody>
+</table>
+<p class="footer credit">CURRENCYH 函数由雅虎提供数据支持
+</p>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5d87a8c31.html#ffa5d87a8c31" class="xRef AppleTopic">CURRENCY</a>
+</div>
+</body>
+</html>

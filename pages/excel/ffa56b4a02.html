@@ -1,0 +1,39 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>BESSELY</title>
+    <meta name="description" content="BESSELY(正 x 值, n 值) 得出整数 Bessel 函数 Yn(x)。">
+</head>
+<body dir="ltr" id="ffa56b4a02" class="AppleTopic apd-topic"><a name="ffa56b4a02"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>BESSELY</h1>
+<p>BESSELY 函数可得出整数 Bessel 函数 Y<sub>n</sub>(x)。</p>
+<div class="HIStrings"><p><strong class="Term">BESSELY</strong>(<em>正 x 值, </em><em>n 值</em>)</p>
+    <div class="HISubString"><p><em class="Term">正 x 值： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，表示要在
+        x 处为此函数求值的 x 值。<span class="DescriptionNotString"><em>正 x 值</em>必须大于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">n 值： </em>数字值，表示函数的阶数。<span class="DescriptionNotString"><em>n 值</em>必须大于或等于 0。任何小数部分都会被忽略。</span>
+    </p></div>
+</div>
+<div id="ffa56e4b66" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此形式的 Bessel 函数也称为 <em>Neumann 函数</em>。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="BESELLY 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=BESSELY(25, 3) 得出 0.117924850396893。</p>
+            <p>=BESSELY(25, 3.9) 也得出 0.117924850396893，因为 <em>n 值</em>的任何小数部分都会被忽略。</p>
+            <p>=BESSELY(-25, 3) 得出错误，因为不允许存在负值或零值。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa566c376.html#ffa566c376" class="xRef AppleTopic">BESSELJ</a>
+</div>
+</body>
+</html>

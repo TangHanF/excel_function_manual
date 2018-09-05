@@ -1,0 +1,48 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>OFFSET</title>
+    <meta name="description" content="OFFSET(基准, 行偏移, 列偏移, 行数, 列数) 得出与指定的基准单元格相隔指定行数和列数的单元格数组。">
+</head>
+<body dir="ltr" id="ffa597c0d3" class="AppleTopic apd-topic"><a name="ffa597c0d3"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>OFFSET</h1>
+<p>OFFSET 函数返回与指定的基准单元格相隔指定行数和列数的单元格<a href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>。</p>
+<div class="HIStrings"><p><strong class="Term">OFFSET</strong>(<em>基准, 行偏移, 列偏移, 行数, 列数</em>)</p>
+    <div class="HISubString"><p><em class="Term">基准： </em>以其为基准测量偏移的单元格的<a href="ffa8575c209.html#ffa8575c209"
+                                                                           class="xRef Aside">单元格引用</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">行偏移： </em>从基准单元格至目标单元格的行数。<span
+            class="DescriptionNotString"><em>行偏移</em>是一个<a href="ffa361b4f72.html#ffa361b4f72"
+                                                           class="xRef Aside">数字值</a>。0 表示目标单元格与基准单元格在同一行。负数表示目标单元格在基准单元格上面的行中。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">列偏移： </em>从基准单元格到目标单元格的列数。<span
+            class="DescriptionNotString"><em>列偏移</em>是一个数字值。0 表示目标单元格与基准单元格在同一列。负数表示目标单元格在基准单元格左边的列中。</span></p></div>
+    <div class="HISubString"><p><em class="Term">行数： </em>可选数字值，指定要得出的引用行数（从偏移位置开始计算）。 </p></div>
+    <div class="HISubString"><p><em class="Term">列数： </em>可选数字值，指定要得出的引用列数（从偏移位置开始计算）。 </p></div>
+</div>
+<table data-type="1 column" aria-label="OFFSET 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设您已在单元格 D7 中输入 1、在单元格 D8 中输入 2、在单元格 D9 中输入 3、在单元格 E7 中输入 4、在单元格 E8 中输入 5 且在单元格 E9 中输入 6。</p>
+            <p>在单元格 B6 中输入 =OFFSET(D7, 0, 0, 3, 1) 得出错误，因为得出的 3 行和 1 列（集合是 D7:D9）与 B6 没有单个的交汇单元格（一个都没有）。</p>
+            <p>在单元格 D4 中输入 =OFFSET(D7, 0, 0, 3, 1) 得出错误，因为得出的 3 行和 1 列（集合是 D7:D9）与 D4（它有三个）没有单个的交汇单元格。</p>
+            <p>在单元格 B8 中输入 =OFFSET(D7, 0, 0, 3, 1) 得出 2，因为得出的 3 行和 1 列（集合是 D7:D9）与 B8 具有单个的交汇单元格（即含有 2 的单元格 D8）。</p>
+            <p>在单元格 B7 中输入 =OFFSET(D7:D9, 0, 1, 3, 1) 得出 4，因为得出的 3 行和 1 列（集合是 E7:E9）与 B7 具有单个的交汇单元格（即含有 4 的单元格 E7）。</p>
+            <p>以下例子没有使用先前例子所述的假定的单元格内容。</p>
+            <p>=OFFSET(A1, 5, 5) 得出单元格 F6 中的值，因为该单元格正是在单元格 A1 的右边五列和下面五行。</p>
+            <p>=OFFSET(G13, 0, -1) 得出 G13 左边的单元格中的值，即 F13 中的值。</p>
+            <p>=SUM(OFFSET(A7, 2, 3, 5, 5)) 得出单元格 D9 至 H13 中值的总和，这些单元格是指以单元格 A7 右边两行和下面三列开始的五行和五列。</p>
+            <p>=SUM(OFFSET(INDIRECT(A1), 0, 0, A2, A3)) 得出在 A2 和 A3 中分别指定的行数和列数之和，其中从在 A1 中指定的基准单元格开始。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa599e753.html#ffa599e753"
+                                                   class="xRef AppleTopic">COLUMN</a><a
+        href="ffa59cc33b.html#ffa59cc33b" class="xRef AppleTopic">ROW</a></div>
+</body>
+</html>

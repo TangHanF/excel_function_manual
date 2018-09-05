@@ -1,0 +1,49 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>SEARCH</title>
+    <meta name="description" content="SEARCH(待查找字符串, 来源字符串, 开始位置) 得出一个字符串值在另一个字符串中的开始位置（忽略大小写，并允许存在通配符）。">
+</head>
+<body dir="ltr" id="ffa5bd4d40" class="AppleTopic apd-topic"><a name="ffa5bd4d40"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>SEARCH</h1>
+<p>SEARCH 函数返回一个<a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>在另一个字符串中的开始位置（忽略大小写，并允许存在<a
+        href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>）。</p>
+<div class="HIStrings"><p><strong class="Term">SEARCH</strong>(<em>待查找字符串, 来源字符串, 开始位置</em>)</p>
+    <div class="HISubString"><p><em class="Term">待查找字符串： </em>要查找的字符串值。 </p></div>
+    <div class="HISubString"><p><em class="Term">来源字符串： </em>要搜索的字符串值。 </p></div>
+    <div class="HISubString"><p><em class="Term">开始位置： </em>可选<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，指定应该在字符串中开始操作的位置。<span
+            class="DescriptionNotString"><em>开始位置</em>必须大于或等于 1 且小于或等于<em>来源字符串</em>中的字符数。</span></p></div>
+</div>
+<div id="ffa5c4de1a" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p><em>待查找字符串</em>中允许使用<a href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>。在<em>待查找字符串</em>中，使用
+            *（星号）来匹配多个字符，或使用 ? （问号）来匹配<em>来源字符串</em>
+            中的任何单个字符。您还可以使用 ~（波浪号）来指定下一个字符应当匹配，而非用作通配符。</p></li>
+        <li><p>指定<em>开始位置</em>允许您在<em>来源字符串</em>中开始搜索<em>待查找字符串</em>，而不在其开头开始搜索。如果<em>来源字符串</em>可能含有多个<em>待查找字符串</em>的实例，而您希望确定第一个实例以外的开始位置，这将非常有用。如果忽略<em>开始位置</em>，则它被假定为
+            1。 </p></li>
+        <li><p>要在搜索中考虑大小写，请使用 FIND 函数。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="SEARCH 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=SEARCH(“ra”, “abracadabra”) 得出 3（即字符串“ra”的第一次出现从“abracadabra”中的第三个字符开始）。</p>
+            <p>=SEARCH(“ra”,“abracadabra”, 5) 得出 10（当您从位置 5 开始查找时，字符串“ra”第一次出现的位置）。</p>
+            <p>=SEARCH(“*lock”, “capslock”) 得出 1，因为搜索字符串开头的星号可匹配“lock”前面的所有字符。</p>
+            <p>=SEARCH(“*lok”, “capslock”) 得出错误，因为字符串“lok”在“capslock”中不存在。</p>
+            <p>=SEARCH(“?lock”, “capslock”) 得出 4，因为问号会匹配“lock”之前的一个字符。</p>
+            <p>=SEARCH(“l*k”, “capslock”) 得出 5，因为星号匹配“l”和“k”之间的所有字符。</p>
+            <p>=SEARCH(“~?”, “Capslock on? No.”) 得出 12，因为波浪符号表示从字面上解释下一个字符（问号），而不是作为通配符，且问号是第 12 个字符。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5c24b12.html#ffa5c24b12" class="xRef AppleTopic">EXACT</a><a
+        href="ffa5c2f5dc.html#ffa5c2f5dc" class="xRef AppleTopic">FIND</a></div>
+</body>
+</html>

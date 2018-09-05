@@ -1,0 +1,121 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>STDEVPA</title>
+    <meta name="description" content="STDEVPA(值, 值…) 根据总体 (true) 方差得出包含任何值的集的标准偏差（离差的一种度量）。">
+</head>
+<body dir="ltr" id="ffa5a86530" class="AppleTopic apd-topic"><a name="ffa5a86530"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>STDEVPA</h1>
+<p>STDEVPA 函数根据总体 (true) 方差返回<a href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>集的标准偏差（离差的一种度量）。</p>
+<div class="HIStrings"><p><strong class="Term">STDEVPA</strong>(<em>值, 值…</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em>任何值。<span class="DescriptionNotString"><em>值</em>可以包含单个值或<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。所有值都必须属于同一<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>（但<a href="ffa8575bef5.html#ffa8575bef5"
+                                                                                 class="xRef Aside">字符串值</a>和<a
+            href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a>可与<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                               class="xRef Aside">数字值</a>同时包括在内）。最少需要两个值。字符串值可包括在引用单元格中，但不能直接输入作为函数的参数。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">值…： </em>可选择性地包括一个或多个附加值或值集合。</p></div>
+</div>
+<div id="ffa5a20c4a" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>当指定值仅表示整个集合或总体时，适合使用 STDEVPA 函数。如果正在分析的值仅表示较大总体的样本，请使用 STDEVA 函数。</p></li>
+        <li><p>此函数为任何字符串值分配值 0，为布尔值 FALSE 分配值 0，为布尔值 TRUE 分配值 1，并在计算中包括它们（如果其他所有值都是数字）。如果<a
+                href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                     class="xRef Aside">持续时间值</a>与字符串值或布尔值包括在内，则函数返回错误。空白单元格将被忽略。
+        </p></li>
+        <li><p>标准偏差是 VARPA 函数得出的方差的平方根。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="STDEVPA 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设您在加州的库珀蒂诺安装了温度感应器。感应器将以华氏度数记录每天的高温和低温。七月的前几天的数据如下表所示，可用作高温和低温的总体样本（请注意，这仅是一个示例，在统计上可能无效）。7 月 5
+            日该感应器出现故障，所以表格中的相应数据显示为 n/a 或不可用。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="STDEVPA 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>日期</p></td>
+        <td><p>高温</p></td>
+        <td><p>低温</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>2010/7/1</p></td>
+        <td><p>58</p></td>
+        <td><p>58</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>2010/7/2</p></td>
+        <td><p>84</p></td>
+        <td><p>61</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>2010/7/3</p></td>
+        <td><p>82</p></td>
+        <td><p>59</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>2010/7/4</p></td>
+        <td><p>78</p></td>
+        <td><p>55</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>2010/7/5</p></td>
+        <td><p>n/a</p></td>
+        <td><p>n/a</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td><p>2010/7/6</p></td>
+        <td><p>81</p></td>
+        <td><p>57</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td><p>2010/7/7</p></td>
+        <td><p>93</p></td>
+        <td><p>67</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 STDEVPA 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=STDEVPA(B2:B8) 得出近似值 29.4472894702188，即根据 STDEVPA 测量的每日高温样本的离差（标准偏差是离差的一种度量）。</p>
+            <p>如果您拥有大型数据集不能轻松看完，或者您希望自动检查丢失值，可将 =STDEVP(B2:B8) 的结果（得出近似值 10.6092203085597）与 STDEVPA 的结果（得出近似值
+                29.4472894702188）进行比较。如果它们不相等（正如这个例子所示），这意味着该数据集含有文本（如“n/a”）或一个或多个布尔值（TRUE 或 FALSE）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b72086.html#ffa5b72086" class="xRef AppleTopic">STDEV</a><a
+        href="ffa5a472c1.html#ffa5a472c1" class="xRef AppleTopic">STDEVP</a><a href="ffa5b823a7.html#ffa5b823a7"
+                                                                               class="xRef AppleTopic">STDEVA</a><a
+        href="ffa5b6c8b4.html#ffa5b6c8b4" class="xRef AppleTopic">VAR</a><a href="ffa5aa34ec.html#ffa5aa34ec"
+                                                                            class="xRef AppleTopic">VARA</a><a
+        href="ffa5b3f163.html#ffa5b3f163" class="xRef AppleTopic">VARP</a><a href="ffa59f5947.html#ffa59f5947"
+                                                                             class="xRef AppleTopic">VARPA</a></div>
+</body>
+</html>

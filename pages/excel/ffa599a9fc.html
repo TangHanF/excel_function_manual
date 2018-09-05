@@ -1,0 +1,35 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CHOOSE</title>
+    <meta name="description" content="CHOOSE(索引, 值, 值…) 可基于指定索引值得出值集合中的某个值。">
+</head>
+<body dir="ltr" id="ffa599a9fc" class="AppleTopic apd-topic"><a name="ffa599a9fc"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CHOOSE</h1>
+<p>CHOOSE 函数可基于指定索引值得出值集合中的某个值。</p>
+<div class="HIStrings"><p><strong class="Term">CHOOSE</strong>(<em>索引, 值, 值…</em>)</p>
+    <div class="HISubString"><p><em class="Term">索引： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                             class="xRef Aside">数字值</a>，表示要返回的值的索引。<span
+            class="DescriptionNotString"><em>索引</em>必须大于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">值： </em><a href="ffa361bc137.html#ffa361bc137"
+                                                            class="xRef Aside">任何值</a>。<span
+            class="DescriptionNotString"><em>值</em>只能包含单个值。</span></p></div>
+    <div class="HISubString"><p><em class="Term">值…： </em>可选择性地包括一个或多个附加单个值。</p></div>
+</div>
+<table data-type="1 column" aria-label="CHOOSE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定单元格 A3 包含 3。</p>
+            <p>=CHOOSE(4,“周一”, “周二”, “周三”, “周四”, “周五”, “周六”, “周日”) 得出周四，这是列表中的第四个值。</p>
+            <p>=CHOOSE(A3, “1st”, “second”, 7, “last”) 得出 7，这是列表中的第三个值。</p></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

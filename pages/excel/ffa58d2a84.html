@@ -1,0 +1,43 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>SUMPRODUCT</title>
+    <meta name="description" content="SUMPRODUCT(范围, 范围…) 得出两个或多个集合内对应数字的乘积之和。">
+</head>
+<body dir="ltr" id="ffa58d2a84" class="AppleTopic apd-topic"><a name="ffa58d2a84"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>SUMPRODUCT</h1>
+<p>SUMPRODUCT 函数得出一个或多个集合内对应数字的乘积之和。</p>
+<div class="HIStrings"><p><strong class="Term">SUMPRODUCT</strong>(<em>范围, 范围…</em>)</p>
+    <div class="HISubString"><p><em class="Term">范围： </em>单元格<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString"><em>范围</em>包含对单个<a href="ffa361b4f72.html#ffa361b4f72"
+                                                            class="xRef Aside">数字值</a>或<a
+            href="ffa8575c843.html#ffa8575c843" class="xRef Aside">持续时间值</a><a href="ffa8575c9b4.html#ffa8575c9b4"
+                                                                               class="xRef Aside">范围</a>的引用。如果所有值都是持续时间值，SUMPRODUCT 得出数字值。如果<em>范围</em>中的一个且仅一个单元格包含持续时间值，而其他所有单元格都包含数字值，SUMPRODUCT 将返回持续时间值。如果<em>范围</em>中包括<a
+            href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>或<a href="ffa361cb72c.html#ffa361cb72c"
+                                                                               class="xRef Aside">布尔值</a>，则它们将被忽略。如果<em>范围</em>中包括<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>，SUMPRODUCT 将返回错误。</span></p></div>
+    <div class="HISubString"><p><em class="Term">范围…： </em>可包括一个或多个附加的单元格集合。<span class="DescriptionNotString">集合的大小必须相同。</span>
+    </p></div>
+</div>
+<div id="ffa5966602" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>SUMPRODUCT 函数将每个集合内的对应数字相乘，然后再对这些乘积求和。如果仅指定一个集合，SUMPRODUCT 将得出此集合的和。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="SUMPRODUCT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设单元格 B1:E1 包含 1、2、3 和 4。假设单元格 B2:E2 包含 2、4、6 和 8。</p>
+            <p>=SUMPRODUCT(B1:E1, B2:E2) 得出 60，即为 B1*B2 (2)、C1*C2 (8)、D1*D2 (18) 和 E1*E2 (32) 的和。</p>
+            <p>=SUMPRODUCT(B1:E1) 得出 10，因为它只有一个集合，该集合的和为 10。</p></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

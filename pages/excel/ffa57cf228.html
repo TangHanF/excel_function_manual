@@ -1,0 +1,59 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>PPMT</title>
+    <meta name="description" content="PPMT(各期利率, 付款期数, 期数, 现值, 终值, 付款时间) 基于固定定期付款和固定利率得出指定贷款或年金付款的本金部分。">
+</head>
+<body dir="ltr" id="ffa57cf228" class="AppleTopic apd-topic"><a name="ffa57cf228"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>PPMT</h1>
+<p>PPMT 函数基于固定定期付款和固定利率得出指定贷款或年金付款的本金部分。</p>
+<div class="HIStrings"><p><strong class="Term">PPMT</strong>(<em>各期利率, 付款期数, 期数, 现值, 终值, 付款时间</em>)</p>
+    <div class="HISubString"><p><em class="Term">各期利率： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，表示每期的利率。<span
+            class="DescriptionNotString"><em>各期利率</em>可以以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。<em>各期利率</em>可使用与<em>期数</em>相同的时限（如每月、每季或每年）指定。例如，如果<em>期数</em>表示月份，且年利率为 8%，则<em>各期利率</em>指定为 0.00667 或 0.667%（0.08 除以 12）。<em>各期利率</em>可以是负数，但函数返回的结果可能难以解释。 </span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">付款期数： </em>数字值，表示要计算本金或利息的付款期数。<span class="DescriptionNotString"><em>付款期数</em>必须大于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">期数： </em>数字值，表示期数。<span
+            class="DescriptionNotString"><em>期数</em>可使用与<em>各期利率</em>相同的时限（如每月、每季或每年）指定。<em>期数</em>必须大于或等于 0。</span></p>
+    </div>
+    <div class="HISubString"><p><em class="Term">现值： </em>数字值，表示初期投资值，或贷款或年金的金额。<span class="DescriptionNotString"><em>现值</em>通常格式化为货币。时间为 0 时，接收的金额为正值，投资的金额为负值。例如，金额可以是借入金额（正）或年金合约中的初始付款（负）。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">终值： </em>可选数字值，表示最终付款后投资的值或年金的剩余现金值（正值），或贷款余额（负值）。<span
+            class="DescriptionNotString"><em>终值</em>通常格式化为货币。在投资周期结束时，接收的金额为正值，投资的金额为负值。例如，金额可以是要支付的贷款的大额尾付金额（正）或年金合约的剩余值（负）。如果省略，则假定<em>终值</em>为 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">付款时间： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定是在每期的开头还是结尾付款。<span
+            class="DescriptionNotString">多数抵押和其他贷款要求在第一个周期 (0) 的结尾进行第一次付款。多数租赁付款和一些其他类型的付款在每个周期 (1) 的开头支付。</span></p>
+        <div class="HISubString"><p><em class="Term">期末<span class="TermNotString">(0 或省略)</span>： </em>将付款视为在每期结尾收到或支付。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">期初<span class="TermNotString">(1)</span>： </em>将付款视为在每期开头收到或支付。</p>
+        </div>
+    </div>
+</div>
+<div id="ffa5df0928c6" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="PPMT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假想分期支付贷款 ￥200,000（<em>现值</em>为正数，因为它是现金流入），欠款年利率为 6%，按月还款（<em>各期利率</em>为 0.06/12，<em>付款时间</em>为 0），期限为 10
+            年（<em>期数</em>为 10*12），期末大额付款（最终付款）为 ￥100,000（<em>终值</em>为 -100000，因为这是现金流出）。</p>
+            <p>=PPMT(0.06/12, 25, 10*12, 200000, -100000, 0) 得出
+                -￥687.80（负值，因为这是现金流出），此值是贷款期限内第三年第一次支付的本金部分（<em>付款期数</em>为 25，因为这是第 25 次付款）。</p>
+            <p>=IPMT(0.06/12, 25, 10*12, 200000, -100000, 0) 得出 -￥922.41，此值是贷款期限内第三年第一次支付的利息部分（付款为 25）。</p>
+            <p>=PMT(0.06/12, 10*12, 200000, -100000, 0) 得出 -￥1,610.21，此值是贷款期限内的分期付款金额。</p>
+            <p>请注意，IPMT 得出的复合利率与 PPMT 得出的本金部分之和，等于 PMT 得出的月付款。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa57a49c3.html#ffa57a49c3" class="xRef AppleTopic">IPMT</a><a
+        href="ffa57ada77.html#ffa57ada77" class="xRef AppleTopic">PMT</a></div>
+</body>
+</html>

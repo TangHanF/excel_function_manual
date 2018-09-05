@@ -1,0 +1,46 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>COLUMNS</title>
+    <meta name="description" content="COLUMNS(范围) 得出指定的单元格集合内包括的列数。">
+</head>
+<body dir="ltr" id="ffa59bde1e" class="AppleTopic apd-topic"><a name="ffa59bde1e"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>COLUMNS</h1>
+<p>COLUMNS 函数可返回指定的单元格<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>内包含的列数。</p>
+<div class="HIStrings"><p><strong class="Term">COLUMNS</strong>(<em>范围, 标题</em>)</p>
+    <div class="HISubString"><p><em class="Term">范围： </em>单元格集合。<span
+            class="DescriptionNotString"><em>范围</em>必须包含单个单元格<a href="ffa8575c9b4.html#ffa8575c9b4" class="xRef Aside">范围</a>（可包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>）的引用。</span></p></div>
+    <div class="HISubString"><p><em class="Term">标题： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定是否要在列数中包括标题列。
+    </p>
+        <div class="HISubString"><p><em class="Term">包括标题<span class="TermNotString">(0 或省略)</span>： </em>列数中包括标题列。</p>
+        </div>
+        <div class="HISubString"><p><em class="Term">排除标题 <span class="TermNotString">(1)</span>： </em>列数中不包括标题列。</p>
+        </div>
+    </div>
+</div>
+<div id="ffa59b3205" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>如果您选择整个表格行作为<em>范围</em>，COLUMNS 将得出该行中的总列数。调整表格大小时，此列数将会改变。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="COLUMNS 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=COLUMNS(B3:D10) 得出 3，即某范围（列 B、C 和 D）指定的集合内的列数。</p>
+            <p>=COLUMNS(5:5) 将得出行 5 中的总列数。</p>
+            <p>=COLUMNS(A1:D10,0) 得出 4，即某范围（列 A、B、C 和 D）指定的集合内的列数，其中包括标题列 A。</p>
+            <p>=COLUMNS(A1:D10,1) 得出 3，即某范围（列 A、B、C 和 D）指定的集合内的列数，其中不包括标题列 A。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59cfc1e.html#ffa59cfc1e" class="xRef AppleTopic">ROWS</a>
+</div>
+</body>
+</html>

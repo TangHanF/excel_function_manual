@@ -1,0 +1,409 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>COUNTIF</title>
+    <meta name="description" content="COUNTIF(待检验阵列, 条件) 得出某个集合内满足给定条件的单元格的个数。">
+</head>
+<body dir="ltr" id="ffa5b9f72f" class="AppleTopic apd-topic"><a name="ffa5b9f72f"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>COUNTIF</h1>
+<p>COUNTIF 函数返回某个集合内满足给定<a href="ffa8575bb7b.html#ffa8575bb7b" class="xRef Aside">条件</a>的单元格的个数。</p>
+<div class="HIStrings"><p><strong class="Term">COUNTIF</strong>(<em>待检验阵列, 条件</em>)</p>
+    <div class="HISubString"><p><em class="Term">待检验阵列： </em><a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>，包含要测试的值。<span
+            class="DescriptionNotString"><em>待检验阵列</em>可以包含<a href="ffa361bc137.html#ffa361bc137"
+                                                              class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">条件： </em>比较或检验值，并返回<a href="ffa361cb72c.html#ffa361cb72c"
+                                                                       class="xRef Aside">布尔值</a> TRUE 或 FALSE 的<a
+            href="ffaf0f44203.html#ffaf0f44203" class="xRef Aside">表达式</a>。<span
+            class="DescriptionNotString"><em>条件</em>可包括比较运算符、常数、与符号并置运算符、引用表达式和通配符。您可以使用<a
+            href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>来匹配表达式中的任何单个字符或多个字符。您可以使用 ? （问号）表示一个字符，*（星号）表示多个字符，并使用 ~（波浪号）来指定下一个字符应当匹配，而非用作通配符。</span>
+    </p></div>
+</div>
+<div id="ffa5b92dfd" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>每个<em>待检验阵列</em>值都要与<em>条件</em>进行比较。如果某值满足条件测试，则它将包括在计数中。 </p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="COUNTIF 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>以下表格中的信息没什么意义，但能说明包括在结果中的 COUNTIF 参数的参数类型。</p>
+            <p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="COUNTIF 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>100</p></td>
+        <td><p>200</p></td>
+        <td><p>300</p></td>
+        <td><p>400</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>lorem</p></td>
+        <td><p>ipsum</p></td>
+        <td><p>dolor</p></td>
+        <td><p>sit</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>100</p></td>
+        <td><p>200</p></td>
+        <td><p>300</p></td>
+        <td><p>sit</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>TRUE</p></td>
+        <td><p>TRUE</p></td>
+        <td><p>FALSE</p></td>
+        <td><p>FALSE</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td></td>
+        <td><p>200</p></td>
+        <td></td>
+        <td><p>400</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 COUNTIF 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=COUNTIF(A1:D1, “&gt;0”) 得出 4，因为此集合内所有单元格中的值都大于 0。</p>
+            <p>=COUNTIF(A3:D3, “&gt;=100”) 得出 3，因为比较时三个数字全都大于或等于 100，且文本值被忽略。</p>
+            <p>=COUNTIF(A1:D5, “=ipsum”) 得出 1，因为文本字符串“ipsum”在该范围引用的集合内出现一次。</p>
+            <p>=COUNTIF(A1:D5, “=*t”) 得出 2，因为以字母“t”结尾的字符串在该范围引用的集合内出现两次。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用几种函数的调查示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例—调查结果</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>本示例汇总了统计函数中使用的举例说明。它基于假设的调查。这项调查很短（只有 5 个问题）且接受调查者非常有限 (10)。应该以等级 1 到 5
+            回答每个问题（可能范围从“从不”到“总是”），也可以不回答问题。每个调查都先编号 (ID#) 再邮寄。下表显示了结果。回答超出范围（错误）或未回答的问题在表格中使用空白单元格表示。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="调查示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+        <th scope="col"><p class="TableHead">F</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>ID#</p></td>
+        <td><p>Q1</p></td>
+        <td><p>Q2</p></td>
+        <td><p>Q3</p></td>
+        <td><p>Q4</p></td>
+        <td><p>Q5</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>101</p></td>
+        <td><p>5</p></td>
+        <td><p>4</p></td>
+        <td><p>4</p></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>105</p></td>
+        <td><p>3</p></td>
+        <td><p>2</p></td>
+        <td><p>2</p></td>
+        <td><p>3</p></td>
+        <td><p>3</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>102</p></td>
+        <td></td>
+        <td><p>4</p></td>
+        <td><p>4</p></td>
+        <td><p>4</p></td>
+        <td><p>4</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>104</p></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+        <td><p>2</p></td>
+        <td><p>4</p></td>
+        <td><p>3</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>107</p></td>
+        <td><p>4</p></td>
+        <td><p>3</p></td>
+        <td></td>
+        <td></td>
+        <td><p>3</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td><p>106</p></td>
+        <td><p>4</p></td>
+        <td><p>3</p></td>
+        <td></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td><p>109</p></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+        <td><p>1</p></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">9</p></td>
+        <td><p>111</p></td>
+        <td><p>5</p></td>
+        <td><p>2</p></td>
+        <td><p>2</p></td>
+        <td><p>5</p></td>
+        <td><p>3</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">10</p></td>
+        <td><p>121</p></td>
+        <td><p>4</p></td>
+        <td><p>2</p></td>
+        <td><p>3</p></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">11</p></td>
+        <td><p>115</p></td>
+        <td><p>3</p></td>
+        <td><p>3</p></td>
+        <td></td>
+        <td><p>3</p></td>
+        <td><p>3</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="第二个值表格的标题">
+    <tbody>
+    <tr>
+        <td><p>为了举例说明部分函数，假定字母前缀中包括调查编号，且数值范围是 A–E，而非 1–5。那么表格将如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="用于调查示例的第二个值表格">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+        <th scope="col"><p class="TableHead">F</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>ID#</p></td>
+        <td><p>Q1</p></td>
+        <td><p>Q2</p></td>
+        <td><p>Q3</p></td>
+        <td><p>Q4</p></td>
+        <td><p>Q5</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>101</p></td>
+        <td><p>E</p></td>
+        <td><p>D</p></td>
+        <td><p>D</p></td>
+        <td><p>C</p></td>
+        <td><p>D</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>105</p></td>
+        <td><p>C</p></td>
+        <td><p>B</p></td>
+        <td><p>B</p></td>
+        <td><p>C</p></td>
+        <td><p>C</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>102</p></td>
+        <td></td>
+        <td><p>D</p></td>
+        <td><p>D</p></td>
+        <td><p>D</p></td>
+        <td><p>D</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>104</p></td>
+        <td><p>C</p></td>
+        <td><p>D</p></td>
+        <td><p>B</p></td>
+        <td><p>D</p></td>
+        <td><p>C</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>107</p></td>
+        <td><p>D</p></td>
+        <td><p>C</p></td>
+        <td></td>
+        <td></td>
+        <td><p>C</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td><p>106</p></td>
+        <td><p>D</p></td>
+        <td><p>C</p></td>
+        <td></td>
+        <td><p>C</p></td>
+        <td><p>D</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td><p>109</p></td>
+        <td><p>C</p></td>
+        <td><p>D</p></td>
+        <td><p>A</p></td>
+        <td><p>C</p></td>
+        <td><p>D</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">9</p></td>
+        <td><p>111</p></td>
+        <td><p>E</p></td>
+        <td><p>B</p></td>
+        <td><p>B</p></td>
+        <td><p>E</p></td>
+        <td><p>C</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">10</p></td>
+        <td><p>121</p></td>
+        <td><p>D</p></td>
+        <td><p>B</p></td>
+        <td></td>
+        <td><p>C</p></td>
+        <td><p>D</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">11</p></td>
+        <td><p>115</p></td>
+        <td><p>C</p></td>
+        <td><p>C</p></td>
+        <td><p>C</p></td>
+        <td><p>C</p></td>
+        <td><p>C</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="调查结果的表格标题">
+    <tbody>
+    <tr>
+        <td><p>使用此表格中的数据和部分可用统计函数，可以收集有关调查结果的信息。请记住，本示例故意设为小型，以便可让结果比较明显。但是，如果具有 50、100 或更多接受调查者，且可能具有很多问题，则结果将不明显。</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="函数列出的调查结果">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">函数和参数</p></th>
+        <th scope="col"><p class="TableHead">结果描述</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=CORREL(B2:B11, C2:C11)</p></td>
+        <td><p>使用线性回归分析确定问题 1 和问题 2 之间的相关性。相关性可衡量两个变量（此示例中是指调查问题的答案）一起变化的程度。这具体取决于问题：如果被调查者对问题 1 的回答值比问题 1
+            的平均值高（或低），则被调查者对问题 2 的回答值是否也比问题 2 的平均值高（或低）？在此示例中，回答不明显相关 (-0.1732)</p></td>
+    </tr>
+    <tr>
+        <td><p>=COUNT(A2:A11) 或 =COUNTA(A2:A11)</p></td>
+        <td><p>确定返回的调查总数 (10)。请注意，如果调查编号不是数值，则需要使用 COUNTA，而非 COUNT。</p></td>
+    </tr>
+    <tr>
+        <td><p>=COUNT(B2:B11) 或 =COUNTA(B2:B11)</p></td>
+        <td><p>确定第一个问题 (9) 的答案总数。通过跨行扩展此公式，可以确定每个问题的答案总数。由于所有数据都是数值，因此 COUNTA 得出的结果相同。但是，如果调查使用 A-E，而非 1-5，将需要使用 COUNTA
+            来记录结果。</p></td>
+    </tr>
+    <tr>
+        <td><p>=COUNTBLANK(B2:B11)</p></td>
+        <td><p>确定空单元格（表示无效回答或无回答）的数量。如果跨行扩展此公式，则将发现问题 3（D 列）具有 3
+            个无效或未回答的答案。这可能会让您在调查中查看此问题，了解措辞是否有争议或较差，因为其他问题的错误或未回答答案都没有超过 1 个。</p></td>
+    </tr>
+    <tr>
+        <td><p>=COUNTIF(B2:B11, “=5”)</p></td>
+        <td><p>确定为特定问题（此示例中是问题 1）给出等级 5 的被调查者人数。如果跨行扩展此公式，将了解到仅问题 1 和 4 是任何被调查者均给出了问题答案 5。如果调查使用 A-E 范围，将使用
+            =COUNTIF(B2:B11, “=E”)。</p></td>
+    </tr>
+    <tr>
+        <td><p>=COVAR(B2:B11, C2:C11)</p></td>
+        <td><p>确定问题 1 和问题 2 的协方差。协方差可衡量两个变量（此示例中是指调查问题的答案）一起变化的程度。这具体取决于问题：如果被调查者对问题 1 的回答值比问题 1 的平均值高（或低），则被调查者对问题 2
+            的回答值是否也比问题 2 的平均值高（或低）？</p>
+            <p>注：COVAR 不会使用数值范围 A–E 处理表格，因为它需要数值参数。</p></td>
+    </tr>
+    <tr>
+        <td><p>=STDEV(B2:B11) 或 =STDEVP(B2:B11)</p></td>
+        <td><p>确定问题 1 回答的标准偏差（离差的一种度量）。如果跨行扩展此公式，将发现问题 3 的回答具有最高标准偏差。如果结果表示被调查者总体的回答，而不是某个人的回答，则使用 STDEVP，而不是
+            STDEV。请注意，STDEV 是 VAR 的平方根。</p></td>
+    </tr>
+    <tr>
+        <td><p>=VAR(B2:B11) 或 =VARP(B2:B11)</p></td>
+        <td><p>确定问题 1 回答的方差（离差的一种度量）。如果跨行扩展此公式，将发现问题 5 的回答具有最低方差。如果结果表示被调查者总体的回答，而不是某个人的回答，则使用 VARP，而不是 VAR。请注意，VAR 是
+            STDEV 的平方。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a52a41.html#ffa5a52a41" class="xRef AppleTopic">COUNT</a><a
+        href="ffa5b36220.html#ffa5b36220" class="xRef AppleTopic">COUNTA</a><a href="ffa5a1ef74.html#ffa5a1ef74"
+                                                                               class="xRef AppleTopic">COUNTBLANK</a><a
+        href="ffa5a400fc.html#ffa5a400fc" class="xRef AppleTopic">COUNTIFS</a></div>
+</body>
+</html>

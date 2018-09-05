@@ -1,0 +1,39 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>DATE</title>
+    <meta name="description" content="DATE(年, 月, 日) 将年、月、日各自的值合并，然后得出一个日期/时间值。">
+</head>
+<body dir="ltr" id="ffa55cce81" class="AppleTopic apd-topic"><a name="ffa55cce81"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>DATE</h1>
+<p>DATE 函数将年、月、日各自的值合并，然后返回一个<a href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>。虽然日期通常可直接作为字符串（例如“2010/12/31”）输入，但使用
+    DATE 函数可以确保日期解释是一致的，而不用考虑“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中）中或 iCloud 设置的“时区 / 地区”设置中指定的日期格式。所有参数都是<a
+            href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">DATE</strong>(<em>年, 月, 日</em>)</p>
+    <div class="HISubString"><p><em class="Term">年： </em>要包括在得出的值中的年份。<span class="DescriptionNotString">该值不会被转换。如果指定为 10，则使用年份 10，而不是 1910 或 2010 年。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">月： </em>要包括在得出的值中的月份。<span class="DescriptionNotString"><em>月</em>范围应在 1 至 12 之间。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">日： </em>要包括在得出的值中的日。<span class="DescriptionNotString"><em>日</em>范围应在 1 至<em>月</em>内的总天数之间。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="DATE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果 A1 含有 2014、A2 含有 11 且 A3 含有 10：</p>
+            <p>=DATE(A1,A2,A3) 得出 2014 年 11 月 10 日，并按照单元格的当前格式显示。</p>
+            <p>=DATE(A1,A3,A2) 得出 2014 年 10 月 11 日。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa558a84c.html#ffa558a84c"
+                                                   class="xRef AppleTopic">DATEVALUE</a><a
+        href="ffa55f034b.html#ffa55f034b" class="xRef AppleTopic">TIME</a></div>
+</body>
+</html>

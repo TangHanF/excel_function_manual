@@ -1,0 +1,62 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>STOCKH</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--<meta name="description" content="STOCKH(代码, 收盘价, 日期) 会返回股票的历史数据。">-->
+</head>
+<body dir="ltr" id="ffaedc3b1296" class="AppleTopic apd-topic"><a name="ffaedc3b1296"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>STOCKH</h1>
+<p>STOCKH 函数会返回通过互联网远程获取的股票在给定日期的历史价格信息。</p>
+<div class="HIStrings"><p><strong class="Term">STOCKH</strong>(<em>代码, 收盘价, 日期</em>)</p>
+    <div class="HISubString"><p><em class="Term">代码： </em>唯一标识特定股票市场上某只公开交易股票的缩写。<span class="DescriptionNotString"><em>代码</em>是一串包括在引号内的字符串。<em>代码</em>也可以是对包含股票代码的单元格的引用。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">收盘价： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定待返回的股票属性。
+    </p>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>收盘价<span class="TermNotString">” (0 或省略)</span>：
+        </em>股票在指定日期收盘时的价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>开盘价<span class="TermNotString">”(1)</span>：
+        </em>股票在指定日期开盘时交易的价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最高价<span class="TermNotString">”(2)</span>：
+        </em>股票在指定日期交易的最高价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最低价<span class="TermNotString">”(3)</span>：
+        </em>股票在指定日期交易的最低价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>成交量<span class="TermNotString">”(4)</span>：
+        </em>股票在指定日期转手的份额数。</p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">日期： </em>您要查询其历史股价信息的日期。<span class="DescriptionNotString"><em>日期</em>可以是包括在引号内且有效的过去<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>（例如，“2014/11/1”或“2015年12月31日”），这个公式将返回一个过去的日期，或者对包含有效过去日期或数据公式的单元格的引用。</span>
+    </p></div>
+</div>
+<div id="ffa755c19cd3" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>如果在互联网无法使用时输入了含 STOCKH 函数的公式，STOCKH 不会返回值。但是，当互联网可用时，公式将根据 STOCKH 返回的值进行更新。</p></li>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+        <li><p>若要获取特定股票的数据，则必须添加股票交易所在的证券交易所的后缀。例如，将 .L 添加到“BLT”，代表伦敦证券交易所的 BHP Billiton Plc（“BLT.L”），或者将 .MC
+            添加到“SAN”，代表马德里证券交易所的 Santander（“SAN.MC”）。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="STOCKH 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=STOCKH(“AAU”, “成交量”, “2015年12月15日”) 返回 127,700，即 Almaden Minerals Ltd. Common Stock (AAU) 在 2015 年 12 月
+            15 日交易的股份数（成交量）。</p>
+            <p>=IFERROR(STOCKH(A9, “最低价”, “2017年5月22日”), “-”)，如果股票代码和公式有效，则返回单元格 A9 中代码所代表的股票在 2017 年 5 月 22
+                日的最低交易价格；如果公式错误或数据无法获取，则返回“-”。</p>
+            <p>=IFERROR(STOCKH(“^HSI”, 2, “2016/5/9”), “无数据”) 返回恒生指数股票 (^HSI) 在 2016 年 5 月 9 日的最高价格（“最高价”或
+                2）；如果恒生指数在那天没有交易或者无数据可用，则返回“无数据”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<p class="footer credit">STOCKH 函数由<img src="../GlobalArt/IL_YahooLogo.png" alt="雅虎" height="30" width="119">提供数据支持
+</p>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa729d49e1c.html#ffa729d49e1c"
+                                                   class="xRef AppleTopic">STOCK</a></div>
+</body>
+</html>

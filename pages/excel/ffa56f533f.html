@@ -1,0 +1,895 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CONVERT</title>
+    <meta name="description" content="CONVERT(待转换数字, 转换前单位, 转换后单位) 可将数字从一个度量系统转换成另一个度量系统中的相应值。">
+</head>
+<body dir="ltr" id="ffa56f533f" class="AppleTopic apd-topic"><a name="ffa56f533f"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CONVERT</h1>
+<p>CONVERT 函数可将数字从一个度量系统转换成另一个度量系统中的相应值。</p>
+<div class="HIStrings"><p><strong class="Term">CONVERT</strong>(<em>待转换数字, </em><em>转换前单位, </em><em>转换后单位</em>)</p>
+    <div class="HISubString"><p><em class="Term">待转换数字： </em>要转换的<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                    class="xRef Aside">数字值</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">转换前单位： </em><a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>，表示要转换数字的当前单位。<span
+            class="DescriptionNotString">它必须是下表中指定的常数之一。</span></p></div>
+    <div class="HISubString"><p><em class="Term">转换后单位： </em>字符串值，表示要转换数字的新单位。<span class="DescriptionNotString">它必须是下表中指定的常数之一。</span>
+    </p></div>
+</div>
+<div id="ffa564aafc" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p> <em>转换前单位</em>和<em>转换后单位</em>的可能值显示在下表中，按类别整理。如果将值输入引用的单元格，而不直接将其键入函数，则不必使用引号。此类值区分大小写；请使用表中显示的正确大写形式。
+        </p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CONVERT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=CONVERT(9, “lbm”, “kg”) 得出 4.08233133（9 磅大约等于 4.08 千克)。</p>
+            <p>=CONVERT (26.2, “mi”, “m”) 得出 42,164.8128（26.2 英里大约等于 42,164.8 米）。</p>
+            <p>=CONVERT(1, “tsp”, “ml”) 得出 4.92892159375（1 茶匙大约等于 4.9 毫升）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div id="ffa24d2c0f8" class="Task"><h2 role="button" aria-controls="aria-ffa24d2c0f8" aria-expanded="true" class="Name">
+    重量单位和质量单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa24d2c0f8">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的重量和质量度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="重量单位和质量单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">度量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>克</p></td>
+                        <td><p>“g”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>斯勒格</p></td>
+                        <td><p>“sg”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>磅（重量）（常衡制）</p></td>
+                        <td><p>“lbm”或“lb”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>U（原子质量单位）</p></td>
+                        <td><p>“u”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>盎司（重量）（常衡制）</p></td>
+                        <td><p>“ozm”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>格令</p></td>
+                        <td><p>“grain”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>美担</p></td>
+                        <td><p>“cwt”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>美国短担</p></td>
+                        <td><p>“shweight”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英担</p></td>
+                        <td><p>“uk_cwt”或“lcwt” (“hweight”)</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英石</p></td>
+                        <td><p>“stone”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>吨</p></td>
+                        <td><p>“ton”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英吨</p></td>
+                        <td><p>“uk_ton”或“LTON” (“brton”)</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffa6d541c30" class="Task"><h2 role="button" aria-controls="aria-ffa6d541c30" aria-expanded="true" class="Name">
+    距离单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa6d541c30">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的距离度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="距离单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>米</p></td>
+                        <td><p>“m”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>法定英里</p></td>
+                        <td><p>“mi”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>海里</p></td>
+                        <td><p>“Nmi”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英寸</p></td>
+                        <td><p>“in”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英尺</p></td>
+                        <td><p>“ft”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>码</p></td>
+                        <td><p>“yd”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>埃</p></td>
+                        <td><p>“ang”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>派卡（1/6 英寸）</p></td>
+                        <td><p>“Pica”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>厄尔</p></td>
+                        <td><p>“ell”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>光年</p></td>
+                        <td><p>“ly”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>秒差距</p></td>
+                        <td><p>“parsec”或“pc”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>美国调查英里</p></td>
+                        <td><p>“survey_mi”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffab7e7a396" class="Task"><h2 role="button" aria-controls="aria-ffab7e7a396" aria-expanded="true" class="Name">
+    持续时间单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffab7e7a396">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的持续时间度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="持续时间单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>年</p></td>
+                        <td><p>“yr”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>周</p></td>
+                        <td><p>“wk”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>天</p></td>
+                        <td><p>“day”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>小时</p></td>
+                        <td><p>“hr”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>分钟</p></td>
+                        <td><p>“mn”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>秒钟</p></td>
+                        <td><p>“sec”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffa91781207" class="Task"><h2 role="button" aria-controls="aria-ffa91781207" aria-expanded="true" class="Name">
+    速度单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa91781207">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的速度度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="速度单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>英里/小时</p></td>
+                        <td><p>“mi/h”或“mph”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英里/分钟</p></td>
+                        <td><p>“mi/mn”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>米/小时</p></td>
+                        <td><p>“m/h”或“m/hr”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>米/分钟</p></td>
+                        <td><p>“m/mn”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>米/秒钟</p></td>
+                        <td><p>“m/s”或“m/sec”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英尺/分钟</p></td>
+                        <td><p>“ft/mn”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英尺/秒钟</p></td>
+                        <td><p>“ft/s”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>海里/小时</p></td>
+                        <td><p>“kt”或“kn”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>海里</p></td>
+                        <td><p>“admkn”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffa7f8ba7ec" class="Task"><h2 role="button" aria-controls="aria-ffa7f8ba7ec" aria-expanded="true" class="Name">
+    压力单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa7f8ba7ec">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的压力度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="压力单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>帕斯卡</p></td>
+                        <td><p>“Pa”或“p”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>大气压</p></td>
+                        <td><p>“atm”或“at”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>毫米汞柱</p></td>
+                        <td><p>“mmHg”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>磅/平方英寸</p></td>
+                        <td><p>“psi”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>托</p></td>
+                        <td><p>“Torr”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffa2b333bd0" class="Task"><h2 role="button" aria-controls="aria-ffa2b333bd0" aria-expanded="true" class="Name">
+    力单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa2b333bd0">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的力度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="力单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>牛顿</p></td>
+                        <td><p>“N”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>达因</p></td>
+                        <td><p>“dyn”或“dy”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>磅力</p></td>
+                        <td><p>“lbf”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>朋特</p></td>
+                        <td><p>“pond”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffaa41e0e26" class="Task"><h2 role="button" aria-controls="aria-ffaa41e0e26" aria-expanded="true" class="Name">
+    能量单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffaa41e0e26">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的能量度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="能量单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>焦耳</p></td>
+                        <td><p>“J”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>尔格</p></td>
+                        <td><p>“e”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>热力学卡路里</p></td>
+                        <td><p>“c”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>国际卡路里</p></td>
+                        <td><p>“cal”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>电子伏特</p></td>
+                        <td><p>“eV”或“ev”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>马力小时</p></td>
+                        <td><p>“HPh”或“hh”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>瓦特小时</p></td>
+                        <td><p>“Wh”或“wh”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英尺-磅</p></td>
+                        <td><p>“flb”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英国热量单位</p></td>
+                        <td><p>“BTU”或“btu”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffaa45f652c" class="Task"><h2 role="button" aria-controls="aria-ffaa45f652c" aria-expanded="true" class="Name">
+    功率单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffaa45f652c">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的功率度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="功率单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>英制马力</p></td>
+                        <td><p>“HP”或“h”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>米制马力</p></td>
+                        <td><p>“PS”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>瓦特</p></td>
+                        <td><p>“W”或“w”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffa7e1debc5" class="Task"><h2 role="button" aria-controls="aria-ffa7e1debc5" aria-expanded="true" class="Name">
+    磁力单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa7e1debc5">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的磁力度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="磁力单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>特斯拉</p></td>
+                        <td><p>“T”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>高斯</p></td>
+                        <td><p>“ga”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffa490bd46a" class="Task"><h2 role="button" aria-controls="aria-ffa490bd46a" aria-expanded="true" class="Name">
+    温度单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa490bd46a">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的温度度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="温度单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>摄氏度</p></td>
+                        <td><p>“C”或“cel”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>华氏度</p></td>
+                        <td><p>“F”或“fah”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>开氏度</p></td>
+                        <td><p>“K”或“kel”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>兰氏度</p></td>
+                        <td><p>“Rank”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>列氏度</p></td>
+                        <td><p>“Reau”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffad1070e46" class="Task"><h2 role="button" aria-controls="aria-ffad1070e46" aria-expanded="true" class="Name">
+    液体计量单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffad1070e46">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的液体计量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="液体计量单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>茶匙</p></td>
+                        <td><p>“tsp”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>现代茶匙</p></td>
+                        <td><p>“tspm”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>汤匙</p></td>
+                        <td><p>“tbs”或“tbsp”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>液体盎司</p></td>
+                        <td><p>“oz”或“fl oz”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>杯</p></td>
+                        <td><p>“cup”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>美制品脱</p></td>
+                        <td><p>“pt”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英制品脱</p></td>
+                        <td><p>“uk_pt”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>夸脱</p></td>
+                        <td><p>“qt”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英制夸脱</p></td>
+                        <td><p>“uk_qt”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>加仑</p></td>
+                        <td><p>“gal”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>英制加仑</p></td>
+                        <td><p>“uk_gal”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>公升</p></td>
+                        <td><p>“l”或“L” (“lt”)（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方埃</p></td>
+                        <td><p>“ang3”或“ang^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>美制桶</p></td>
+                        <td><p>“barrel”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>美制蒲式耳</p></td>
+                        <td><p>“bushel”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方英尺</p></td>
+                        <td><p>“ft3”或“ft^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方英寸</p></td>
+                        <td><p>“in3”或“in^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方光年</p></td>
+                        <td><p>“ly3”或“ly^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方米</p></td>
+                        <td><p>“m3”或“m^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方码</p></td>
+                        <td><p>“yd3”或“yd^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方海里</p></td>
+                        <td><p>“Nmi3”或“Nmi^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>立方皮卡</p></td>
+                        <td><p>“Picapt3”或“Picapt^3”或者“Pica3”或“Pica^3”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>总注册吨</p></td>
+                        <td><p>“GRT”或“regton”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>运费吨</p></td>
+                        <td><p>“MTON”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="apd0d862e70433d4" class="Task"><h2 role="button" aria-controls="aria-apd0d862e70433d4" aria-expanded="true"
+                                            class="Name">面积单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-apd0d862e70433d4">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的面积度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="面积单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>国际英亩</p></td>
+                        <td><p>“uk_acre”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>美制英亩</p></td>
+                        <td><p>“us_acre”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方埃</p></td>
+                        <td><p>“ang2”或“ang^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>公亩</p></td>
+                        <td><p>“ar”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方英尺</p></td>
+                        <td><p>“ft2”或“ft^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>公顷</p></td>
+                        <td><p>“ha”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方英寸</p></td>
+                        <td><p>“in2”或“in^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方光年</p></td>
+                        <td><p>“ly2”或“ly^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方米</p></td>
+                        <td><p>“m2”或“m^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>摩根</p></td>
+                        <td><p>“Morgen”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方英里</p></td>
+                        <td><p>“mi2”或“mi^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方海里</p></td>
+                        <td><p>“Nmi2”或“Nmi^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方皮卡</p></td>
+                        <td><p>“Picapt2”或“Picapt^2”或者“Pica2”或“Pica^2”</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>平方码</p></td>
+                        <td><p>“yd2”或“yd^2”</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="apd92ba9eeae0bc4" class="Task"><h2 role="button" aria-controls="aria-apd92ba9eeae0bc4" aria-expanded="true"
+                                            class="Name">信息单位</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-apd92ba9eeae0bc4">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的信息度量单位，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="信息单位">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>比特</p></td>
+                        <td><p>“bit”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>字节</p></td>
+                        <td><p>“byte”（可配合公制前缀使用）</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="ffa1a6d9918" class="Task"><h2 role="button" aria-controls="aria-ffa1a6d9918" aria-expanded="true" class="Name">
+    公制前缀</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-ffa1a6d9918">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的公制前缀，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="公制前缀">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                        <th scope="col"><p class="TableHead">乘数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>尧它</p></td>
+                        <td><p>“Y”</p></td>
+                        <td><p>1E+24</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>泽它</p></td>
+                        <td><p>“Z”</p></td>
+                        <td><p>1E+21</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>艾可萨</p></td>
+                        <td><p>“E”</p></td>
+                        <td><p>1E+18</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>拍它</p></td>
+                        <td><p>“P”</p></td>
+                        <td><p>1E+15</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>太拉</p></td>
+                        <td><p>“T”</p></td>
+                        <td><p>1E+12</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>吉</p></td>
+                        <td><p>“G”</p></td>
+                        <td><p>1E+09</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>兆</p></td>
+                        <td><p>“M”</p></td>
+                        <td><p>1E+06</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>千</p></td>
+                        <td><p>“k”</p></td>
+                        <td><p>1E+03</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>百</p></td>
+                        <td><p>“h”</p></td>
+                        <td><p>1E+02</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>十</p></td>
+                        <td><p>“e”</p></td>
+                        <td><p>1E+01</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>分</p></td>
+                        <td><p>“d”</p></td>
+                        <td><p>1E-01</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>厘</p></td>
+                        <td><p>“c”</p></td>
+                        <td><p>1E-02</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>毫</p></td>
+                        <td><p>“m”</p></td>
+                        <td><p>1E-03</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>微</p></td>
+                        <td><p>“u”或“µ”</p></td>
+                        <td><p>1E-06</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>纳诺</p></td>
+                        <td><p>“n”</p></td>
+                        <td><p>1E-09</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>皮可</p></td>
+                        <td><p>“p”</p></td>
+                        <td><p>1E-12</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>飞母托</p></td>
+                        <td><p>“f”</p></td>
+                        <td><p>1E-15</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>阿托</p></td>
+                        <td><p>“a”</p></td>
+                        <td><p>1E-18</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>仄普托</p></td>
+                        <td><p>“z”</p></td>
+                        <td><p>1E-21</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>幺科托</p></td>
+                        <td><p>“y”</p></td>
+                        <td><p>1E-24</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="apdb17ed90588194" class="Task"><h2 role="button" aria-controls="aria-apdb17ed90588194" aria-expanded="true"
+                                            class="Name">二进制前缀</h2>
+    <div class="TaskBody" role="region" aria-hidden="false" id="aria-apdb17ed90588194">
+        <ul class="ListSingle">
+            <li><p>下表显示了支持的二进制前缀，以及各自使用的常数。</p>
+                <table data-type="Multicolumn" aria-label="二进制前缀">
+                    <thead>
+                    <tr>
+                        <th scope="col"><p class="TableHead">计量单位</p></th>
+                        <th scope="col"><p class="TableHead">常数</p></th>
+                        <th scope="col"><p class="TableHead">乘数</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><p>yobi</p></td>
+                        <td><p>“Yi”</p></td>
+                        <td><p>2^80</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>zebi</p></td>
+                        <td><p>“Zi”</p></td>
+                        <td><p>2^70</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>exbi</p></td>
+                        <td><p>“Ei”</p></td>
+                        <td><p>2^60</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>pebi</p></td>
+                        <td><p>“Pi”</p></td>
+                        <td><p>2^50</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>tebi</p></td>
+                        <td><p>“Ti”</p></td>
+                        <td><p>2^40</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>gibi</p></td>
+                        <td><p>“Gi”</p></td>
+                        <td><p>2^30</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>mebi</p></td>
+                        <td><p>“Mi”</p></td>
+                        <td><p>2^20</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>kibi</p></td>
+                        <td><p>“Ki”</p></td>
+                        <td><p>2^10</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

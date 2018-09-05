@@ -1,0 +1,46 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>SUBSTITUTE</title>
+    <meta name="description" content="SUBSTITUTE(来源字符串, 现有字符串, 新字符串, 次数) 得出用新字符串值替换给定字符串值的指定字符的字符串值。">
+</head>
+<body dir="ltr" id="ffa5c004fb" class="AppleTopic apd-topic"><a name="ffa5c004fb"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>SUBSTITUTE</h1>
+<p>SUBSTITUTE 函数返回用新字符串值替换给定字符串值的指定字符的<a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">SUBSTITUTE</strong>(<em>来源字符串, 现有字符串, 新字符串, 次数</em>)</p>
+    <div class="HISubString"><p><em class="Term">来源字符串： </em><a href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>。
+    </p></div>
+    <div class="HISubString"><p><em class="Term">现有字符串： </em>要替换的值。<span class="DescriptionNotString"><em>现有字符串</em>可以包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">新字符串： </em>用作替换的值。<span class="DescriptionNotString"><em>新字符串</em>可以包含任何值。它的长度不必与<em>现有字符串</em>的长度相等。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">次数： </em>可选<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，指定应该替换<em>来源字符串</em>内的哪一个<em>现有字符串</em>。<span
+            class="DescriptionNotString"><em>次数</em>必须大于或等于 1，或者省略。如果<em>次数</em>大于<em>现有字符串</em>在<em>来源字符串</em>内的出现次数，则不替换。如果省略<em>次数</em>，<em>现有字符串</em>在<em>来源字符串</em>内的所有重复都将被替换为<em>新字符串</em>。</span>
+    </p></div>
+</div>
+<div id="ffa5c0ea9e" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>可以替换词内的单个字符、整个词或字符串。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="SUBSTITUTE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=SUBSTITUTE(“a b c d e f”, “b”, “B”) 得出“a B c d e f”。</p>
+            <p>=SUBSTITUTE(“a a b b b c”, “a”, “A”, 2) 得出“a A b b b c”。</p>
+            <p>=SUBSTITUTE(“a a b b b c”, “b”, “B”) 得出“a a B B B c”。</p>
+            <p>=SUBSTITUTE(“aaabbccc”, “bc”, “BC”, 2) 得出“aaabbccc”。</p>
+            <p>=SUBSTITUTE(60606, 6, 3) 得出“30303”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5bddfec.html#ffa5bddfec" class="xRef AppleTopic">REPLACE</a>
+</div>
+</body>
+</html>

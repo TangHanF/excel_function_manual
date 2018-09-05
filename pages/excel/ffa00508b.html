@@ -1,0 +1,49 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>INTERSECT.RANGES</title>
+    <meta name="description" content="INTERSECT.RANGES(范围, 范围…) 得出所指定集合之交集的范围。">
+</head>
+<body dir="ltr" id="ffa00508b" class="AppleTopic apd-topic"><a name="ffa00508b"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>INTERSECT.RANGES</h1>
+<p>INTERSECT.RANGES 函数返回指定<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>交汇处包含的单个值或值<a
+        href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>。</p>
+<div class="HIStrings"><p><strong class="Term">INTERSECT.RANGES</strong>(<em>范围, 范围…</em>)</p>
+    <div class="HISubString"><p><em class="Term">范围： </em>单元格集合。<span class="DescriptionNotString"><em>范围</em>是包含单个单元格<a
+            href="ffa8575c9b4.html#ffa8575c9b4" class="xRef Aside">范围</a>（可包括<a href="ffa361bc137.html#ffa361bc137"
+                                                                                class="xRef Aside">任何值</a>）的集合。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">范围…： </em>可包括一个或多个附加集合。</p></div>
+</div>
+<div id="ffa6f160dcc" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>集合可以是任何大小，且只需一个集合。如果只指定了一个集合，则得出的集合将与所指定的集合相同。</p></li>
+        <li><p>不同表格的集合不会交叉，即使每个表格上的单元格范围相同。例如：</p>
+            <p>=INTERSECT.RANGES(表格 1::B, 表格 2::B) 得出一个错误。</p></li>
+        <li><p>如果任何输入范围都无效，则该函数会得出引用错误。</p></li>
+        <li><p>如果交集为空，则该函数会得出引用错误。例如：</p>
+            <p>=INTERSECT.RANGES(B,C)，得出一个错误，因为 B 和 C 不交叉。</p></li>
+        <li><p>提供此函数主要是为了与其他电子表格应用兼容。在处理所引用的范围时，可能不知道单个单元格的确切位置的情况下，此函数也很有用。</p></li>
+        <li><p>在其他电子表格应用中，包括 Numbers ’08（适用于 Mac）和 Numbers ’09（适用于 Mac），会将空格用作交集运算符。</p></li>
+        <li><p>iBooks Author 中该函数不可用。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="INTERSECT.RANGES 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=INTERSECT.RANGES(INDIRECT(“B:C”),C) 得出包含列 C 中的值的数组，因为列 C 是第一个参数即 INDIRECT（列 B 和列 C）得出的范围和第二个参数（列
+            C）的交集或重叠区域。这些值可使用 INDEX 函数读取。</p>
+            <p>=INTERSECT.RANGES(B1:C6, C3, B2:C4) 得出 7（如果单元格 C3 包含 7），因为 C3 是指定的所有三个参数所引用的唯一单元格。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59b4edb.html#ffa59b4edb" class="xRef AppleTopic">INDEX</a><a
+        href="ffa596db0e.html#ffa596db0e" class="xRef AppleTopic">INDIRECT</a></div>
+</body>
+</html>

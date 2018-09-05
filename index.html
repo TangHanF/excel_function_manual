@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+    <title>Title</title>
+    <link href="css/layui.css" rel="stylesheet">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/layui.js"></script>
+    <script src="js/nav_json.js"></script>
+</head>
+<body>
+<div class="container" style="padding-top: 20px" id="app">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline has-success">
+                <div class="form-group">
+                    <input v-model="keyword" type="text" class="form-control" id="exampleInputName2"
+                           placeholder="请输入搜索内容..." data-toggle="tooltip" data-placement="bottom" title="输入要搜索的内容">
+                </div>
+                <button type="button" class="btn btn-primary" @click="keyword=''">清空
+                </button>
+            </form>
+        </div>
+    </div>
+    <!--初始加载-->
+    <div v-show="isShow" class="row">
+        <div class="col-md-12">
+            <!--标题-->
+            <h1>Excel{{jsonData.title}}手册</h1>
+            <div v-for="(feilei,key,index) in jsonData.sections">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div :class="[panel, randomPanelClass()]">
+                        <div class="panel-heading" role="tab" :id="['heading'+index]">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                   :href="['#collapse'+index]"
+                                   aria-expanded="true" aria-controls="['collapse'+index]">
+                                    {{index+1}}、{{feilei.name}}
+                                </a>
+                                <span class="badge" data-toggle="tooltip" data-placement="right" :title="['共有'+feilei.children.length]+'条相关函数'">{{feilei.children.length}}</span>
+                            </h4>
+                        </div>
+                        <div :id="['collapse'+index]" class="panel-collapse collapse" role="tabpanel"
+                             :aria-labelledby="['heading'+index]">
+                            <div class="panel-body">
+                                <div v-for="childrenItem in feilei.children">
+                                    <strong>
+                                        <a @click="itemClick(jsonData.topics[childrenItem].href,$event)">{{jsonData.topics[childrenItem].name}}</a>
+                                    </strong>
+                                    <blockquote>
+                                        <p class="bg-success">
+                                            <strong>描述：</strong>
+                                            {{jsonData.topics[childrenItem].summary.substr(jsonData.topics[childrenItem].summary.indexOf(")")+1)}}
+                                        </p>
+                                        <strong>格式：</strong>
+
+                                        <kbd>
+                                            {{jsonData.topics[childrenItem].summary.substr(0,jsonData.topics[childrenItem].summary.indexOf(")")+1)}}
+                                        </kbd>
+                                    </blockquote>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--搜索-->
+    <div v-if="!isShow" class="row" style="padding-top: 20px">
+        <div class="col-md-12">
+            <div v-if="tmpJsonData.length>0">
+                <small>搜索结果如下：</small>
+                <div v-for="(item,index) in tmpJsonData">
+                    <strong>
+                        <a @click="itemClick(item.href,$event)">{{index+1}}、{{item.name}}</a>
+                    </strong>
+                    <blockquote>
+                        <p class="bg-success">
+                            <strong>描述：</strong>
+                            {{item.summary.substr(item.summary.indexOf(")")+1)}}
+                        </p>
+                        <strong>格式：</strong>
+
+                        <kbd>
+                            {{item.summary.substr(0,item.summary.indexOf(")")+1)}}
+                        </kbd>
+                    </blockquote>
+                </div>
+            </div>
+            <div v-else>
+                <small class="text-danger">未搜索到相关结果...</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="js/support.js"></script>
+
+</html>

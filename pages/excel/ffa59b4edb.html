@@ -1,0 +1,144 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    <meta name="description" content="INDEX(范围, 行编号, 列编号, 区域编号) 得出位于某单元格集合内或数组函数返回的数组中指定行和列的交汇处的单元格中的值。">
+</head>
+<body dir="ltr" id="ffa59b4edb" class="AppleTopic apd-topic"><a name="ffa59b4edb"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>INDEX</h1>
+<p>INDEX 函数返回位于某单元格集合内或<a href="ffa4b83d89f.html#ffa4b83d89f" class="xRef Aside">数组函数</a>返回的<a
+        href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>中指定行和列的交汇处的单元格中的值。</p>
+<div class="HIStrings"><p><strong class="Term">INDEX</strong>(<em>范围, 行编号, 列编号, 区域编号</em>)</p>
+    <div class="HISubString"><p><em class="Term">范围： </em>单元格<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString"><em>范围</em>是单个集合或多个集合，其中每个集合都是单个单元格<a href="ffa8575c9b4.html#ffa8575c9b4"
+                                                                               class="xRef Aside">范围</a>。如果指定多个集合，它们以逗号分隔，并用附加圆括号对括起来。例如，((B1:B5, C10:C12))。<em>范围</em>引用的单元格可以包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">行编号： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                              class="xRef Aside">数字值</a>，表示要返回的值的行编号。<span
+            class="DescriptionNotString"><em>行编号</em>必须大于或等于 0 且小于或等于<em>范围</em>中的行数。如果<em>行编号</em>是 0，INDEX 得出<em>列编号</em>整列的数组值，其中列编号必须大于 0 且小于或等于<em>范围</em>中的列数。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">列编号： </em>可选数字值，指定要得出的值的列编号。<span
+            class="DescriptionNotString"><em>列编号</em>必须大于或等于 0 且小于或等于<em>范围</em>中的列数。如果<em>列编号</em>是 0，INDEX 得出<em>行编号</em>整行的数组值，其中行编号必须大于 0 且小于或等于<em>范围</em>中的行数。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">区域编号： </em>可选数字值，指定要得出的值的区域编号。<span class="DescriptionNotString"><em>区域编号</em>必须大于或等于 1 且小于或等于<em>范围</em>中的区域数。如果省略<em>区域编号</em>，则使用 1。</span>
+    </p></div>
+</div>
+<div id="ffa598c38f" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>INDEX 可得出多个值的二维集合指定交汇处的值。例如，假设单元格 B1:D8 包含该值。</p>
+            <p>=INDEX(B1:D8, 2, 3) 得出可在第二行和第三列的交汇处找到的值（该值在单元格 D3 中）。</p></li>
+        <li><p>通过用附加的一对圆括号括住范围可指定多个区域。例如：</p>
+            <p>=INDEX((B2:D5, B7:D10), 2, 3, 2) 得出第二个区域内第二行和第三列交汇处的值（该值在单元格 D8 中）。</p></li>
+        <li><p>INDEX 可得出另一个函数的单行或单列数组。在此形式下，<em>行编号</em>或<em>列编号</em>必需，但可以省略其他参数。例如：</p>
+            <p>=SUM(INDEX(B2:D5, , 3)) 得出第三列（单元格 D2 至 D5）中值的总和。</p>
+            <p>=AVERAGE(INDEX(B2:D5, 2)) 得出第二行（单元格 B3 至 D3）中值的平均值。</p></li>
+        <li><p>INDEX 可以从数组函数得出的数组得出（或“读取”）值。FREQUENCY 函数可基于指定间隔得出值的数组。</p>
+            <p>=INDEX(FREQUENCY($A$1:$F$5, $B$8:$E$8), 1) 将得出由给定的 FREQUENCY 函数得出的数组中的第一个值。</p>
+            <p>同样，=INDEX(FREQUENCY($A$1:$F$5, $B$8:$E$8), 5) 得出数组中的第五个值。</p></li>
+        <li><p>可通过指示相对于数组左上角的单元格向下多少行、向右多少列，来指定在数组中的位置。</p></li>
+        <li><p>除非按上述第三种情况所示指定 INDEX，否则不能省略<em>行编号</em>；如果省略<em>列编号</em>，则将假定它为 1。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="INDEX 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="INDEX 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td></td>
+        <td><p>1</p></td>
+        <td><p>11</p></td>
+        <td><p>21</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td></td>
+        <td><p>2</p></td>
+        <td><p>12</p></td>
+        <td><p>22</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td></td>
+        <td><p>3</p></td>
+        <td><p>13</p></td>
+        <td><p>23</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td></td>
+        <td><p>4</p></td>
+        <td><p>14</p></td>
+        <td><p>24</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td></td>
+        <td><p>a</p></td>
+        <td><p>b</p></td>
+        <td><p>c</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td></td>
+        <td><p>d</p></td>
+        <td><p>e</p></td>
+        <td><p>f</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td></td>
+        <td><p>g</p></td>
+        <td><p>h</p></td>
+        <td><p>i</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td></td>
+        <td><p>j</p></td>
+        <td><p>k</p></td>
+        <td><p>l</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 INDEX 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=INDEX(B1:D4, 2, 3) 得出 22，所求的值位于指定范围（<em>范围</em>）内的第二行（<em>行编号</em>是 2）、第三列（<em>列编号</em>是 3），指定集合是
+            B1:D4，所以单元格 D2 就是结果。</p>
+            <p>=INDEX((B1:D4, B5:D8), 2, 3, 2) 得出“f”，所求的值位于第二个区域（<em>区域编号</em> 是 2）的第二行（<em>行编号</em>是
+                2）、第三列（<em>列编号</em>是 3），即为单元格 D6。</p>
+            <p>=SUM(INDEX(B1:D4, , 3)) 得出 90，即第三列（单元格 D1 至 D4）中值的总和。</p>
+            <p>=AVERAGE(INDEX(B1:D4, 2)) 得出 12，即第二行（单元格 B2 至 D2）中值的平均值。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa599e753.html#ffa599e753"
+                                                   class="xRef AppleTopic">COLUMN</a><a
+        href="ffa5b13e81.html#ffa5b13e81" class="xRef AppleTopic">FREQUENCY</a><a href="ffa596db0e.html#ffa596db0e"
+                                                                                  class="xRef AppleTopic">INDIRECT</a><a
+        href="ffa597c0d3.html#ffa597c0d3" class="xRef AppleTopic">OFFSET</a><a href="ffa59cc33b.html#ffa59cc33b"
+                                                                               class="xRef AppleTopic">ROW</a><a
+        href="ffa596bee0.html#ffa596bee0" class="xRef AppleTopic">TRANSPOSE</a></div>
+</body>
+</html>

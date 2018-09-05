@@ -1,0 +1,43 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>MOD</title>
+    <meta name="description" content="MOD(被除数, 除数) 得出除法的余数。">
+</head>
+<body dir="ltr" id="ffa5904d12" class="AppleTopic apd-topic"><a name="ffa5904d12"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>MOD</h1>
+<p>MOD 函数得出除法的余数。两个参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">MOD</strong>(<em>被除数, 除数</em>)</p>
+    <div class="HISubString"><p><em class="Term">被除数： </em>要除以另一个数的数字。 </p></div>
+    <div class="HISubString"><p><em class="Term">除数： </em>要除另一个数的数字<span class="DescriptionNotString">如果<em>除数</em>是 0，以零做除数时，此函数将得出一个错误。</span>
+    </p></div>
+</div>
+<div id="ffadc42f6c7" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>结果的正负与除数的正负相符。</p></li>
+        <li><p>在计算 MOD(a, b) 时，MOD 得出一个数字 r，使 a = bk + r（其中 r 介于 0 和 b 之间，k 是一个整数）。</p></li>
+        <li><p>MOD(a,b) 等效于 a–b*INT(a/b)。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="MOD 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=MOD(6, 3) 得出 0，因为 6 除以 3 正好为 2。</p>
+            <p>=MOD(7, 3) 得出 1，即为 7 除以 3 所得余数。</p>
+            <p>=MOD(8, 3) 得出 2，即为 8 除以 3 所得余数。</p>
+            <p>=MOD(-8, 3) 得出 1，因为 -8 除以 3 得到 -3，余数为 1。（最接近并小于 -8 且能被 3 整除的数字是 -9）。</p>
+            <p>=MOD(4.5, 2) 得出 0.5，即为 4.5 除以 2 所得余数。 </p>
+            <p>=MOD(7, 0.75) 得出 0.25。MOD(7, 0.75) 等效于 7 - 0.75*INT(7/0.75)，亦即 7 - 0.75*9。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5868145.html#ffa5868145"
+                                                   class="xRef AppleTopic">QUOTIENT</a></div>
+</body>
+</html>

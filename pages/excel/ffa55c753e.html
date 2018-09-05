@@ -1,0 +1,52 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>YEARFRAC</title>
+    <meta name="description" content="YEARFRAC(开始日期, 结束日期, 基准天数) 返回以两个日期之间的整日数表示的年份的分数。">
+</head>
+<body dir="ltr" id="ffa55c753e" class="AppleTopic apd-topic"><a name="ffa55c753e"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>YEARFRAC</h1>
+<p>YEARFRAC 函数返回以两个日期之间的整日数表示的年份的分数。</p>
+<div class="HIStrings"><p><strong class="Term">YEARFRAC</strong>(<em>开始日期, </em><em>结束日期, </em><em>基准天数</em>)</p>
+    <div class="HISubString"><p><em class="Term">开始日期： </em>开始日期。<span class="DescriptionNotString"><em>开始日期</em>是一个<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>（时间部分被忽略）或<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">结束日期： </em>结束日期。<span class="DescriptionNotString"><em>结束日期</em>是一个日期/时间值（时间部分被忽略）或日期字符串。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">基准天数： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定在计算中要使用的每月天数及每年天数。
+    </p>
+        <div class="HISubString"><p><em class="Term">30/360<span class="TermNotString">(0 或省略)</span>： </em>使用 <a
+                href="ffa205f6771.html#ffa205f6771" class="xRef Aside">NASD 方法</a>时，一个月 30 天，一年 360 天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/实际天数<span class="TermNotString">(1)</span>： </em>每月实际天数，每年实际天数。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/360<span class="TermNotString">(2)</span>： </em>每月实际天数，一年 360
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/365<span class="TermNotString">(3)</span>： </em>每月实际天数，一年 365
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">30E/360<span class="TermNotString">(4)</span>： </em>使用<a
+                href="ffa7b6f10f2.html#ffa7b6f10f2" class="xRef Aside">欧洲方法</a>时，一个月 30 天，一年 360 天。</p></div>
+    </div>
+</div>
+<table data-type="1 column" aria-label="YEARFRAC 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=YEARFRAC(“2009/12/15”, “2010/6/30”, 0) 得出近似值 0.541666666666667（以 30/360 天为基础）。</p>
+            <p>=YEARFRAC(“2009/12/15”, “2010/6/30”, 1) 得出近似值 0.53972602739726（以实际天数为基础）。</p>
+            <p>=YEARFRAC(“2009/12/15”, “2010/6/30”, 2) 得出近似值 0.547222222222222（以实际天数/360 天为基础）。</p>
+            <p>=YEARFRAC(“2009/12/15”, “2010/6/30”, 3) 得出近似值 0.53972602739726（以实际天数/365 天为基础）。</p>
+            <p>=YEARFRAC(“2009/12/15”, “2010/6/30”, 4) 得出近似值 0.541666666666667（以欧洲 30/360 天为基础）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa55ea982.html#ffa55ea982" class="xRef AppleTopic">DATEDIF</a><a
+        href="ffa557d36f.html#ffa557d36f" class="xRef AppleTopic">DAYS360</a><a href="ffa55b18db.html#ffa55b18db"
+                                                                                class="xRef AppleTopic">NETWORKDAYS</a>
+</div>
+</body>
+</html>

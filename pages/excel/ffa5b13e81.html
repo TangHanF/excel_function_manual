@@ -1,0 +1,166 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>FREQUENCY</title>
+    <meta name="description" content="FREQUENCY(数据值, 区间值) 得出数据值在区间值集合内出现频率的数组。">
+</head>
+<body dir="ltr" id="ffa5b13e81" class="AppleTopic apd-topic"><a name="ffa5b13e81"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>FREQUENCY</h1>
+<p>FREQUENCY 函数可返回数据值在区间值集合内出现频率的<a href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>。</p>
+<div class="HIStrings"><p><strong class="Term">FREQUENCY</strong>(<em>数据值, </em><em>区间值</em>)</p>
+    <div class="HISubString"><p><em class="Term">数据值： </em><a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                              class="xRef Aside">集合</a>，包含要计算的值。<span
+            class="DescriptionNotString"><em>数据值</em>必须包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                            class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>。所有值都应该属于同一<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">区间值： </em>含有区间值的集合。<span class="DescriptionNotString"><em>区间值</em>包含的值类型必须与<em>数据值</em>集合中的值相同。</span>
+    </p></div>
+</div>
+<div id="ffa5a4560c" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>FREQUENCY 可确定每个区间内<em>数据值</em>中值的个数。如果区间数组以升序排列，则最容易理解。第一个频率值是对小于或等于最小区间值的值的计数。所有其他频率值（最后一个除外）是对大于最小区间值且小于或等于当前区间值的值的计数。最后一个频率值是对大于最大区间值的值的计数。
+        </p></li>
+        <li><p>函数得出的值包含在数组中。读取数组中值的方法之一是使用 INDEX 函数。可在 INDEX 函数中绕排 FREQUENCY 函数：=INDEX(FREQUENCY(<em>数据值, 区间值</em>),
+            <em>x</em>) 中的 <em>x</em> 是所需区间。请记住，区间个数比<em>区间值</em>的个数多一个。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="FREQUENCY 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设下表是您管理的最近参加考试的 30 名学生的测试分数。分数在单元格 A1:E6 中。进一步假设最低及格分数是 65，并已给出其他级别的最低分数（在表格中用 % 表示）。为便于建立公式，用 1
+            表示“F”（下表 C 列中为“Gr”），用 5 表示“A”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="FREQUENCY 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>55</p></td>
+        <td><p>75</p></td>
+        <td><p>90</p></td>
+        <td><p>65</p></td>
+        <td><p>91</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>33</p></td>
+        <td><p>88</p></td>
+        <td><p>74</p></td>
+        <td><p>97</p></td>
+        <td><p>77</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>83</p></td>
+        <td><p>76</p></td>
+        <td><p>89</p></td>
+        <td><p>93</p></td>
+        <td><p>92</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>74</p></td>
+        <td><p>96</p></td>
+        <td><p>51</p></td>
+        <td><p>87</p></td>
+        <td><p>81</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>99</p></td>
+        <td><p>100</p></td>
+        <td><p>82</p></td>
+        <td><p>86</p></td>
+        <td><p>76</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>84</p></td>
+        <td><p>85</p></td>
+        <td><p>61</p></td>
+        <td><p>74</p></td>
+        <td><p>78</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td></td>
+        <td><p>%</p></td>
+        <td><p>Gr.</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td></td>
+        <td><p>65</p></td>
+        <td><p>1</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">9</p></td>
+        <td></td>
+        <td><p>74</p></td>
+        <td><p>2</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">10</p></td>
+        <td></td>
+        <td><p>83</p></td>
+        <td><p>3</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">11</p></td>
+        <td></td>
+        <td><p>91</p></td>
+        <td><p>4</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">12</p></td>
+        <td></td>
+        <td></td>
+        <td><p>5</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 FREQUENCY 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=INDEX(FREQUENCY($A$1:$E$6, $B$8:$B$11), C8) 得出 5（得到“F”（分数等于或低于 65）的学生人数）。可在单元格 D8 中输入此公式，然后一直向下填充到单元格
+            D12。级别“D”至“A”得出的结果值分别为 3、8、8 和 6。 </p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59b4edb.html#ffa59b4edb" class="xRef AppleTopic">INDEX</a><a
+        href="ffa5a24591.html#ffa5a24591" class="xRef AppleTopic">PERCENTILE</a><a href="ffa5b571d2.html#ffa5b571d2"
+                                                                                   class="xRef AppleTopic">PERCENTRANK</a><a
+        href="ffa5aa708f.html#ffa5aa708f" class="xRef AppleTopic">QUARTILE</a></div>
+</body>
+</html>

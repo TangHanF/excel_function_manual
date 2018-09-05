@@ -1,0 +1,110 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>COUNT</title>
+    <meta name="description" content="COUNT(值, 值…) 可得出参数（含有数字、数字表达式或日期）的个数。">
+</head>
+<body dir="ltr" id="ffa5a52a41" class="AppleTopic apd-topic"><a name="ffa5a52a41"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>COUNT</h1>
+<p>COUNT 函数可得出参数（含有数字、数字表达式或日期）的个数。</p>
+<div class="HIStrings"><p><strong class="Term">COUNT</strong>(<em>值, 值…</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em><a href="ffa361bc137.html#ffa361bc137"
+                                                            class="xRef Aside">任何值</a>或包含任何值的<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">值…： </em>可选择性地包括一个或多个附加值或集合。</p></div>
+</div>
+<table data-type="1 column" aria-label="COUNT 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>以下表格中的信息没什么意义，但能说明包括在结果中的 COUNT 参数的参数类型。</p>
+            <p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="COUNT 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>100</p></td>
+        <td><p>200</p></td>
+        <td><p>300</p></td>
+        <td><p>400</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>lorem</p></td>
+        <td><p>ipsum</p></td>
+        <td><p>dolor</p></td>
+        <td><p>sit</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>100</p></td>
+        <td><p>200</p></td>
+        <td><p>300</p></td>
+        <td><p>sit</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>TRUE</p></td>
+        <td><p>TRUE</p></td>
+        <td><p>FALSE</p></td>
+        <td><p>FALSE</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td></td>
+        <td><p>200</p></td>
+        <td></td>
+        <td><p>400</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 COUNT 函数示例">
+    <tbody>
+    <tr>
+        <td><p>因为所有的参数都是数字，因此 =COUNT(A1:D1) 得出 4。</p>
+            <p>因为所有的参数都不是数字，因此 =COUNT(A2:D2) 得出 0。</p>
+            <p>因为最后一个单元格不是数字，因此 =COUNT(A3:D3) 得出 3。</p>
+            <p>因为参数为布尔值 TRUE 或 FALSE（不记为数字），因此 =COUNT(A4:D4) 得出 0。</p>
+            <p>因为有两个单元格为空，因此 =COUNT(A5:D5) 得出 2。</p>
+            <p>因为参数 2 和 3 是数字，A5:D5 范围指定的集合内有 2 个数字，SUM 函数得出一个数字，且最后两个参数是文本，而不是数字（总共 5 个数字参数），因此 =COUNT(2, 3, A5:D5,
+                SUM(A1:D1), “A”, “b”) 得出 5。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="COUNT 函数其他示例参考">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例—调查结果</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>若要查看此函数和其他几个应用到调查结果的统计函数的示例，请参阅 <a href="ffa5b9f72f.html#ffa5b9f72f" class="xRef AppleTopic">COUNTIF</a>
+            函数。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b36220.html#ffa5b36220"
+                                                   class="xRef AppleTopic">COUNTA</a><a
+        href="ffa5a1ef74.html#ffa5a1ef74" class="xRef AppleTopic">COUNTBLANK</a><a href="ffa5b9f72f.html#ffa5b9f72f"
+                                                                                   class="xRef AppleTopic">COUNTIF</a><a
+        href="ffa5a400fc.html#ffa5a400fc" class="xRef AppleTopic">COUNTIFS</a></div>
+</body>
+</html>

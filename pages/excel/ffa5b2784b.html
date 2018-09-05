@@ -1,0 +1,46 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AVERAGEA</title>
+    <meta name="description" content="AVERAGEA(值, 值…) 得出包含任何值的集的平均值（算术平均）。">
+</head>
+<body dir="ltr" id="ffa5b2784b" class="AppleTopic apd-topic"><a name="ffa5b2784b"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>AVERAGEA</h1>
+<p>AVERAGEA 函数返回包含<a href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>的集的平均值（算术平均）。</p>
+<div class="HIStrings"><p><strong class="Term">AVERAGEA</strong>(<em>值, </em><em>值…</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em>任何值或包含任何值的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                      class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString"><a href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a
+            href="ffa8575c843.html#ffa8575c843" class="xRef Aside">持续时间值</a>不能与其他<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>混合。如果包括这两种值类型之一，则所有值都必须属于同一值类型。</span></p>
+    </div>
+    <div class="HISubString"><p><em class="Term">值…： </em>可选择性地包括一个或多个附加值或集合。</p></div>
+</div>
+<div id="ffa5b4bfd3" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>包括在引用单元格中的<a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>被赋值 0。<a
+                href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a> FALSE 被赋值 0，布尔值 TRUE 被赋值 1。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="AVERAGEA 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果单元格 A1 至 D1 含有 4、a、6、b，则 =AVERAGEA(A1:D1) 得出 2.5。这 4 个值的和为 10，其中文本值被计算为 0。与 =AVERAGE(A1:D1)
+            相比，后者完全忽略文本值，和为 10、计数为 2，因此平均值为 5。</p>
+            <p>如果单元格 A2 至 D2 含有 5、a、TRUE、10，则 =AVERAGEA(A2:D2) 得出 4。这 4 个值的和为 16，其中文本值计算为 0，TRUE 计算为 1。</p>
+            <p>如果单元格 A3 至 D3 含有 FALSE、FALSE、FALSE、TRUE，则 =AVERAGEA(A3:D3) 得出 0.25。每个 FALSE 计为 0，TRUE 计为 1，因此和为 1，计数为
+                4。</p>
+            <p>=AVERAGEA(“2010/12/31”, “3天”) 得出错误，因为提供的值既包括日期/时间值又包括持续时间值。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a1272d.html#ffa5a1272d" class="xRef AppleTopic">AVERAGE</a>
+</div>
+</body>
+</html>

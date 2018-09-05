@@ -1,0 +1,32 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>TIMEVALUE</title>
+    <meta name="description" content="TIMEVALUE(日期时间) 返回给定日期/时间值或时间字符串的 24 小时制日小数部分的时间。">
+</head>
+<body dir="ltr" id="ffa55e8d11" class="AppleTopic apd-topic"><a name="ffa55e8d11"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>TIMEVALUE</h1>
+<p>TIMEVALUE 函数返回给定<a href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a
+        href="ffa4fa5b15f.html#ffa4fa5b15f" class="xRef Aside">时间字符串</a>的 24 小时制日小数部分的时间。</p>
+<div class="HIStrings"><p><strong class="Term">TIMEVALUE</strong>(<em>时间</em>)</p>
+    <div class="HISubString"><p><em class="Term">时间： </em>要转换的时间字符串或日期/时间值。</p></div>
+</div>
+<table data-type="1 column" aria-label="TIMEVALUE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=TIMEVALUE(“88/4/6 12:00”) 得出 0.5（12:00 代表一天的二分之一）。</p>
+            <p>=TIMEVALUE(“12:00:59”) 得出近似值 0.50068287037037。</p>
+            <p>=TIMEVALUE(“下午 9:00”) 得出 0.875（21 除以 24——因为在 24 小时制中，晚上 9 点是第 21个小时）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa55f034b.html#ffa55f034b" class="xRef AppleTopic">TIME</a>
+</div>
+</body>
+</html>

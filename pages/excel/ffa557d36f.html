@@ -1,0 +1,44 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>DAYS360</title>
+    <meta name="description" content="DAYS360(开始日期, 结束日期, 使用欧洲方法) 将得出基于 12 个 30 日制月和 360 日制年的两个日期之间的天数。">
+</head>
+<body dir="ltr" id="ffa557d36f" class="AppleTopic apd-topic"><a name="ffa557d36f"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>DAYS360</h1>
+<p>DAYS360 函数可得出基于 12 个 30 日制月和 360 日制年的两个日期之间的天数。</p>
+<div class="HIStrings"><p><strong class="Term">DAYS360</strong>(<em>开始日期, </em><em>结束日期, </em><em>使用欧洲计算方法</em>)</p>
+    <div class="HISubString"><p><em class="Term">开始日期： </em>开始日期。<span class="DescriptionNotString"><em>开始日期</em>是一个<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>（时间部分被忽略）或<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">结束日期： </em>结束日期。<span class="DescriptionNotString"><em>结束日期</em>是一个日期/时间值（时间部分被忽略）或日期字符串。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">使用欧洲计算方法： </em>可选<a href="ffa8575c326.html#ffa8575c326"
+                                                                     class="xRef Aside">模态值</a>，指定方法来计算一个月的第 31 天。</p>
+        <div class="HISubString"><p><em class="Term">NASD 方法<span class="TermNotString">(0、FALSE 或省略)</span>： </em>采用 <a
+                href="ffa205f6771.html#ffa205f6771" class="xRef Aside">NASD 方法</a>来计算一个月的第 31 天。</p></div>
+        <div class="HISubString"><p><em class="Term">欧洲方法<span class="TermNotString">(1 或 TRUE)</span>： </em>采用<a
+                href="ffa7b6f10f2.html#ffa7b6f10f2" class="xRef Aside">欧洲方法</a>来计算一个月的第 31 天。</p></div>
+    </div>
+</div>
+<table data-type="1 column" aria-label="DAYS360 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=DAYS360(“2008/12/20”,“2009/3/31”) 得出 101天。</p>
+            <p>=DAYS360(“2008/2/27”,“2009/3/31”,0) 得出 394天。</p>
+            <p>=DAYS360(“2008/2/27”,“2009/3/31”,1) 得出 393天，因为使用的是欧洲计算方法。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa55ea982.html#ffa55ea982" class="xRef AppleTopic">DATEDIF</a><a
+        href="ffa55b18db.html#ffa55b18db" class="xRef AppleTopic">NETWORKDAYS</a><a href="ffa55c753e.html#ffa55c753e"
+                                                                                    class="xRef AppleTopic">YEARFRAC</a>
+</div>
+</body>
+</html>

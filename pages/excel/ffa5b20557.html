@@ -1,0 +1,136 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CHITEST</title>
+    <meta name="description" content="CHITEST(实际值, 预期值) 可根据给定数据的卡方分布得出某值。">
+</head>
+<body dir="ltr" id="ffa5b20557" class="AppleTopic apd-topic"><a name="ffa5b20557"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CHITEST</h1>
+<p>CHITEST 函数可根据给定数据的卡方分布得出某值。所有值都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">CHITEST</strong>(<em>实际值, </em><em>预期值</em>)</p>
+    <div class="HISubString"><p><em class="Term">实际值： </em>包含实际值的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                    class="xRef Aside">集合</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">预期值： </em>含有期望值的集合。 </p></div>
+</div>
+<div id="ffa5abd20f" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>与得出值有关的自由度是<em>实际值</em>中的行数减 1。</p></li>
+        <li><p>通过行的总和乘以列的总和然后除以总数计算出每个期望值。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CHITEST 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设针对某调查的某个特殊问题，可能的答案范围是 1 到 5。调查结果会针对男性和女性分别累计。在以下表格中，单元格 B3:C7 包含男性和女性各自答案的实际百分比结果。</p>
+            <p>单元格 B9:C13 包含针对正常人数计算的总体期望值（基于样本）。通过行的总和乘以列的总和然后除以总数计算出每个总体期望值。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="CHITEST 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>答案</p></td>
+        <td><p>男性</p></td>
+        <td><p>女性</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>实际</p></td>
+        <td><p>%</p></td>
+        <td><p>%</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>5</p></td>
+        <td><p>15</p></td>
+        <td><p>9</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>4</p></td>
+        <td><p>56</p></td>
+        <td><p>35</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>3</p></td>
+        <td><p>11</p></td>
+        <td><p>23</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>2</p></td>
+        <td><p>10</p></td>
+        <td><p>23</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td><p>1</p></td>
+        <td><p>8</p></td>
+        <td><p>10</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td><p>期望</p></td>
+        <td><p>%</p></td>
+        <td><p>%</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">9</p></td>
+        <td><p>5</p></td>
+        <td><p>12.00</p></td>
+        <td><p>4.50</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">10</p></td>
+        <td><p>4</p></td>
+        <td><p>10.20</p></td>
+        <td><p>3.83</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">11</p></td>
+        <td><p>3</p></td>
+        <td><p>4.92</p></td>
+        <td><p>1.85</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">12</p></td>
+        <td><p>2</p></td>
+        <td><p>4.82</p></td>
+        <td><p>1.81</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">13</p></td>
+        <td><p>1</p></td>
+        <td><p>4.21</p></td>
+        <td><p>1.58</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 CHITEST 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=CHITEST(B3:C7, B9:C13) 得出近似值 1.3382569E-218。借助该值以及自由度（在这个例子中自由度是 4，因为有 5
+            行实际值），您可以使用卡方表来确定采样结果和预期的人口统计结果之间的差异是否有统计学意义。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a6a7f0.html#ffa5a6a7f0" class="xRef AppleTopic">CHIDIST</a><a
+        href="ffa5b3d428.html#ffa5b3d428" class="xRef AppleTopic">CHIINV</a></div>
+</body>
+</html>

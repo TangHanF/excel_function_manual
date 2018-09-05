@@ -1,0 +1,56 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>DATEDIF</title>
+    <meta name="description" content="DATEDIF(开始日期, 结束日期, 计算方式) 将得出两个日期之间的天数、月数或年数。">
+</head>
+<body dir="ltr" id="ffa55ea982" class="AppleTopic apd-topic"><a name="ffa55ea982"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>DATEDIF</h1>
+<p>DATEDIF 函数可得出两个日期之间的天数、月数和年数。</p>
+<div class="HIStrings"><p><strong class="Term">DATEDIF</strong>(<em>开始日期, </em><em>结束日期, </em><em>计算方式</em>)</p>
+    <div class="HISubString"><p><em class="Term">开始日期： </em>开始日期。<span class="DescriptionNotString"><em>开始日期</em>是一个<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>（时间部分被忽略）或<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">结束日期： </em>结束日期。<span class="DescriptionNotString"><em>结束日期</em>是一个日期/时间值（时间部分被忽略）或日期字符串值。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">计算方式： </em><a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定如何表示时差并指定如何处理不同年份或月份中的日期。
+    </p>
+        <div class="HISubString"><p><em class="Term">“D”： </em>返回起始日期和结束日期之间的天数。</p></div>
+        <div class="HISubString"><p><em class="Term">“M”： </em>返回起始日期和结束日期之间的月数。</p></div>
+        <div class="HISubString"><p><em class="Term">“Y”： </em>返回起始日期和结束日期之间的年数。</p></div>
+        <div class="HISubString"><p><em
+                class="Term">“MD”： </em>返回起始日期和结束日期之间的天数，忽略月份和年份。将<em>结束日期</em>中的月份视为<em>开始日期</em>中的月份。如果起始日在结束日之后，则根据结束日开始计算，即将其视为在上月中。<em>结束日期</em>的年份用于检查是否为闰年。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">“YM”： </em>返回起始日期和结束日期之间的整月数，忽略年份。如果起始月/日在结束月/日之前，则将日期视为在同一年内。如果起始月/日在结束月/日之后，则将日期视为在相邻两年内。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">“YD”： </em>返回起始日期和结束日期之间的天数，忽略年份。如果起始月/日在结束月/日之前，则将日期视为在同一年内。如果起始月/日在结束月/日之后，则将日期视为在相邻两年内。
+        </p></div>
+    </div>
+</div>
+<table data-type="1 column" aria-label="DATEDIF 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果 A1 含有日期/时间值 1988/4/6 并且 A2 含有日期/时间值 2006/10/30：</p>
+            <p>=DATEDIF(A1,A2,“D”) 得出 6,781（1988 年 4 月 6 日到 2006 年 10 月 30 日之间的天数）。</p>
+            <p>=DATEDIF(A1,A2,“M”) 得出 222（1988 年 4 月 6 日到 2006 年 10 月 30 日之间的整月数）。</p>
+            <p>=DATEDIF(A1,A2,“Y”) 得出 18（1988 年 4 月 6 日到 2006 年 10 月 30 日之间的整年数）。</p>
+            <p>=DATEDIF(A1,A2,“MD”) 得出 24（某月的第 6 天和同一个月的第 30 天之间的天数）。</p>
+            <p>=DATEDIF(A1,A2,“YM”) 得出 6（任何一年中的 4 月份和接着的 10 月份之间的月数）。</p>
+            <p>=DATEDIF(A1,A2,“YD”) 得出 207（任何一年中的 4 月 6 日和接着的 10 月 30 日之间的天数）。</p>
+            <p>=DATEDIF(“1988/04/06”,NOW(),“Y”)&amp; “ 岁，” &amp;DATEDIF(“1988/04/06”,NOW(),“YM”)&amp; “ 个月，” &amp;DATEDIF(“1988/04/06”,NOW(),“MD”)&amp;
+                “ 天”得出 25 岁，2 个月，25 天，即 1988 年 4 月 6 日出生的人的当前岁数（假定今天是 2013 年 7 月 1 日）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa557d36f.html#ffa557d36f" class="xRef AppleTopic">DAYS360</a><a
+        href="ffa55b18db.html#ffa55b18db" class="xRef AppleTopic">NETWORKDAYS</a><a href="ffa55c753e.html#ffa55c753e"
+                                                                                    class="xRef AppleTopic">YEARFRAC</a>
+</div>
+</body>
+</html>

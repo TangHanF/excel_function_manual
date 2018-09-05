@@ -1,0 +1,45 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>INDIRECT</title>
+    <meta name="description" content="INDIRECT(地址字符串, 地址样式) 将得出由指定为字符串的地址引用的单元格或一组单元格中的内容。">
+</head>
+<body dir="ltr" id="ffa596db0e" class="AppleTopic apd-topic"><a name="ffa596db0e"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>INDIRECT</h1>
+<p>INDIRECT 函数返回由指定为<a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>的地址引用的单元格或<a
+        href="ffa8575c9b4.html#ffa8575c9b4" class="xRef Aside">范围</a>中的内容。</p>
+<div class="HIStrings"><p><strong class="Term">INDIRECT</strong>(<em>地址字符串, 地址样式</em>)</p>
+    <div class="HISubString"><p><em class="Term">地址字符串： </em>表示单元格地址的字符串值。 </p></div>
+    <div class="HISubString"><p><em class="Term">地址样式： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，用于指定地址样式。
+    </p>
+        <div class="HISubString"><p><em class="Term">A1<span class="TermNotString">(TRUE、1 或省略)</span>： </em>地址格式应使用字母表示列，用数字表示行。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">R1C1<span class="TermNotString">(FALSE)</span>： </em>地址应当使用 R1C1
+            格式，其中 R1 是单元格的行号，C1 是列号。</p></div>
+    </div>
+</div>
+<div id="ffa59888f8" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>给定的地址可以是范围引用，如“A1:C5”，而不仅仅是单个单元格的引用。如果使用此方法，INDIRECT 将返回一个可用作另一函数的参数或可使用 INDEX 函数直接读取的<a
+                href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>。例如：</p>
+            <p>=SUM(INDIRECT(“A1:C5”, 1)) 得出单元格 A1 至 C5 中的地址引用的单元格中值的总和。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="INDIRECT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果单元格 A1 含有 99、A20 含有 A1，则：</p>
+            <p>=INDIRECT(A20) 将得出 99（单元格 A1 的内容）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59b4edb.html#ffa59b4edb" class="xRef AppleTopic">INDEX</a>
+</div>
+</body>
+</html>

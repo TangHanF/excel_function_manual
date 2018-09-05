@@ -1,0 +1,39 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ISBLANK</title>
+    <meta name="description" content="如果指定的单元格为空，ISBLANK(单元格) 将得出 TRUE；否则得出　FALSE。">
+</head>
+<body dir="ltr" id="ffa57eb830" class="AppleTopic apd-topic"><a name="ffa57eb830"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ISBLANK</h1>
+<p>如果指定单元格为空，ISBLANK 函数返回<a href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a> TRUE，否则返回布尔值 FALSE。</p>
+<div class="HIStrings"><p><strong class="Term">ISBLANK</strong>(<em>单元格</em>)</p>
+    <div class="HISubString"><p><em class="Term">单元格： </em>单个表格单元格的<a href="ffa8575c209.html#ffa8575c209"
+                                                                      class="xRef Aside">单元格引用</a>。<span
+            class="DescriptionNotString">引用的单元格可以包含<a href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>或为空。如果<em>单元格</em>引用多个单元格，ISBLANK 将返回布尔值 FALSE，即使所有单元格均为空白也是如此。</span>
+    </p></div>
+</div>
+<div id="ffa57fffbd" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>如果单元格完全为空白（空），则函数将返回布尔值 TRUE；否则返回布尔值 FALSE。如果单元格含有空格或非打印字符，函数将得出 FALSE（尽管单元格显示为空白）。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="ISBLANK 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果表格单元格 A1 为空，表格单元格 B2 等于 100：</p>
+            <p>=ISBLANK(A1) 得出 TRUE。</p>
+            <p>=ISBLANK(B2) 得出 FALSE。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa580d62c.html#ffa580d62c" class="xRef AppleTopic">IFERROR</a><a
+        href="ffa57f6d11.html#ffa57f6d11" class="xRef AppleTopic">ISERROR</a></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>MATCH</title>
+    <meta name="description" content="MATCH(搜索目标, 搜索位置, 匹配方式) 得出一个集合内值的位置。">
+</head>
+<body dir="ltr" id="ffa59a83d3" class="AppleTopic apd-topic"><a name="ffa59a83d3"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>MATCH</h1>
+<p>MATCH 函数返回一个<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>内值的位置。</p>
+<div class="HIStrings"><p><strong class="Term">MATCH</strong>(<em>搜索目标, 搜索位置, 匹配方式</em>)</p>
+    <div class="HISubString"><p><em class="Term">搜索目标： </em>要查找的值。<span class="DescriptionNotString"><em>搜索目标</em>可以包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">搜索位置： </em>含有要搜索的值的集合。<span class="DescriptionNotString"><em>搜索位置</em>可以包含任何值。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">匹配方式： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定如何执行值的匹配。
+    </p>
+        <div class="HISubString"><p><em class="Term">查找最大值<span class="TermNotString">(1 或省略)</span>： </em>查找具有小于或等于<em>搜索目标</em>的最大值的单元格。如果使用<em>查找最大值</em>，不能将<a
+                href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>用于<em>搜索目标</em>。</p></div>
+        <div class="HISubString"><p><em class="Term">查找值<span class="TermNotString">(0)</span>： </em>查找具有与<em>搜索目标</em>准确匹配的值的第一个单元格。此匹配方式最适用于查找文本。如果使用<em>查找值</em>，可以将<a
+                href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>用于<em>搜索目标</em>。您可以使用 ?
+            （问号）表示一个字符，*（星号）表示多个字符，并使用 ~（波浪号）来指定下一个字符应当匹配，而非用作通配符。</p></div>
+        <div class="HISubString"><p><em class="Term">查找最小值<span class="TermNotString">(–1)</span>： </em>查找具有大于或等于<em>搜索目标</em>的最小值的单元格。如果使用<em>查找最小值</em>，不能将通配符用于<em>搜索目标</em>。
+        </p></div>
+    </div>
+</div>
+<div id="ffa59bc0e4" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>MATCH 仅可用于查找属于单个行或列的集合，不能用于搜索二维集合。</p></li>
+        <li><p>单元格编号分别是从垂直和水平集合的顶部或左侧的单元格以 1 开始。可从上至下或从左至右执行搜索。</p></li>
+        <li><p>在搜索文本时不区分大小写。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="MATCH 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="MATCH 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>10</p></td>
+        <td></td>
+        <td><p>vel</p></td>
+        <td></td>
+        <td><p>40</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>20</p></td>
+        <td></td>
+        <td><p>elit</p></td>
+        <td></td>
+        <td><p>20</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>30</p></td>
+        <td></td>
+        <td><p>lorex</p></td>
+        <td></td>
+        <td><p>30</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>40</p></td>
+        <td></td>
+        <td><p>felis</p></td>
+        <td></td>
+        <td><p>50</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>50</p></td>
+        <td></td>
+        <td><p>facit</p></td>
+        <td></td>
+        <td><p>10</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 MATCH 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=MATCH(40, A1:A5) 得出 4，因为 40（<em>搜索目标</em>）是指定集合（<em>搜索位置</em>）中的第四项。</p>
+            <p>=MATCH(40, E1:E5) 得出 1，因为 40 是指定集合中的第一项。</p>
+            <p>=MATCH(35, E1:E5, 1) 得出 3，因为 30 是小于或等于 35（<em>匹配方式</em>是 1，<em>找最大值</em>）的最大值。</p>
+            <p>=MATCH(35, E1:E5, -1) 得出 1，因为 40 是大于或等于 35（<em>匹配方式</em>是 -1，<em>找最小值</em>）的最小值。</p>
+            <p>=MATCH(35, E1:E5, 0) 得出一个错误，因为没有找到匹配项（<em>匹配方式</em>是 0，<em>查找值</em>）。</p>
+            <p>=MATCH(“vel”, C1:C5) 得出 1，因为“vel”出现在指定范围中的第一个单元格中。</p>
+            <p>=MATCH(“*x”, C1:C5 0) 得出 3，因为“lorex”以“x”结尾，出现在指定范围的第三个单元格中。</p>
+            <p>=MATCH(“vel”, C1:D5) 得出一个错误，因为<em>搜索目标</em>集合只能包含一行或一列。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa597dc7b.html#ffa597dc7b" class="xRef AppleTopic">LOOKUP</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>STOCK</title>
+    <meta name="description" content="STOCK(代码, 价格) 会返回通过互联网远程获取的股票的数据。">
+</head>
+<body dir="ltr" id="ffa729d49e1c" class="AppleTopic apd-topic"><a name="ffa729d49e1c"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>STOCK</h1>
+<p>STOCK 函数会返回通过互联网远程获取的前一交易日收盘时给定股票的数据。</p>
+<div class="HIStrings"><p><strong class="Term">STOCK</strong>(<em>代码, 价格</em>)</p>
+    <div class="HISubString"><p><em class="Term">代码： </em>唯一标识特定股票市场上某只公开交易股票的缩写。<span class="DescriptionNotString"><em>代码</em>是一串包括在引号内的字符串。<em>代码</em>也可以是对包含股票代码的单元格的引用。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">价格： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定待返回的股票属性。
+    </p>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>价格<span class="TermNotString">” (0 或省略)</span>：
+        </em>指定股票在前一交易日收盘时的股价。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>名称<span class="TermNotString">”(1)</span>：
+        </em>股票或公司的全称。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>涨跌额<span class="TermNotString">”(2)</span>：
+        </em>前一交易日的最后交易价格与再前一交易日的收盘价格之间的差异。如果那段时间股票没有交易，则报告的变化为“0”。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>涨跌幅<span class="TermNotString">”(3)</span>：
+        </em>前一交易日的最后交易股价与再前一交易日的收盘股价之间的百分比变化。如果那段时间股票没有交易，则报告的变化为“0”。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>开盘价<span class="TermNotString">”(4)</span>：
+        </em>股票在前一交易日开盘时交易的价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最高价<span class="TermNotString">”(5)</span>：
+        </em>股票在前一交易日交易的最高价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最低价<span class="TermNotString">”(6)</span>：
+        </em>股票在前一交易日交易的最低价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>市值<span class="TermNotString">”(7)</span>：
+        </em>股票前一交易日所有已发行股份的总市场价值。计算方式：已发行股份总数乘以每股价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>成交量<span class="TermNotString">”(8)</span>：
+        </em>股票在前一交易日转手的份额数。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>收益率<span class="TermNotString">”(9)</span>：
+        </em>股票的每股年股利（现金派发）占股价百分比的比率。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>1 年目标价<span
+                class="TermNotString">”(10)</span>： </em>一年目标价格预计值，即关注该股票的分析师预测的目标价格中位数。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>52 周最高价<span
+                class="TermNotString">”(11)</span>： </em>股票在过去 52 周的最高交易价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>52 周最低价<span
+                class="TermNotString">”(12)</span>： </em>股票在过去 52 周的最低交易价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>卖出价<span class="TermNotString">”(13)</span>：
+        </em>卖方卖出股票愿意接受的价格（要价）。<strong>注：</strong>“卖出价”数据当前不可用。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>卖出量<span class="TermNotString">”(14)</span>：
+        </em>卖方以卖出价所卖出的股份数。<strong>注：</strong>“卖出量”数据当前不可用。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>3 个月平均成交量<span
+                class="TermNotString">”(15)</span>： </em>过去 3 个月累计成交量除以 22 天所得的月平均值。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>beta<span
+                class="TermNotString">”(16)</span>： </em>某个证券或商品的波动率（系统性风险）相对于整个市场的度量结果。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>买入价<span class="TermNotString">”(17)</span>：
+        </em>买方买入股票愿意支付的最高价格。<strong>注：</strong>“买入价”数据当前不可用。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>买入量<span class="TermNotString">”(18)</span>：
+        </em>以买入价所买入的股份数。<strong>注：</strong>“买入量”数据当前不可用。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>货币<span class="TermNotString">”(19)</span>：
+        </em>股票定价所用的货币。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>年股利<span class="TermNotString">”(20)</span>：
+        </em>每股年度股利（现金派发）金额。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>每股收益<span
+                class="TermNotString">”(21)</span>： </em>每股收益计算方式：公司总利润除以已发行股份（所有股东当前持有的股票）数。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>交易所<span class="TermNotString">”(22)</span>：
+        </em>股票交易所在的证券交易所（例如，NYSE、NASDAQ、Euronext 等）。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>市盈率<span class="TermNotString">”(23)</span>：
+        </em>价格/收益比，计算方式：股票的市场价格除以最近 12 个月的每股收益。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>前收盘价<span
+                class="TermNotString">”(24)</span>： </em>股票在最近一次报告交易的前一个交易日的收盘价格。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>代码<span class="TermNotString">”(25)</span>：
+        </em>唯一标识该股票的股票代码（股票代号）。</p></div>
+    </div>
+</div>
+<div id="ffa94d3dc4b4" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>如果在互联网无法使用时输入了含 STOCK 函数的公式，STOCK 不会返回值。但是，当互联网可用时，公式将根据 STOCK 返回的值进行更新。</p></li>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+        <li><p>若要获取特定股票的数据，则必须添加股票交易所在的证券交易所的后缀。例如，将 .L 添加到“BLT”，代表伦敦证券交易所的 BHP Billiton Plc（“BLT.L”），或者将 .F
+            添加到“UBL”，代表巴黎证券交易所的 Unibail（“UBL.F”）。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="STOCK 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=STOCK(“AAPL”, “价格”) 返回前一交易日收盘时 Apple Inc. 股票的价格。</p>
+            <p>=STOCK(“CH”, 1) 返回“Aberdeen Chile Fund, Inc. (The)”，即代码为 CH 的股票名称（“名称”或 1）。</p>
+            <p>=IFERROR(STOCK(A9, “价格”), “-”)，如果股票代码和公式有效，则返回单元格 A9 中代码所代表的股票前一交易日的收盘价；如果公式错误或数据无法获取，则返回“-”。</p>
+            <p>=STOCK(“CARB”, “最高价”) 返回 Carbonite, Inc. 股票前一交易日的最高价格。</p>
+            <p>=STOCK(“NKE”, 22) 返回“NYSE”，即 Nike, Inc.Common Stock 进行交易的证券交易所（“交易所”或 22）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<p class="footer credit">STOCK 函数由<img src="../GlobalArt/IL_YahooLogo.png" alt="雅虎" height="30" width="119">提供数据支持
+</p>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa580d62c.html#ffa580d62c" class="xRef AppleTopic">IFERROR</a><a
+        href="ffaedc3b1296.html#ffaedc3b1296" class="xRef AppleTopic">STOCKH</a></div>
+</body>
+</html>

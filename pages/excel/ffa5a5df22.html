@@ -1,0 +1,163 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AVERAGEIF</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--<meta name="description" content="AVERAGEIF(待检验的值, 条件, 待平均的值) 得出集合内满足给定条件的单元格的平均值（算术平均）。">-->
+</head>
+<body dir="ltr" id="ffa5a5df22" class="AppleTopic apd-topic"><a name="ffa5a5df22"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>AVERAGEIF</h1>
+<p>AVERAGEIF 函数返回集合内满足给定<a href="ffa8575bb7b.html#ffa8575bb7b" class="xRef Aside">条件</a>的单元格的平均值（算术平均）。</p>
+<div class="HIStrings"><p><strong class="Term">AVERAGEIF</strong>(<em>待检验的值, </em><em>条件, </em><em>待平均的值</em>)</p>
+    <div class="HISubString"><p><em class="Term">待检验的值： </em><a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>，包含要测试的值。<span
+            class="DescriptionNotString"><em>待检验的值</em>可以包含<a href="ffa361bc137.html#ffa361bc137"
+                                                              class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">条件： </em>比较或检验值，并返回<a href="ffa361cb72c.html#ffa361cb72c"
+                                                                       class="xRef Aside">布尔值</a> TRUE 或 FALSE 的<a
+            href="ffaf0f44203.html#ffaf0f44203" class="xRef Aside">表达式</a>。<span
+            class="DescriptionNotString"><em>条件</em>可包括比较运算符、常数、与符号并置运算符、引用表达式和通配符。您可以使用<a
+            href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>来匹配表达式中的任何单个字符或多个字符。您可以使用 ? （问号）表示一个字符，*（星号）表示多个字符，并使用 ~（波浪号）来指定下一个字符应当匹配，而非用作通配符。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">待平均的值： </em>一个可选集合，可含有要计算平均值的值。<span class="DescriptionNotString"><em>待平均的值</em>是对单个单元格集合的引用，它只能包含<a
+            href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>或布尔值。</span></p></div>
+</div>
+<div id="ffa5babfba" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>每个值都要与<em>条件</em>进行比较。如果某值满足条件测试，平均值中则包括<em>待平均的值</em>的相应值。</p></li>
+        <li><p><em>待平均的值</em>和<em>待检验的值</em>（如已指定）的大小必须相同。</p></li>
+        <li><p>如果忽略<em>待平均的值</em>，<em>待检验的值</em>将用作<em>待平均的值</em>。</p></li>
+        <li><p>如果<em>待平均的值</em>被省略或等于<em>待检验的值</em>，则<em>待检验的值</em>只能包含数字值或布尔值。</p></li>
+        <li><p>如果要求有多个<em>条件</em>或多组<em>待检验的值</em>，可考虑使用 AVERAGEIFS 函数。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="AVERAGEIF 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="AVERAGEIF 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>年龄</p></td>
+        <td><p>性别</p></td>
+        <td><p>婚姻状况</p></td>
+        <td><p>工资</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>35</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>71000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>27</p></td>
+        <td><p>女</p></td>
+        <td><p>已婚</p></td>
+        <td><p>81000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>42</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>86000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>51</p></td>
+        <td><p>男</p></td>
+        <td><p>未婚</p></td>
+        <td><p>66000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>28</p></td>
+        <td><p>男</p></td>
+        <td><p>未婚</p></td>
+        <td><p>52000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td><p>49</p></td>
+        <td><p>女</p></td>
+        <td><p>未婚</p></td>
+        <td><p>62000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td><p>63</p></td>
+        <td><p>女</p></td>
+        <td><p>已婚</p></td>
+        <td><p>89000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">9</p></td>
+        <td><p>22</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>34000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">10</p></td>
+        <td><p>29</p></td>
+        <td><p>女</p></td>
+        <td><p>未婚</p></td>
+        <td><p>42000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">11</p></td>
+        <td><p>35</p></td>
+        <td><p>女</p></td>
+        <td><p>已婚</p></td>
+        <td><p>56000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">12</p></td>
+        <td><p>33</p></td>
+        <td><p>男</p></td>
+        <td><p>未婚</p></td>
+        <td><p>62000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">13</p></td>
+        <td><p>61</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>91000</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 AVERAGEIF 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=AVERAGEIF(A2:A13, “&lt;40”, D2:D13) 得出近似值 56857，此数值为 40 岁以下人群的平均工资。</p>
+            <p>=AVERAGEIF(B2:B13, “=女”, D2:D13) 得出 66000，此数值为女性（在 B 列中以“女”表示）的平均工资。</p>
+            <p>=AVERAGEIF(C2:C13, “未婚”, D2:D13) 得出 56800，此数值为单身（在 C 列中以“未婚”表示）人士的平均工资。</p>
+            <p>=AVERAGEIF(A2:A13, “&gt;=40”, D2:D13) 得出 78800，此数值为 40 岁或 40 岁以上人群的平均工资。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a1272d.html#ffa5a1272d" class="xRef AppleTopic">AVERAGE</a><a
+        href="ffa5b68ea4.html#ffa5b68ea4" class="xRef AppleTopic">AVERAGEIFS</a></div>
+</body>
+</html>

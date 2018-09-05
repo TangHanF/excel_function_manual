@@ -1,0 +1,47 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AVERAGE</title>
+    <meta name="description" content="AVERAGE(值, 值…) 得出一组数字的平均值（算术平均）。">
+</head>
+<body dir="ltr" id="ffa5a1272d" class="AppleTopic apd-topic"><a name="ffa5a1272d"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>AVERAGE</h1>
+<p>AVERAGE 函数得出一组数字的平均值（算术平均）。</p>
+<div class="HIStrings"><p><strong class="Term">AVERAGE</strong>(<em>值, 值…</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em>单个值或<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString">每个值都必须是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>。所有值都必须属于同一<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">值…： </em>可选择性地包括一个或多个附加值或值集合。</p></div>
+</div>
+<p><strong>注释</strong></p>
+<ul>
+    <li><p>AVERAGE 将数字之和除以数字的个数。</p></li>
+    <li><p>引用的单元格中包括的<a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>或<a
+            href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a>将被忽略。如果要在平均值中包括字符串和布尔值，请使用 AVERAGEA 函数。</p>
+    </li>
+</ul>
+<table data-type="1 column" aria-label="AVERAGE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=AVERAGE(4, 4, 4, 6, 6, 6) 得出 5。</p>
+            <p>=AVERAGE(2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4) 得出 3。</p>
+            <p>=AVERAGE(“3天”, “6天”, “4天”, “7天”) 得出 5天，这是持续时间值。</p>
+            <p>=AVERAGE(“2010/12/1”, “2011/12/31”, “2013/9/30”) 得出 2012 年 3 月 21 日 08:00，这是日期/时间值。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b2784b.html#ffa5b2784b"
+                                                   class="xRef AppleTopic">AVERAGEA</a><a
+        href="ffa5a5df22.html#ffa5a5df22" class="xRef AppleTopic">AVERAGEIF</a><a href="ffa5b68ea4.html#ffa5b68ea4"
+                                                                                  class="xRef AppleTopic">AVERAGEIFS</a>
+</div>
+</body>
+</html>

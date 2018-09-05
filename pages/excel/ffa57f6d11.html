@@ -1,0 +1,37 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ISERROR</title>
+    <meta name="description" content="如果给定的表达式计算出错，ISERROR(任何表达式) 将得出 TRUE；否则得出 FALSE。">
+</head>
+<body dir="ltr" id="ffa57f6d11" class="AppleTopic apd-topic"><a name="ffa57f6d11"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ISERROR</h1>
+<p>如果给定表达式计算出错，ISERROR 函数返回<a href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a> TRUE，否则返回布尔值 FALSE。</p>
+<div class="HIStrings"><p><strong class="Term">ISERROR</strong>(<em>任何表达式</em>)</p>
+    <div class="HISubString"><p><em class="Term">任何表达式： </em>要测试的表达式。<span class="DescriptionNotString"><em>任何表达式</em>可以包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任意值</a>。</span></p></div>
+</div>
+<div id="ffa5832357" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>通常，最好使用 IFERROR 函数。IFERROR 函数提供 ISERROR 的所有功能，但也允许返回任意表达式（取决于结果）。ISERROR 只能返回布尔值 TRUE 或 FALSE。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="ISERROR 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果 B1 为数字值，D1 求得的值为 0，则：</p>
+            <p>=IF(ISERROR(B1/D1), 0, B1/D1) 得出 0，因为以 0 作除数会导致出错。</p>
+            <p>=IFERROR(B1/D1, 0) 等同于上例，但是只需一个函数。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa580d62c.html#ffa580d62c" class="xRef AppleTopic">IFERROR</a><a
+        href="ffa57eb830.html#ffa57eb830" class="xRef AppleTopic">ISBLANK</a></div>
+</body>
+</html>

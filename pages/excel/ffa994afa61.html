@@ -1,0 +1,24 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>通配符</title>
+    <meta name="robots" content="noindex">
+</head>
+<body class="Aside apd-topic" dir="ltr" id="ffa994afa61"><a name="ffa994afa61"></a>
+<h1>通配符</h1>
+<p>您可以使用通配符来匹配表达式中的任何单个字符或多个字符。您可以使用的通配符包括 ? （问号）、*（星号）以及 ~（波浪号）。</p>
+<ul>
+    <li><p>使用 ? 字符可匹配表达式中允许使用条件的单个字符。例如：</p>
+        <p>“Ea?”将匹配任何以“Ea”开头且仅包括一个附加字符的字符串，如“Ea2”或“Eac”。</p>
+        <p>“Th??”将匹配任何以“Th”开头且仅包含两个附加字符的字符串，如“Then”和“That”。</p>
+        <p>=COUNTIF(B2:E7,“?ip”) 得出 B2:E7 范围中包含以一个字符开头且后面紧跟“ip”的值的单元格数，如“rip”和“tip”。它不匹配“drip”和“trip”。</p></li>
+    <li><p>使用 * 字符可匹配表达式中允许使用条件的任何数量的字符，包括无。例如：</p>
+        <p>“*ed”将匹配以“ed”结尾且长度任意的字符串，如“Ted”或“Treed”。</p>
+        <p>=COUNTIF(B2:E7,“*it”) 得出范围 B2:E7 中包含以“it”结尾的值的单元格数，如“bit”和“mit”。它不匹配“mitt”。</p></li>
+    <li><p>使用 ~ 字符可指定后续字符在允许使用条件的表达式中应该匹配，而不是用作通配符。例如：</p>
+        <p>“~?”将匹配问号，而非使用问号来匹配任何单个字符。</p>
+        <p>=COUNTIF(E,“~*”) 得出 E 列中包含星号字符的单元格数。</p>
+        <p>=SEARCH(“~?”,B2) 得出 19（如果单元格 B2 包含“That is a question? Yes it is!”），因为问号是字符串中的第 19 个字符。</p></li>
+</ul>
+</body>
+</html>

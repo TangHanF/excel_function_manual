@@ -1,0 +1,47 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>PERCENTRANK</title>
+    <meta name="description" content="PERCENTRANK(值集合, 值, 有效位数) 得出值在集中的百分数排位。">
+</head>
+<body dir="ltr" id="ffa5b571d2" class="AppleTopic apd-topic"><a name="ffa5b571d2"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>PERCENTRANK</h1>
+<p>PERCENTRANK 函数得出值在集中的百分数排位。</p>
+<div class="HIStrings"><p><strong class="Term">PERCENTRANK</strong>(<em>值集合, 值, 有效位数</em>)</p>
+    <div class="HISubString"><p><em class="Term">值集合： </em>必须包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                  class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>的<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString">所有值都必须属于同一<a href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">值： </em>要排位的单个数字值、日期/时间值或持续时间值。<span
+            class="DescriptionNotString"><em>值</em>的值类型必须与<em>值集合</em>中包含的值相同。</span></p></div>
+    <div class="HISubString"><p><em class="Term">有效位数： </em>可选数字值，用于指定小数点右边的数字个数。<span class="DescriptionNotString"><em>有效位数</em>必须大于或等于 1。如果省略，则使用默认值 3 (x.xxx%)。</span>
+    </p></div>
+</div>
+<div id="ffa5a1b64e" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>PERCENTRANK 可用于计算集合中值的相对位置。通过确定指定数字在集合中的位置来计算。例如，如果给定集合中有十个值小于指定数字、十个值大于指定数字，则指定数字的 PERCENTRANK 将为
+            50%。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="PERCENTRANK 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设单元格 B2 至 J2 分别包含值 5、6、9、3、7、11、8、2 和 14。可以使用以下公式求出数字 10 的排位：</p>
+            <p>=PERCENTRANK(B2:J2, 10) 得出近似值 0.813，因为有七个值小于 10 且仅有两个值大于 10。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b13e81.html#ffa5b13e81"
+                                                   class="xRef AppleTopic">FREQUENCY</a><a
+        href="ffa5a24591.html#ffa5a24591" class="xRef AppleTopic">PERCENTILE</a></div>
+</body>
+</html>

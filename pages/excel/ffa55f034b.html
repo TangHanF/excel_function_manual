@@ -1,0 +1,44 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>TIME</title>
+    <meta name="description" content="TIME(小时数, 分钟数, 秒数) 将小时、分钟、秒钟各自的数字值（任何小数部分都被忽略）转换为日期/时间值。">
+</head>
+<body dir="ltr" id="ffa55f034b" class="AppleTopic apd-topic"><a name="ffa55f034b"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>TIME</h1>
+<p>TIME 函数将小时、分钟、秒钟各自的<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>转换为<a
+        href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">TIME</strong>(<em>小时数, 分钟数, 秒数</em>)</p>
+    <div class="HISubString"><p><em class="Term">小时数： </em>要包括在返回的日期/时间值中的小时数。 </p></div>
+    <div class="HISubString"><p><em class="Term">分钟数： </em>要包括在返回的日期/时间值中的分钟数。 </p></div>
+    <div class="HISubString"><p><em class="Term">秒数： </em>要包括在返回的日期/时间值中的秒钟数。 </p></div>
+</div>
+<div id="ffa55a3ec0" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>您可以指定分别大于 24、60 和 60 的小时、分钟和秒钟值。如果小时、分钟和秒钟的和大于 24 小时，则重复减去 24 小时，直到和小于 24 小时。</p></li>
+        <li><p>小时、分钟和秒钟值中的任何小数部分都将被忽略。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="TIME 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=TIME(12,0,0) 得出下午 12 点。</p>
+            <p>=TIME(16,45,30) 得出下午 4 点 45 分。</p>
+            <p>=TIME(0,900,0) 得出下午 3 点。</p>
+            <p>=TIME(60,0,0) 得出下午 12 点。</p>
+            <p>=TIME(4.25,0,0) 得出上午 4 点。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa55cce81.html#ffa55cce81" class="xRef AppleTopic">DATE</a><a
+        href="ffa558a84c.html#ffa558a84c" class="xRef AppleTopic">DATEVALUE</a><a href="ffa55e8d11.html#ffa55e8d11"
+                                                                                  class="xRef AppleTopic">TIMEVALUE</a>
+</div>
+</body>
+</html>

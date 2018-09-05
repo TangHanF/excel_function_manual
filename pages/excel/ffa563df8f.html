@@ -1,0 +1,45 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>HEX2OCT</title>
+    <meta name="description" content="HEX2OCT(十六进制字符串, 转换长度) 可将十六进制数字转换为相应的八进制数字。">
+</head>
+<body dir="ltr" id="ffa563df8f" class="AppleTopic apd-topic"><a name="ffa563df8f"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>HEX2OCT</h1>
+<p>HEX2OCT 函数可将十六进制数字转换成相应的八进制数字。</p>
+<div class="HIStrings"><p><strong class="Term">HEX2OCT</strong>(<em>十六进制字符串, </em><em>转换长度</em>)</p>
+    <div class="HISubString"><p><em class="Term">十六进制字符串： </em><a href="ffa8575bef5.html#ffa8575bef5"
+                                                                  class="xRef Aside">字符串值</a>，表示要被转换的数字。<span
+            class="DescriptionNotString"><em>十六进制字符串</em>必须仅包含 0 到 9 之间的数字和 A 到 F 之间的字母。</span></p></div>
+    <div class="HISubString"><p><em class="Term">转换长度： </em>可选<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，指定返回数字的最小长度。<span
+            class="DescriptionNotString"><em>转换长度</em>必须在范围 1 至 16 内。如果省略<em>转换长度</em>，则假定为 1。如果包括此值，则返回的数字将以前导零填充（如有必要），因此其长度至少为<em>转换长度</em>指定的长度。</span>
+    </p></div>
+</div>
+<div id="ffa56cd057" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数使用<a href="ffad1ec8928.html#ffad1ec8928" class="xRef Aside">二进制补码记数法</a>。负数的长度始终为 11 位。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="HEX2OCT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=HEX2OCT(“F”, 3) 得出 017。</p>
+            <p>=HEX2OCT(“3F”) 得出 77。</p>
+            <p>=HEX2OCT(“-F”, 8) 得出错误，因为不允许存在负号。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa56b0c24.html#ffa56b0c24" class="xRef AppleTopic">BIN2OCT</a><a
+        href="ffa564e4eb.html#ffa564e4eb" class="xRef AppleTopic">DEC2OCT</a><a href="ffa56503fb.html#ffa56503fb"
+                                                                                class="xRef AppleTopic">HEX2BIN</a><a
+        href="ffa56f192f.html#ffa56f192f" class="xRef AppleTopic">HEX2DEC</a><a href="ffa568a633.html#ffa568a633"
+                                                                                class="xRef AppleTopic">OCT2HEX</a>
+</div>
+</body>
+</html>

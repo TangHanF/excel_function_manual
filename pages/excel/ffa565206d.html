@@ -1,0 +1,44 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>BASETONUM</title>
+    <meta name="description" content="BASETONUM(待转换字符串, 转换基数) 可将指定基数的数字转换成基数为 10 的数字。">
+</head>
+<body dir="ltr" id="ffa565206d" class="AppleTopic apd-topic"><a name="ffa565206d"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>BASETONUM</h1>
+<p>BASETONUM 函数可将指定基数的数字转换成基数为 10 的数字。</p>
+<div class="HIStrings"><p><strong class="Term">BASETONUM</strong>(<em>待转换字符串, </em><em>基数</em>)</p>
+    <div class="HISubString"><p><em class="Term">待转换字符串： </em><a href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>，表示要被转换的数字。<span
+            class="DescriptionNotString"><em>待转换字符串</em>必须仅包含适用于要转换数字的基数的数字和字母。</span></p></div>
+    <div class="HISubString"><p><em class="Term">基数： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                             class="xRef Aside">数字值</a>，表示要转换数字的当前基数。<span
+            class="DescriptionNotString"><em>基数</em>必须在范围 1 到 36 内。</span></p></div>
+</div>
+<div id="ffa56689ca" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数将得出数字值，并可恰当地用于含有其他数字值的公式中。某些其他电子表格应用可得出字符串值。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="BASETONUM 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=BASETONUM(“3F”, 16) 得出 63，这是等同于十六进制（以 16 为基数）值 3F 的十进制值（以 10 为基数）。只要<em>待转换字符串</em>中包含字母，则需要引号。</p>
+            <p>=BASETONUM(1000100, 2) 或 =BASETONUM(“1000100”, 2) 得出 68。</p>
+            <p>=BASETONUM(-1000100, 2) 得出错误，因为负号不是<em>待转换字符串</em>的有效组成部分。</p>
+            <p>=-BASETONUM(1000100, 2) 得出 -68。</p>
+            <p>=BASETONUM(7279, 8) 得出错误，因为基数是 8 时数字“9”无效。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa565cee1.html#ffa565cee1" class="xRef AppleTopic">BIN2DEC</a><a
+        href="ffa56f192f.html#ffa56f192f" class="xRef AppleTopic">HEX2DEC</a><a href="ffa56db9a6.html#ffa56db9a6"
+                                                                                class="xRef AppleTopic">NUMTOBASE</a><a
+        href="ffa56f99a2.html#ffa56f99a2" class="xRef AppleTopic">OCT2DEC</a></div>
+</body>
+</html>

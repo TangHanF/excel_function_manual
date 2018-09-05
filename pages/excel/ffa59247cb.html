@@ -1,0 +1,45 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>MROUND</title>
+    <meta name="description" content="MROUND(要舍入的数字, 因子) 会将一个数四舍五入到最接近的指定因数倍数。">
+</head>
+<body dir="ltr" id="ffa59247cb" class="AppleTopic apd-topic"><a name="ffa59247cb"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>MROUND</h1>
+<p>MROUND 函数将某数四舍五入到最接近的指定因数倍数。如果要被四舍五入的数位于两个倍数之间，则 MROUND 将朝与零相反的方向四舍五入。两个参数都是<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                                  class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">MROUND</strong>(<em>要舍入的数字, 因子</em>)</p>
+    <div class="HISubString"><p><em class="Term">要舍入的数字： </em>要四舍五入的数字。 </p></div>
+    <div class="HISubString"><p><em class="Term">因子： </em>用于确定最接近倍数的数字。<span class="DescriptionNotString"><em>因子</em>必须拥有与<em>要舍入的数字</em>相同的正负号。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="MROUND 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=MROUND(2, 3) 得出 3，即为最接近 2 的 3 的倍数。</p>
+            <p>=MROUND(4, 3) 得出 3，即为最接近 4 的 3 的倍数。</p>
+            <p>=MROUND(4.4999, 3) 得出 3，即为最接近 4.4999 的 3 的倍数。</p>
+            <p>=MROUND(4.5, 3) 得出 6，即为最接近 4.5 的 3 的倍数。</p>
+            <p>=MROUND(-4.4999, -3) 得出 -3，即为最接近 -4.4999 的 -3 的倍数。</p>
+            <p>=MROUND(-4.5, -3) 得出 -6，即为最接近 -4.5 的 -3 的倍数。</p>
+            <p>=MROUND(-4.5, 3) 得出一个错误，因为这两个参数必须同为正数或同为负数。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa592ccd5.html#ffa592ccd5" class="xRef AppleTopic">CEILING</a><a
+        href="ffa58be187.html#ffa58be187" class="xRef AppleTopic">EVEN</a><a href="ffa5883dff.html#ffa5883dff"
+                                                                             class="xRef AppleTopic">FLOOR</a><a
+        href="ffa5946f58.html#ffa5946f58" class="xRef AppleTopic">INT</a><a href="ffa58b6c37.html#ffa58b6c37"
+                                                                            class="xRef AppleTopic">ODD</a><a
+        href="ffa5940fed.html#ffa5940fed" class="xRef AppleTopic">ROUND</a><a href="ffa58f7708.html#ffa58f7708"
+                                                                              class="xRef AppleTopic">ROUNDDOWN</a><a
+        href="ffa5929132.html#ffa5929132" class="xRef AppleTopic">ROUNDUP</a><a href="ffa58af6a5.html#ffa58af6a5"
+                                                                                class="xRef AppleTopic">TRUNC</a></div>
+</body>
+</html>

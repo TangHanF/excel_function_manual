@@ -1,0 +1,40 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>COMBIN</title>
+    <meta name="description" content="COMBIN(项目总数, 组别大小) 将得出可将大量项目合并成特定大小的组（忽略组内的顺序）的不同方法。">
+</head>
+<body dir="ltr" id="ffa5906f26" class="AppleTopic apd-topic"><a name="ffa5906f26"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>COMBIN</h1>
+<p>COMBIN 函数将得出可将大量项目合并成特定大小的组（忽略组内的顺序）的不同方法。两个参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。
+</p>
+<div class="HIStrings"><p><strong class="Term">COMBIN</strong>(<em>项目总数, 组别大小</em>)</p>
+    <div class="HISubString"><p><em class="Term">项目总数： </em>总项目数。<span class="DescriptionNotString"><em>项目总数</em>必须大于或等于 0。<em>项目总数</em>的任何小数部分都将被忽略。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">组别大小： </em>合并到每个组中的项目数。<span class="DescriptionNotString"><em>组别大小</em>必须大于或等于 0。任何小数部分都会被忽略。</span>
+    </p></div>
+</div>
+<div id="ffa58fb2ab" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>组合与排列不同。组合不考虑组内各项目的顺序，而排列则考虑。例如，(1, 2, 3) 和 (3, 2, 1) 是相同的组合，但是为不同的排列。如果您要排列数字，请使用 PERMUT 函数。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="COMBIN 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=COMBIN(3, 2) 得出 3（以 3 个项目开始，每次将其中 2 个成组而创建的唯一组的个数）。例如，如果组包含 1、2 和 4，则可能的唯一组包括：1 和 2、1 和 4、2 和 4。</p>
+            <p>=COMBIN(3.2, 2.3) 得出 3。去掉了小数部分。</p>
+            <p>=COMBIN(5, 2) 和 =COMBIN(5, 3) 都得出 10。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a262aa.html#ffa5a262aa" class="xRef AppleTopic">PERMUT</a>
+</div>
+</body>
+</html>

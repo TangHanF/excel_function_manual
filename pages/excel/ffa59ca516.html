@@ -1,0 +1,55 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ADDRESS</title>
+    <meta name="description" content="ADDRESS(行号, 列号, 地址类型, 地址样式, 表格) 可使用单个行、列和表格标识符构建单元格地址字符串。">
+</head>
+<body dir="ltr" id="ffa59ca516" class="AppleTopic apd-topic"><a name="ffa59ca516"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ADDRESS</h1>
+<p>ADDRESS 函数可使用单个行、列和表格标识符来构建单元格地址字符串。</p>
+<div class="HIStrings"><p><strong class="Term">ADDRESS</strong>(<em>行号, 列号, 地址类型, 地址样式, 表格</em>)</p>
+    <div class="HISubString"><p><em class="Term">行号： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                             class="xRef Aside">数字值</a>，表示地址行数。<span
+            class="DescriptionNotString"><em>行号</em>必须在范围 1 到 65,535 内。</span></p></div>
+    <div class="HISubString"><p><em class="Term">列号： </em>数字值，表示地址列数。<span class="DescriptionNotString"><em>列号</em>必须在范围 1 到 255 内。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">地址类型： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定在粘贴或填充单元格时是否保留行编号和列编号。
+    </p>
+        <div class="HISubString"><p><em class="Term">保留行与列<span class="TermNotString">(1 或省略)</span>： </em>行引用和列引用都予以保留。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">保留行<span class="TermNotString">(2)</span>： </em>行引用予以保留；列引用不予以保留。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">保留列<span class="TermNotString">(3)</span>： </em>列引用予以保留；行引用不予以保留。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">不保留行与列<span class="TermNotString">(4)</span>： </em>行引用和列引用都不保留。</p>
+        </div>
+    </div>
+    <div class="HISubString"><p><em class="Term">地址样式： </em>可选模态值，用于指定地址样式。</p>
+        <div class="HISubString"><p><em class="Term">A1<span class="TermNotString">(TRUE、1 或省略)</span>： </em>地址格式应使用字母表示列，用数字表示行。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">R1C1<span class="TermNotString">(FALSE)</span>： </em>地址应当使用格式
+            R1C1，其中 R1 是单元格的行号，C1 是列号。</p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">表格： </em>可选值，用于指定表格名称。<span class="DescriptionNotString"><em>表格</em>是一个<a
+            href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>。如果表格位于其他表单上，您还必须包括表单名称。如果忽略，则假定<em>表格</em>为当前表单上的当前表格（即 ADDRESS 函数所在的表格）。</span>
+    </p></div>
+</div>
+<table data-type="1 column" aria-label="ADDRESS 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=ADDRESS(3, 5) 将创建地址 $E$3。</p>
+            <p>=ADDRESS(3, 5, 2) 将创建地址 E$3。</p>
+            <p>=ADDRESS(3, 5, 3) 将创建地址 $E3。</p>
+            <p>=ADDRESS(3, 5, 4) 将创建地址 E3。</p>
+            <p>=ADDRESS(3, 3,,,“表单 2::表格 1”) 将创建地址“表单 2::表格 1::$C$3”。</p></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

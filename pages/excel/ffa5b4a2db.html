@@ -1,0 +1,88 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>PROB</title>
+    <meta name="description" content="PROB(数字集合, 概率值, 下限, 上限) 可得出值集合的概率（如果已知单个值的概率）。">
+</head>
+<body dir="ltr" id="ffa5b4a2db" class="AppleTopic apd-topic"><a name="ffa5b4a2db"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>PROB</h1>
+<p>PROB 函数可得出值集合的概率（如果已知单个值的概率）。</p>
+<div class="HIStrings"><p><strong class="Term">PROB</strong>(<em>数字集合, 概率值, 下限, 上限</em>)</p>
+    <div class="HISubString"><p><em class="Term">数字集合： </em>包含<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>的<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">概率值： </em>含有概率值的集合。<span class="DescriptionNotString"><em>概率值</em>必须包含数字值，且数字值之和必须合计为 1。任何<a
+            href="ffa8575bef5.html#ffa8575bef5" class="xRef Aside">字符串值</a>都将被忽略。</span></p></div>
+    <div class="HISubString"><p><em class="Term">下限： </em>数字值，表示想知道其概率的值的下限。 </p></div>
+    <div class="HISubString"><p><em class="Term">上限： </em>可选数字值，表示想知道其概率的值的上限。 </p></div>
+</div>
+<div id="ffa5a9a0ae" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>PROB 函数可将集合中与大于或等于指定下限值且小于或等于指定上限值的所有值关联的概率相加。如果忽略<em>上限</em>，PROB 将得出等于指定下限值的单个数字的概率。</p></li>
+        <li><p>两个集合的大小必须相同。如果集合中包含字符串值，它将被忽略。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="PROB 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设有一个特殊的研究调查要求被调查者从 12 到 16 这些数之间选择一个数。在下列表格中，单元格 A1:A5 包含可能的选择（数字 12 到 16）。该调查中参与者选择每个数字的百分比用小数表示，包含在
+            B1:B5 中。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="PROB 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>12</p></td>
+        <td><p>0.17</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>13</p></td>
+        <td><p>0.32</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>14</p></td>
+        <td><p>0.15</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>15</p></td>
+        <td><p>0.19</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>16</p></td>
+        <td><p>0.17</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 PROB 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=PROB(A1:A5, B1:B5, 15,16) 得出 0.36，选择 15 或 16 的概率。</p>
+            <p>=PROB(A1:A5, B1:B5, 14) 得出 0.15，选择 14 的概率。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b7ea3e.html#ffa5b7ea3e"
+                                                   class="xRef AppleTopic">BINOMDIST</a><a
+        href="ffa59f7814.html#ffa59f7814" class="xRef AppleTopic">CRITBINOM</a><a href="ffa5aa5269.html#ffa5aa5269"
+                                                                                  class="xRef AppleTopic">NEGBINOMDIST</a><a
+        href="ffa5a262aa.html#ffa5a262aa" class="xRef AppleTopic">PERMUT</a></div>
+</body>
+</html>

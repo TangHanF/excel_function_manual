@@ -1,0 +1,41 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AVEDEV</title>
+    <meta name="description" content="AVEDEV(值, 值…) 得出数字集合与其平均值（算术平均）之差。">
+</head>
+<body dir="ltr" id="ffa5ab7bf2" class="AppleTopic apd-topic"><a name="ffa5ab7bf2"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>AVEDEV</h1>
+<p>AVEDEV 函数根据数字集合的平均值（算术平均）得出其差值的平均值。</p>
+<div class="HIStrings"><p><strong class="Term">AVEDEV</strong>(<em>值, 值…</em>)</p>
+    <div class="HISubString"><p><em class="Term">值： </em>单个值或<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString">每个值都必须是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>。所有值都必须属于同一<a
+            href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">值…： </em>可选择性地包括一个或多个附加值或值集合。</p></div>
+</div>
+<div id="ffa5b03cb0" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>AVEDEV 将数字的和除以数字的个数，以得到平均值。每个数字与平均值之间的差值（绝对值）相加，并除以数字的个数。</p></li>
+        <li><p>如果<em>值</em>含有日期/时间值，将得出持续时间值。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="AVEDEV 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=AVEDEV(2, 2, 2, 4, 4, 4) 得出 1。</p>
+            <p>=AVEDEV(2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4) 得出 0.666666666666667。</p>
+            <p>=AVEDEV(“3天”, “6天”, “4天”, “7天”) 得出 1天 12小时，这是持续时间值。</p>
+            <p>=AVEDEV(“2010/12/1”, “2011/12/31”, “2013/9/30”) 得出 371天 18小时 40分，这也是持续时间值。</p></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

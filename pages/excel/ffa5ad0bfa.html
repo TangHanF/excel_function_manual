@@ -1,0 +1,40 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>BETAINV</title>
+    <meta name="description" content="BETAINV(概率, alpha, beta, x 下限, x 上限) 得出给定累积 Beta 分布概率值的逆运算。">
+</head>
+<body dir="ltr" id="ffa5ad0bfa" class="AppleTopic apd-topic"><a name="ffa5ad0bfa"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>BETAINV</h1>
+<p>BETAINV 函数可得出给定累积 Beta 分布概率值的逆运算。所有参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">BETAINV</strong>(<em>概率, alpha, beta, x 下限, x 上限</em>)</p>
+    <div class="HISubString"><p><em class="Term">概率： </em>与分布关联的概率。<span class="DescriptionNotString"><em>概率</em>必须大于 0 且小于 1。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">alpha： </em>分布的形状参数之一。<span class="DescriptionNotString"><em>alpha</em> 必须大于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">beta： </em>分布的形状参数之一。<span class="DescriptionNotString"><em>beta</em> 必须大于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">x 下限： </em>指定 x 值或概率的可选下限。 <span
+            class="DescriptionNotString"><em> x 下限</em>必须小于或等于<em>概率</em>。如果省略 <em>x 下限</em>，则使用 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">x 上限： </em>指定 x 值或概率的可选上限。 <span
+            class="DescriptionNotString"><em> x 上限</em>必须大于或等于<em>概率</em>。如果省略 <em>x 上限</em>，则使用 1。</span></p></div>
+</div>
+<table data-type="1 column" aria-label="BETAINV 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=BETAINV(0.5, 1, 2, 0.3, 2) 得出 0.797918471982869。</p>
+            <p>=BETAINV(0.99, 1, 2, 0, 1) 得出 0.9。</p>
+            <p>=BETAINV(0.1, 2, 2, 0, 2) 得出 0.391600211318183。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a3a754.html#ffa5a3a754"
+                                                   class="xRef AppleTopic">BETADIST</a></div>
+</body>
+</html>

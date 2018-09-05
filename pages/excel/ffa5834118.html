@@ -1,0 +1,69 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>IF</title>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--<meta name="description" content="IF(条件表达式, 为 TRUE 时返回的值, 为 FALSE 时返回的值) 得出 TRUE 或 FALSE，具体取决于指定的表达式求得的值是布尔值 TRUE 还是 FALSE。">-->
+</head>
+<body dir="ltr" id="ffa5834118" class="AppleTopic apd-topic"><a name="ffa5834118"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>IF</h1>
+<p>IF 函数返回 TRUE 或 FALSE，具体取决于指定的表达式求得的值是<a href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a> TRUE 还是 FALSE。
+</p>
+<div class="HIStrings"><p><strong class="Term">IF</strong>(<em>逻辑表达式, </em><em>为 TRUE 时返回的值</em>, <em>为 FALSE 时返回的值</em>)
+</p>
+    <div class="HISubString"><p><em class="Term">条件表达式： </em>逻辑表达式。<span class="DescriptionNotString"><em>条件表达式</em>可含有任何值，只要表达式可作为布尔值求值。如果表达式求得的值为数字，则 0 被视为 FALSE，任何其他数字则被视为 TRUE。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">为 TRUE 时返回的值： </em><em>条件表达式</em>为 TRUE 时返回的值。<span
+            class="DescriptionNotString"><em>为 TRUE 时返回的值</em>可以包含<a href="ffa361bc137.html#ffa361bc137"
+                                                                     class="xRef Aside">任何值</a>。如果省略<em>为 TRUE 时返回的值</em>（有逗号，但无值）且<em>条件表达式</em>的计算结果为 TRUE，IF 将返回 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">为 FALSE 时返回的值： </em>可选参数，指定<em>条件表达式</em>为 FALSE 时返回的值。<span
+            class="DescriptionNotString"><em>为 FALSE 时返回的值</em>可以包含任何值。如果省略<em>为 FALSE 时返回的值</em>（有逗号，但无值）且<em>条件表达式</em>的计算结果为 FALSE，IF 将返回 0。如果完全省略<em>为 FALSE 时返回的值</em>（<em>为 TRUE 时返回的值</em>后面无逗号）且<em>条件表达式</em>的计算结果为 FALSE，IF 将返回 FALSE。</span>
+    </p></div>
+</div>
+<div id="ffa5803bc5" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p><em>为 TRUE 时返回的值</em>和<em>为 FALSE 时返回的值</em>中的任意一个或两者都可以含有附加的 IF 函数（通常称为<em>嵌套的 IF 函数</em>）。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="IF 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果单元格 A5 含有大于或等于 0 的数字或非数字值，=IF(A5&gt;=0, “Nonnegative”, “Negative”) 返回文本“Nonnegative”。如果单元格 A5 含有小于 0
+            的值，函数将得出“Negative”。</p>
+            <p>如果单元格 B4 和 B5 都含有数字，=IF(IFERROR(OR(ISEVEN(B4+B5), ISODD(B4+B5)), FALSE), “All numbers”, “Not all
+                numbers”) 返回文本“All numbers”；否则返回文本“Not all numbers”。这可以通过测试以查看这两个单元格之和是偶数还是奇数实现。如果单元格不是数字，EVEN 和 ODD
+                函数得出错误，IFERROR 函数得出 FALSE；否则得出 TRUE，因为 EVEN 或 ODD 为 TRUE。因此，如果 B4 或 B5 不是数字或布尔值，则 IF 语句返回<em>为 FALSE
+                    时返回的值</em>表达式“Not all numbers”；否则返回<em>为 TRUE 时返回的值</em>表达式“All numbers”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="IF 函数避免出现除以 0 错误的示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例——避免出现除以 0 错误</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>有时无法构建可避免除以 0 的表格。但是，如果出现除以 0，结果是单元格出现错误值，而这通常不是希望的结果。本示例介绍三种防止出现此错误的方法。</p>
+            <p>假定单元格 D2 和 E2 各含一个数字。E2 可能会包含 0。您想要将 D2 除以 E2，但避免出现除以 0 错误。如果单元格 E2 等于 0，则以下三种方法中的每一种都将得出 0；否则，各得出 D2/E2
+                的结果。</p>
+            <p>=IF(E2=0, 0, D2/E2) 直接测试单元格 E2，了解是否为 0。</p>
+            <p>=IFERROR(D2/E2, 0) 在出错时得出 0。除以 0 是一种错误。</p>
+            <p>=IF(ISERROR(D2/E2), 0, D2/E2) 执行逻辑测试，以了解 D2/E2 是否为 TRUE。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa58075d5.html#ffa58075d5" class="xRef AppleTopic">AND</a><a
+        href="ffa583eff2.html#ffa583eff2" class="xRef AppleTopic">NOT</a><a href="ffa57fe1fc.html#ffa57fe1fc"
+                                                                            class="xRef AppleTopic">OR</a></div>
+</body>
+</html>

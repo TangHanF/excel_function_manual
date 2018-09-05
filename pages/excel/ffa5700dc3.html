@@ -1,0 +1,48 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ISPMT</title>
+    <meta name="description" content="ISPMT(各期利率, 付款期数, 期数, 现值) 得出固定利率贷款的定期利息，在每期期初减少等额本金，在每期期末支付余额的利息。">
+</head>
+<body dir="ltr" id="ffa5700dc3" class="AppleTopic apd-topic"><a name="ffa5700dc3"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ISPMT</h1>
+<p>ISPMT 函数得出固定利率贷款的定期利息部分，在每期期初减少等额本金，在每期期末支付未清余额的利息。此函数主要用于兼容从其他电子表格应用导入的表格。所有参数都是<a
+        href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">ISPMT</strong>(<em>各期利率, 付款期数, 期数, 现值</em>)</p>
+    <div class="HISubString"><p><em class="Term">各期利率： </em>每期的利率。<span class="DescriptionNotString"><em>各期利率</em>可以以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。<em>各期利率</em>可使用与<em>期数</em>相同的时限（如每月、每季或每年）指定。例如，如果<em>期数</em>表示月份，且年利率为 8%，则<em>各期利率</em>指定为 0.00667 或 0.667%（0.08 除以 12）。<em>各期利率</em>可以是负数，但函数返回的结果可能难以解释。 </span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">付款期数： </em>要计算利息金额的付款期。<span class="DescriptionNotString"><em>付款期数</em>必须大于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">期数： </em>期数。<span
+            class="DescriptionNotString"><em>期数</em>可使用与<em>各期利率</em>相同的时限（如每月、每季或每年）指定。<em>期数</em>必须大于或等于 0。</span></p>
+    </div>
+    <div class="HISubString"><p><em class="Term">现值： </em>初期投资值，或贷款或年金的金额。<span class="DescriptionNotString"><em>现值</em>通常格式化为货币。时间为 0 时，接收的金额为正值，投资的金额为负值。例如，金额可以是借入金额（正）或年金合约中的初始付款（负）。</span>
+    </p></div>
+</div>
+<div id="ffa5752f1b" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>每期的分期还款本金都一样，而利息随时间减少。例如，如果初始本金是 ￥5,000，贷款期限是 5 年，则每期期初支付的本金是
+            ￥1,000，包括第一期的期初。每期期末支付的利息会减少。这有别于标准的分期支付贷款，这种贷款的本金与支付利息之和随时间保持不变。</p></li>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="ISPMT 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假想的分期支付贷款为 ￥200,000（<em>现值</em>为正数，因为这是现金流入），年利率为 6%，按月还款（<em>各期利率</em>为 0.06/12），期限为 10 年（<em>期数</em>为
+            10*12）。</p>
+            <p>=ISPMT(0.06/12, 25, 10*12, 200000) 得出 -791.666666666667（负数，因为这是现金支出），此值是第三年第一个月月底需要支付的利息（付款为 25）。</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa57a49c3.html#ffa57a49c3" class="xRef AppleTopic">IPMT</a>
+</div>
+</body>
+</html>

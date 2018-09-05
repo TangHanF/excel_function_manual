@@ -1,0 +1,44 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CONFIDENCE</title>
+    <meta name="description" content="CONFIDENCE(alpha, 标准偏差, 样本大小) 函数可得出一个值，用于为具有已知标准偏差的总体的样本创建统计置信区间。">
+</head>
+<body dir="ltr" id="ffa5a29b28" class="AppleTopic apd-topic"><a name="ffa5a29b28"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CONFIDENCE</h1>
+<p>CONFIDENCE 函数可得出一个值，用于为具有已知标准偏差的总体的样本创建统计置信区间。所有参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。
+</p>
+<div class="HIStrings"><p><strong class="Term">CONFIDENCE</strong>(<em>alpha, 标准偏差, 样本大小</em>)</p>
+    <div class="HISubString"><p><em class="Term">alpha： </em>真实总体值位于区间之外的概率。<span
+            class="DescriptionNotString"><em>alpha</em> 必须大于 0 且小于 1。1 减去置信区间得到 alpha。</span></p></div>
+    <div class="HISubString"><p><em class="Term">标准偏差： </em>总体的标准偏差。<span class="DescriptionNotString"><em>标准偏差</em>必须大于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">样本大小： </em>样本的大小。<span class="DescriptionNotString"><em>样本大小</em>必须大于 0。</span>
+    </p></div>
+</div>
+<div id="ffa5a7f195" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>置信度假设样本值是正态分布的。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CONFIDENCE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=CONFIDENCE(0.05, 1, 10) 得出 0.619795032304561。如果样本值的平均值为 100，置信度为 95%，总体的平均值将在 99.38–100.62 范围内。</p>
+            <p>=CONFIDENCE(0.1, 1, 10) 得出 0.520148387875558。如果样本值的平均值为 100，置信度为 90%，总体的平均值将在 99.48-100.52 范围内。</p>
+            <p>=CONFIDENCE(0.05, 1, 20) 得出 0.438261270288291。</p>
+            <p>=CONFIDENCE(0.05, 1, 30) 得出 0.357838828743431。</p>
+            <p>=CONFIDENCE(0.05 ,1, 40) 得出 0.309897516152281。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b72086.html#ffa5b72086" class="xRef AppleTopic">STDEV</a>
+</div>
+</body>
+</html>

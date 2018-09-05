@@ -1,0 +1,101 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>PERCENTILE</title>
+    <meta name="description" content="PERCENTILE(值集合, 百分位值) 得出数值集内与特定百分位对应的值。">
+</head>
+<body dir="ltr" id="ffa5a24591" class="AppleTopic apd-topic"><a name="ffa5a24591"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>PERCENTILE</h1>
+<p>PERCENTILE 函数得出数值集内与特定百分位对应的值。</p>
+<div class="HIStrings"><p><strong class="Term">PERCENTILE</strong>(<em>值集合, 百分位值</em>)</p>
+    <div class="HISubString"><p><em class="Term">值集合： </em>必须包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                  class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>的<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString">所有值都必须属于同一<a href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">百分位值： </em>数字值，表示您要查找的百分位值。<span
+            class="DescriptionNotString"><em>百分位值</em>可以以小数形式（例如，0.25）或以百分比形式（例如，25%）输入。它必须大于或等于 0，且小于或等于 1。</span></p>
+    </div>
+</div>
+<div id="ffa59ebfa9" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>集合中大小相同的值同属一个排位，但会影响结果。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="PERCENTILE 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设下表是 20 名学生在本学期的累积测试分数。（我们在这个示例中按此方式组织数据，最初可能有 20 行。）</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="PERCENTILE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>30</p></td>
+        <td><p>75</p></td>
+        <td><p>92</p></td>
+        <td><p>86</p></td>
+        <td><p>51</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>83</p></td>
+        <td><p>100</p></td>
+        <td><p>92</p></td>
+        <td><p>68</p></td>
+        <td><p>70</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>77</p></td>
+        <td><p>91</p></td>
+        <td><p>86</p></td>
+        <td><p>85</p></td>
+        <td><p>83</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>77</p></td>
+        <td><p>90</p></td>
+        <td><p>83</p></td>
+        <td><p>75</p></td>
+        <td><p>80</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 PERCENTILE 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=PERCENTILE(A1:E4, 0.90) 得出 92，即进入班级前 10% 的最低累积测试分数（第 90 个百分点值）。</p>
+            <p>=PERCENTILE(A1:E4, 3/4) 得出 87，即进入班级前四分之一的最低累积测试分数（第 75 个百分点值）。</p>
+            <p>=PERCENTILE(A1:E4, 0.50) 得出 83，即进入班级前一半的最低累积测试分数（第 50 个百分点值）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b13e81.html#ffa5b13e81"
+                                                   class="xRef AppleTopic">FREQUENCY</a><a
+        href="ffa5b571d2.html#ffa5b571d2" class="xRef AppleTopic">PERCENTRANK</a><a href="ffa5aa708f.html#ffa5aa708f"
+                                                                                    class="xRef AppleTopic">QUARTILE</a>
+</div>
+</body>
+</html>

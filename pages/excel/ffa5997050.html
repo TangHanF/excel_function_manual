@@ -1,0 +1,118 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>VLOOKUP</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!--<meta name="description" content="VLOOKUP(搜索目标, 列范围, 返回列编号, 近似匹配) 通过使用左列值挑选行并使用列编号挑选该行中的列从列集合中得出某值。">-->
+</head>
+<body dir="ltr" id="ffa5997050" class="AppleTopic apd-topic"><a name="ffa5997050"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>VLOOKUP</h1>
+<p>VLOOKUP 函数通过使用左列值以挑选某行和使用列号以挑选该行中的某列从列<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>中返回某值。</p>
+<div class="HIStrings"><p><strong class="Term">VLOOKUP</strong>(<em>搜索目标, 列范围, 返回列编号, 近似匹配</em>)</p>
+    <div class="HISubString"><p><em class="Term">搜索目标： </em>要查找的值。<span class="DescriptionNotString"><em>搜索值</em>可以包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">列范围： </em>单元格集合。<span class="DescriptionNotString"><em>列范围</em>必须包含单个单元格<a
+            href="ffa8575c9b4.html#ffa8575c9b4" class="xRef Aside">范围</a>（可包含任何值）的引用。</span></p></div>
+    <div class="HISubString"><p><em class="Term">返回列编号： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，指定要基于其返回值的单元格相对列编号。<span
+            class="DescriptionNotString">集合中最左边的列是第 1 列。</span></p></div>
+    <div class="HISubString"><p><em class="Term">近似匹配： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，确定是否要求精确匹配。
+    </p>
+        <div class="HISubString"><p><em class="Term">近似匹配<span class="TermNotString">(TRUE、1 或省略)</span>： </em>如果没有准确匹配，则选择最大项列值小于或等于搜索值的行。<span
+                class="DescriptionNotString">如果使用<em>近似匹配</em>，则不能将<a href="ffa994afa61.html#ffa994afa61"
+                                                                      class="xRef Aside">通配符</a>用于<em>搜索目标</em>。</span>
+        </p></div>
+        <div class="HISubString"><p><em class="Term">精确匹配<span class="TermNotString">(FALSE 或 0)</span>： </em>如果没有准确匹配，则得出错误。<span
+                class="DescriptionNotString">如果使用<em>精确匹配</em>，则可将<a href="ffa994afa61.html#ffa994afa61"
+                                                                     class="xRef Aside">通配符</a>用于<em>搜索目标</em>。可使用通配符？（问号）表示一个字符，*（星号）表示多个字符，并使用 ~（波浪号）来指定下一个字符应当匹配，而非用作通配符。</span>
+        </p></div>
+    </div>
+</div>
+<div id="ffa59adcf4" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>VLOOKUP
+            可比较搜索值与指定集合内最左列的值。除非要求准确匹配，否则包含的最大项列值小于或等于搜索值的行会被选中。然后，函数将得出该行中指定列中的值。如果必须准确匹配并且没有与搜索值匹配的最大左列值，则函数将得出错误。</p>
+        </li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="VLOOKUP 函数示例表格标题">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="VLOOKUP 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>0</p></td>
+        <td><p>A</p></td>
+        <td><p>lorem</p></td>
+        <td><p>1</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>20</p></td>
+        <td><p>E</p></td>
+        <td><p>ipsum</p></td>
+        <td><p>2</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>40</p></td>
+        <td><p>I</p></td>
+        <td><p>dolor</p></td>
+        <td><p>3</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>60</p></td>
+        <td><p>O</p></td>
+        <td><p>sit</p></td>
+        <td><p>4</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>80</p></td>
+        <td><p>U</p></td>
+        <td><p>amet</p></td>
+        <td><p>5</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 VLOOKUP 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=VLOOKUP(20,A1:D5,2) 得出“E”，因为值“E”位于 20（<em>搜索目标</em>）所在的同一行，且在指定集合（<em>列范围</em>）内的第二列（<em>返回列编号</em>）中。
+        </p>
+            <p>=VLOOKUP(39, A1:D5, 2) 得出“E”，因为“E”位于 20 所在的同一行，是未超出给定值 (39) 的最佳匹配项，且在指定集合内的第二列中。</p>
+            <p>=VLOOKUP(“M”, B1:D5, 2) 得出“dolor”，因为“dolor”位于“I”所在的同一行，是未超出给定值 (“M”) 的最佳匹配项，且在指定集合内的第二列中（实际上是 C 列，因为第 1
+                列已被指定为 B 列）。</p>
+            <p>=VLOOKUP(“C”, B1:D5, 2) 得出“lorem”，因为“lorem”位于“A”所在的同一行，是未超出给定值 (“C”) 的最佳匹配项，且在指定集合内的第二列中。</p>
+            <p>=VLOOKUP(“blandit”, C1:D5, 2) 得出 5，因为 5 位于“amet”所在的同一行，是指定范围中的最后一个值（因为未找到“blandit”），且在指定集合内的第二列中。</p>
+            <p>=VLOOKUP(“C”, B1:D5, 3, TRUE) 得出 1，因为 1 位于“A”所在的同一行，是未超出给定值 (“C”) 的最佳匹配项，且在指定集合内的第三列中。</p>
+            <p>=VLOOKUP(“C”, B1:D5, 3, FALSE) 得出一个错误，因为值“C”找不到（没有完全匹配项）且<em>精确匹配</em>已被指定为 FALSE（如果没有完全匹配项将得出错误）。</p>
+            <p>=VLOOKUP(“C”, B1:D5, 4, TRUE) 得出一个错误，因为在指定集合（只有三列）内没有第四列。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59a0514.html#ffa59a0514" class="xRef AppleTopic">HLOOKUP</a><a
+        href="ffa597dc7b.html#ffa597dc7b" class="xRef AppleTopic">LOOKUP</a><a href="ffa59a83d3.html#ffa59a83d3"
+                                                                               class="xRef AppleTopic">MATCH</a></div>
+</body>
+</html>

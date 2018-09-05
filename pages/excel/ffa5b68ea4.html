@@ -1,0 +1,172 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>AVERAGEIFS</title>
+    <meta name="description"
+          content="AVERAGEIFS(待平均的值, 待检验的值, 条件, 待检验的值…, 条件…) 得出给定集合内（一个或多个集合满足一个或多个相关条件）单元格的平均值（算术平均）。">
+</head>
+<body dir="ltr" id="ffa5b68ea4" class="AppleTopic apd-topic"><a name="ffa5b68ea4"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>AVERAGEIFS</h1>
+<p>AVERAGEIFS 函数返回给定集合内（一个或多个集合满足一个或多个相关<a href="ffa8575bb7b.html#ffa8575bb7b" class="xRef Aside">条件</a>）单元格的平均值（算术平均）。
+</p>
+<div class="HIStrings"><p><strong class="Term">AVERAGEIFS</strong>(<em>待平均的值, </em><em>待检验的值, </em><em>条件,
+    待检验的值…,</em><em>条件…</em>)</p>
+    <div class="HISubString"><p><em class="Term">待平均的值： </em><a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>，包含要计算平均值的值。<span
+            class="DescriptionNotString"><em>待平均的值</em>是对单个单元格集合的引用，它只能包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                                            class="xRef Aside">数字值</a>或<a
+            href="ffa361cb72c.html#ffa361cb72c" class="xRef Aside">布尔值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">待检验的值： </em>集合，包含要测试的值。<span
+            class="DescriptionNotString"><em>待检验的值</em>可以包含<a href="ffa361bc137.html#ffa361bc137"
+                                                              class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">条件： </em>比较或检验值，并返回<a href="ffa361cb72c.html#ffa361cb72c"
+                                                                       class="xRef Aside">布尔值</a> TRUE 或 FALSE 的<a
+            href="ffaf0f44203.html#ffaf0f44203" class="xRef Aside">表达式</a>。<span
+            class="DescriptionNotString"><em>条件</em>可包括比较运算符、常数、与符号并置运算符、引用表达式和通配符。您可以使用<a
+            href="ffa994afa61.html#ffa994afa61" class="xRef Aside">通配符</a>来匹配表达式中的任何单个字符或多个字符。您可以使用 ? （问号）表示一个字符，*（星号）表示多个字符，并使用 ~（波浪号）来指定下一个字符应当匹配，而非用作通配符。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">待检验的值…： </em>可含有一个或多个附加集合（含有要测试的值）。每个<em>待检验的值</em>集合后必须紧跟一个<em>条件</em>表达式。<span
+            class="DescriptionNotString">此模式的<em>待检验的值、条件</em>可根据需要尽可能多地重复。</span></p></div>
+    <div class="HISubString"><p><em class="Term">条件…： </em>如果<em>待检验的值</em>的可选集合包括在内，它表示结果为布尔值 TRUE 或 FALSE
+        的附加表达式。每个<em>待检验的值</em>集合后必须有一个<em>条件</em>表达式；因此，此函数始终拥有偶数个参数。</p></div>
+</div>
+<div id="ffa57bc92e53" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>对于每个<em>待检验的值</em>和<em>条件</em>对，相应（<a href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>中的相同位置）的值要与条件测试进行比较。如果满足所有的条件测试，平均值中将包括<em>待平均的值</em>中的相应值。
+        </p></li>
+        <li><p><em>待平均的值</em>和所有<em>待检验的值</em>集合的大小必须相同。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="AVERAGEIFS 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="AVERAGEIFS 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>年龄</p></td>
+        <td><p>性别</p></td>
+        <td><p>婚姻状况</p></td>
+        <td><p>工资</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>35</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>71000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>27</p></td>
+        <td><p>女</p></td>
+        <td><p>已婚</p></td>
+        <td><p>81000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>42</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>86000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td><p>51</p></td>
+        <td><p>男</p></td>
+        <td><p>未婚</p></td>
+        <td><p>66000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">6</p></td>
+        <td><p>28</p></td>
+        <td><p>男</p></td>
+        <td><p>未婚</p></td>
+        <td><p>52000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">7</p></td>
+        <td><p>49</p></td>
+        <td><p>女</p></td>
+        <td><p>未婚</p></td>
+        <td><p>62000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">8</p></td>
+        <td><p>63</p></td>
+        <td><p>女</p></td>
+        <td><p>已婚</p></td>
+        <td><p>89000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">9</p></td>
+        <td><p>22</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>34000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">10</p></td>
+        <td><p>29</p></td>
+        <td><p>女</p></td>
+        <td><p>未婚</p></td>
+        <td><p>42000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">11</p></td>
+        <td><p>35</p></td>
+        <td><p>女</p></td>
+        <td><p>已婚</p></td>
+        <td><p>56000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">12</p></td>
+        <td><p>33</p></td>
+        <td><p>男</p></td>
+        <td><p>未婚</p></td>
+        <td><p>62000</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">13</p></td>
+        <td><p>61</p></td>
+        <td><p>男</p></td>
+        <td><p>已婚</p></td>
+        <td><p>91000</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 AVERAGEIFS 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=AVERAGEIFS(D2:D13, A2:A13, “&lt;40”, B2:B13, “=男”) 得出 54750，此数值为 40 岁以下男性（在 B 列中以“男”表示）的平均工资。</p>
+            <p>=AVERAGEIFS(D2:D13, A2:A13, “&lt;40”, B2:B13, “=男”, C2:C13, “=未婚”) 得出 57000，此数值为 40 岁以下单身（在 C
+                列中以“未婚”表示）男性的平均工资。</p>
+            <p>=AVERAGEIFS(D2:D13, A2:A13, “&lt;40”, B2:B13, “=男”, C2:C13, “=已婚”) 得出 52500，此数值为 40 岁以下已婚（在 C
+                列中以“已婚”表示）男性的平均工资。</p>
+            <p>=AVERAGEIFS(D2:D13, A2:A13, “&lt;40”, B2:B13, “=女”) 得出近似值 59667，此数值为 40 岁以下女性（在 B 列中以“女”表示）的平均工资。</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a1272d.html#ffa5a1272d" class="xRef AppleTopic">AVERAGE</a><a
+        href="ffa5a5df22.html#ffa5a5df22" class="xRef AppleTopic">AVERAGEIF</a></div>
+</body>
+</html>

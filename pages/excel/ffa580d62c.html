@@ -1,0 +1,44 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>IFERROR</title>
+    <meta name="description" content="如果给定的值计算出错，IFERROR(任何表达式, 出错返回值) 将得出您指定的值；否则得出给定值。">
+</head>
+<body dir="ltr" id="ffa580d62c" class="AppleTopic apd-topic"><a name="ffa580d62c"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>IFERROR</h1>
+<p>如果给定的值计算出错，IFERROR 函数将得出您指定的值；否则得出给定的值。</p>
+<div class="HIStrings"><p><strong class="Term">IFERROR</strong>(<em>任何表达式, </em><em>出错返回值</em>)</p>
+    <div class="HISubString"><p><em class="Term">任何表达式： </em>要测试的表达式。<span class="DescriptionNotString"><em>任何表达式</em>可以包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任意值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">出错返回值： </em><em>任何表达式</em>计算出错时得出的值。<span class="DescriptionNotString"><em>出错返回值</em>可以包含任何值。</span>
+    </p></div>
+</div>
+<div id="ffa583d33d" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>使用 IFERROR 处理公式中的错误。例如，在处理的数据中，如果单元格 D1 的一个有效值为 0，公式 =B1/D1 将会出错（除数为零）。通过使用公式 =IFERROR(B1/D1, 0)
+            可防止出现此错误，它可以得出实际除数（如果 D1 不为 0）；否则得出 0。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="IFERROR 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>如果 B1 为数字值，D1 求得的值为 0，则：</p>
+            <p>=IFERROR(B1/D1, 0) 得出 0，因为以零作除数将导致出错。</p>
+            <p>=IF(ISERROR(B1/D1), 0, B1/D1) 等同于上一个 IFERROR 示例，但是需要使用 IF 和 ISERROR 函数。</p>
+            <p>如果单元格 B4 和 B5 都含有数字，=IF(IFERROR(OR(ISEVEN(B4+B5), ISODD(B4+B5)), FALSE), “All numbers”, “Not all
+                numbers”) 返回文本“All numbers”；否则返回文本“Not all numbers”。这可以通过测试以查看这两个单元格之和是偶数还是奇数实现。如果单元格不是数字，EVEN 和 ODD
+                函数得出错误，IFERROR 函数得出 FALSE；否则得出 TRUE，因为 EVEN 或 ODD 为 TRUE。因此，如果 B4 或 B5 不是数字或布尔值，则 IF 语句返回<em>为 FALSE
+                    时返回的值</em>表达式“Not all numbers”；否则返回<em>为 TRUE 时返回的值</em>表达式“All numbers”。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa57eb830.html#ffa57eb830" class="xRef AppleTopic">ISBLANK</a><a
+        href="ffa57f6d11.html#ffa57f6d11" class="xRef AppleTopic">ISERROR</a></div>
+</body>
+</html>

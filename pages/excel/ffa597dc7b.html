@@ -1,0 +1,107 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>LOOKUP</title>
+    <meta name="description" content="LOOKUP(搜索目标, 搜索位置, 结果值) 可查找某个集合内与给定搜索值匹配的值，然后在第二个集合内具有相同相对位置的单元格中得出值。">
+</head>
+<body dir="ltr" id="ffa597dc7b" class="AppleTopic apd-topic"><a name="ffa597dc7b"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>LOOKUP</h1>
+<p>LOOKUP 函数可查找某个<a href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>内与给定搜索值匹配的值，然后在第二个集合内具有相同相对位置的单元格中返回值。
+</p>
+<div class="HIStrings"><p><strong class="Term">LOOKUP</strong>(<em>搜索目标, 搜索位置, 结果值</em>)</p>
+    <div class="HISubString"><p><em class="Term">搜索目标： </em>要查找的值。<span class="DescriptionNotString"><em>搜索值</em>可以包含<a
+            href="ffa361bc137.html#ffa361bc137" class="xRef Aside">任何值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">搜索位置： </em>含有要搜索的值的集合。<span class="DescriptionNotString"><em>搜索位置</em>可以包含任何值。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">结果值： </em>可选集合，含有要基于搜索得出的值。<span
+            class="DescriptionNotString"><em>结果值</em>可以包含任何值。</span></p></div>
+</div>
+<div id="ffa59815a0" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>通常，<em>搜索位置</em>和<em>结果值</em>均包括在内，且为一维，即多列或多行，但不能同时指定为多列和多行。但是，为了与其他电子表格应用兼容，即可将<em>搜索位置</em>指定为二维，即可指定为多列或多行，并且可忽略<em>结果值</em>。
+        </p></li>
+        <li><p>如果<em>搜索位置</em>是二维且指定了<em>结果值</em>，函数将会搜索最上面的行或最左边的列（无论哪个含有更多单元格），并得出<em>结果值</em>的相应值。</p></li>
+        <li><p>如果<em>搜索位置</em>是二维且忽略<em>结果值</em>，将得出最后一行（如果集合中的列数较多）或列（如果集合中的行数较多）的相应值。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="LOOKUP 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="LOOKUP 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>0</p></td>
+        <td><p>20</p></td>
+        <td><p>40</p></td>
+        <td><p>60</p></td>
+        <td><p>80</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>A</p></td>
+        <td><p>E</p></td>
+        <td><p>I</p></td>
+        <td><p>O</p></td>
+        <td><p>U</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td><p>vel</p></td>
+        <td><p>elit</p></td>
+        <td><p>dolor</p></td>
+        <td><p>sit</p></td>
+        <td><p>amet</p></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td><p>1</p></td>
+        <td><p>2</p></td>
+        <td><p>3</p></td>
+        <td><p>4</p></td>
+        <td><p>5</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 LOOKUP 函数示例">
+    <tbody>
+    <tr>
+        <td><p>=LOOKUP(20, A1:E1, A2:E2) 得出“E”，因为“E”在<em>结果值</em>集合 (A2:E2) 中的位置与 20（<em>搜索目标</em>）在<em>搜索位置</em>集合
+            (A1:E1) 中的位置相同（在第二个单元格中）。</p>
+            <p>=LOOKUP(“E”, B1:B4, A4:D4) 得出 2，因为“E”是在<em>搜索位置</em>集合内的第二个值，同时 2 是<em>搜索目标</em>集合内的第二个值。请注意，虽然一个集合是列，一个是行，但是它们大小相等。
+            </p>
+            <p>=LOOKUP(20, A1:E2, A4:E4) 得出 2，因为 20 位于<em>搜索位置</em>集合（最上面的行被使用）中的顶行的第二个单元格中，同时 2 位于<em>搜索位置</em>集合中的第二个单元格中。
+            </p>
+            <p>=LOOKUP(“vel”, A1:B4, B2:E2) 得出“O”，因为“vel”位于<em>搜索位置</em>集合（最左侧的列被使用）中的第一列的第三个单元格中，同时“O”位于<em>搜索位置</em>集合中的第三个单元格中。
+            </p>
+            <p>=LOOKUP(“vel”, A1:B4, B2:E4) 得出一个错误，因为<em>结果值</em>集合不能大于一个行宽或一个列宽。</p>
+            <p>=LOOKUP(100, A1:E1, A4:E4) 得出 5，因为 100 比<em>搜索位置</em>集合中指定的最后一个（第五个）单元格中的值大，同时 5 位于指定<em>结果值</em>集合中的第五个单元格中。
+            </p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59a0514.html#ffa59a0514" class="xRef AppleTopic">HLOOKUP</a><a
+        href="ffa59a83d3.html#ffa59a83d3" class="xRef AppleTopic">MATCH</a><a href="ffa5997050.html#ffa5997050"
+                                                                              class="xRef AppleTopic">VLOOKUP</a></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>GAMMADIST</title>
+    <meta name="description" content="GAMMADIST(非负 x 值, alpha, beta, 形式类型) 将得出指定形式的伽玛分布。">
+</head>
+<body dir="ltr" id="ffa5a92ddc" class="AppleTopic apd-topic"><a name="ffa5a92ddc"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>GAMMADIST</h1>
+<p>GAMMADIST 函数可得出指定形式的伽玛分布。</p>
+<div class="HIStrings"><p><strong class="Term">GAMMADIST</strong>(<em>非负 x 值, alpha, beta, 形式类型</em>)</p>
+    <div class="HISubString"><p><em class="Term">非负 x 值： </em><a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>，表示要在
+        x 处为此函数求值的 x 值。<span class="DescriptionNotString"><em>非负 x 值</em>必须大于或等于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">alpha： </em>数字值，表示分布的形状参数之一。<span class="DescriptionNotString"><em>alpha</em> 必须大于 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">beta： </em>数字值，表示分布的形状参数之一。<span
+            class="DescriptionNotString"><em>beta</em> 必须大于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">形式类型： </em><a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指明要提供何种形式的指数函数。
+    </p>
+        <div class="HISubString"><p><em class="Term">累积形式<span class="TermNotString">(TRUE 或 1)</span>： </em>得出累积分布形式的值。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">概率密度形式<span class="TermNotString">(FALSE 或 0)</span>： </em>得出概率密度形式的值。
+        </p></div>
+    </div>
+</div>
+<table data-type="1 column" aria-label="GAMMADIST 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=GAMMADIST(0.8, 1, 2, 1) 得出 0.329679953964361（累积分布形式）。</p>
+            <p>=GAMMADIST(0.8, 1, 2, 0) 得出 0.33516002301782（概率密度形式）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b17742.html#ffa5b17742"
+                                                   class="xRef AppleTopic">GAMMAINV</a><a
+        href="ffa5a967cb.html#ffa5a967cb" class="xRef AppleTopic">GAMMALN</a></div>
+</body>
+</html>

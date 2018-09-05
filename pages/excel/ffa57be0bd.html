@@ -1,0 +1,72 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>YIELD</title>
+    <meta name="description" content="YIELD(结算日, 到期日, 年利率, 价格, 赎回价, 频率, 基准天数) 将得出定期支付利息的证券的实际年利率。">
+</head>
+<body dir="ltr" id="ffa57be0bd" class="AppleTopic apd-topic"><a name="ffa57be0bd"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>YIELD</h1>
+<p>YIELD 函数将得出定期支付利息的证券的实际年利率。</p>
+<div class="HIStrings"><p><strong class="Term">YIELD</strong>(<em>结算日, 到期日, 年利率, 价格, 赎回价, 频率, 基准天数</em>)</p>
+    <div class="HISubString"><p><em class="Term">结算日： </em><a href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a
+            href="ffac26dc144.html#ffac26dc144" class="xRef Aside">日期字符串</a>，表示交易结算日期，通常比交易日期晚一天或多天。 </p></div>
+    <div class="HISubString"><p><em class="Term">到期日： </em>日期/时间值或日期字符串，表示证券的到期日期。<span
+            class="DescriptionNotString"><em>到期日</em>必须晚于为<em>结算日</em>指定的日期。</span></p></div>
+    <div class="HISubString"><p><em class="Term">年利率： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                              class="xRef Aside">数字值</a>，表示证券的票面年利率或名义年利率，用来确定每期支付的利息。<span
+            class="DescriptionNotString"><em>年利率</em>必须大于 0，且以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。</span></p></div>
+    <div class="HISubString"><p><em class="Term">价格： </em>数字值，表示面值 ￥100 的证券的价格。<span
+            class="DescriptionNotString"><em>价格</em>的计算公式为<em>购买价格/票面价值 * 100</em>，且必须大于 0。</span></p></div>
+    <div class="HISubString"><p><em class="Term">赎回价： </em>数字值，表示面值 ￥100 的有价证券的清偿价值。<span
+            class="DescriptionNotString"><em>赎回价</em>的计算公式为<em>赎回价值/票面价值 * 100</em>，且必须大于 0。通常为 100，表示证券的赎回价值等于其票面价值。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">频率： </em><a href="ffa8575c326.html#ffa8575c326"
+                                                             class="xRef Aside">模态值</a>，指定每年息票支付的次数。</p>
+        <div class="HISubString"><p><em class="Term">每年一次<span class="TermNotString">(1)</span>：  </em>每年支付一次。</p></div>
+        <div class="HISubString"><p><em class="Term">每半年一次<span class="TermNotString">(2)</span>：  </em>每年支付两次。</p>
+        </div>
+        <div class="HISubString"><p><em class="Term">每季一次<span class="TermNotString">(4)</span>：  </em>每年支付四次。</p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">基准天数： </em>可选模态值，指定计算中使用的每月天数和每年天数（<a
+            href="ffa8575bdd7.html#ffa8575bdd7" class="xRef Aside">基准天数惯例</a>）。</p>
+        <div class="HISubString"><p><em class="Term">30/360<span class="TermNotString">(0 或省略)</span>： </em>一个月 30 天，一年
+            360 天，采用 <a href="ffa205f6771.html#ffa205f6771" class="xRef Aside">NASD 方法</a>计算一个月的第 31 天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/实际天数 <span class="TermNotString">(1)</span>： </em>每月实际天数，每年实际天数。
+        </p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/360<span class="TermNotString">(2)</span>： </em>每月实际天数，一年 360
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">实际天数/365<span class="TermNotString">(3)</span>： </em>每月实际天数，一年 365
+            天。</p></div>
+        <div class="HISubString"><p><em class="Term">30E/360<span class="TermNotString">(4)</span>： </em>一个月 30 天，一年 360
+            天，采用<a href="ffa7b6f10f2.html#ffa7b6f10f2" class="xRef Aside">欧洲方法</a>计算一个月的第 31 天。</p></div>
+    </div>
+</div>
+<div id="ffa89da1d052" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="YIELD 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您在考虑购买假想的证券。证券结算日是 2009 年 5 月 1 日（<em>结算日</em>），到期日是 2015 年 6 月 30 日（<em>到期日</em>），赎回价值是每 ￥100 票面价值
+            100（<em>赎回价</em>为 100），半年支付一次利息（<em>频率</em>），年利率为 6.5%（<em>年利率</em>），以 30/360 天（<em>基准天数</em>）为基础计算利息。提供的证券价格是
+            106.50（<em>价格</em>）。</p>
+            <p>=YIELD(“2009/05/01”, “2015/06/30”, 0.065, 106.50, 100, 2, 0) 得出近似值
+                5.25020473181683%，这表示年收益率（基于给定的假设）。</p>
+            <p>随着债券价格下跌，其收益率将提高。相反，如果债券价格上涨，其收益率将降低。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa576d0b3.html#ffa576d0b3" class="xRef AppleTopic">PRICE</a><a
+        href="ffa577d9ba.html#ffa577d9ba" class="xRef AppleTopic">YIELDDISC</a><a href="ffa572bbaa.html#ffa572bbaa"
+                                                                                  class="xRef AppleTopic">YIELDMAT</a>
+</div>
+</body>
+</html>

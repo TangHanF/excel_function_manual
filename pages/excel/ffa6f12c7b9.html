@@ -1,0 +1,47 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>POLYNOMIAL</title>
+    <meta name="description" content="POLYNOMIAL(x 值, 系数) 用于计算多项式在给定点的值。">
+</head>
+<body dir="ltr" id="ffa6f12c7b9" class="AppleTopic apd-topic"><a name="ffa6f12c7b9"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>POLYNOMIAL</h1>
+<p>POLYNOMIAL 函数用于计算多项式在给定点的值。 </p>
+<div class="HIStrings"><p><strong class="Term">POLYNOMIAL</strong>(<em>x 值</em>, <em>系数</em>)</p>
+    <div class="HISubString"><p><em class="Term">x 值： </em>乘幂序列的输入值。<span class="DescriptionNotString"><em>x 值</em>是一个<a
+            href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</span></p></div>
+    <div class="HISubString"><p><em class="Term">系数： </em>系数将乘以 <em>x 值</em>的每个连续乘幂。<span class="DescriptionNotString">系数的个数决定乘幂序列的项数。<em>系数</em>是一个数字值<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。</span></p></div>
+</div>
+<div id="ffa58bfe19" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>高阶项最先表示。系数 (a<sub>i</sub>) 用于 <em>x 值</em>的连续乘幂。在以下公式中，“x”表示 <em>x 值</em>。POLYNOMIAL
+            函数使用的公式是：a<sub>0</sub> x<sup>n</sup> + a<sub>1</sub> x<sup>(n-1)</sup> + a<sub>2</sub> x<sup>(n-2)</sup> +
+            ...+ a<sub>n</sub></p></li>
+    </ul>
+    <ul>
+        <li><p>POLYNOMIAL 函数不支持任意的起始点或任意的指数间距。如果要求以上任意一项，可使用 SERIESSUM 函数。</p></li>
+    </ul>
+    <ul>
+        <li><p>指数是非负整数。</p></li>
+        <li><p>iBooks Author 中该函数不可用。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="POLYNOMIAL 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=POLYNOMIAL(2, 9) 得出 9。</p>
+            <p>=POLYNOMIAL(2, 1) 得出 1。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa6f12fdca.html#ffa6f12fdca"
+                                                   class="xRef AppleTopic">SERIESSUM</a></div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>UNION.RANGES</title>
+    <meta name="description" content="UNION.RANGES(压缩模式, 范围, 范围…) 得出一个数组，该数组表示一个代表指定集合的单元的集合。">
+</head>
+<body dir="ltr" id="ffa6f15afb0" class="AppleTopic apd-topic"><a name="ffa6f15afb0"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>UNION.RANGES</h1>
+<p>UNION.RANGES 函数返回一个<a href="ffa361d1a87.html#ffa361d1a87" class="xRef Aside">数组</a>，该数组表示一个代表指定集合的单元的<a
+        href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。</p>
+<div class="HIStrings"><p><strong class="Term">UNION.RANGES</strong>(<em>压缩模式, 范围, 范围…</em>)</p>
+    <div class="HISubString"><p><em class="Term">压缩模式： </em><a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，确定结果的顺序以及返回的数组的形状。
+    </p>
+        <div class="HISubString"><p><em class="Term">从左压缩<span class="TermNotString">(FALSE 或 0)</span>： </em>从左至右移除间隙（即不包含在任何指定范围中的单元格），从包括包含在指定范围内的单元格的第一行开始。<span
+                class="DescriptionNotString">这是默认顺序。</span></p></div>
+        <div class="HISubString"><p><em class="Term">从上压缩<span class="TermNotString">(TRUE 或 1)</span>： </em>从上至下移除间隙（即不包含在任何指定范围中的单元格），从包括包含在指定范围内的单元格的第一列开始。
+        </p></div>
+    </div>
+    <div class="HISubString"><p><em class="Term">范围： </em>单元格集合。<span class="DescriptionNotString"><em>范围</em>是包含单个单元格<a
+            href="ffa8575c9b4.html#ffa8575c9b4" class="xRef Aside">范围</a>（可包括<a href="ffa361bc137.html#ffa361bc137"
+                                                                                class="xRef Aside">任何值</a>）的集合。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">范围…： </em>可包括一个或多个附加集合。</p></div>
+</div>
+<div id="ffa6f167d78" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>集合可以是任何大小，且只需一个集合。如果只指定了一个集合，则得出的数组将与所指定的集合相同。</p></li>
+        <li><p>UNION.RANGES
+            尝试从输入集合构建一个矩形集合，方法是移除数组元素之间的间隙。如果结果数组是矩形，这就是要得出的数组。如果结果数组不是矩形，则除第一行以外的行将依次移到第一行的末尾，这样得出的数组只有一行，代表包括所有数组元素的一个列表。</p>
+        </li>
+        <li><p>如果任何输入范围都无效，则该函数会得出引用错误。</p></li>
+        <li><p>在一些其他电子表格应用中，包括 Numbers ’08（适用于 Mac）和 Numbers ’09（适用于 Mac），进行跨表格引用时，该函数会将空格用作交集运算符。</p></li>
+        <li><p>iBooks Author 中该函数不可用。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="UNION.RANGES 示例介绍">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设表格如下：</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="Multicolumn" aria-label="UNION.RANGES 示例的值">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"><p class="TableHead">A</p></th>
+        <th scope="col"><p class="TableHead">B</p></th>
+        <th scope="col"><p class="TableHead">C</p></th>
+        <th scope="col"><p class="TableHead">D</p></th>
+        <th scope="col"><p class="TableHead">E</p></th>
+        <th scope="col"><p class="TableHead">F</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">1</p></td>
+        <td><p>7</p></td>
+        <td><p>8</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">2</p></td>
+        <td><p>19</p></td>
+        <td><p>20</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">3</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">4</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="TableDisplayRow">
+        <td><p class="TableDisplay">5</p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><p>30</p></td>
+        <td><p>31</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="使用给定值的 UNION.RANGES 函数示例">
+    <tbody>
+    <tr>
+        <td><p>在这些例子中，包含声明的数组元素的给定集合中的单元格的值会用圆括号括起来。</p>
+            <p>=UNION.RANGES(FALSE, A1, B2) 得出 2 行 1 列的数组。所求的值可以使用 INDEX 函数从该数组中抽取出来。=INDEX(UNION.RANGES(FALSE, A1, B2),
+                1, 1, 1) 得出 7 (A1)，该值位于该数组的第一行。=INDEX(UNION.RANGES(FALSE, A1, B2), 2, 1, 1) 得出 20 (B2)，该值位于该数组的第二行。</p>
+            <p>=UNION.RANGES(TRUE, A1, B2) 得出一个 1 行 2 列的数组。该数组中第一列的值为 7 (A1)。该数组中第二列的值为 20 (B2)。</p>
+            <p>=VLOOKUP(7, UNION.RANGES(FALSE, A1, B2), 2, 0) 得出范围错误，因为正如第一个例子所示，得出的数组只有一个列宽。=VLOOKUP(7,
+                UNION.RANGES(TRUE, A1, B2), 2, 0) 得出 20，因为正如第二个例子所示，得出的数组是 1 行 2 列。第二列中的值对应于 7 的搜索值，为 20。</p>
+            <p>=UNION.RANGES(FALSE, A1:B1, E5) 或 =UNION.RANGES(TRUE, A1:B1, E5) 得出 1 行 3 列的数组。该只有一行的数组中的值为 7 (A1)、8 (B1)
+                和 30 (E5)。</p>
+            <p>=UNION.RANGES(FALSE, A1:B2, D4:F5) 得出一个 1 行 10 列的数组。值为 7 (A1)、8 (B1)、19 (A2)、20 (B2)、0 (D4)、0 (E4)、0
+                (F4)、0 (D5)、30 (E5) 和 31 (F5)。</p>
+            <p>=UNION.RANGES(TRUE, A1:B2, D4:F5) 得出一个 2 行 5 列的数组。第一行中的值为 7 (A1)、8 (B2)、0 (D4)、0 (E4) 和 0 (F4)。第二行中的值为 19
+                (A2)、20 (B2)、0 (D5)、30 (E5) 和 31 (F5)。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa59b4edb.html#ffa59b4edb" class="xRef AppleTopic">INDEX</a><a
+        href="ffa596db0e.html#ffa596db0e" class="xRef AppleTopic">INDIRECT</a><a href="ffa00508b.html#ffa00508b"
+                                                                                 class="xRef AppleTopic">INTERSECT.RANGES</a>
+</div>
+</body>
+</html>

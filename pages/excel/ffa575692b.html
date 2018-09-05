@@ -1,0 +1,61 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>IRR</title>
+    <meta name="description" content="IRR(现金流范围, 估计) 基于一系列定期发生的潜在不规则现金流（付款金额不必为某特定数量）得出投资的内部回报率。">
+</head>
+<body dir="ltr" id="ffa575692b" class="AppleTopic apd-topic"><a name="ffa575692b"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>IRR</h1>
+<p>IRR 函数基于一系列定期发生的潜在不规则现金流（付款金额不必为某特定数量）得出投资的内部回报率。</p>
+<div class="HIStrings"><p><strong class="Term">IRR</strong>(<em>现金流范围, 估计</em>)</p>
+    <div class="HISubString"><p><em class="Term">现金流范围： </em>包含现金流值的<a href="ffa8575c6f3.html#ffa8575c6f3"
+                                                                       class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString"><em>现金流范围</em>必须包含<a href="ffa361b4f72.html#ffa361b4f72"
+                                                              class="xRef Aside">数字值</a>。收入（现金流入量）指定为正数，而支出（现金流出量）指定为负数。集合中必须至少包括一个正值和一个负值。现金流量必须按时间顺序指定，且在时间上等距（如每月）。如果某个期间没有现金流量，则该期间使用 0。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">估计： </em>可选数字值，指定回报率的初步估计。<span
+            class="DescriptionNotString"><em>估计</em>可以以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。如果省略<em>估计</em>，则假定为 10%。如果默认值无法得出结果，请先试用更大的正值。如果仍无法得出支出，请试用小的负值。允许的最小值是 –1。</span>
+    </p></div>
+</div>
+<div id="ffa5795ec0" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>如果所有定期现金流相同，请考虑使用 NPV 函数。</p></li>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="IRR 函数示例 1">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例 1</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您在为女儿的大学教育制定计划。她刚刚 13 岁，预期她将在 5 年后开始上大学。现在，储蓄帐户中有 ￥75,000，并且将每年年底雇主发放的奖金存入帐户。因为您认为奖金每年都会增加，所以预期在之后的 5
+            年内每年年底存入的金额分别为 ￥5,000、￥7,000、￥8,000、￥9,000 和 ￥10,000。当女儿上大学时，您认为需要准备 ￥150,000 的教育金额。假定单元格 B2 到 G2
+            包含您将存入的金额，表示为负金额，因为它们是流出，最初是起始存款 (-75000, -5000, -7000, -8000, -9000, -10000)。单元格 H2
+            包含您女儿完成大学教育估计需要的资金，表示为正数，因为这是现金流入 (150000)。<em>现金流范围</em>为 B2:H2。</p>
+            <p>=IRR(B2:H2) 得出 5.69965598016224%，此值是存入的金额与年利息在 5 年后增长到 ￥150,000 所必需的复合利率。</p></td>
+    </tr>
+    </tbody>
+</table>
+<table data-type="1 column" aria-label="IRR 函数示例 2">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例 2</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您有一个与他人合作的投资机会。初期投资需要 ￥50,000。因为合作企业仍在开发其产品，所以在第一年和第二年的年底您必须分别额外投资 ￥25,000 和
+            ￥10,000。假定您将这些现金流出（表示为负数）放入单元格 B3 到 D3。第三年，合作企业预期能够独立筹资，但是无法向投资者返还任何现金（在 E3 中表示为 0）。第四年和第五年，投资者预期能够分别收到
+            ￥10,000 和 ￥30,000 的回报（在 F3 和 G3 中表示为正数）。第六年年底，公司预期能够销售产品，同时投资者预期将收到 ￥100,000 的回报（在 H3 中表示为正数）。</p>
+            <p>=IRR(B3:H3) 得出 10.2411564203%，此值是现金流量都符合预定计划时取得的复合年利率（内部收益率）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa57c73ac.html#ffa57c73ac" class="xRef AppleTopic">MIRR</a><a
+        href="ffa574069e.html#ffa574069e" class="xRef AppleTopic">NPV</a></div>
+</body>
+</html>

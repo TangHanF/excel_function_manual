@@ -1,0 +1,68 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>CURRENCY</title>
+    <meta name="description" content="CURRENCY 返回通过互联网远程获取的两种货币间汇率的数据。">
+</head>
+<body dir="ltr" id="ffa5d87a8c31" class="AppleTopic apd-topic"><a name="ffa5d87a8c31"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>CURRENCY</h1>
+<p>CURRENCY 函数会返回通过互联网远程获取的前一交易日收盘时两种货币间汇率的数据。</p>
+<div class="HIStrings"><p><strong class="Term">CURRENCY</strong>(<em>货币-1, 货币-2, 价格</em>)</p>
+    <div class="HISubString"><p><em class="Term">货币-1： </em>您要转换的原始货币的代码。<span
+            class="DescriptionNotString"><em>货币‑1 </em>是一串包括在引号内的字符串。</span></p></div>
+    <div class="HISubString"><p><em class="Term">货币-2： </em>您要转换成的目标货币的代码。<span
+            class="DescriptionNotString"><em>货币‑2 </em>是一串包括在引号内的字符串。</span></p></div>
+    <div class="HISubString"><p><em class="Term">价格： </em>可选<a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定待返回的汇率属性。
+    </p>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>价格<span class="TermNotString">” (0 或省略)</span>：
+        </em>前一营业日收盘时<em>货币‑1</em> 对<em>货币‑2</em> 的汇率，以<em>货币‑2</em> 的金额表示。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>名称<span class="TermNotString">”(1)</span>：
+        </em>指定货币的货币代码，在用于计算汇率的公式中显示。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>涨跌额<span class="TermNotString">”(2)</span>：
+        </em>最近两个营业日收盘时汇率的差异。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>涨跌幅<span class="TermNotString">”(3)</span>：
+        </em>前一营业日收盘时与再前一营业日收盘时汇率的变化百分比。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>开盘价<span class="TermNotString">”(4)</span>：
+        </em>前一营业日开盘时的汇率。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最高价<span class="TermNotString">”(5)</span>：
+        </em>前一营业日的最高汇率。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>最低价<span class="TermNotString">”(6)</span>：
+        </em>前一营业日的最低汇率。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>52 周最高价<span
+                class="TermNotString">”(7)</span>： </em>过去 52 周最高汇率。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>52 周最低价<span
+                class="TermNotString">”(8)</span>： </em>过去 52 周最低汇率。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>卖出价<span class="TermNotString">”(9)</span>：
+        </em>卖方要求以<em>货币-2</em> 卖出<em>货币-1</em> 的价格。<strong>注：</strong>“卖出价”数据当前不可用。</p></div>
+        <div class="HISubString"><p><em class="Term"><span class="TermNotString">“</span>买入价<span class="TermNotString">”(10)</span>：
+        </em>买方愿意以<em>货币-2</em> 买入<em>货币-1</em> 的价格。<strong>注：</strong>“买入价”数据当前不可用。</p></div>
+    </div>
+</div>
+<div id="ffa4acfc6671" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>货币代码由 ISO 4217 定义，它是由国际标准化组织发布的一项标准。您可以在网络上查找 ISO 货币代码。</p></li>
+        <li><p>如果在互联网无法使用时输入了含 CURRENCY 函数的公式，CURRENCY 不会返回任何值。但是，当互联网可用时，公式将根据 CURRENCY 返回的值进行更新。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="CURRENCY 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>=CURRENCY(“USD”, “GBP”, “价格”) 返回 1 美元对应的英镑值，即以英镑表示前一营业日收盘时两种货币间的汇率。</p>
+            <p>=CURRENCY(“EUR”, “DKK”, 2) 返回前一营业日收盘时与再前一营业日收盘时欧元对丹麦克朗汇率的涨跌额（“涨跌额”或 2）。</p>
+            <p>=CURRENCY(“EUR”, “CHF”, “52 周最高价”) 返回过去 52 周欧元对瑞士法郎的最高汇率。</p></td>
+    </tr>
+    </tbody>
+</table>
+<p class="footer credit">CURRENCY 函数由<img src="../GlobalArt/IL_YahooLogo.png" alt="雅虎" height="30" width="119">提供数据支持
+</p>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa3e86ad3f3.html#ffa3e86ad3f3" class="xRef AppleTopic">CURRENCYH</a><a
+        href="ffa354d15acd.html#ffa354d15acd" class="xRef AppleTopic">CURRENCYCODE</a><a
+        href="ffa1965cea68.html#ffa1965cea68" class="xRef AppleTopic">CURRENCYCONVERT</a></div>
+</body>
+</html>

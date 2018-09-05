@@ -1,0 +1,56 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>QUARTILE</title>
+    <meta name="description" content="QUARTILE(数字集合, 四分位数) 得出给定数字集中指定四分位数的值。">
+</head>
+<body dir="ltr" id="ffa5aa708f" class="AppleTopic apd-topic"><a name="ffa5aa708f"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>QUARTILE</h1>
+<p>QUARTILE 函数得出给定数字集中指定四分位数的值。</p>
+<div class="HIStrings"><p><strong class="Term">QUARTILE</strong>(<em>数字集合, 四分位数</em>)</p>
+    <div class="HISubString"><p><em class="Term">数字集合： </em>包含<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>的<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。 </p></div>
+    <div class="HISubString"><p><em class="Term">四分位数： </em><a href="ffa8575c326.html#ffa8575c326" class="xRef Aside">模态值</a>，指定所需的四分位数。
+    </p>
+        <div class="HISubString"><p><em class="Term">最小值<span class="TermNotString">(0)</span>： </em>可得出最小值。</p></div>
+        <div class="HISubString"><p><em class="Term">第一<span class="TermNotString">(1)</span>： </em>可得出第一个四分位数（第 25
+            个百分位）。</p></div>
+        <div class="HISubString"><p><em class="Term">第二<span class="TermNotString">(2)</span>： </em>可得出第二个四分位数（第 50
+            个百分位）。</p></div>
+        <div class="HISubString"><p><em class="Term">第三<span class="TermNotString">(3)</span>： </em>可得出第三个四分位数（第 75
+            个百分位）。</p></div>
+        <div class="HISubString"><p><em class="Term">最大值<span class="TermNotString">(4)</span>： </em>可得出最大值。</p></div>
+    </div>
+</div>
+<div id="ffa5ac7d1c" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>当<em>四分位数</em>分别等于 0、2 和 4 时，MIN、MEDIAN 和 MAX 得出与 QUARTILE 相同的值。 </p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="QUARTILE 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设单元格 B2 至 J2 分别包含值 5、6、9、3、7、11、8、2 和 14。可以使用以下公式求出每个四分位数的值：</p>
+            <p>=QUARTILE(B2:J2, 0) 得出 2（最小值）。</p>
+            <p>=QUARTILE(B2:J2, 1) 得出 5（25% 或第一个四分位数）。</p>
+            <p>=QUARTILE(B2:J2, 2) 得出 7（50% 或第二个四分位数）。</p>
+            <p>=QUARTILE(B2:J2, 3) 得出 9（75% 或第三个四分位数）。</p>
+            <p>=QUARTILE(B2:J2, 4) 得出 14（最大值）。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5b13e81.html#ffa5b13e81"
+                                                   class="xRef AppleTopic">FREQUENCY</a><a
+        href="ffa5ab1ceb.html#ffa5ab1ceb" class="xRef AppleTopic">MAX</a><a href="ffa5b4f8b6.html#ffa5b4f8b6"
+                                                                            class="xRef AppleTopic">MEDIAN</a><a
+        href="ffa5b6ab7a.html#ffa5b6ab7a" class="xRef AppleTopic">MIN</a><a href="ffa5a24591.html#ffa5a24591"
+                                                                            class="xRef AppleTopic">PERCENTILE</a><a
+        href="ffa5b571d2.html#ffa5b571d2" class="xRef AppleTopic">PERCENTRANK</a></div>
+</body>
+</html>

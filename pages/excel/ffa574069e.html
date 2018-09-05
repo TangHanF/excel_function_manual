@@ -1,0 +1,42 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>NPV</title>
+    <meta name="description" content="NPV(每期贴现率, 现金流, 现金流…) 基于一系列定期发生的潜在不规则现金流得出投资的净现值。">
+</head>
+<body dir="ltr" id="ffa574069e" class="AppleTopic apd-topic"><a name="ffa574069e"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>NPV</h1>
+<p>NPV 函数基于一系列定期发生的潜在不规则现金流得出投资的净现值。所有参数都是<a href="ffa361b4f72.html#ffa361b4f72" class="xRef Aside">数字值</a>。</p>
+<div class="HIStrings"><p><strong class="Term">NPV</strong>(<em>每期贴现率, 现金流, 现金流…</em>)</p>
+    <div class="HISubString"><p><em class="Term">每期贴现率： </em>每个周期的贴现率。<span class="DescriptionNotString"><em>每期贴现率</em>可以以小数形式（例如，0.08）或以百分比形式（例如，8%）输入。<em>每期贴现率</em>必须大于或等于 0。<em>每期贴现率</em>指定为使用与现金流的时限相同的时限。例如，如果现金流是按月的，且预期年贴现率为 8%，则<em>每期贴现率</em>必须指定为 0.00667 或 0.667%（0.08 除以 12）。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">现金流： </em>现金流。<span class="DescriptionNotString">正值表示收入（现金流入）。负值表示支出（现金流出量）。现金流在时间上要平均分布。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">现金流…： </em>包括一批或多批（可选）额外现金流。</p></div>
+</div>
+<div id="ffad3f5cd8b9" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>此函数结果中显示的货币取决于“语言与地区”设置（在 macOS 的“系统偏好设置”和 iOS 的“设置”中），或者 iCloud 设置中的“时区 / 地区”设置。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="NPV 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假定您有一个与他人合作的投资机会。因为合作企业仍在开发其产品，所以在第一年和第二年的年底您必须分别额外投资 ￥25,000 和
+            ￥10,000（现金流为负）。第三年，合作企业预期能够独立筹资，但是无法向投资者返还任何现金（现金流为 0）。第四年和第五年，投资者预期能够分别收到 ￥10,000 和 ￥30,000
+            的回报（现金流为正）。第六年年底，公司预期能够销售产品，同时投资者预期将收到 ￥100,000 的回报（现金流为正）。为了投资，您希望年收益率至少达到 10%。</p>
+            <p>=NPV(0.10, -25000, -10000, 0, 10000, 30000, 100000) 得出 ￥50,913.43，现金流量的净现值为
+                10%。因此，如果所需的最初投资等于或小于此值时，此机会将符合您 10% 的目标。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa575692b.html#ffa575692b" class="xRef AppleTopic">IRR</a><a
+        href="ffa57e084a.html#ffa57e084a" class="xRef AppleTopic">PV</a></div>
+</body>
+</html>

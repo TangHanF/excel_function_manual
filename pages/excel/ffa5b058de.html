@@ -1,0 +1,48 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>ZTEST</title>
+    <meta name="description" content="ZTEST(值集合, 值, 标准偏差) 得出 Z 检验的单尾概率值。">
+</head>
+<body dir="ltr" id="ffa5b058de" class="AppleTopic apd-topic"><a name="ffa5b058de"></a>
+<figure class="topicIcon"><img src="Art/ixicnff.png" alt="" height="32" width="32"></figure>
+<h1>ZTEST</h1>
+<p>ZTEST 函数可得出 Z 检验的单尾概率值。</p>
+<div class="HIStrings"><p><strong class="Term">ZTEST</strong>(<em>值集合, 值, 标准偏差</em>)</p>
+    <div class="HISubString"><p><em class="Term">值集合： </em><a href="ffa361b4f72.html#ffa361b4f72"
+                                                              class="xRef Aside">数字值</a>、<a
+            href="ffa8575ca19.html#ffa8575ca19" class="xRef Aside">日期/时间值</a>或<a href="ffa8575c843.html#ffa8575c843"
+                                                                                 class="xRef Aside">持续时间值</a>的<a
+            href="ffa8575c6f3.html#ffa8575c6f3" class="xRef Aside">集合</a>。<span
+            class="DescriptionNotString">所有值都必须属于同一<a href="ffac6f2d7977.html#ffac6f2d7977" class="xRef Aside">值类型</a>。</span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">值： </em>要测试的值。<span class="DescriptionNotString"><em>值</em> 是单个数字值、日期/时间值或持续时间值。 </span>
+    </p></div>
+    <div class="HISubString"><p><em class="Term">标准偏差： </em>可选数字值，用于总体的标准偏差。<span
+            class="DescriptionNotString"><em>标准偏差</em>必须大于 0。</span></p></div>
+</div>
+<div id="ffa5ab990b" class="Subhead"><h2 class="Name">注释</h2>
+    <ul>
+        <li><p>Z 检验是一种统计检验，可确定样本平均值和总体平均值之间的差异大小是否具有统计学意义。Z 检验主要用于标准化检验。</p></li>
+        <li><p>如果省略<em>标准偏差</em>，则使用假设的样本标准偏差。</p></li>
+    </ul>
+</div>
+<table data-type="1 column" aria-label="ZTEST 函数示例">
+    <thead>
+    <tr>
+        <th scope="col"><p class="TableHead">示例</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>假设单元格 B2 至 G2 分别包含值 57、75、66、98、92 和 80，且表示<em>值集合</em>。此集合的 ZTEST 值，假定要检验的值（<em>值</em>）为 70 且标准偏差（<em>标准偏差</em>）为
+            9，可以使用以下公式求得：</p>
+            <p>=ZTEST(B2:G2, 70, 9)</p>
+            <p>结果是 0.0147281928162857。</p></td>
+    </tr>
+    </tbody>
+</table>
+<div class="LinkUniversal"><strong>另请参阅</strong><a href="ffa5a8f367.html#ffa5a8f367"
+                                                   class="xRef AppleTopic">STANDARDIZE</a></div>
+</body>
+</html>
