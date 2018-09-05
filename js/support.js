@@ -1,11 +1,21 @@
-
 let app;
+let app2;
+
+app2 = new Vue({
+    el: "#app2",
+    data: {
+        funName: "",//函数名称
+        iframeSrc: "",
+    }
+});
+
 (function () {
     $(function () {
         layui.use(["layer", "util"], function () {
             let util = layui.util;
             util.fixbar({});
             let jsonData = $.parseJSON(nav);
+            debugger
             app = new Vue({
                 el: "#app"
                 , data: {
@@ -18,20 +28,24 @@ let app;
                 }
                 , methods: {
                     itemClick: function (href, e) {
-                        let layer = layui.layer;
-                        layer.open({
-                            type: 2,
-                            title: e.target.text + '函数说明',
-                            anim: 0,
-                            shadeClose: true,
-                            resize: false,
-                            area: ['800px', '700px'],
-                            btn: ['确定'],
-                            yes: function (index, layero) {
-                                layer.close(index);
-                            },
-                            content: 'pages/excel/' + href
-                        });
+                        app2.iframeSrc = href;
+                        console.log(href);
+                        $("#myModal").modal({
+                        })
+                        // let layer = layui.layer;
+                        // layer.open({
+                        //     type: 2,
+                        //     title: e.target.text + '函数说明',
+                        //     anim: 0,
+                        //     shadeClose: true,
+                        //     resize: false,
+                        //     area: ['800px', '700px'],
+                        //     btn: ['确定'],
+                        //     yes: function (index, layero) {
+                        //         layer.close(index);
+                        //     },
+                        //     content: 'pages/excel/' + href
+                        // });
                     },
                     // 生成随机样式
                     randomPanelClass: function () {
