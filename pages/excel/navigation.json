@@ -1401,7 +1401,7 @@
     "ffa58075d5": {
       "name": "AND",
       "href": "ffa58075d5.html",
-      "summary": "如果所有参数为真，AND(测试表达式, 测试表达式…) 将得出 TRUE；否则得出 FALSE。"
+      "summary": "AND(测试表达式, 测试表达式…) 如果所有参数为真，AND(测试表达式, 测试表达式…) 将得出 TRUE；否则得出 FALSE。"
     },
     "ffa5834118": {
       "name": "IF",
@@ -1542,7 +1542,7 @@
     "ffa5c24b12": {
       "name": "EXACT",
       "href": "ffa5c24b12.html",
-      "summary": "如果参数字符串的大小写和内容完全相同，EXACT(字符串 1, 字符串 2) 函数将得出 TRUE。"
+      "summary": "EXACT(字符串 1, 字符串 2) 如果参数字符串的大小写和内容完全相同，EXACT(字符串 1, 字符串 2) 函数将得出 TRUE。"
     },
     "ffa8575c62a": {
       "name": "常数",
@@ -1916,6 +1916,7 @@
     "ffa205f6771": {
       "name": "NASD 方法",
       "href": "ffa205f6771.html",
+      "summary": "用于计算两个日期之间的天数",
       "categories": [
         "aside"
       ]

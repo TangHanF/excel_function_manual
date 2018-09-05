@@ -1401,7 +1401,7 @@ const nav='{\n' +
     '    "ffa58075d5": {\n' +
     '      "name": "AND",\n' +
     '      "href": "ffa58075d5.html",\n' +
-    '      "summary": "如果所有参数为真，AND(测试表达式, 测试表达式…) 将得出 TRUE；否则得出 FALSE。"\n' +
+    '      "summary": "AND(测试表达式, 测试表达式…) 如果所有参数为真，AND(测试表达式, 测试表达式…) 将得出 TRUE；否则得出 FALSE。"\n' +
     '    },\n' +
     '    "ffa5834118": {\n' +
     '      "name": "IF",\n' +
@@ -1542,7 +1542,7 @@ const nav='{\n' +
     '    "ffa5c24b12": {\n' +
     '      "name": "EXACT",\n' +
     '      "href": "ffa5c24b12.html",\n' +
-    '      "summary": "如果参数字符串的大小写和内容完全相同，EXACT(字符串 1, 字符串 2) 函数将得出 TRUE。"\n' +
+    '      "summary": "EXACT(字符串 1, 字符串 2) 如果参数字符串的大小写和内容完全相同，EXACT(字符串 1, 字符串 2) 函数将得出 TRUE。"\n' +
     '    },\n' +
     '    "ffa8575c62a": {\n' +
     '      "name": "常数",\n' +
@@ -1916,6 +1916,7 @@ const nav='{\n' +
     '    "ffa205f6771": {\n' +
     '      "name": "NASD 方法",\n' +
     '      "href": "ffa205f6771.html",\n' +
+    '      "summary": "用于计算两个日期之间的天数",\n' +
     '      "categories": [\n' +
     '        "aside"\n' +
     '      ]\n' +

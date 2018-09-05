@@ -15,7 +15,6 @@ app2 = new Vue({
             let util = layui.util;
             util.fixbar({});
             let jsonData = $.parseJSON(nav);
-            debugger
             app = new Vue({
                 el: "#app"
                 , data: {
@@ -28,6 +27,7 @@ app2 = new Vue({
                 }
                 , methods: {
                     itemClick: function (href, e) {
+                        app2.iframeSrc = "";//赋空值，避免重复打开一个URL导致更新不及时问题
                         app2.iframeSrc = href;
                         console.log(href);
                         $("#myModal").modal({

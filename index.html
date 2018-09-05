@@ -81,13 +81,12 @@
                     <strong>
                         <a @click="itemClick(item.href,$event)">{{index+1}}、{{item.name}}</a>
                     </strong>
-                    <blockquote>
+                    <blockquote v-if="item.summary">
                         <p class="bg-success">
                             <strong>描述：</strong>
                             {{item.summary.substr(item.summary.indexOf(")")+1)}}
                         </p>
                         <strong>格式：</strong>
-
                         <kbd>
                             {{item.summary.substr(0,item.summary.indexOf(")")+1)}}
                         </kbd>
@@ -103,7 +102,7 @@
     <div class="jumbotron">
         <p>欢迎使用</p>
         <h1>Excel公式与函数帮助手册</h1>
-        <p>欢迎各位Start、Fork进行完善。时间有限，没做细致优化，有意向者可以一起完善</p>
+        <p>欢迎各位Star、Fork进行完善。时间有限，没做细致优化，有意向者可以一起完善</p>
         <p>对外发布、提供服务请保留项目地址，谢谢合作！</p>
         <hr>
         <blockquote>
