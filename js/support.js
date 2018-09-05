@@ -11,6 +11,11 @@ app2 = new Vue({
 
 (function () {
     $(function () {
+        //数组去重
+        function dedupe(array){
+            return Array.from(new Set(array));
+        }
+
         layui.use(["layer", "util"], function () {
             let util = layui.util;
             util.fixbar({});
@@ -61,7 +66,7 @@ app2 = new Vue({
                                 tmpObj.push(searchFunNameJsonData.topics[key]);
                             })
                         }
-                        this.tmpJsonData = tmpObj;
+                        this.tmpJsonData = dedupe(tmpObj);
                     }
                 }
                 , mounted: function () {
