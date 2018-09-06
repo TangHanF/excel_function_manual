@@ -16,23 +16,79 @@
     <style>
         .col1 {
             height: 600px;
+            border: white 1px solid;
             overflow: auto;
             padding-top: 30px;
-            background-color: rgba(128, 133, 124, 0.37);
+            background-color: #2e2e41;
         }
 
         .col2 {
             height: 600px;
+            border: white 1px solid;
             overflow: auto;
             padding-top: 15px;
-            background-color: white;
+            background-color: #2e2e41;
         }
 
         .col3 {
             height: 600px;
+            /*border: #432f2f 1px solid;*/
             overflow: auto;
-            background-color: #855e12;
+            padding: 0;
+            background-color: #2e2e41;
         }
+
+        .live {
+            overflow: hidden;
+        }
+
+        .live > li {
+            list-style: none;
+            position: relative;
+            padding: 0 0 0 2em;
+            margin: 0 0 .5em 10px;
+            -webkit-transition: .12s;
+            transition: .12s;
+        }
+        .live > li> a{
+            color: #93929b;
+            text-decoration: none;
+        }
+
+        .live > li::before {
+            position: absolute;
+            content: '\2022';
+            font-family: Arial;
+            color: #FFF;
+            top: 0;
+            left: 0;
+            text-align: center;
+            font-size: 2em;
+            opacity: .5;
+            line-height: .75;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+        .live > li:hover {
+            color: #FFF;
+        }
+
+        .live > li > a:hover {
+            color: #FFF;
+        }
+
+        .live > li:hover::before {
+            -webkit-transform: scale(2);
+            -ms-transform: scale(2);
+            transform: scale(2);
+            opacity: 1;
+            text-shadow: 0 0 4px;
+            -webkit-transition: .1s;
+            transition: .1s;
+        }
+
+
     </style>
 </head>
 <body>
@@ -49,24 +105,26 @@
             </form-field>
         </div>
     </div>
+
     <h1>Excel{{jsonData.title}}手册-<kbd>{{getCurrentStyle}}</kbd></h1>
-    <div class="col-md-3 col1">
-        <ul>
+    <div class="col-md-2 col1">
+        <ul class="live">
             <li v-for="(feilei,key,index) in jsonData.sections">
-                <a href="#" @click="style3LinkClick(key)">{{feilei.name}}-{{key}}</a>
+                <a href="#" @click="style3LinkClick(key)">{{feilei.name}}</a>
             </li>
         </ul>
     </div>
     <div class="col-md-3 col2">
-
-        <ul>
+        <ul class="live">
             <li v-for="feilei in sectionsChildren">
-                <a href="#" data-toggle="tooltip" data-placement="right" :title="feilei.summary">{{feilei.name}}</a>
+                <a href="#" @click="style3SecondLinkClick(feilei.href)" data-toggle="tooltip" data-placement="right"
+                   :title="feilei.summary">{{feilei.name}}</a>
             </li>
         </ul>
     </div>
-    <div class="col-md-6 col3">
-        正在开发...
+    <div class="col-md-7 col3">
+        <iframe :src="iframeSrc" width="100%" height="100%" frameborder=no border=0 marginwidth=0
+                marginheight=0></iframe>
     </div>
 </div>
 </body>

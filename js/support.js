@@ -80,6 +80,9 @@ let app2;
                             Vue.set(app.sectionsChildren, index, topics);
                         })
                     }
+                    ,style3SecondLinkClick:function (href) {
+                        app.iframeSrc='pages/excel/'+href;
+                    }
                 },
                 computed: {
                     //根据当前url计算当前风格样式
