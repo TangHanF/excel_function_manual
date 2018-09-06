@@ -29,8 +29,8 @@ let app2;
                     isShow: true,
                     currentStyleName: '',//当前风格名称
                     pagestyle: [
-                        {name: '详情弹窗式', value: 'index.html'},
-                        {name: '详情折叠式', value: 'index2.html'}
+                        {name: '详情折叠式', value: 'index.html'},
+                        {name: '详情弹窗式', value: 'index2.html'}
                     ],
                     currentSelected: 'index2.html',
                     iframeSrc: "",

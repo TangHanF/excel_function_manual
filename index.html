@@ -12,6 +12,7 @@
     <script src="js/nav_json.js"></script>
     <script src="js/search_json.js"></script>
     <script src="js/component/vuecomponent.js"></script>
+
 </head>
 <body>
 <div class="container" style="padding-top: 20px" id="app">
@@ -21,13 +22,14 @@
                         @clear-search="keyword=''"
                         @select-change="selectChange($event)"
                         :selected="currentSelected"
-                        :elestyle="pagestyle"
-            >
+                        :elestyle="pagestyle">
             </form-field>
         </div>
     </div>
     <!--初始加载-->
-    <div v-if="isShow" class="row">
+    <div v-show="isShow" class="row">
+
+
         <div class="col-md-12">
             <!--标题-->
             <h1>Excel{{jsonData.title}}手册-<kbd>{{getCurrentStyle}}</kbd></h1>
@@ -48,9 +50,9 @@
                         <div :id="['collapse'+index]" class="panel-collapse collapse" role="tabpanel"
                              :aria-labelledby="['heading'+index]">
                             <div class="panel-body">
-                                <div v-for="childrenItem in feilei.children">
+                                <div v-for="(childrenItem,index_item) in feilei.children">
                                     <strong>
-                                        <a @click="itemClick(jsonData.topics[childrenItem].href,$event)">{{jsonData.topics[childrenItem].name}}</a>
+                                        <a @click="itemClick2(jsonData.topics[childrenItem].href,$event)">{{jsonData.topics[childrenItem].name}}</a>
                                     </strong>
                                     <blockquote>
                                         <p class="bg-success">
@@ -62,8 +64,40 @@
                                         <kbd>
                                             {{jsonData.topics[childrenItem].summary.substr(0,jsonData.topics[childrenItem].summary.indexOf(")")+1)}}
                                         </kbd>
-                                    </blockquote>
 
+                                        <div class="panel-group" style="padding-top: 15px"
+                                             :id="['accordion_item_'+index_item+index]" role="tablist"
+                                             aria-multiselectable="true">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading" role="tab"
+                                                     :id="['heading_item_'+index_item+index]">
+                                                    <h4 class="panel-title">
+                                                        <a role="button" data-toggle="collapse"
+                                                           :data-parent="['#accordion_item_'+index_item+index]"
+                                                           :href="['#collapse_item_'+index_item+index]"
+                                                           aria-expanded="true"
+                                                           aria-controls="['heading_item_'+index_item+index]"
+                                                           @click="itemClick2(jsonData.topics[childrenItem].href,$event)">
+                                                            详细介绍
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div :id="['collapse_item_'+index_item+index]"
+                                                     class="panel-collapse collapse" role="tabpanel"
+                                                     aria-labelledby="['heading_item_'+index_item+index]">
+                                                    <div class="panel-body">
+                                                        <div v-if="renderIframeXiangxiFlagArr[jsonData.topics[childrenItem].href]">
+                                                            <iframe
+                                                                    style="border: none;width: 100%;height:400px"
+                                                                    :src="['pages/excel/'+jsonData.topics[childrenItem].href]">
+                                                            </iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </blockquote>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +114,7 @@
                 <small>搜索结果如下：</small>
                 <div v-for="(item,index) in tmpJsonData">
                     <strong>
-                        <a @click="itemClick(item.href,$event)">{{index+1}}、{{item.name}}</a>
+                        <a @click="itemClick2(item.href,$event)">{{index+1}}、{{item.name}}</a>
                     </strong>
                     <blockquote v-if="item.summary">
                         <p class="bg-success">
@@ -91,6 +125,39 @@
                         <kbd>
                             {{item.summary.substr(0,item.summary.indexOf(")")+1)}}
                         </kbd>
+
+                        <div class="panel-group" style="padding-top: 15px"
+                             :id="['accordion_item_'+index]" role="tablist"
+                             aria-multiselectable="true">
+                            <div class="panel panel-info">
+                                <div class="panel-heading" role="tab"
+                                     :id="['heading_item_'+index]">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse"
+                                           :data-parent="['#accordion_item_'+index]"
+                                           :href="['#collapse_item_'+index]"
+                                           aria-expanded="true"
+                                           aria-controls="['heading_item_'+index]"
+                                           @click="itemClick2(item.href,$event)">
+                                            详细介绍
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div :id="['collapse_item_'+index]"
+                                     class="panel-collapse collapse" role="tabpanel"
+                                     aria-labelledby="['heading_item_'+index]">
+                                    <div class="panel-body">
+                                        <div v-if="renderIframeXiangxiFlagArr[item.href]">
+                                            <iframe
+                                                    style="border: none;width: 100%;height:400px"
+                                                    :src="['pages/excel/'+item.href]">
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </blockquote>
                 </div>
             </div>
@@ -171,8 +238,8 @@
 
 
 </div>
-<script src="js/support.js"></script>
 
 </body>
+<script src="js/support.js"></script>
 
 </html>
