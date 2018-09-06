@@ -26,14 +26,14 @@ app2 = new Vue({
                 , data: {
                     jsonData: searchFunNameJsonData,
                     tmpJsonData: [],
-                    keyword: "",
+                    keyword: "",//搜索框的搜索关键字
                     isShow: true,
-                    style:[
-                        {name:'风格1',value:'index.html'},
-                        {name:'风格2',value:'index2.html'}
-                        // {name:'风格3',value:'index3.html'},
+                    currentStyleName: '',//当前风格名称
+                    style: [
+                        {name: '风格1', value: 'index.html'},
+                        {name: '风格2', value: 'index2.html'}
                     ],
-                    currentSelected:'index2.html',
+                    currentSelected: 'index2.html',
                     iframeSrc: "",
                     renderIframeXiangxiFlagArr: {},
                     panel: 'panel',
@@ -55,9 +55,10 @@ app2 = new Vue({
                     randomPanelClass: function () {
                         return this.panelStyle[Math.floor(Math.random() * this.panelStyle.length)];
                     },
-                    selectChange:function (ele) {
+                    selectChange: function (ele) {
                         let selected = ele.target.value;
-                        window.location.href=selected;
+                        this.currentStyleName=selected;
+                        window.location.href = selected;
                     }
                 }
                 , watch: {
@@ -86,8 +87,8 @@ app2 = new Vue({
                     }
                 }
                 , mounted: function () {
-                    this.currentSelected=window.location.href.substr(window.location.href.lastIndexOf("/")+1);
-                    console.log("===:"+this.currentSelected)
+                    this.currentSelected = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+                    console.log("===:" + this.currentSelected)
                     $("[data-toggle='tooltip']").tooltip();
                 }
             })

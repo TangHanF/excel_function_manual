@@ -1,12 +1,12 @@
 Vue.component("form-field", {
+    props: ['value', 'elestyle', 'selected']
 
-    props: ['value',  'elestyle', 'selected'],
-    // data:function(){
-    //     return{
-    //         selected:"index2.html"
-    //     }
-    // },
-    template: `
+    ,computed:{
+        selected_model:function () {
+            return this.selected;
+        }
+    }
+    ,template: `
     <form class="form-inline has-success">
                 <div class="form-group">
                     <input 
@@ -24,7 +24,7 @@ Vue.component("form-field", {
                 </button>
 
                 <label style="padding-left: 40px" for="selectStyle">风格类型选择</label>
-                <select v-model="selected" id="selectStyle" @change="$emit('select-change',$event)" class="form-control">
+                <select v-model="selected_model" id="selectStyle" @change="$emit('select-change',$event)" class="form-control">
                     <option v-for="(obj,index) in elestyle" :value="obj.value">{{obj.name}}</option>
                 </select>
             </form>

@@ -32,7 +32,7 @@
 
         <div class="col-md-12">
             <!--标题-->
-            <h1>Excel{{jsonData.title}}手册</h1>
+            <h1>Excel{{jsonData.title}}手册-风格2</h1>
             <div v-for="(feilei,key,index) in jsonData.sections">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div :class="[panel, randomPanelClass()]">
@@ -114,7 +114,7 @@
                 <small>搜索结果如下：</small>
                 <div v-for="(item,index) in tmpJsonData">
                     <strong>
-                        <a @click="itemClick(item.href,$event)">{{index+1}}、{{item.name}}</a>
+                        <a @click="itemClick2(item.href,$event)">{{index+1}}、{{item.name}}</a>
                     </strong>
                     <blockquote v-if="item.summary">
                         <p class="bg-success">
