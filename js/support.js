@@ -80,8 +80,8 @@ let app2;
                             Vue.set(app.sectionsChildren, index, topics);
                         })
                     }
-                    ,style3SecondLinkClick:function (href) {
-                        app.iframeSrc='pages/excel/'+href;
+                    , style3SecondLinkClick: function (href) {
+                        app.iframeSrc = 'pages/excel/' + href;
                     }
                 },
                 computed: {
@@ -99,6 +99,7 @@ let app2;
                     }
                 }
                 , watch: {
+                    // 对搜索框输入的内容进行实时搜索
                     keyword: function (newKeyword, oldKeyword) {
                         if ($.trim(newKeyword) === "") {
                             this.isShow = true;
@@ -106,18 +107,26 @@ let app2;
                             this.isShow = false;
                         }
                         //匹配函数名搜索
-                        const tmpObj = [];
+                        let tmpObj = [];
+                        let index = 0;
+                        app.sectionsChildren=[];
                         $.each(searchFunNameJsonData.topics, function (key, obj) {
                             if (obj.name.toLowerCase().indexOf(newKeyword) != -1) {
                                 tmpObj.push(obj);
+                                Vue.set(app.sectionsChildren, index, obj);
+                                index++;
                             }
                         });
 
                         //匹配描述搜索
                         let searchDesObj = searchDesJsonData[newKeyword];
                         if (searchDesObj) {
+                            index = 0;
                             $.each(searchDesObj, function (key, val) {
+                                // debugger
                                 tmpObj.push(searchFunNameJsonData.topics[key]);
+                                Vue.set(app.sectionsChildren, index, searchFunNameJsonData.topics[key]);
+                                index++;
                             })
                         }
                         this.tmpJsonData = dedupe(tmpObj);
