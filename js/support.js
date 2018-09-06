@@ -1,12 +1,6 @@
 let app;
 let app2;
 
-app2 = new Vue({
-    el: "#app2",
-    data: {
-        iframeSrc: "",
-    }
-});
 
 (function () {
     $(function () {
@@ -20,7 +14,12 @@ app2 = new Vue({
             util.fixbar({});
             let searchFunNameJsonData = $.parseJSON(nav);
             let searchDesJsonData = $.parseJSON(search_name_json);
-
+            app2 = new Vue({
+                el: "#app2",
+                data: {
+                    iframeSrc: "",
+                }
+            });
             app = new Vue({
                 el: "#app"
                 , data: {
@@ -29,9 +28,9 @@ app2 = new Vue({
                     keyword: "",//搜索框的搜索关键字
                     isShow: true,
                     currentStyleName: '',//当前风格名称
-                    style: [
-                        {name: '风格1', value: 'index.html'},
-                        {name: '风格2', value: 'index2.html'}
+                    pagestyle: [
+                        {name: '详情弹窗式', value: 'index.html'},
+                        {name: '详情折叠式', value: 'index2.html'}
                     ],
                     currentSelected: 'index2.html',
                     iframeSrc: "",
@@ -57,8 +56,22 @@ app2 = new Vue({
                     },
                     selectChange: function (ele) {
                         let selected = ele.target.value;
-                        this.currentStyleName=selected;
+                        this.currentStyleName = selected;
                         window.location.href = selected;
+                    }
+                },
+                computed: {
+                    //根据当前url计算当前风格样式
+                    getCurrentStyle: function () {
+                        let res = '';
+                        let page = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+                        $.each(this.pagestyle, function (index, obj) {
+                            if (obj.value && obj.value.indexOf(page) != -1) {
+                                res = obj.name;
+                                return;
+                            }
+                        });
+                        return res;
                     }
                 }
                 , watch: {
@@ -91,6 +104,7 @@ app2 = new Vue({
                     console.log("===:" + this.currentSelected)
                     $("[data-toggle='tooltip']").tooltip();
                 }
+
             })
         });
     })
