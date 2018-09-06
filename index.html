@@ -17,7 +17,12 @@
 <div class="container" style="padding-top: 20px" id="app">
     <div class="row">
         <div class="col-md-12">
-            <form-field :keyword="keyword"  @select-change="selectChange($event)" :selected="currentSelected" :elestyle="style"></form-field>
+            <form-field v-model="keyword"
+                        @clear-search="keyword=''"
+                        @select-change="selectChange($event)"
+                        :selected="currentSelected"
+                        :elestyle="style">
+            </form-field>
         </div>
     </div>
     <!--初始加载-->
@@ -153,7 +158,8 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <iframe v-if="iframeSrc!=''" style="border: none;width: 100%" :src="['pages/excel/'+iframeSrc]"></iframe>
+                    <iframe v-if="iframeSrc!=''" style="border: none;width: 100%"
+                            :src="['pages/excel/'+iframeSrc]"></iframe>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>

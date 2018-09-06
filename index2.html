@@ -18,7 +18,12 @@
 <div class="container" style="padding-top: 20px" id="app">
     <div class="row">
         <div class="col-md-12">
-            <form-field :keyword="keyword"  @select-change="selectChange($event)" :elestyle="style"></form-field>
+            <form-field v-model="keyword"
+                        @clear-search="keyword=''"
+                        @select-change="selectChange($event)"
+                        :selected="currentSelected"
+                        :elestyle="style">
+            </form-field>
         </div>
     </div>
     <!--初始加载-->
