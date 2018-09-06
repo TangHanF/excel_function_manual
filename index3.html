@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+    <title>Excel公式与函数帮助手册</title>
+    <link href="css/layui.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/layui.js"></script>
+    <script src="js/nav_json.js"></script>
+    <script src="js/search_json.js"></script>
+    <script src="js/component/vuecomponent.js"></script>
+    <style>
+        .col1 {
+            height: 600px;
+            overflow: auto;
+            padding-top: 30px;
+            background-color: rgba(128, 133, 124, 0.37);
+        }
+
+        .col2 {
+            height: 600px;
+            overflow: auto;
+            padding-top: 15px;
+            background-color: white;
+        }
+
+        .col3 {
+            height: 600px;
+            overflow: auto;
+            background-color: #855e12;
+        }
+    </style>
+</head>
+<body>
+<div id="app2"></div>
+<div class="container-fluid" id="app">
+    <div class="row" style="padding-top: 20px">
+        <div class="col-md-12">
+            <form-field v-model="keyword"
+                        @clear-search="keyword=''"
+                        @select-change="selectChange($event)"
+                        :selected="currentSelected"
+                        :elestyle="pagestyle"
+            >
+            </form-field>
+        </div>
+    </div>
+    <h1>Excel{{jsonData.title}}手册-<kbd>{{getCurrentStyle}}</kbd></h1>
+    <div class="col-md-3 col1">
+        <ul>
+            <li v-for="(feilei,key,index) in jsonData.sections">
+                <a href="#" @click="style3LinkClick(key)">{{feilei.name}}-{{key}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-3 col2">
+
+        <ul>
+            <li v-for="feilei in sectionsChildren">
+                <a href="#" data-toggle="tooltip" data-placement="right" :title="feilei.summary">{{feilei.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6 col3">
+        正在开发...
+    </div>
+</div>
+</body>
+<script src="js/support.js"></script>
+</html>
