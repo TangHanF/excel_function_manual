@@ -32,7 +32,7 @@ let app2;
                         {name: '详情折叠式', value: 'index.html'},
                         {name: '详情弹窗式', value: 'index2.html'}
                     ],
-                    currentSelected: 'index2.html',
+                    currentSelected: 'index.html',
                     iframeSrc: "",
                     renderIframeXiangxiFlagArr: {},
                     panel: 'panel',
@@ -58,6 +58,14 @@ let app2;
                         let selected = ele.target.value;
                         this.currentStyleName = selected;
                         window.location.href = selected;
+                    },
+                    getDes: function (data) {
+                        return data.substr(data.indexOf(")") + 1);
+
+                    },
+                    getFormat: function (data) {
+                        return data.substr(0, data.indexOf(")") + 1);
+
                     }
                 },
                 computed: {
@@ -66,7 +74,7 @@ let app2;
                         let res = '';
                         let page = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
                         $.each(this.pagestyle, function (index, obj) {
-                            if (obj.value && obj.value.indexOf(page) != -1) {
+                            if (obj.value && page && page.indexOf(obj.value) != -1) {
                                 res = obj.name;
                                 return;
                             }

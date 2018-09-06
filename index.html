@@ -57,12 +57,12 @@
                                     <blockquote>
                                         <p class="bg-success">
                                             <strong>描述：</strong>
-                                            {{jsonData.topics[childrenItem].summary.substr(jsonData.topics[childrenItem].summary.indexOf(")")+1)}}
+                                            {{getDes(jsonData.topics[childrenItem].summary)}}
                                         </p>
                                         <strong>格式：</strong>
 
                                         <kbd>
-                                            {{jsonData.topics[childrenItem].summary.substr(0,jsonData.topics[childrenItem].summary.indexOf(")")+1)}}
+                                            {{getFormat(jsonData.topics[childrenItem].summary)}}
                                         </kbd>
 
                                         <div class="panel-group" style="padding-top: 15px"
@@ -119,11 +119,11 @@
                     <blockquote v-if="item.summary">
                         <p class="bg-success">
                             <strong>描述：</strong>
-                            {{item.summary.substr(item.summary.indexOf(")")+1)}}
+                            {{getDes(item.summary)}}
                         </p>
                         <strong>格式：</strong>
                         <kbd>
-                            {{item.summary.substr(0,item.summary.indexOf(")")+1)}}
+                            {{getFormat(item.summary)}}
                         </kbd>
 
                         <div class="panel-group" style="padding-top: 15px"
